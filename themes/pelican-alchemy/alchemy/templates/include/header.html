@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-sm-12">
+    {% if SITEIMAGE %}
+    <div class="col-sm-12">
+      <a href="{{ SITEURL }}/">
+        <img class="img-fluid rounded" src={{ SITEURL }}{{ SITEIMAGE }} alt="{{ SITENAME }}">
+      </a>
+    </div>
+    {% endif %}
+
+    {% if LINKS or (DISPLAY_PAGES_ON_MENU and pages) or ICONS %}
+    <div class="row">
+      <div class="col-sm-9">
+        <ul class="list-inline">
+          {% for title, link in LINKS %}
+            <li class="list-inline-item"><a href="{{ link }}" target="_blank">{{ title }}</a></li>
+          {% endfor %}
+          {% if DISPLAY_PAGES_ON_MENU %}
+            {% for page in pages %}
+              {% if LINKS and loop.first %}
+                <li class="list-inline-item text-muted">|</li>
+              {% endif %}
+              <li class="list-inline-item"><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+            {% endfor %}
+          {% endif %}
+          {% for icon, link in ICONS %}
+            {% if (LINKS or (DISPLAY_PAGES_ON_MENU and pages)) and loop.first %}
+              <li class=" list-inline-item text-muted">|</li>
+            {% endif %}
+            <li class="list-inline-item"><a class="fa fa-{{ icon }}" href="{{ link }}" target="_blank"></a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="col-sm-3 text-right">
+        <a href="{{ SITEURL }}/{{ FEED_ALL_RSS }}"><i class="fa fa-rss"></i></a>
+        <a href="https://github.com/turicas/blog.brasil.io"><i class="fa fa-github"></i></a>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>

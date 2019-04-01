@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="327.478mm"
+   height="45.781189mm"
+   viewBox="0 0 327.478 45.781189"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="logo.svg"
+   inkscape:export-filename="/home/turicas/projects/blog.brasil.io/themes/pelican-alchemy/alchemy/static/images/logo-blog.brasil.io.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="537.57792"
+     inkscape:cy="-58.531529"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1916"
+     inkscape:window-height="1056"
+     inkscape:window-x="0"
+     inkscape:window-y="22"
+     inkscape:window-maximized="0"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(103.64185,-125.6094)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:43.08924103px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.07723093"
+       x="-29.394604"
+       y="161.16824"
+       id="text817"><tspan
+         sodipodi:role="line"
+         id="tspan815"
+         x="-29.394604"
+         y="161.16824"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;stroke-width:1.07723093"><tspan
+           style="font-weight:bold"
+           id="tspan1545">blog</tspan><tspan
+           style="fill:#0000a7;fill-opacity:1;stroke-width:1.07723093"
+           id="tspan1543">.brasil.io</tspan></tspan></text>
+    <g
+       id="g1554"
+       transform="translate(0,10.627965)">
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/karlisson/brasil.png"
+         inkscape:connector-curvature="0"
+         id="path3917"
+         d="m -34.974363,114.98144 -0.684633,0.0248 -3.289776,0.14056 -12.64865,0.52916 -2.64e-4,6.65593 9.52315,-0.40515 -2.260388,31.87403 -7.240249,0.0413 0.0069,6.63939 10.702462,-0.0744 h 0.0083 l 2.181725,-0.0165 h 0.570508 l 0.03688,-0.57051 0.156226,-2.14974 2.748648,-38.65397 0.232164,-3.25769 0.005,-0.0496 -0.0027,-0.0413 -0.04521,-0.68626 z"
+         style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:Sans;-inkscape-font-specification:Sans;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:start;display:inline;overflow:visible;visibility:visible;fill:#44aa00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.32291663;marker:none;enable-background:accumulate" />
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/karlisson/brasil.png"
+         id="path3909"
+         d="m -88.866521,117.30482 -11.567249,0.48782 -2.53835,0.10749 -0.66973,0.0248 0.0331,0.66973 0.12402,2.55488 1.85208,36.3306 0.14056,2.6541 0.0331,0.62839 h 0.63665 l 2.637564,-0.0165 h 0.0083 l 12.236981,-0.0744 -0.446485,-6.62286 -8.797395,0.0579 -1.521355,-29.83177 8.284766,-0.34726 z"
+         style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:Sans;-inkscape-font-specification:Sans;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:start;display:inline;overflow:visible;visibility:visible;fill:#44aa00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.32291663;marker:none;enable-background:accumulate" />
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/karlisson/brasil.png"
+         sodipodi:nodetypes="ccccccc"
+         inkscape:connector-curvature="0"
+         id="path3037"
+         d="m -84.731018,123.96463 -14.689,13.88432 16.193836,15.89872 4.539637,-3.76079 -12.613416,-11.6837 11.474789,-9.8867 z"
+         style="fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:0.26458332" />
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/karlisson/brasil.png"
+         sodipodi:nodetypes="ccccccc"
+         inkscape:connector-curvature="0"
+         id="path3039"
+         d="m -61.526004,125.24834 4.933696,-4.2095 16.521168,17.77014 -19.900468,14.06789 -4.332674,-4.75309 15.638057,-9.97786 z"
+         style="fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:0.26458332" />
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/karlisson/brasil.png"
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path3043"
+         d="m -78.765106,143.80587 c 0.180216,1.12498 -0.34368,2.01469 -0.998693,2.68152 5.675865,1.58632 4.228626,-4.24533 3.208851,-6.48903 -0.816232,-1.99038 -1.049737,-3.33089 -0.34281,-4.97656 -7.119673,-0.90141 -1.750841,6.74972 -1.867348,8.78407 z"
+         style="fill:#0000a7;fill-opacity:1;stroke:none;stroke-width:0.26458332" />
+      <ellipse
+         ry="1.6750294"
+         rx="1.656105"
+         cy="133.88144"
+         cx="-63.996693"
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/karlisson/brasil.png"
+         transform="matrix(0.99990211,0.01399171,-0.10792694,0.99415883,0,0)"
+         id="path3045"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#0000a7;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.25712878px;marker:none;enable-background:accumulate" />
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/karlisson/brasil.png"
+         inkscape:connector-curvature="0"
+         id="path3108"
+         d="m -67.725038,129.02729 c -4.245427,-0.1841 -7.851256,3.19418 -8.05107,7.5509 -0.19981,4.35672 3.082145,8.0404 7.32757,8.2245 4.245424,0.1841 7.84503,-3.20116 8.044841,-7.55789 0.199811,-4.35672 -3.075916,-8.03341 -7.321341,-8.21751 z m -0.159888,3.48628 c 2.367643,0.10267 4.195445,2.1542 4.084014,4.58392 -0.111435,2.42971 -2.119787,4.31489 -4.487429,4.21222 -2.367643,-0.10267 -4.20198,-2.15449 -4.090548,-4.58421 0.111432,-2.42971 2.126321,-4.31461 4.493963,-4.21193 z"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#0000a7;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332px;marker:none;enable-background:accumulate" />
+    </g>
+  </g>
+</svg>
