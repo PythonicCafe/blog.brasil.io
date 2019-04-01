@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>Brasil.IO - Blog</title><link>https://blog.brasil.io/</link><description>Dados abertos para mais democracia</description><lastBuildDate>Mon, 01 Apr 2019 16:20:00 -0300</lastBuildDate><item><title>Olá, Brasil!</title><link>https://blog.brasil.io/2019/04/01/ola-brasil/</link><description>&lt;p&gt;Seja bem-vinda(o) à publicação de inauguração do &lt;a href="https://blog.brasil.io/"&gt;Blog do
+Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt;; aqui se inicia um espaço colaborativo para
+falar sobre &lt;strong&gt;dados abertos&lt;/strong&gt;, &lt;strong&gt;lei de acesso à informação&lt;/strong&gt;, &lt;strong&gt;ciência de
+dados&lt;/strong&gt; e &lt;strong&gt;interagir com a comunidade&lt;/strong&gt; da&amp;nbsp;plataforma.&lt;/p&gt;
+&lt;p&gt;Antes desse blog nossos canais de comunicação eram voltados somente a quem quer
+colaborar diretamente com o código/dados da plataforma (como o
+&lt;a href="https://chat.brasil.io/"&gt;chat.brasil.io&lt;/a&gt; e o &lt;a href="https://brasil.io/datasets/sugira"&gt;espaço para sugestão de
+datasets&lt;/a&gt;); agora temos um espaço onde
+estaremos mais próximos de quem &lt;a href="https://brasil.io/doe"&gt;doa para o projeto&lt;/a&gt;,
+utiliza os dados ou trabalha/quer trabalhar com ciência de dados. Nossas
+publicações se encaixarão nas seguintes&amp;nbsp;categorias:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Meta&lt;/strong&gt;: publicações sobre &lt;strong&gt;atualizações na plataforma&lt;/strong&gt; (no software, não
+  nos&amp;nbsp;dados);&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Datasets&lt;/strong&gt;: notícias sobre &lt;strong&gt;lançamento e atualização dos datasets&lt;/strong&gt;
+  disponíveis na plataforma, tutoriais sobre como utilizar os dados disponíveis
+  (comentando regras de negócio relacionadas aos dados e ferramentas úteis)&amp;nbsp;etc.;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bastidores&lt;/strong&gt;: expor a &lt;strong&gt;metodologia de coleta, limpeza e análise de
+  dados&lt;/strong&gt;, que muitas vezes fica escondida (nosso objetivo aqui é incentivar o
+  jornalismo aberto e ensinar boas técnicas para o trabalho com&amp;nbsp;dados);&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dados abertos e transparência&lt;/strong&gt;: conceitos e novidades no &lt;strong&gt;ecossistema de
+  dados abertos&lt;/strong&gt;, leis, projetos&amp;nbsp;etc.;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mídia&lt;/strong&gt;: anunciar participação em eventos, mostrar onde os dados do site
+  estão sendo utilizados (como matérias, aplicativos e projetos de controle&amp;nbsp;social).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Sempre compartilho &lt;a href="https://twitter.com/turicas"&gt;em meu Twitter&lt;/a&gt; histórias
+interessantes sobre os problemas relacionados a dados abertos, como: &lt;a href="https://medium.com/serenata/o-dia-que-a-receita-nos-mandou-pagar-r-500-mil-para-ter-dados-públicos-8e18438f3076"&gt;o dia em
+que a Receita Federal nos sugeriu pagar meio milhão de reais por dados
+abertos&lt;/a&gt;,
+problemas enfrentados para baixar os Diários Oficiais de
+&lt;a href="https://twitter.com/turicas/status/1094069287206248450"&gt;Rondônia&lt;/a&gt; e &lt;a href="https://twitter.com/turicas/status/1091767340134514690"&gt;Rio de
+Janeiro&lt;/a&gt;, &lt;a href="https://twitter.com/turicas/status/943176715672711168"&gt;os
+exorbitantes salários dos juízes brasileiros (acima do
+teto)&lt;/a&gt; e, mais
+recentemente, &lt;a href="https://twitter.com/turicas/status/1112491956314259457"&gt;a deleção de arquivos contendo a lista de beneficiados da lei da
+anistia&lt;/a&gt;. A partir de
+agora essas histórias serão publicadas em mais detalhes aqui no&amp;nbsp;blog!&lt;/p&gt;
+&lt;p&gt;Então, se você já utilizou os dados da plataforma para algum projeto, tem dicas
+interessantes sobre ferramentas para trabalhar com dados, conhece bastante um
+dataset, quer fazer um tutorial de código (&lt;a href="https://github.com/danielfrg/pelican-ipynb"&gt;nosso blog já tem suporte a
+publicar usando o Jupyter
+Notebook&lt;/a&gt;) ou tem alguma história
+interessante relacionada ao trabalho com dados abertos, por favor fique à
+vontade para colaborar criando um texto para o blog (&lt;a href="https://github.com/turicas/blog.brasil.io#contribuindo"&gt;veja aqui as
+instruções&lt;/a&gt;; &lt;a href="https://brasil.io/colabore"&gt;existem
+também outras formas de contribuir com o projeto&lt;/a&gt;).&amp;nbsp;:)&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Álvaro Justen</dc:creator><pubDate>Mon, 01 Apr 2019 16:20:00 -0300</pubDate><guid isPermaLink="false">tag:blog.brasil.io,2019-04-01:2019/04/01/ola-brasil/</guid><category>opendata</category></item></channel></rss>
