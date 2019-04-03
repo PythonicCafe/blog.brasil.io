@@ -2,7 +2,7 @@ Title: Webinar sobre dados abertos e Python
 Slug: webinar-sobre-daos-abertos-e-python
 Date: 2019-04-03 15:40
 Category: mídia
-Tags: opendata, python, rows, csv, pdf, web scraping, acessibilidade
+Tags: opendata, ddj, controlesocial, python, rows, csv, pdf, webscraping, acessibilidade
 Author: Álvaro Justen
 Summary: Vídeo e slides de uma palestra online apresentada por Álvaro Justen sobre dados abertos e suas aplicações, acessibilidade de dados e demonstração do Brasil.IO.
 
