@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Brasil.IO - Blog</title><link href="https://blog.brasil.io/" rel="alternate"></link><link href="https://blog.brasil.io/feeds/midia.atom.xml" rel="self"></link><id>https://blog.brasil.io/</id><updated>2019-04-03T15:40:00-03:00</updated><entry><title>Webinar sobre dados abertos e Python</title><link href="https://blog.brasil.io/2019/04/03/webinar-sobre-daos-abertos-e-python/" rel="alternate"></link><published>2019-04-03T15:40:00-03:00</published><updated>2019-04-03T15:40:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-04-03:2019/04/03/webinar-sobre-daos-abertos-e-python/</id><summary type="html">&lt;p&gt;Na última segunda-feira (01/04/2019) apresentei uma palestra online (webinar)
+no &lt;a href="https://www.youtube.com/channel/UC2Qzw5aqCBk_z0lWJnumWQQ"&gt;canal da Glaucia Lemos no
+YouTube&lt;/a&gt;,
+apresentando conceitos como: dados abertos e suas aplicações no jornalismo e no
+controle social, acessibilidade de dados,
+ferramentas para resolver problemas de qualidade de dados e demonstração da
+plataforma &lt;a href="https://brasil.io/"&gt;Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;O &lt;a href="https://www.youtube.com/watch?v=1FEYQBmyk2Y"&gt;vídeo está disponível no
+YouTube&lt;/a&gt;:&lt;/p&gt;
+&lt;iframe width="1267" height="487" src="https://www.youtube.com/embed/1FEYQBmyk2Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Os slides estão disponíveis &lt;a href="http://bit.ly/turicas-webinar-glaucia"&gt;em formato de um
+site&lt;/a&gt; (&lt;a href="https://github.com/turicas/slides/blob/gh-pages/brasil.io/capiconf2018/webinar-glaucia-lemos.html"&gt;o código do site está
+disponível&lt;/a&gt;)
+e também &lt;a href="https://www.slideshare.net/turicas/brasilio-dados-abertos-para-mais-democracia"&gt;no
+slideshare&lt;/a&gt;,
+onde é possível fazer o download em &lt;span class="caps"&gt;PDF&lt;/span&gt;:&lt;/p&gt;
+&lt;iframe src="//www.slideshare.net/slideshow/embed_code/key/49M0cuZGqc4995" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen&gt; &lt;/iframe&gt;</summary><category term="opendata"></category><category term="python"></category><category term="rows"></category><category term="csv"></category><category term="pdf"></category><category term="web scraping"></category><category term="acessibilidade"></category></entry></feed>
