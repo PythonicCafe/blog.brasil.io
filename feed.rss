@@ -1,5 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Brasil.IO - Blog</title><link>https://blog.brasil.io/</link><description>Dados abertos para mais democracia</description><lastBuildDate>Wed, 03 Apr 2019 15:40:00 -0300</lastBuildDate><item><title>Webinar sobre dados abertos e Python</title><link>https://blog.brasil.io/2019/04/03/webinar-sobre-daos-abertos-e-python/</link><description>&lt;p&gt;Na última segunda-feira (01/04/2019) apresentei uma palestra online (webinar)
+<rss version="2.0"><channel><title>Brasil.IO - Blog</title><link>https://blog.brasil.io/</link><description>Dados abertos para mais democracia</description><lastBuildDate>Wed, 17 Apr 2019 17:30:00 -0300</lastBuildDate><item><title>Dissecando os custos (e a infraestrutura) do projeto</title><link>https://blog.brasil.io/2019/04/17/dissecando-os-custos-e-a-infraestrutura-do-projeto/</link><description>&lt;p&gt;Quando visitamos um site geralmente não temos noção de todo o trabalho e
+infraestrutura envolvidos para mantê-lo online; por trás dos dados apresentados
+no &lt;a href="https://brasil.io/"&gt;Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt; existem diversos programas que fazem
+raspagem de sites (&lt;em&gt;Web scraping&lt;/em&gt;), limpeza de dados, além de outros que
+armazenam e servem as centenas de gigabytes de dados que temos atualmente;
+esses programas rodam em servidores que nos custam em torno de &lt;strong&gt;R$1.100,00&lt;/strong&gt;&amp;nbsp;mensais.&lt;/p&gt;
+&lt;p&gt;Desde o início do projeto a infraestrutura foi bancada por mim, até que abri
+uma &lt;a href="https://brasil.io/doe"&gt;campanha de financiamento coletivo&lt;/a&gt; e algumas
+pessoas começaram a doar (porém a quantidade de doações que recebemos ainda não
+é suficiente e eu ainda pago metade desse valor). Os custos de infraestrutura
+que temos hoje estão listados &lt;a href="https://docs.google.com/spreadsheets/d/1ZElv9dWuEmhi-X_K674vQ_8YlmLeMo_m6swIqsSfdF0/view"&gt;nessa
+planilha&lt;/a&gt;
+e segue abaixo um detalhamento de cada&amp;nbsp;item:&lt;/p&gt;
+&lt;h2&gt;Domínio &amp;#8220;brasil.io&amp;#8221;&amp;nbsp;(namecheap.com)&lt;/h2&gt;
+&lt;p&gt;Domínio do projeto, registrado em 28 de novembro de 2013 (apesar da ideia ser
+antiga, a plataforma começou a ser desenvolvida como é hoje em&amp;nbsp;2018).&lt;/p&gt;
+&lt;p&gt;Custo: 35,00 &lt;span class="caps"&gt;USD&lt;/span&gt; /&amp;nbsp;ano.&lt;/p&gt;
+&lt;h2&gt;Servidor na DigitalOcean &lt;span class="caps"&gt;EUA&lt;/span&gt; (+ extra&amp;nbsp;storage)&lt;/h2&gt;
+&lt;p&gt;Servidor principal (&lt;span class="caps"&gt;VPS&lt;/span&gt;), onde é hospedada a plataforma. Características:
+Intel(R) Xeon(R) &lt;span class="caps"&gt;CPU&lt;/span&gt; E5-2650L v3 @ 1.80GHz (dual core), &lt;span class="caps"&gt;2GB&lt;/span&gt; &lt;span class="caps"&gt;RAM&lt;/span&gt;, &lt;span class="caps"&gt;60GB&lt;/span&gt; &lt;span class="caps"&gt;SSD&lt;/span&gt; + &lt;span class="caps"&gt;1TB&lt;/span&gt;
+extra de &lt;span class="caps"&gt;SSD&lt;/span&gt;. Está no datacenter de San&amp;nbsp;Francisco.&lt;/p&gt;
+&lt;p&gt;Nesse servidor rodam a aplicação feita em Django (frontend e &lt;span class="caps"&gt;API&lt;/span&gt;) e os bancos
+de dados PostgreSQL (utilizado para &lt;a href="https://brasil.io/datasets"&gt;hospedar os
+dados&lt;/a&gt; e os índices de busca) e Neo4J (utilizado
+para &lt;a href="https://brasil.io/especiais"&gt;traçar caminhos entre pessoas e empresas&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Para o &lt;em&gt;deployment&lt;/em&gt; utilizamos o &lt;a href="https://github.com/dokku/dokku"&gt;dokku&lt;/a&gt; (um
+&lt;em&gt;platform-as-a-service&lt;/em&gt; livre) e, com isso, conseguimos subir alterações com um
+simples &lt;code&gt;git push&lt;/code&gt; (como no Heroku, porém mais&amp;nbsp;barato).&lt;/p&gt;
+&lt;p&gt;Custo: 120 &lt;span class="caps"&gt;USD&lt;/span&gt; /&amp;nbsp;mês.&lt;/p&gt;
+&lt;h2&gt;DigitalOcean Spaces (arquivos&amp;nbsp;estáticos)&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://m.do.co/c/5b17037059e9"&gt;Digital Ocean Spaces&lt;/a&gt; é um serviço de
+hospedagem de arquivos estáticos, similar ao &lt;span class="caps"&gt;AWS&lt;/span&gt; S3. Está sendo utilizado em
+caráter de testes para hospedar os arquivos estáticos (para quem quer baixar um
+dataset completo) e para os futuros &lt;em&gt;mirrors&lt;/em&gt; que teremos. Atualmente o meu
+Google Drive pessoal está sendo utilizado para disponibilizar os arquivos
+completos, mas ele possui limitações e em breve migraremos&amp;nbsp;totalmente.&lt;/p&gt;
+&lt;p&gt;Custo: 5 &lt;span class="caps"&gt;USD&lt;/span&gt; /&amp;nbsp;mês.&lt;/p&gt;
+&lt;h2&gt;Servidor na &lt;span class="caps"&gt;OVH&lt;/span&gt; (+ extra&amp;nbsp;storage)&lt;/h2&gt;
+&lt;p&gt;Servidor secundário (dedicado), onde rodamos os programas que coletam, limpam e
+convertem os dados, hospedamos backups e fazemos outros testes.
+Características: Intel(R) Xeon(R) &lt;span class="caps"&gt;CPU&lt;/span&gt; D-1520 @ 2.20GHz (8 cores), &lt;span class="caps"&gt;32GB&lt;/span&gt; de &lt;span class="caps"&gt;RAM&lt;/span&gt;,
+&lt;span class="caps"&gt;60GB&lt;/span&gt; &lt;span class="caps"&gt;HD&lt;/span&gt; + extra de &lt;span class="caps"&gt;760GB&lt;/span&gt;. Está num datacenter no&amp;nbsp;Canadá.&lt;/p&gt;
+&lt;p&gt;Como o custo é bem menor, está em nossos planos migrar a hospedagem da
+plataforma para esse servidor dedicado e rodar os scripts coletores em uma &lt;span class="caps"&gt;VPS&lt;/span&gt;
+mais barata (porém essa migração requer algum&amp;nbsp;trabalho).&lt;/p&gt;
+&lt;p&gt;Custo: 89,90 &lt;span class="caps"&gt;USD&lt;/span&gt; /&amp;nbsp;mês.&lt;/p&gt;
+&lt;h2&gt;Hospedagem rocketchat - chat.brasil.io&amp;nbsp;(Heroku)&lt;/h2&gt;
+&lt;p&gt;Instância do &lt;a href="https://rocket.chat/"&gt;Rocket.Chat&lt;/a&gt; que está por trás do
+&lt;a href="https://chat.brasil.io/"&gt;chat.brasil.io&lt;/a&gt;, onde os colaboradores podem se
+comunicar mais facilmente, com divisão por assunto. Roda em um dyno simples (o
+mais&amp;nbsp;barato).&lt;/p&gt;
+&lt;p&gt;Custo: 7,00 &lt;span class="caps"&gt;USD&lt;/span&gt; /&amp;nbsp;mês.&lt;/p&gt;
+&lt;h2&gt;Horas de&amp;nbsp;trabalho&lt;/h2&gt;
+&lt;p&gt;Trabalho de desenvolvimento de novos scripts de coleta de dados,
+desenvolvimento de novas funcionalidades na plataforma, manutenção da
+plataforma (verificação de erros, atualização de datasets etc.) e divulgação do
+projeto (eventos, palestras, entrevistas, blog&amp;nbsp;etc.).&lt;/p&gt;
+&lt;p&gt;Todas as horas de trabalho na plataforma (por enquanto) são voluntárias e não
+estão sendo pagas porque o projeto atualmente não tem verba disponível (uma de
+nossas metas desse ano é justamente conseguir tornar a plataforma sustentável
+economicamente. Atualmente trabalho em torno de 60 horas mensais (além do
+trabalho de &lt;a href="https://brasil.io/contribuidores"&gt;diversos outros voluntários&lt;/a&gt;).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Nota: os valores descritos são os cobrados pelos provedores de serviços,
+porém como todos os pagamentos são feitos via cartão de crédito em Dólar o
+valor final pago é de 110,38% do que está descrito (4% de spread + 6,38% de
+&lt;span class="caps"&gt;IOF&lt;/span&gt;).&lt;/p&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Álvaro Justen</dc:creator><pubDate>Wed, 17 Apr 2019 17:30:00 -0300</pubDate><guid isPermaLink="false">tag:blog.brasil.io,2019-04-17:2019/04/17/dissecando-os-custos-e-a-infraestrutura-do-projeto/</guid><category>infra</category><category>hosting</category><category>crowdfunding</category><category>história</category><category>django</category><category>postgresql</category><category>neo4j</category></item><item><title>Webinar sobre dados abertos e Python</title><link>https://blog.brasil.io/2019/04/03/webinar-sobre-daos-abertos-e-python/</link><description>&lt;p&gt;Na última segunda-feira (01/04/2019) apresentei uma palestra online (webinar)
 no &lt;a href="https://www.youtube.com/channel/UC2Qzw5aqCBk_z0lWJnumWQQ"&gt;canal da Glaucia Lemos no
 YouTube&lt;/a&gt;,
 apresentando conceitos como: dados abertos e suas aplicações no jornalismo e no

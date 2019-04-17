@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Dissecando os custos (e a infraestrutura) do projeto | Brasil.IO - Blog
+</title>
+  <link rel="canonical" href="https://blog.brasil.io/2019/04/17/dissecando-os-custos-e-a-infraestrutura-do-projeto/index.html">
+
+
+  <link rel="stylesheet" href="https://blog.brasil.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://blog.brasil.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://blog.brasil.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://blog.brasil.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://blog.brasil.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/rss+xml" title="Full RSS Feed"
+        href="https://blog.brasil.io/feed.rss">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://blog.brasil.io/feeds/meta.atom.xml">  
+  <meta name="description" content="Quando visitamos um site geralmente não temos noção de todo o trabalho e infraestrutura envolvidos para mantê-lo online; nesse artigo detalho os custos do Brasil.IO e falo um pouco da infraestrutura. Spoiler: o projeto ainda está deficitário.">
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o);
+      a.async = 1;
+      a.src = g;
+      m = s.getElementsByTagName(o)[0];
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-117698282-2', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+  <div class="col-sm-12">
+    <div class="col-sm-12">
+      <a href="https://blog.brasil.io/">
+        <img class="img-fluid rounded" src=https://blog.brasil.io/theme/images/logo-blog.brasil.io.png alt="Brasil.IO - Blog">
+      </a>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-9">
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://blog.brasil.io/" target="_blank">Blog</a></li>
+            <li class="list-inline-item"><a href="https://brasil.io/datasets" target="_blank">Datasets</a></li>
+            <li class="list-inline-item"><a href="https://brasil.io/colabore" target="_blank">Colabore</a></li>
+            <li class="list-inline-item"><a href="https://brasil.io/contato" target="_blank">Contato</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3 text-right">
+        <a href="https://blog.brasil.io/feed.rss"><i class="fa fa-rss"></i></a>
+        <a href="https://github.com/turicas/blog.brasil.io"><i class="fa fa-github"></i></a>
+      </div>
+    </div>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Dissecando os custos (e a infraestrutura) do&nbsp;projeto
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2019-04-17T17:30:00-03:00">
+          <i class="fa fa-clock-o"></i>
+          qua 17 abril 2019
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://blog.brasil.io/category/meta.html">meta</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://blog.brasil.io/author/alvaro-justen.html">Álvaro Justen</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://blog.brasil.io/tag/infra.html">#infra</a>,               <a href="https://blog.brasil.io/tag/hosting.html">#hosting</a>,               <a href="https://blog.brasil.io/tag/crowdfunding.html">#crowdfunding</a>,               <a href="https://blog.brasil.io/tag/historia.html">#história</a>,               <a href="https://blog.brasil.io/tag/django.html">#django</a>,               <a href="https://blog.brasil.io/tag/postgresql.html">#postgresql</a>,               <a href="https://blog.brasil.io/tag/neo4j.html">#neo4j</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Quando visitamos um site geralmente não temos noção de todo o trabalho e
+infraestrutura envolvidos para mantê-lo online; por trás dos dados apresentados
+no <a href="https://brasil.io/">Brasil.<span class="caps">IO</span></a> existem diversos programas que fazem
+raspagem de sites (<em>Web scraping</em>), limpeza de dados, além de outros que
+armazenam e servem as centenas de gigabytes de dados que temos atualmente;
+esses programas rodam em servidores que nos custam em torno de <strong>R$1.100,00</strong>&nbsp;mensais.</p>
+<p>Desde o início do projeto a infraestrutura foi bancada por mim, até que abri
+uma <a href="https://brasil.io/doe">campanha de financiamento coletivo</a> e algumas
+pessoas começaram a doar (porém a quantidade de doações que recebemos ainda não
+é suficiente e eu ainda pago metade desse valor). Os custos de infraestrutura
+que temos hoje estão listados <a href="https://docs.google.com/spreadsheets/d/1ZElv9dWuEmhi-X_K674vQ_8YlmLeMo_m6swIqsSfdF0/view">nessa
+planilha</a>
+e segue abaixo um detalhamento de cada&nbsp;item:</p>
+<h2>Domínio &#8220;brasil.io&#8221;&nbsp;(namecheap.com)</h2>
+<p>Domínio do projeto, registrado em 28 de novembro de 2013 (apesar da ideia ser
+antiga, a plataforma começou a ser desenvolvida como é hoje em&nbsp;2018).</p>
+<p>Custo: 35,00 <span class="caps">USD</span> /&nbsp;ano.</p>
+<h2>Servidor na DigitalOcean <span class="caps">EUA</span> (+ extra&nbsp;storage)</h2>
+<p>Servidor principal (<span class="caps">VPS</span>), onde é hospedada a plataforma. Características:
+Intel(R) Xeon(R) <span class="caps">CPU</span> E5-2650L v3 @ 1.80GHz (dual core), <span class="caps">2GB</span> <span class="caps">RAM</span>, <span class="caps">60GB</span> <span class="caps">SSD</span> + <span class="caps">1TB</span>
+extra de <span class="caps">SSD</span>. Está no datacenter de San&nbsp;Francisco.</p>
+<p>Nesse servidor rodam a aplicação feita em Django (frontend e <span class="caps">API</span>) e os bancos
+de dados PostgreSQL (utilizado para <a href="https://brasil.io/datasets">hospedar os
+dados</a> e os índices de busca) e Neo4J (utilizado
+para <a href="https://brasil.io/especiais">traçar caminhos entre pessoas e empresas</a>).</p>
+<p>Para o <em>deployment</em> utilizamos o <a href="https://github.com/dokku/dokku">dokku</a> (um
+<em>platform-as-a-service</em> livre) e, com isso, conseguimos subir alterações com um
+simples <code>git push</code> (como no Heroku, porém mais&nbsp;barato).</p>
+<p>Custo: 120 <span class="caps">USD</span> /&nbsp;mês.</p>
+<h2>DigitalOcean Spaces (arquivos&nbsp;estáticos)</h2>
+<p><a href="https://m.do.co/c/5b17037059e9">Digital Ocean Spaces</a> é um serviço de
+hospedagem de arquivos estáticos, similar ao <span class="caps">AWS</span> S3. Está sendo utilizado em
+caráter de testes para hospedar os arquivos estáticos (para quem quer baixar um
+dataset completo) e para os futuros <em>mirrors</em> que teremos. Atualmente o meu
+Google Drive pessoal está sendo utilizado para disponibilizar os arquivos
+completos, mas ele possui limitações e em breve migraremos&nbsp;totalmente.</p>
+<p>Custo: 5 <span class="caps">USD</span> /&nbsp;mês.</p>
+<h2>Servidor na <span class="caps">OVH</span> (+ extra&nbsp;storage)</h2>
+<p>Servidor secundário (dedicado), onde rodamos os programas que coletam, limpam e
+convertem os dados, hospedamos backups e fazemos outros testes.
+Características: Intel(R) Xeon(R) <span class="caps">CPU</span> D-1520 @ 2.20GHz (8 cores), <span class="caps">32GB</span> de <span class="caps">RAM</span>,
+<span class="caps">60GB</span> <span class="caps">HD</span> + extra de <span class="caps">760GB</span>. Está num datacenter no&nbsp;Canadá.</p>
+<p>Como o custo é bem menor, está em nossos planos migrar a hospedagem da
+plataforma para esse servidor dedicado e rodar os scripts coletores em uma <span class="caps">VPS</span>
+mais barata (porém essa migração requer algum&nbsp;trabalho).</p>
+<p>Custo: 89,90 <span class="caps">USD</span> /&nbsp;mês.</p>
+<h2>Hospedagem rocketchat - chat.brasil.io&nbsp;(Heroku)</h2>
+<p>Instância do <a href="https://rocket.chat/">Rocket.Chat</a> que está por trás do
+<a href="https://chat.brasil.io/">chat.brasil.io</a>, onde os colaboradores podem se
+comunicar mais facilmente, com divisão por assunto. Roda em um dyno simples (o
+mais&nbsp;barato).</p>
+<p>Custo: 7,00 <span class="caps">USD</span> /&nbsp;mês.</p>
+<h2>Horas de&nbsp;trabalho</h2>
+<p>Trabalho de desenvolvimento de novos scripts de coleta de dados,
+desenvolvimento de novas funcionalidades na plataforma, manutenção da
+plataforma (verificação de erros, atualização de datasets etc.) e divulgação do
+projeto (eventos, palestras, entrevistas, blog&nbsp;etc.).</p>
+<p>Todas as horas de trabalho na plataforma (por enquanto) são voluntárias e não
+estão sendo pagas porque o projeto atualmente não tem verba disponível (uma de
+nossas metas desse ano é justamente conseguir tornar a plataforma sustentável
+economicamente. Atualmente trabalho em torno de 60 horas mensais (além do
+trabalho de <a href="https://brasil.io/contribuidores">diversos outros voluntários</a>).</p>
+<blockquote>
+<p>Nota: os valores descritos são os cobrados pelos provedores de serviços,
+porém como todos os pagamentos são feitos via cartão de crédito em Dólar o
+valor final pago é de 110,38% do que está descrito (4% de spread + 6,38% de
+<span class="caps">IOF</span>).</p>
+</blockquote>
+    </div>
+  </article>
+  <hr>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function() {
+      this.page.url = 'https://blog.brasil.io/2019/04/17/dissecando-os-custos-e-a-infraestrutura-do-projeto/index.html';
+      this.page.identifier = 'dissecando-os-custos-e-a-infraestrutura-do-projeto';
+    };
+    (function() {
+      var d = document;
+      var s = d.createElement('script');
+      s.src = '//brasilio.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript class="text-muted">
+    Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+  </noscript>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://blog.brasil.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://blog.brasil.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://blog.brasil.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://blog.brasil.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>
