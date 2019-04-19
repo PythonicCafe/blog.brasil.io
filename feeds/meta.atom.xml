@@ -1,5 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Brasil.IO - Blog</title><link href="https://blog.brasil.io/" rel="alternate"></link><link href="https://blog.brasil.io/feeds/meta.atom.xml" rel="self"></link><id>https://blog.brasil.io/</id><updated>2019-04-17T17:30:00-03:00</updated><entry><title>Dissecando os custos (e a infraestrutura) do projeto</title><link href="https://blog.brasil.io/2019/04/17/dissecando-os-custos-e-a-infraestrutura-do-projeto/" rel="alternate"></link><published>2019-04-17T17:30:00-03:00</published><updated>2019-04-17T17:30:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-04-17:2019/04/17/dissecando-os-custos-e-a-infraestrutura-do-projeto/</id><summary type="html">&lt;p&gt;Quando visitamos um site geralmente não temos noção de todo o trabalho e
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Brasil.IO - Blog</title><link href="https://blog.brasil.io/" rel="alternate"></link><link href="https://blog.brasil.io/feeds/meta.atom.xml" rel="self"></link><id>https://blog.brasil.io/</id><updated>2019-04-18T23:05:00-03:00</updated><entry><title>1 Ano de Dados Acessíveis</title><link href="https://blog.brasil.io/2019/04/18/1-ano-de-dados-acessiveis/" rel="alternate"></link><published>2019-04-18T23:05:00-03:00</published><updated>2019-04-18T23:05:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-04-18:2019/04/18/1-ano-de-dados-acessiveis/</id><summary type="html">&lt;p&gt;Tive a &lt;a href="http://whois.domaintools.com/brasil.io"&gt;ideia de criar o Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; há muitos anos, em
+2013&lt;/a&gt;, porém por diversos motivos
+(incluindo mudanças na ideia inicial) o desenvolvimento da plataforma como
+existe hoje foi iniciado somente em 2018 - o pontapé inicial aconteceu após
+&lt;a href="https://speakerfight.com/events/python-sudeste-2018-tutoriais/#libertando-bases-de-dados-publicas"&gt;uma palestra que
+apresentei&lt;/a&gt;
+na &lt;a href="https://2018.pythonsudeste.org/"&gt;Python Sudeste 2018&lt;/a&gt;, em São Paulo:
+algumas das pessoas que assistiram ficaram comovidas com a ideia e se
+voluntariaram a ajudar, daí no evento mesmo já estruturamos algumas&amp;nbsp;coisas.&lt;/p&gt;
+&lt;p&gt;O site foi ao ar alguns dias depois do evento e diversas alterações foram sendo
+feitas, então eu tive que escolher um desses dias para considerar o início do
+projeto; escolhi o dia em que &lt;a href="https://github.com/turicas/brasil.io/commit/9968c8c80bc13c1a5f13557158518d57871a6a5b"&gt;adicionei o código de configuração de
+infraestrutura do
+PostgreSQL&lt;/a&gt;.
+&lt;a href="https://www.postgresql.org/"&gt;PostgreSQL&lt;/a&gt; é um dos mais avançados sistemas de
+gerenciamento de banco de dados, é software livre e peça fundamental no
+&lt;a href="https://brasil.io/"&gt;Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt;: os metadados, os dados e os índices de busca
+de todos os &lt;em&gt;datasets&lt;/em&gt; da plataforma são servidos por ele e, por conta disso,
+resolvi fazer essa&amp;nbsp;homenagem.&lt;/p&gt;
+&lt;p&gt;Nesses últimos 12 meses tivemos algumas conquistas e ainda temos alguns
+desafios pela&amp;nbsp;frente:&lt;/p&gt;
+&lt;h2&gt;Interface&amp;nbsp;Acessível&lt;/h2&gt;
+&lt;p&gt;Apesar de razoavelmente simples, &lt;strong&gt;nossa interface facilita muito o trabalho de
+diversas pessoas&lt;/strong&gt; (que possivelmente não teriam tempo/conhecimento
+técnico/dinheiro suficientes para fazer todo o trabalho de coleta, limpeza,
+conversão e hospedagem dos dados), pois apresenta &lt;em&gt;datasets&lt;/em&gt; com milhões de
+registros de uma maneira rápida, possibilitando filtros, paginação e exportação
+dos resultados (seja baixando como &lt;span class="caps"&gt;CSV&lt;/span&gt; ou através de &lt;a href="https://brasil.io/api/datasets"&gt;nossa
+&lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt;). Além das páginas de &lt;em&gt;datasets&lt;/em&gt;, as
+&lt;a href="http://brasil.io/especiais"&gt;páginas especiais&lt;/a&gt; facilitam o cruzamento entre
+datasets e análises mais profundas, com poucos&amp;nbsp;cliques.&lt;/p&gt;
+&lt;p&gt;Como ponto a melhorar temos a experiência do usuário e usabilidade das&amp;nbsp;páginas.&lt;/p&gt;
+&lt;h2&gt;Datasets&amp;nbsp;Relevantes&lt;/h2&gt;
+&lt;p&gt;Dois &lt;em&gt;datasets&lt;/em&gt; da plataforma são de extrema relevância tanto para jornalistas
+investigativos, cientistas políticos, advogados, ativistas, dentre outros:
+&lt;a href="https://brasil.io/dataset/socios-brasil/socios"&gt;socios-brasil&lt;/a&gt; (contém a lista
+de CNPJs das empresas brasileiras e seus sócios) e
+&lt;a href="https://brasil.io/dataset/eleicoes-brasil/candidatos"&gt;eleicoes-brasil&lt;/a&gt; (contém
+dados de candidaturas, votação, declaração de bens e filiação partidária das
+eleições, desde&amp;nbsp;1996).&lt;/p&gt;
+&lt;p&gt;Por conta de termos esses dados acessíveis possibilitamos diversas matérias
+serem publicadas,&amp;nbsp;como:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.generonumero.media/candidatura-semvoto-eleicoes2018/"&gt;Indício de candidaturas laranjas em nomes de&amp;nbsp;mulheres&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://oglobo.globo.com/sociedade/crise-reduz-abertura-de-novas-igrejas-no-pais-23385508"&gt;Redução da abertura de novas igrejas no&amp;nbsp;país&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://theintercept.com/2018/04/03/exercito-rio-empresa-investigada/"&gt;Operações do Exército no Rio geraram milhões para empresa da &amp;#8220;Farra do&amp;nbsp;Guardanapo&amp;#8221;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Contribuímos também com o desenvolvimento de aplicativos que ajudaram no
+processo&amp;nbsp;eleitoral:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://eleicoes.poder360.com.br/"&gt;Políticos do Brasil&amp;nbsp;(Poder360)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://perfilpolitico.serenata.ai/"&gt;Perfil Político (Open Knowledge Foundation&amp;nbsp;Brasil)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Como ponto a melhorar, precisamos adicionar mais &lt;em&gt;datasets&lt;/em&gt; à plataforma:
+apesar de eu ter criado divesos outros programas de coleta de dados (como
+recentemente um em que extraí os &lt;a href="https://twitter.com/turicas/status/1112491956314259457"&gt;beneficiados da Lei da
+Anistia&lt;/a&gt;), parte deles
+não está disponível porque precisamos melhorar o processo de criação e
+atualização de &lt;em&gt;datasets&lt;/em&gt;, que tem parte&amp;nbsp;manual.&lt;/p&gt;
+&lt;h2&gt;Luta por Dados&amp;nbsp;Abertos&lt;/h2&gt;
+&lt;p&gt;Infelizmente, &lt;strong&gt;nem sempre os dados que precisamos estão disponíveis&lt;/strong&gt; - e
+quando isso acontece tenho duas tarefas: alertar sobre o problema e utilizar a
+&lt;a href="http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm"&gt;Lei de Acesso à
+Informação&lt;/a&gt;
+para resolver a&amp;nbsp;questão.&lt;/p&gt;
+&lt;p&gt;Um caso bastante famoso que teve diversas repercussões foi quando &lt;a href="https://medium.com/serenata/o-dia-que-a-receita-nos-mandou-pagar-r-500-mil-para-ter-dados-p%C3%BAblicos-8e18438f3076"&gt;a Receita
+Federal quis nos cobrar meio milhão de Reais por dados
+públicos&lt;/a&gt;,
+porém diversos outros casos aconteceram (e os processos ainda estão rolando),&amp;nbsp;como:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://twitter.com/turicas/status/1091767340134514690"&gt;Diários Oficiais do Rio de Janeiro não possuem licença de dados abertos (e
+  outras questões)&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://twitter.com/turicas/status/1094069287206248450"&gt;Diários Oficiais de Rondônia não são acessíveis de fora do
+  Brasil&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://twitter.com/turicas/status/1117488008805146625"&gt;&lt;span class="caps"&gt;ALERJ&lt;/span&gt; libera &amp;#8220;dados abertos&amp;#8221; em &lt;span class="caps"&gt;PDF&lt;/span&gt;, dificultando o
+  acesso&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Acredito que esse ativismo seja importante não só para resolver as questões
+pontualmente, mas também para &lt;strong&gt;mudar a cultura do setor público com relação às
+políticas de transparência e dados abertos&lt;/strong&gt;. Utilizo bastante &lt;a href="https://twitter.com/turicas"&gt;minha conta no
+Twitter&lt;/a&gt; e &lt;a href="https://github.com/turicas/slides/tree/gh-pages/brasil.io"&gt;minhas
+palestras&lt;/a&gt; para
+divulgar esses casos (em breve talvez eu faça uma sessão de vídeos contando em
+mais&amp;nbsp;detalhes!).&lt;/p&gt;
+&lt;h2&gt;Comunicação&lt;/h2&gt;
+&lt;p&gt;Por muitas vezes a comunicação da plataforma foi falha, deixando dúvidas sobre
+seu funcionamento, processo de desenvolvimento, atualizações etc. Para suprir
+essa necessidade criamos uma &lt;em&gt;newsletter&lt;/em&gt; e, recentemente, &lt;a href="https://blog.brasil.io/2019/04/01/ola-brasil/"&gt;nosso
+blog&lt;/a&gt; (que em breve terá mais
+publicações técnicas). Aos poucos estamos mudando as páginas da plataforma para
+comunicarem melhor o que gostaríamos (que inclusive irá diminuir o fluxo que
+recebo de emails com&amp;nbsp;dúvidas).&lt;/p&gt;
+&lt;h2&gt;Financiamento&lt;/h2&gt;
+&lt;p&gt;Durante os 12 últimos meses foquei bastante na questão técnica (criar novos
+programas coletores de dados, melhorar o código da plataforma) e divulgação
+(palestras) e acabei deixando de lado a questão financeira. Hoje &lt;strong&gt;o projeto é
+deficitário&lt;/strong&gt;: ainda não arrecadamos o suficiente em doações para pagar a
+infraestrutura (&lt;a href="https://blog.brasil.io/2019/04/17/dissecando-os-custos-e-a-infraestrutura-do-projeto/"&gt;veja sobre os custos do
+projeto&lt;/a&gt;)
+e, por isso, mantenho boa parte dos custos.
+Precisamos de em torno de &lt;strong&gt;R$ 1.100,00 mensais&lt;/strong&gt; (varia conforme a cotação do
+dólar - valores em abril de 2019) apenas para manter a plataforma online (esse
+valor não contempla horas de trabalho) e por enquanto &lt;a href="https://apoia.se/brasilio"&gt;nossa campanha de
+financiamento coletivo&lt;/a&gt; recebe metade desse&amp;nbsp;valor.&lt;/p&gt;
+&lt;p&gt;Estou buscando instituições que acreditem nos valores do projeto e queiram
+apoiá-lo (seja em forma de apoios voluntários ou &lt;em&gt;grants&lt;/em&gt;/editais com algum
+entregável) e também clientes de projetos de &lt;em&gt;Web scraping&lt;/em&gt; de dados públicos
+que paguem o tempo de desenvolvimento de novos coletores ou a melhoria dos já
+existentes. Se você puder ajudar ou conhece alguém que possa, por favor &lt;a href="https://brasil.io/contato"&gt;entre
+em contato&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Conclusão&lt;/h2&gt;
+&lt;p&gt;Os últimos 12 meses foram maravilhosos, a plataforma se mostrou madura e
+geramos diversos impactos positivos, porém ainda temos muito o que melhorar
+principalmente no que diz respeito à sustentabilidade financeira do projeto.
+Para os próximos 12 meses estamos abertos a
+&lt;a href="https://brasil.io/colabore"&gt;colaborações&lt;/a&gt; para criar um ecossistema de dados
+abertos acessíveis que facilite o surgimento de diversas iniciativas que tem
+como objetivo exercer &lt;a href="https://pt.wikipedia.org/wiki/Controlo_social"&gt;controle
+social&lt;/a&gt;. &lt;strong&gt;Vida longa ao
+Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;!&lt;/strong&gt;&lt;/p&gt;</summary><category term="história"></category><category term="opendata"></category><category term="crowdfunding"></category></entry><entry><title>Dissecando os custos (e a infraestrutura) do projeto</title><link href="https://blog.brasil.io/2019/04/17/dissecando-os-custos-e-a-infraestrutura-do-projeto/" rel="alternate"></link><published>2019-04-17T17:30:00-03:00</published><updated>2019-04-17T17:30:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-04-17:2019/04/17/dissecando-os-custos-e-a-infraestrutura-do-projeto/</id><summary type="html">&lt;p&gt;Quando visitamos um site geralmente não temos noção de todo o trabalho e
 infraestrutura envolvidos para mantê-lo online; por trás dos dados apresentados
 no &lt;a href="https://brasil.io/"&gt;Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt; existem diversos programas que fazem
 raspagem de sites (&lt;em&gt;Web scraping&lt;/em&gt;), limpeza de dados, além de outros que

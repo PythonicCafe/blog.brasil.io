@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  1 Ano de Dados Acessíveis | Brasil.IO - Blog
+</title>
+  <link rel="canonical" href="https://blog.brasil.io/2019/04/18/1-ano-de-dados-acessiveis/index.html">
+
+
+  <link rel="stylesheet" href="https://blog.brasil.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://blog.brasil.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://blog.brasil.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://blog.brasil.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://blog.brasil.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/rss+xml" title="Full RSS Feed"
+        href="https://blog.brasil.io/feed.rss">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://blog.brasil.io/feeds/meta.atom.xml">  
+  <meta name="description" content="A ideia do Brasil.IO surgiu em 2013, mas o projeto como é conhecido hoje está no ar há mais ou menos 1 ano. Veja algumas conquistas passadas e desafios fututos.">
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o);
+      a.async = 1;
+      a.src = g;
+      m = s.getElementsByTagName(o)[0];
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-117698282-2', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+  <div class="col-sm-12">
+    <div class="col-sm-12">
+      <a href="https://blog.brasil.io/">
+        <img class="img-fluid rounded" src=https://blog.brasil.io/theme/images/logo-blog.brasil.io.png alt="Brasil.IO - Blog">
+      </a>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-9">
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://blog.brasil.io/" target="_blank">Blog</a></li>
+            <li class="list-inline-item"><a href="https://brasil.io/datasets" target="_blank">Datasets</a></li>
+            <li class="list-inline-item"><a href="https://brasil.io/colabore" target="_blank">Colabore</a></li>
+            <li class="list-inline-item"><a href="https://brasil.io/contato" target="_blank">Contato</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3 text-right">
+        <a href="https://blog.brasil.io/feed.rss"><i class="fa fa-rss"></i></a>
+        <a href="https://github.com/turicas/blog.brasil.io"><i class="fa fa-github"></i></a>
+      </div>
+    </div>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  1 Ano de Dados&nbsp;Acessíveis
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2019-04-18T23:05:00-03:00">
+          <i class="fa fa-clock-o"></i>
+          qui 18 abril 2019
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://blog.brasil.io/category/meta.html">meta</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://blog.brasil.io/author/alvaro-justen.html">Álvaro Justen</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://blog.brasil.io/tag/historia.html">#história</a>,               <a href="https://blog.brasil.io/tag/opendata.html">#opendata</a>,               <a href="https://blog.brasil.io/tag/crowdfunding.html">#crowdfunding</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Tive a <a href="http://whois.domaintools.com/brasil.io">ideia de criar o Brasil.<span class="caps">IO</span> há muitos anos, em
+2013</a>, porém por diversos motivos
+(incluindo mudanças na ideia inicial) o desenvolvimento da plataforma como
+existe hoje foi iniciado somente em 2018 - o pontapé inicial aconteceu após
+<a href="https://speakerfight.com/events/python-sudeste-2018-tutoriais/#libertando-bases-de-dados-publicas">uma palestra que
+apresentei</a>
+na <a href="https://2018.pythonsudeste.org/">Python Sudeste 2018</a>, em São Paulo:
+algumas das pessoas que assistiram ficaram comovidas com a ideia e se
+voluntariaram a ajudar, daí no evento mesmo já estruturamos algumas&nbsp;coisas.</p>
+<p>O site foi ao ar alguns dias depois do evento e diversas alterações foram sendo
+feitas, então eu tive que escolher um desses dias para considerar o início do
+projeto; escolhi o dia em que <a href="https://github.com/turicas/brasil.io/commit/9968c8c80bc13c1a5f13557158518d57871a6a5b">adicionei o código de configuração de
+infraestrutura do
+PostgreSQL</a>.
+<a href="https://www.postgresql.org/">PostgreSQL</a> é um dos mais avançados sistemas de
+gerenciamento de banco de dados, é software livre e peça fundamental no
+<a href="https://brasil.io/">Brasil.<span class="caps">IO</span></a>: os metadados, os dados e os índices de busca
+de todos os <em>datasets</em> da plataforma são servidos por ele e, por conta disso,
+resolvi fazer essa&nbsp;homenagem.</p>
+<p>Nesses últimos 12 meses tivemos algumas conquistas e ainda temos alguns
+desafios pela&nbsp;frente:</p>
+<h2>Interface&nbsp;Acessível</h2>
+<p>Apesar de razoavelmente simples, <strong>nossa interface facilita muito o trabalho de
+diversas pessoas</strong> (que possivelmente não teriam tempo/conhecimento
+técnico/dinheiro suficientes para fazer todo o trabalho de coleta, limpeza,
+conversão e hospedagem dos dados), pois apresenta <em>datasets</em> com milhões de
+registros de uma maneira rápida, possibilitando filtros, paginação e exportação
+dos resultados (seja baixando como <span class="caps">CSV</span> ou através de <a href="https://brasil.io/api/datasets">nossa
+<span class="caps">API</span></a>). Além das páginas de <em>datasets</em>, as
+<a href="http://brasil.io/especiais">páginas especiais</a> facilitam o cruzamento entre
+datasets e análises mais profundas, com poucos&nbsp;cliques.</p>
+<p>Como ponto a melhorar temos a experiência do usuário e usabilidade das&nbsp;páginas.</p>
+<h2>Datasets&nbsp;Relevantes</h2>
+<p>Dois <em>datasets</em> da plataforma são de extrema relevância tanto para jornalistas
+investigativos, cientistas políticos, advogados, ativistas, dentre outros:
+<a href="https://brasil.io/dataset/socios-brasil/socios">socios-brasil</a> (contém a lista
+de CNPJs das empresas brasileiras e seus sócios) e
+<a href="https://brasil.io/dataset/eleicoes-brasil/candidatos">eleicoes-brasil</a> (contém
+dados de candidaturas, votação, declaração de bens e filiação partidária das
+eleições, desde&nbsp;1996).</p>
+<p>Por conta de termos esses dados acessíveis possibilitamos diversas matérias
+serem publicadas,&nbsp;como:</p>
+<ul>
+<li><a href="http://www.generonumero.media/candidatura-semvoto-eleicoes2018/">Indício de candidaturas laranjas em nomes de&nbsp;mulheres</a></li>
+<li><a href="https://oglobo.globo.com/sociedade/crise-reduz-abertura-de-novas-igrejas-no-pais-23385508">Redução da abertura de novas igrejas no&nbsp;país</a></li>
+<li><a href="https://theintercept.com/2018/04/03/exercito-rio-empresa-investigada/">Operações do Exército no Rio geraram milhões para empresa da &#8220;Farra do&nbsp;Guardanapo&#8221;</a></li>
+</ul>
+<p>Contribuímos também com o desenvolvimento de aplicativos que ajudaram no
+processo&nbsp;eleitoral:</p>
+<ul>
+<li><a href="https://eleicoes.poder360.com.br/">Políticos do Brasil&nbsp;(Poder360)</a></li>
+<li><a href="https://perfilpolitico.serenata.ai/">Perfil Político (Open Knowledge Foundation&nbsp;Brasil)</a></li>
+</ul>
+<p>Como ponto a melhorar, precisamos adicionar mais <em>datasets</em> à plataforma:
+apesar de eu ter criado divesos outros programas de coleta de dados (como
+recentemente um em que extraí os <a href="https://twitter.com/turicas/status/1112491956314259457">beneficiados da Lei da
+Anistia</a>), parte deles
+não está disponível porque precisamos melhorar o processo de criação e
+atualização de <em>datasets</em>, que tem parte&nbsp;manual.</p>
+<h2>Luta por Dados&nbsp;Abertos</h2>
+<p>Infelizmente, <strong>nem sempre os dados que precisamos estão disponíveis</strong> - e
+quando isso acontece tenho duas tarefas: alertar sobre o problema e utilizar a
+<a href="http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm">Lei de Acesso à
+Informação</a>
+para resolver a&nbsp;questão.</p>
+<p>Um caso bastante famoso que teve diversas repercussões foi quando <a href="https://medium.com/serenata/o-dia-que-a-receita-nos-mandou-pagar-r-500-mil-para-ter-dados-p%C3%BAblicos-8e18438f3076">a Receita
+Federal quis nos cobrar meio milhão de Reais por dados
+públicos</a>,
+porém diversos outros casos aconteceram (e os processos ainda estão rolando),&nbsp;como:</p>
+<ul>
+<li><a href="https://twitter.com/turicas/status/1091767340134514690">Diários Oficiais do Rio de Janeiro não possuem licença de dados abertos (e
+  outras questões)</a>,</li>
+<li><a href="https://twitter.com/turicas/status/1094069287206248450">Diários Oficiais de Rondônia não são acessíveis de fora do
+  Brasil</a>,</li>
+<li><a href="https://twitter.com/turicas/status/1117488008805146625"><span class="caps">ALERJ</span> libera &#8220;dados abertos&#8221; em <span class="caps">PDF</span>, dificultando o
+  acesso</a>.</li>
+</ul>
+<p>Acredito que esse ativismo seja importante não só para resolver as questões
+pontualmente, mas também para <strong>mudar a cultura do setor público com relação às
+políticas de transparência e dados abertos</strong>. Utilizo bastante <a href="https://twitter.com/turicas">minha conta no
+Twitter</a> e <a href="https://github.com/turicas/slides/tree/gh-pages/brasil.io">minhas
+palestras</a> para
+divulgar esses casos (em breve talvez eu faça uma sessão de vídeos contando em
+mais&nbsp;detalhes!).</p>
+<h2>Comunicação</h2>
+<p>Por muitas vezes a comunicação da plataforma foi falha, deixando dúvidas sobre
+seu funcionamento, processo de desenvolvimento, atualizações etc. Para suprir
+essa necessidade criamos uma <em>newsletter</em> e, recentemente, <a href="https://blog.brasil.io/2019/04/01/ola-brasil/">nosso
+blog</a> (que em breve terá mais
+publicações técnicas). Aos poucos estamos mudando as páginas da plataforma para
+comunicarem melhor o que gostaríamos (que inclusive irá diminuir o fluxo que
+recebo de emails com&nbsp;dúvidas).</p>
+<h2>Financiamento</h2>
+<p>Durante os 12 últimos meses foquei bastante na questão técnica (criar novos
+programas coletores de dados, melhorar o código da plataforma) e divulgação
+(palestras) e acabei deixando de lado a questão financeira. Hoje <strong>o projeto é
+deficitário</strong>: ainda não arrecadamos o suficiente em doações para pagar a
+infraestrutura (<a href="https://blog.brasil.io/2019/04/17/dissecando-os-custos-e-a-infraestrutura-do-projeto/">veja sobre os custos do
+projeto</a>)
+e, por isso, mantenho boa parte dos custos.
+Precisamos de em torno de <strong>R$ 1.100,00 mensais</strong> (varia conforme a cotação do
+dólar - valores em abril de 2019) apenas para manter a plataforma online (esse
+valor não contempla horas de trabalho) e por enquanto <a href="https://apoia.se/brasilio">nossa campanha de
+financiamento coletivo</a> recebe metade desse&nbsp;valor.</p>
+<p>Estou buscando instituições que acreditem nos valores do projeto e queiram
+apoiá-lo (seja em forma de apoios voluntários ou <em>grants</em>/editais com algum
+entregável) e também clientes de projetos de <em>Web scraping</em> de dados públicos
+que paguem o tempo de desenvolvimento de novos coletores ou a melhoria dos já
+existentes. Se você puder ajudar ou conhece alguém que possa, por favor <a href="https://brasil.io/contato">entre
+em contato</a>.</p>
+<h2>Conclusão</h2>
+<p>Os últimos 12 meses foram maravilhosos, a plataforma se mostrou madura e
+geramos diversos impactos positivos, porém ainda temos muito o que melhorar
+principalmente no que diz respeito à sustentabilidade financeira do projeto.
+Para os próximos 12 meses estamos abertos a
+<a href="https://brasil.io/colabore">colaborações</a> para criar um ecossistema de dados
+abertos acessíveis que facilite o surgimento de diversas iniciativas que tem
+como objetivo exercer <a href="https://pt.wikipedia.org/wiki/Controlo_social">controle
+social</a>. <strong>Vida longa ao
+Brasil.<span class="caps">IO</span>!</strong></p>
+    </div>
+  </article>
+  <hr>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function() {
+      this.page.url = 'https://blog.brasil.io/2019/04/18/1-ano-de-dados-acessiveis/index.html';
+      this.page.identifier = '1-ano-de-dados-acessiveis';
+    };
+    (function() {
+      var d = document;
+      var s = d.createElement('script');
+      s.src = '//brasilio.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript class="text-muted">
+    Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+  </noscript>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://blog.brasil.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://blog.brasil.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://blog.brasil.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://blog.brasil.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>
