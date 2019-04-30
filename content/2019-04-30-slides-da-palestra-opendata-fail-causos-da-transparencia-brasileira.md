@@ -41,11 +41,11 @@ projeto](https://brasil.io/colabore).
 A apresentação não foi filmada, mas os slides estão disponíveis [em formato
 HTML](http://turicas.info/slides/brasil.io/causos-da-transparencia/) e também
 [no
-slideshare](https://www.slideshare.net/turicas/opendata-fail-causos-da-transparncia-brasileira)
+slideshare](https://www.slideshare.net/turicas/opendata-fail-causos-da-transparncia-brasileira-142967375)
 (veja abaixo).
 
 
-<iframe src="//www.slideshare.net/slideshow/embed_code/key/1V3iWZ1Eayg8PH" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/7ZTByBwU4oxZx" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
 
 
 [Do nosso manifesto](https://brasil.io/manifesto): **Restringir acesso a dados públicos é elitizar a democracia.**
