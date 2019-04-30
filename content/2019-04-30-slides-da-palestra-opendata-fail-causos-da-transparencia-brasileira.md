@@ -16,6 +16,8 @@ que afetam diretamente a [transparência
 pública](https://www.cgu.gov.br/assuntos/transparencia-publica) e o [controle
 social](https://www.cgu.gov.br/assuntos/controle-social).
 
+![Álvaro Justen apresentando os causos da transparência brasileira]({filename}/images/2019-04-29-alvaro-justen-cerveja-com-dados-cwb-4.jpg)
+
 Os causos que contei retratam os seguintes problemas:
 
 - Sites que disponibilizam dados sem criptografia (HTTPS)

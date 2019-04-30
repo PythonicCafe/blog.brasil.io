@@ -7,7 +7,7 @@ SITENAME = "Brasil.IO - Blog"
 SITESUBTITLE = "Dados abertos para mais democracia"
 SITEURL = "https://blog.brasil.io"
 SITEIMAGE = "/theme/images/logo-blog.brasil.io.png"
-STATIC_PATHS = ['extra/CNAME']
+STATIC_PATHS = ['extra/CNAME', 'images']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 
 PATH = "content"
