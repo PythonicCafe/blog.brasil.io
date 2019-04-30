@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Brasil.IO - Blog</title><link>https://blog.brasil.io/</link><description>Dados abertos para mais democracia</description><lastBuildDate>Thu, 18 Apr 2019 23:05:00 -0300</lastBuildDate><item><title>1 Ano de Dados Acessíveis</title><link>https://blog.brasil.io/2019/04/18/1-ano-de-dados-acessiveis/</link><description>&lt;p&gt;Tive a &lt;a href="http://whois.domaintools.com/brasil.io"&gt;ideia de criar o Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; há muitos anos, em
+<rss version="2.0"><channel><title>Brasil.IO - Blog</title><link>https://blog.brasil.io/</link><description>Dados abertos para mais democracia</description><lastBuildDate>Tue, 30 Apr 2019 12:00:00 -0300</lastBuildDate><item><title>Slides da Palestra “#opendata #fail: Causos da Transparência Brasileira”</title><link>https://blog.brasil.io/2019/04/30/slides-da-palestra-opendata-fail-causos-da-transparencia-brasileira/</link><description>&lt;p&gt;Ontem (29/04, meu aniversário!) aconteceu em Curitiba/&lt;span class="caps"&gt;PR&lt;/span&gt; o &lt;a href="https://www.meetup.com/Cerveja-cm-Dados/events/260152313/"&gt;Cerveja com Dados
+&lt;span class="caps"&gt;CWB&lt;/span&gt; #4&lt;/a&gt;, onde
+apresentei uma das palestras, contando de maneira cômica &lt;strong&gt;problemas
+relacionados à &lt;a href="https://pt.wikipedia.org/wiki/Lei_de_acesso_%C3%A0_informa%C3%A7%C3%A3o"&gt;Lei de Acesso à
+Informação&lt;/a&gt;&lt;/strong&gt;
+que afetam diretamente a &lt;a href="https://www.cgu.gov.br/assuntos/transparencia-publica"&gt;transparência
+pública&lt;/a&gt; e o &lt;a href="https://www.cgu.gov.br/assuntos/controle-social"&gt;controle
+social&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Os causos que contei retratam os seguintes&amp;nbsp;problemas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sites que disponibilizam dados sem criptografia (&lt;span class="caps"&gt;HTTPS&lt;/span&gt;)&lt;/li&gt;
+&lt;li&gt;Bloqueio de portais de transparência por região geográfica, impossibilitando
+  o acesso de fora do&amp;nbsp;Brasil&lt;/li&gt;
+&lt;li&gt;Arquivos que desaparecem dos&amp;nbsp;sites&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Download&lt;/em&gt; de arquivos muito lentos (podendo demorar&amp;nbsp;dias)&lt;/li&gt;
+&lt;li&gt;Licenças que não permitem redistribuição e uso comercial (ou seja, não é dado&amp;nbsp;aberto)&lt;/li&gt;
+&lt;li&gt;Arquivos disponíveis apenas em formatos&amp;nbsp;proprietários&lt;/li&gt;
+&lt;li&gt;Arquivos disponíveis apenas em formatos não&amp;nbsp;estruturados&lt;/li&gt;
+&lt;li&gt;Arquivos que não respeitam o&amp;nbsp;formato&lt;/li&gt;
+&lt;li&gt;Arquivos não padronizados ao longo do&amp;nbsp;tempo&lt;/li&gt;
+&lt;li&gt;Dados&amp;nbsp;incorretos&lt;/li&gt;
+&lt;li&gt;Cobrança por dados que deveriam ser&amp;nbsp;gratuitos&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Esses são alguns dos problemas que enfrentamos diariamente para disponibilizar
+dados acessíveis aqui no Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; e acreditamos que &lt;strong&gt;dar visibilidade a esses
+problemas é parte da solução&lt;/strong&gt;. Você considera esse problema importante de ser
+resolvido e quer ajudar? Veja &lt;a href="https://brasil.io/colabore"&gt;como colaborar com nosso
+projeto&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;A apresentação não foi filmada, mas os slides estão disponíveis &lt;a href="http://turicas.info/slides/brasil.io/causos-da-transparencia/"&gt;em formato
+&lt;span class="caps"&gt;HTML&lt;/span&gt;&lt;/a&gt; e também
+&lt;a href="https://www.slideshare.net/turicas/opendata-fail-causos-da-transparncia-brasileira"&gt;no
+slideshare&lt;/a&gt;
+(veja&amp;nbsp;abaixo).&lt;/p&gt;
+&lt;iframe src="//www.slideshare.net/slideshow/embed_code/key/1V3iWZ1Eayg8PH" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen&gt; &lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href="https://brasil.io/manifesto"&gt;Do nosso manifesto&lt;/a&gt;: &lt;strong&gt;Restringir acesso a dados públicos é elitizar a&amp;nbsp;democracia.&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Álvaro Justen</dc:creator><pubDate>Tue, 30 Apr 2019 12:00:00 -0300</pubDate><guid isPermaLink="false">tag:blog.brasil.io,2019-04-30:2019/04/30/slides-da-palestra-opendata-fail-causos-da-transparencia-brasileira/</guid><category>opendata</category><category>fail</category><category>datascience</category></item><item><title>1 Ano de Dados Acessíveis</title><link>https://blog.brasil.io/2019/04/18/1-ano-de-dados-acessiveis/</link><description>&lt;p&gt;Tive a &lt;a href="http://whois.domaintools.com/brasil.io"&gt;ideia de criar o Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; há muitos anos, em
 2013&lt;/a&gt;, porém por diversos motivos
 (incluindo mudanças na ideia inicial) o desenvolvimento da plataforma como
 existe hoje foi iniciado somente em 2018 - o pontapé inicial aconteceu após
