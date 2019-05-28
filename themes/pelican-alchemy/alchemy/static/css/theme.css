@@ -125,3 +125,60 @@ hr {
     margin-right: 10px;
   }
 }
+
+caption {
+  color: #777777;
+  display: table-caption;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  text-align: -webkit-center;
+  text-align: left;
+}
+
+table {
+  background: #ffffff;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: none;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+
+thead {
+  border-bottom: 1px solid black;
+  border-color: inherit;
+  vertical-align: bottom;
+}
+th {
+  border: none;
+  font-weight: bold;
+  line-height: normal;
+  max-width: none;
+  padding: 0.5em 0.5em;
+  text-align: right;
+  vertical-align: middle;
+  white-space: normal;
+}
+
+tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+tbody tr:nth-child(even) {
+  background: #ffffff;
+}
+tbody {
+  border-color: inherit;
+  display: table-row-group;
+  vertical-align: middle;
+}
+
+th, td {
+  border: none;
+  line-height: normal;
+  max-width: none;
+  padding: 0.5em 0.5em;
+  text-align: right;
+  vertical-align: middle;
+  white-space: normal;
+}
