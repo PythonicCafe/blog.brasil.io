@@ -1,5 +1,1587 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Brasil.IO - Blog</title><link>https://blog.brasil.io/</link><description>Dados abertos para mais democracia</description><lastBuildDate>Tue, 30 Apr 2019 12:00:00 -0300</lastBuildDate><item><title>Slides da Palestra “#opendata #fail: Causos da Transparência Brasileira”</title><link>https://blog.brasil.io/2019/04/30/slides-da-palestra-opendata-fail-causos-da-transparencia-brasileira/</link><description>&lt;p&gt;Ontem (29/04, meu aniversário!) aconteceu em Curitiba/&lt;span class="caps"&gt;PR&lt;/span&gt; o &lt;a href="https://www.meetup.com/Cerveja-cm-Dados/events/260152313/"&gt;Cerveja com Dados
+<rss version="2.0"><channel><title>Brasil.IO - Blog</title><link>https://blog.brasil.io/</link><description>Dados abertos para mais democracia</description><lastBuildDate>Tue, 28 May 2019 00:20:00 -0300</lastBuildDate><item><title>Identificando Partidos que Mudaram de Nome</title><link>https://blog.brasil.io/2019/05/28/identificando-partidos-que-mudaram-de-nome/</link><description>&lt;style type="text/css"&gt;/*!
+*
+* IPython notebook
+*
+*/
+/* &lt;span class="caps"&gt;CSS&lt;/span&gt; font colors for translated &lt;span class="caps"&gt;ANSI&lt;/span&gt; escape sequences */
+/* The color values are a mix of
+   http://www.xcolors.net/dl/baskerville-ivorylight and
+   http://www.xcolors.net/dl/euphrasia */
+.ansi-black-fg {
+  color: #&lt;span class="caps"&gt;3E424D&lt;/span&gt;;
+}
+.ansi-black-bg {
+  background-color: #&lt;span class="caps"&gt;3E424D&lt;/span&gt;;
+}
+.ansi-black-intense-fg {
+  color: #282C36;
+}
+.ansi-black-intense-bg {
+  background-color: #282C36;
+}
+.ansi-red-fg {
+  color: #&lt;span class="caps"&gt;E75C58&lt;/span&gt;;
+}
+.ansi-red-bg {
+  background-color: #&lt;span class="caps"&gt;E75C58&lt;/span&gt;;
+}
+.ansi-red-intense-fg {
+  color: #&lt;span class="caps"&gt;B22B31&lt;/span&gt;;
+}
+.ansi-red-intense-bg {
+  background-color: #&lt;span class="caps"&gt;B22B31&lt;/span&gt;;
+}
+.ansi-green-fg {
+  color: #00A250;
+}
+.ansi-green-bg {
+  background-color: #00A250;
+}
+.ansi-green-intense-fg {
+  color: #007427;
+}
+.ansi-green-intense-bg {
+  background-color: #007427;
+}
+.ansi-yellow-fg {
+  color: #&lt;span class="caps"&gt;DDB62B&lt;/span&gt;;
+}
+.ansi-yellow-bg {
+  background-color: #&lt;span class="caps"&gt;DDB62B&lt;/span&gt;;
+}
+.ansi-yellow-intense-fg {
+  color: #&lt;span class="caps"&gt;B27D12&lt;/span&gt;;
+}
+.ansi-yellow-intense-bg {
+  background-color: #&lt;span class="caps"&gt;B27D12&lt;/span&gt;;
+}
+.ansi-blue-fg {
+  color: #&lt;span class="caps"&gt;208FFB&lt;/span&gt;;
+}
+.ansi-blue-bg {
+  background-color: #&lt;span class="caps"&gt;208FFB&lt;/span&gt;;
+}
+.ansi-blue-intense-fg {
+  color: #&lt;span class="caps"&gt;0065CA&lt;/span&gt;;
+}
+.ansi-blue-intense-bg {
+  background-color: #&lt;span class="caps"&gt;0065CA&lt;/span&gt;;
+}
+.ansi-magenta-fg {
+  color: #&lt;span class="caps"&gt;D160C4&lt;/span&gt;;
+}
+.ansi-magenta-bg {
+  background-color: #&lt;span class="caps"&gt;D160C4&lt;/span&gt;;
+}
+.ansi-magenta-intense-fg {
+  color: #A03196;
+}
+.ansi-magenta-intense-bg {
+  background-color: #A03196;
+}
+.ansi-cyan-fg {
+  color: #&lt;span class="caps"&gt;60C6C8&lt;/span&gt;;
+}
+.ansi-cyan-bg {
+  background-color: #&lt;span class="caps"&gt;60C6C8&lt;/span&gt;;
+}
+.ansi-cyan-intense-fg {
+  color: #&lt;span class="caps"&gt;258F8F&lt;/span&gt;;
+}
+.ansi-cyan-intense-bg {
+  background-color: #&lt;span class="caps"&gt;258F8F&lt;/span&gt;;
+}
+.ansi-white-fg {
+  color: #&lt;span class="caps"&gt;C5C1B4&lt;/span&gt;;
+}
+.ansi-white-bg {
+  background-color: #&lt;span class="caps"&gt;C5C1B4&lt;/span&gt;;
+}
+.ansi-white-intense-fg {
+  color: #&lt;span class="caps"&gt;A1A6B2&lt;/span&gt;;
+}
+.ansi-white-intense-bg {
+  background-color: #&lt;span class="caps"&gt;A1A6B2&lt;/span&gt;;
+}
+.ansi-default-inverse-fg {
+  color: #&lt;span class="caps"&gt;FFFFFF&lt;/span&gt;;
+}
+.ansi-default-inverse-bg {
+  background-color: #000000;
+}
+.ansi-bold {
+  font-weight: bold;
+}
+.ansi-underline {
+  text-decoration: underline;
+}
+/* The following styles are deprecated an will be removed in a future version */
+.ansibold {
+  font-weight: bold;
+}
+.ansi-inverse {
+  outline: 0.5px dotted;
+}
+/* use dark versions for foreground, to improve visibility */
+.ansiblack {
+  color: black;
+}
+.ansired {
+  color: darkred;
+}
+.ansigreen {
+  color: darkgreen;
+}
+.ansiyellow {
+  color: #c4a000;
+}
+.ansiblue {
+  color: darkblue;
+}
+.ansipurple {
+  color: darkviolet;
+}
+.ansicyan {
+  color: steelblue;
+}
+.ansigray {
+  color: gray;
+}
+/* and light for background, for the same reason */
+.ansibgblack {
+  background-color: black;
+}
+.ansibgred {
+  background-color: red;
+}
+.ansibggreen {
+  background-color: green;
+}
+.ansibgyellow {
+  background-color: yellow;
+}
+.ansibgblue {
+  background-color: blue;
+}
+.ansibgpurple {
+  background-color: magenta;
+}
+.ansibgcyan {
+  background-color: cyan;
+}
+.ansibggray {
+  background-color: gray;
+}
+div.cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  width: 100%;
+  padding: 5px;
+  /* This acts as a spacer between cells, that is outside the border */
+  margin: 0px;
+  outline: none;
+  position: relative;
+  overflow: visible;
+}
+div.cell:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: transparent;
+}
+div.cell.jupyter-soft-selected {
+  border-left-color: #&lt;span class="caps"&gt;E3F2FD&lt;/span&gt;;
+  border-left-width: 1px;
+  padding-left: 5px;
+  border-right-color: #&lt;span class="caps"&gt;E3F2FD&lt;/span&gt;;
+  border-right-width: 1px;
+  background: #&lt;span class="caps"&gt;E3F2FD&lt;/span&gt;;
+}
+@media print {
+  div.cell.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+div.cell.selected,
+div.cell.selected.jupyter-soft-selected {
+  border-color: #ababab;
+}
+div.cell.selected:before,
+div.cell.selected.jupyter-soft-selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #&lt;span class="caps"&gt;42A5F5&lt;/span&gt;;
+}
+@media print {
+  div.cell.selected,
+  div.cell.selected.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+.edit_mode div.cell.selected {
+  border-color: #&lt;span class="caps"&gt;66BB6A&lt;/span&gt;;
+}
+.edit_mode div.cell.selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #&lt;span class="caps"&gt;66BB6A&lt;/span&gt;;
+}
+@media print {
+  .edit_mode div.cell.selected {
+    border-color: transparent;
+  }
+}
+.prompt {
+  /* This needs to be wide enough for 3 digit prompt numbers: In[100]: */
+  min-width: 14ex;
+  /* This padding is tuned to match the padding on the CodeMirror editor. */
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace;
+  text-align: right;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+  /* Don't highlight prompt number selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Use default cursor */
+  cursor: default;
+}
+@media (max-width: 540px) {
+  .prompt {
+    text-align: left;
+  }
+}
+div.inner_cell {
+  min-width: 0;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_area {
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+  background: #f7f7f7;
+  line-height: 1.21429em;
+}
+/* This is needed so that empty prompt areas can collapse to zero height when there
+   is no content in the output_subarea and the prompt. The main purpose of this is
+   to make sure that empty JavaScript output_subareas have no height. */
+div.prompt:empty {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+div.unrecognized_cell {
+  padding: 5px 5px 5px 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.unrecognized_cell .inner_cell {
+  border-radius: 2px;
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+  border: 1px solid #cfcfcf;
+  background: #eaeaea;
+}
+div.unrecognized_cell .inner_cell a {
+  color: inherit;
+  text-decoration: none;
+}
+div.unrecognized_cell .inner_cell a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+@media (max-width: 540px) {
+  div.unrecognized_cell &gt; div.prompt {
+    display: none;
+  }
+}
+div.code_cell {
+  /* avoid page breaking on code cells when printing */
+}
+@media print {
+  div.code_cell {
+    page-break-inside: avoid;
+  }
+}
+/* any special styling for code cells that are currently running goes here */
+div.input {
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.input {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_prompt {
+  color: #&lt;span class="caps"&gt;303F9F&lt;/span&gt;;
+  border-top: 1px solid transparent;
+}
+div.input_area &gt; div.highlight {
+  margin: 0.4em;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+div.input_area &gt; div.highlight &gt; pre {
+  margin: 0px;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+/* The following gets added to the &lt;head&gt; if it is detected that the user has a
+ * monospace font with inconsistent normal/bold/italic height.  See
+ * notebookmain.js.  Such fonts will have keywords vertically offset with
+ * respect to the rest of the text.  The user should select a better font.
+ * See: https://github.com/ipython/ipython/issues/1503
+ *
+ * .CodeMirror span {
+ *      vertical-align: bottom;
+ * }
+ */
+.CodeMirror {
+  line-height: 1.21429em;
+  /* Changed from 1em to our global default */
+  font-size: 14px;
+  height: auto;
+  /* Changed to auto to autogrow */
+  background: none;
+  /* Changed from white to allow our bg to show through */
+}
+.CodeMirror-scroll {
+  /*  The CodeMirror docs are a bit fuzzy on if overflow-y should be hidden or visible.*/
+  /*  We have found that if it is visible, vertical scrollbars appear with font size changes.*/
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.CodeMirror-lines {
+  /* In &lt;span class="caps"&gt;CM2&lt;/span&gt;, this used to be 0.4em, but in &lt;span class="caps"&gt;CM3&lt;/span&gt; it went to 4px. We need the em value because */
+  /* we have set a different line-height and want this to scale with that. */
+  /* Note that this should set vertical padding only, since CodeMirror assumes
+       that horizontal padding will be set on CodeMirror pre */
+  padding: 0.4em 0;
+}
+.CodeMirror-linenumber {
+  padding: 0 8px 0 4px;
+}
+.CodeMirror-gutters {
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+.CodeMirror pre {
+  /* In &lt;span class="caps"&gt;CM3&lt;/span&gt; this went to 4px from 0 in &lt;span class="caps"&gt;CM2&lt;/span&gt;. This sets horizontal padding only,
+    use .CodeMirror-lines for vertical */
+  padding: 0 0.4em;
+  border: 0;
+  border-radius: 0;
+}
+.CodeMirror-cursor {
+  border-left: 1.4px solid black;
+}
+@media screen and (min-width: 2138px) and (max-width: 4319px) {
+  .CodeMirror-cursor {
+    border-left: 2px solid black;
+  }
+}
+@media screen and (min-width: 4320px) {
+  .CodeMirror-cursor {
+    border-left: 4px solid black;
+  }
+}
+/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev &lt;Maniac@SoftwareManiacs.Org&gt;
+Adapted from GitHub theme
+
+*/
+.highlight-base {
+  color: #000;
+}
+.highlight-variable {
+  color: #000;
+}
+.highlight-variable-2 {
+  color: #1a1a1a;
+}
+.highlight-variable-3 {
+  color: #333333;
+}
+.highlight-string {
+  color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt;;
+}
+.highlight-comment {
+  color: #408080;
+  font-style: italic;
+}
+.highlight-number {
+  color: #080;
+}
+.highlight-atom {
+  color: #88F;
+}
+.highlight-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.highlight-builtin {
+  color: #008000;
+}
+.highlight-error {
+  color: #f00;
+}
+.highlight-operator {
+  color: #&lt;span class="caps"&gt;AA22FF&lt;/span&gt;;
+  font-weight: bold;
+}
+.highlight-meta {
+  color: #&lt;span class="caps"&gt;AA22FF&lt;/span&gt;;
+}
+/* previously not defined, copying from default codemirror */
+.highlight-def {
+  color: #00f;
+}
+.highlight-string-2 {
+  color: #f50;
+}
+.highlight-qualifier {
+  color: #555;
+}
+.highlight-bracket {
+  color: #997;
+}
+.highlight-tag {
+  color: #170;
+}
+.highlight-attribute {
+  color: #00c;
+}
+.highlight-header {
+  color: blue;
+}
+.highlight-quote {
+  color: #090;
+}
+.highlight-link {
+  color: #00c;
+}
+/* apply the same style to codemirror */
+.cm-s-ipython span.cm-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-atom {
+  color: #88F;
+}
+.cm-s-ipython span.cm-number {
+  color: #080;
+}
+.cm-s-ipython span.cm-def {
+  color: #00f;
+}
+.cm-s-ipython span.cm-variable {
+  color: #000;
+}
+.cm-s-ipython span.cm-operator {
+  color: #&lt;span class="caps"&gt;AA22FF&lt;/span&gt;;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-variable-2 {
+  color: #1a1a1a;
+}
+.cm-s-ipython span.cm-variable-3 {
+  color: #333333;
+}
+.cm-s-ipython span.cm-comment {
+  color: #408080;
+  font-style: italic;
+}
+.cm-s-ipython span.cm-string {
+  color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt;;
+}
+.cm-s-ipython span.cm-string-2 {
+  color: #f50;
+}
+.cm-s-ipython span.cm-meta {
+  color: #&lt;span class="caps"&gt;AA22FF&lt;/span&gt;;
+}
+.cm-s-ipython span.cm-qualifier {
+  color: #555;
+}
+.cm-s-ipython span.cm-builtin {
+  color: #008000;
+}
+.cm-s-ipython span.cm-bracket {
+  color: #997;
+}
+.cm-s-ipython span.cm-tag {
+  color: #170;
+}
+.cm-s-ipython span.cm-attribute {
+  color: #00c;
+}
+.cm-s-ipython span.cm-header {
+  color: blue;
+}
+.cm-s-ipython span.cm-quote {
+  color: #090;
+}
+.cm-s-ipython span.cm-link {
+  color: #00c;
+}
+.cm-s-ipython span.cm-error {
+  color: #f00;
+}
+.cm-s-ipython span.cm-tab {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+div.output_wrapper {
+  /* this position must be relative to enable descendents to be absolute within it */
+  position: relative;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 1;
+}
+/* class for the output area when it should be height-limited */
+div.output_scroll {
+  /* ideally, this would be max-height, but &lt;span class="caps"&gt;FF&lt;/span&gt; barfs all over that */
+  height: 24em;
+  /* &lt;span class="caps"&gt;FF&lt;/span&gt; needs this *and the wrapper* to specify full width, or it will shrinkwrap */
+  width: 100%;
+  overflow: auto;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  display: block;
+}
+/* output div while it is collapsed */
+div.output_collapsed {
+  margin: 0px;
+  padding: 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+div.out_prompt_overlay {
+  height: 100%;
+  padding: 0px 0.4em;
+  position: absolute;
+  border-radius: 2px;
+}
+div.out_prompt_overlay:hover {
+  /* use inner shadow to get border that is computed the same on WebKit/&lt;span class="caps"&gt;FF&lt;/span&gt; */
+  -webkit-box-shadow: inset 0 0 1px #000;
+  box-shadow: inset 0 0 1px #000;
+  background: rgba(240, 240, 240, 0.5);
+}
+div.output_prompt {
+  color: #D84315;
+}
+/* This class is the outer container of all output sections. */
+div.output_area {
+  padding: 0px;
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.output_area .MathJax_Display {
+  text-align: left !important;
+}
+div.output_area 
+div.output_area 
+div.output_area img,
+div.output_area svg {
+  max-width: 100%;
+  height: auto;
+}
+div.output_area img.unconfined,
+div.output_area svg.unconfined {
+  max-width: none;
+}
+div.output_area .mglyph &gt; img {
+  max-width: none;
+}
+/* This is needed to protect the pre formating from global settings such
+   as that of bootstrap */
+.output {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.output_area {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+div.output_area pre {
+  margin: 0;
+  padding: 1px 0 1px 0;
+  border: 0;
+  vertical-align: baseline;
+  color: black;
+  background-color: transparent;
+  border-radius: 0;
+}
+/* This class is for the output subarea inside the output_area and after
+   the prompt div. */
+div.output_subarea {
+  overflow-x: auto;
+  padding: 0.4em;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+  max-width: calc(100% - 14ex);
+}
+div.output_scroll div.output_subarea {
+  overflow-x: visible;
+}
+/* The rest of the output_* classes are for special styling of the different
+   output types */
+/* all text output has this class: */
+div.output_text {
+  text-align: left;
+  color: #000;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+}
+/* stdout/stderr are 'text' as well as 'stream', but execute_result/error are *not* streams */
+div.output_stderr {
+  background: #fdd;
+  /* very light red background for stderr */
+}
+div.output_latex {
+  text-align: left;
+}
+/* Empty output_javascript divs should have no height */
+div.output_javascript:empty {
+  padding: 0;
+}
+.js-error {
+  color: darkred;
+}
+/* raw_input styles */
+div.raw_input_container {
+  line-height: 1.21429em;
+  padding-top: 5px;
+}
+pre.raw_input_prompt {
+  /* nothing needed here. */
+}
+input.raw_input {
+  font-family: monospace;
+  font-size: inherit;
+  color: inherit;
+  width: auto;
+  /* make sure input baseline aligns with prompt */
+  vertical-align: baseline;
+  /* padding + margin = 0.5em between prompt and cursor */
+  padding: 0em 0.25em;
+  margin: 0em 0.25em;
+}
+input.raw_input:focus {
+  box-shadow: none;
+}
+p.p-space {
+  margin-bottom: 10px;
+}
+div.output_unrecognized {
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+}
+div.output_unrecognized a {
+  color: inherit;
+  text-decoration: none;
+}
+div.output_unrecognized a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.rendered_html {
+  color: #000;
+  /* any extras will just be numbers: */
+}
+
+
+
+.rendered_html :link {
+  text-decoration: underline;
+}
+.rendered_html :visited {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+.rendered_html h1:first-child {
+  margin-top: 0.538em;
+}
+.rendered_html h2:first-child {
+  margin-top: 0.636em;
+}
+.rendered_html h3:first-child {
+  margin-top: 0.777em;
+}
+.rendered_html h4:first-child {
+  margin-top: 1em;
+}
+.rendered_html h5:first-child {
+  margin-top: 1em;
+}
+.rendered_html h6:first-child {
+  margin-top: 1em;
+}
+.rendered_html ul:not(.list-inline),
+.rendered_html ol:not(.list-inline) {
+  padding-left: 2em;
+}
+
+
+
+
+
+
+
+
+.rendered_html * + ul {
+  margin-top: 1em;
+}
+.rendered_html * + ol {
+  margin-top: 1em;
+}
+
+
+
+
+
+.rendered_html pre,
+
+
+
+
+.rendered_html tr,
+.rendered_html th,
+
+
+.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+.rendered_html * + table {
+  margin-top: 1em;
+}
+
+.rendered_html * + p {
+  margin-top: 1em;
+}
+
+.rendered_html * + img {
+  margin-top: 1em;
+}
+.rendered_html img,
+
+.rendered_html img.unconfined,
+
+
+.rendered_html * + .alert {
+  margin-top: 1em;
+}
+[dir="rtl"] 
+div.text_cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.text_cell &gt; div.prompt {
+    display: none;
+  }
+}
+div.text_cell_render {
+  /*font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+  outline: none;
+  resize: none;
+  width: inherit;
+  border-style: none;
+  padding: 0.5em 0.5em 0.5em 0.4em;
+  color: #000;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+a.anchor-link:link {
+  text-decoration: none;
+  padding: 0px 20px;
+  visibility: hidden;
+}
+h1:hover .anchor-link,
+h2:hover .anchor-link,
+h3:hover .anchor-link,
+h4:hover .anchor-link,
+h5:hover .anchor-link,
+h6:hover .anchor-link {
+  visibility: visible;
+}
+.text_cell.rendered .input_area {
+  display: none;
+}
+.text_cell.rendered 
+.text_cell.rendered .rendered_html tr,
+.text_cell.rendered .rendered_html th,
+.text_cell.rendered 
+.text_cell.unrendered .text_cell_render {
+  display: none;
+}
+.text_cell .dropzone .input_area {
+  border: 2px dashed #bababa;
+  margin: -1px;
+}
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cm-header-1 {
+  font-size: 185.7%;
+}
+.cm-header-2 {
+  font-size: 157.1%;
+}
+.cm-header-3 {
+  font-size: 128.6%;
+}
+.cm-header-4 {
+  font-size: 110%;
+}
+.cm-header-5 {
+  font-size: 100%;
+  font-style: italic;
+}
+.cm-header-6 {
+  font-size: 100%;
+  font-style: italic;
+}
+&lt;/style&gt;
+&lt;style type="text/css"&gt;.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f8f8f8; }
+.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #&lt;span class="caps"&gt;FF0000&lt;/span&gt; } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #&lt;span class="caps"&gt;BC7A00&lt;/span&gt; } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #&lt;span class="caps"&gt;FF0000&lt;/span&gt; } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #&lt;span class="caps"&gt;0044DD&lt;/span&gt; } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String */
+.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt;; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #&lt;span class="caps"&gt;AA22FF&lt;/span&gt; } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #&lt;span class="caps"&gt;D2413A&lt;/span&gt;; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt; } /* Name.Function */
+.highlight .nl { color: #&lt;span class="caps"&gt;A0A000&lt;/span&gt; } /* Name.Label */
+.highlight .nn { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt;; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #&lt;span class="caps"&gt;AA22FF&lt;/span&gt;; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Affix */
+.highlight .sb { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Backtick */
+.highlight .sc { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Char */
+.highlight .dl { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Delimiter */
+.highlight .sd { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt;; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Double */
+.highlight .se { color: #&lt;span class="caps"&gt;BB6622&lt;/span&gt;; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Heredoc */
+.highlight .si { color: #&lt;span class="caps"&gt;BB6688&lt;/span&gt;; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #&lt;span class="caps"&gt;BB6688&lt;/span&gt; } /* Literal.String.Regex */
+.highlight .s1 { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt; } /* Name.Function.Magic */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */&lt;/style&gt;
+&lt;style type="text/css"&gt;
+/* Temporary definitions which will become obsolete with Notebook release 5.0 */
+.ansi-black-fg { color: #&lt;span class="caps"&gt;3E424D&lt;/span&gt;; }
+.ansi-black-bg { background-color: #&lt;span class="caps"&gt;3E424D&lt;/span&gt;; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #&lt;span class="caps"&gt;E75C58&lt;/span&gt;; }
+.ansi-red-bg { background-color: #&lt;span class="caps"&gt;E75C58&lt;/span&gt;; }
+.ansi-red-intense-fg { color: #&lt;span class="caps"&gt;B22B31&lt;/span&gt;; }
+.ansi-red-intense-bg { background-color: #&lt;span class="caps"&gt;B22B31&lt;/span&gt;; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #&lt;span class="caps"&gt;DDB62B&lt;/span&gt;; }
+.ansi-yellow-bg { background-color: #&lt;span class="caps"&gt;DDB62B&lt;/span&gt;; }
+.ansi-yellow-intense-fg { color: #&lt;span class="caps"&gt;B27D12&lt;/span&gt;; }
+.ansi-yellow-intense-bg { background-color: #&lt;span class="caps"&gt;B27D12&lt;/span&gt;; }
+.ansi-blue-fg { color: #&lt;span class="caps"&gt;208FFB&lt;/span&gt;; }
+.ansi-blue-bg { background-color: #&lt;span class="caps"&gt;208FFB&lt;/span&gt;; }
+.ansi-blue-intense-fg { color: #&lt;span class="caps"&gt;0065CA&lt;/span&gt;; }
+.ansi-blue-intense-bg { background-color: #&lt;span class="caps"&gt;0065CA&lt;/span&gt;; }
+.ansi-magenta-fg { color: #&lt;span class="caps"&gt;D160C4&lt;/span&gt;; }
+.ansi-magenta-bg { background-color: #&lt;span class="caps"&gt;D160C4&lt;/span&gt;; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #&lt;span class="caps"&gt;60C6C8&lt;/span&gt;; }
+.ansi-cyan-bg { background-color: #&lt;span class="caps"&gt;60C6C8&lt;/span&gt;; }
+.ansi-cyan-intense-fg { color: #&lt;span class="caps"&gt;258F8F&lt;/span&gt;; }
+.ansi-cyan-intense-bg { background-color: #&lt;span class="caps"&gt;258F8F&lt;/span&gt;; }
+.ansi-white-fg { color: #&lt;span class="caps"&gt;C5C1B4&lt;/span&gt;; }
+.ansi-white-bg { background-color: #&lt;span class="caps"&gt;C5C1B4&lt;/span&gt;; }
+.ansi-white-intense-fg { color: #&lt;span class="caps"&gt;A1A6B2&lt;/span&gt;; }
+.ansi-white-intense-bg { background-color: #&lt;span class="caps"&gt;A1A6B2&lt;/span&gt;; }
+
+.ansi-bold { font-weight: bold; }
+&lt;/style&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Diversos partidos brasileiros &lt;a href="https://g1.globo.com/politica/noticia/diante-de-crise-politica-partidos-mudam-de-nome-para-atrair-eleitores-em-2018.ghtml"&gt;mudaram de nome em 2018&lt;/a&gt;, mas você sabe quais são? Motivado por &lt;a href="https://twitter.com/zananeno/status/1132989468028358661"&gt;uma dúvida no Twitter&lt;/a&gt; resolvi utilizar o &lt;a href="https://brasil.io/dataset/eleicoes-brasil"&gt;&lt;em&gt;dataset&lt;/em&gt; eleicoes-brasil&lt;/a&gt; para listar as mudanças de nome que aconteceram desde 1996. Vamos utilizar a &lt;a href="http://turicas.info/rows/cli/"&gt;interface de linha de comando da rows&lt;/a&gt;, um pouco de &lt;span class="caps"&gt;SQL&lt;/span&gt; e Python para essa&amp;nbsp;tarefa!&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="Instalando-as-depend&amp;#234;ncias"&gt;Instalando as depend&amp;#234;ncias&lt;a class="anchor-link" href="#Instalando-as-depend&amp;#234;ncias"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Antes de iniciar, criarei um ambiente virtual (virtualenv) utilizando a versão 3.7 do Python (vou utilizar o
+&lt;a href="https://github.com/pyenv/pyenv"&gt;pyenv&lt;/a&gt; e &lt;a href="https://github.com/pyenv/pyenv-virtualenv"&gt;pyenv-virtualenv&lt;/a&gt; para isso, mas fique à vontade para utilizar outras ferramentas em seu ambiente). Depois de criado o virtualenv, precisamos instalar a interface de linha de comando da &lt;a href="https://github.com/turicas/rows"&gt;rows&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pyenv virtualenv &lt;span class="m"&gt;3&lt;/span&gt;.7.3 eleicoes
+pyenv activate eleicoes
+pip install rows&lt;span class="o"&gt;[&lt;/span&gt;cli&lt;span class="o"&gt;]&lt;/span&gt;
+pip install -U https://github.com/turicas/rows/archive/develop.zip#egg&lt;span class="o"&gt;=&lt;/span&gt;rows
+&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;&lt;p&gt;Nota: estamos utilizando a versão em desenvolvimento da rows por conta da correção de alguns bugs. 
+Essa versão (0.4.2) será lançada em&amp;nbsp;breve.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="Baixando-os-dados"&gt;Baixando os dados&lt;a class="anchor-link" href="#Baixando-os-dados"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Para determinar todos os partidos e as mudanças de nome utilizaremos os dados das candidaturas, que contém a sigla e número do partido para cada candidato. Aqui, usei o &lt;code&gt;wget&lt;/code&gt; para baixar o arquivo completo, disponível no Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget https://data.brasil.io/dataset/eleicoes-brasil/candidatura.csv.gz
+&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;&lt;p&gt;Nota: os dados de candidatura não estão atualizados para visualização na interface do Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;
+(ainda sem as informações das eleições de 2018), porém o arquivo acima está&amp;nbsp;atualizado.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="Importando-no-SQLite"&gt;Importando no SQLite&lt;a class="anchor-link" href="#Importando-no-SQLite"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Como são mais de 2 milhões de candidaturas (veja a quantidade de linhas do arquivo &lt;span class="caps"&gt;CSV&lt;/span&gt; compactado: &lt;code&gt;zcat candidatura.csv.gz | wc -l&lt;/code&gt;), vou transformar o &lt;span class="caps"&gt;CSV&lt;/span&gt; em uma tabela numa base SQLite e utilizar &lt;span class="caps"&gt;SQL&lt;/span&gt; para fazer as consultas mais fácil e rapidamente - a versão 0.4 da rows possui um comando na sua &lt;span class="caps"&gt;CLI&lt;/span&gt; que facilita o&amp;nbsp;processo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;rows csv2sqlite candidatura.csv.gz eleicoes.sqlite
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Relaxe por alguns minutos enquanto o arquivo é convertido. :) Enquanto você toma um café, o comando acima&amp;nbsp;irá:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Descompactar em tempo de execução o&amp;nbsp;arquivo&lt;/li&gt;
+&lt;li&gt;Identificar o dialeto do &lt;span class="caps"&gt;CSV&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Identificar o tipo de cada coluna, inspecionando os primeiros&amp;nbsp;registros&lt;/li&gt;
+&lt;li&gt;Criar o banco de dados e a tabela &lt;code&gt;candidatura&lt;/code&gt;, utilizando os tipos&amp;nbsp;identificados&lt;/li&gt;
+&lt;li&gt;Adicionar os dados do &lt;span class="caps"&gt;CSV&lt;/span&gt; na&amp;nbsp;tabela&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="Criando-e-executando-a-consulta"&gt;Criando e executando a consulta&lt;a class="anchor-link" href="#Criando-e-executando-a-consulta"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Cada candidatura possui informações do partido nas colunas &lt;code&gt;numero_partido&lt;/code&gt; e &lt;code&gt;nome_partido&lt;/code&gt;. Vamos criar um arquivo &lt;span class="caps"&gt;SQL&lt;/span&gt; com uma consulta que agrupa as candidaturas por ano da eleição, número e nome do partido, assim teremos todos os partidos que disputaram as eleições, junto com os anos em que isso aconteceu. Crie o arquivo &lt;code&gt;consulta-partidos.sql&lt;/code&gt; com o seguinte&amp;nbsp;conteúdo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;SELECT&lt;/span&gt;
+    &lt;span class="n"&gt;ano_eleicao&lt;/span&gt; &lt;span class="k"&gt;AS&lt;/span&gt; &lt;span class="n"&gt;ano&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;numero_partido&lt;/span&gt; &lt;span class="k"&gt;AS&lt;/span&gt; &lt;span class="n"&gt;numero&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;nome_partido&lt;/span&gt; &lt;span class="k"&gt;AS&lt;/span&gt; &lt;span class="n"&gt;nome&lt;/span&gt;
+&lt;span class="k"&gt;FROM&lt;/span&gt; &lt;span class="n"&gt;candidatura&lt;/span&gt;
+&lt;span class="k"&gt;WHERE&lt;/span&gt;
+    &lt;span class="n"&gt;sigla_partido&lt;/span&gt; &lt;span class="k"&gt;NOT&lt;/span&gt; &lt;span class="k"&gt;IN&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;PRESTCONTAS&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;NAO&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;SIM&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;GROUP&lt;/span&gt; &lt;span class="k"&gt;BY&lt;/span&gt;
+    &lt;span class="n"&gt;ano_eleicao&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;numero_partido&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;nome_partido&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;&lt;p&gt;Na consulta eliminamos algumas siglas de partidos que não são interessantes agora (elas aparecem em outros casos, como plebiscitos, e não representam um&amp;nbsp;partido).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Então, voltamos a utilizar &lt;span class="caps"&gt;CLI&lt;/span&gt; da rows para executar a consulta e salvar o resultado num &lt;span class="caps"&gt;CSV&lt;/span&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;rows query &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;cat consulta-partidos.sql&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; eleicoes.sqlite --output&lt;span class="o"&gt;=&lt;/span&gt;partidos-por-ano.csv
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Pronto! Com isso teremos um registro por partido por ano. Agora precisamos agrupar por número do partido e entender quais possuem nomes diferentes ao longo dos&amp;nbsp;anos.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="Agrupando-por-N&amp;#250;mero-do-Partido"&gt;Agrupando por N&amp;#250;mero do Partido&lt;a class="anchor-link" href="#Agrupando-por-N&amp;#250;mero-do-Partido"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Vamos agrupar os dados em &lt;code&gt;partidos-por-ano.csv&lt;/code&gt; utilizando outra consulta &lt;span class="caps"&gt;SQL&lt;/span&gt;. Crie o arquivo &lt;code&gt;partidos-por-numero.sql&lt;/code&gt; com o seguinte&amp;nbsp;conteúdo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;SELECT&lt;/span&gt;
+    &lt;span class="n"&gt;numero&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;nome&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;GROUP_CONCAT&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ano&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;AS&lt;/span&gt; &lt;span class="n"&gt;anos&lt;/span&gt;
+&lt;span class="k"&gt;FROM&lt;/span&gt; &lt;span class="n"&gt;table1&lt;/span&gt;
+&lt;span class="k"&gt;GROUP&lt;/span&gt; &lt;span class="k"&gt;BY&lt;/span&gt;
+    &lt;span class="n"&gt;numero&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;nome&lt;/span&gt;
+&lt;span class="k"&gt;ORDER&lt;/span&gt; &lt;span class="k"&gt;BY&lt;/span&gt;
+    &lt;span class="n"&gt;numero&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;ano&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Agora basta executarmos essa consulta no arquivo &lt;code&gt;partidos-por-ano.csv&lt;/code&gt; que geramos&amp;nbsp;anteriormente:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;rows query &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;cat partidos-por-numero.sql&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; partidos-por-ano.csv --output&lt;span class="o"&gt;=&lt;/span&gt;partidos-por-numero.csv
+&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;&lt;p&gt;Sim, com a rows é possível executar consultas &lt;span class="caps"&gt;SQL&lt;/span&gt; diretamente em arquivos nos formatos suportados
+pela biblioteca, como &lt;span class="caps"&gt;CSV&lt;/span&gt;, porém utilize essa funcionalidade &lt;strong&gt;apenas em arquivos pequenos&lt;/strong&gt;, pois
+a conversão pode demorar; para arquivos maiores prefira converter para SQLite com o comando 
+&lt;code&gt;rows csv2sqlite&lt;/code&gt; (como feito com &lt;code&gt;candidatura.csv.gz&lt;/code&gt;) e após isso utilize 
+&lt;code&gt;rows query CONSULTA arquivo.sqlite&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Vamos ao resultado? Podemos visualizar a tabela diretamente no Jupyter&amp;nbsp;Notebook:&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;rows&lt;/span&gt;
+
+&lt;span class="n"&gt;rows&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;import_from_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;partidos-por-numero.csv&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+    &lt;div class="prompt output_prompt"&gt;Out[1]:&lt;/div&gt;
+
+
+
+&lt;div class="output_html rendered_html output_subarea output_execute_result"&gt;
+&lt;table&gt;
+
+  &lt;caption&gt;partidos_por_numero (showing 20 rows, out of 53)&lt;/caption&gt;
+
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; numero &lt;/th&gt;
+      &lt;th&gt; nome &lt;/th&gt;
+      &lt;th&gt; anos &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+
+  &lt;tbody&gt;
+
+    &lt;tr class="odd"&gt;
+      &lt;td&gt; 10 &lt;/td&gt;
+      &lt;td&gt; &lt;span class="caps"&gt;PARTIDO&lt;/span&gt; &lt;span class="caps"&gt;REPUBLICANO&lt;/span&gt; &lt;span class="caps"&gt;BRASILEIRO&lt;/span&gt; &lt;/td&gt;
+      &lt;td&gt; 2006,2008,2010,2012,2014,2016,2018 &lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr class="even"&gt;
+      &lt;td&gt; 11 &lt;/td&gt;
+      &lt;td&gt; &lt;span class="caps"&gt;PARTIDO&lt;/span&gt; &lt;span class="caps"&gt;PROGRESSISTA&lt;/span&gt; &lt;span class="caps"&gt;BRASILEIRO&lt;/span&gt; &lt;/td&gt;
+      &lt;td&gt; 1996,1998,2000,2002 &lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr class="odd"&gt;
+      &lt;td&gt; 11 &lt;/td&gt;
+      &lt;td&gt; &lt;span class="caps"&gt;PARTIDO&lt;/span&gt; &lt;span class="caps"&gt;PROGRESSISTA&lt;/span&gt; &lt;/td&gt;
+      &lt;td&gt; 2004,2006,2008,2010,2012,2014,2016 &lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr class="even"&gt;
+      &lt;td&gt; 11 &lt;/td&gt;
+      &lt;td&gt; &lt;span class="caps"&gt;PROGRESSISTAS&lt;/span&gt; &lt;/td&gt;
+      &lt;td&gt; 2018 &lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr class="odd"&gt;
+      &lt;td&gt; 12 &lt;/td&gt;
+      &lt;td&gt; &lt;span class="caps"&gt;PARTIDO&lt;/span&gt; &lt;span class="caps"&gt;DEMOCRATICO&lt;/span&gt; &lt;span class="caps"&gt;TRABALHISTA&lt;/span&gt; &lt;/td&gt;
+      &lt;td&gt; 1996,1998,2000,2002,2004,2006,2008,2010,2012,2014,2016,2018 &lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr class="even"&gt;
+      &lt;td&gt; 13 &lt;/td&gt;
+      &lt;td&gt; &lt;span class="caps"&gt;PARTIDO&lt;/span&gt; &lt;span class="caps"&gt;DOS&lt;/span&gt; &lt;span class="caps"&gt;TRABALHADORES&lt;/span&gt; &lt;/td&gt;
+      &lt;td&gt; 1996,1998,2000,2002,2004,2006,2008,2010,2012,2014,2016,2018 &lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr class="odd"&gt;
+      &lt;td&gt; 14 &lt;/td&gt;
+      &lt;td&gt; &lt;span class="caps"&gt;PARTIDO&lt;/span&gt; &lt;span class="caps"&gt;TRABALHISTA&lt;/span&gt; &lt;span class="caps"&gt;BRASILEIRO&lt;/span&gt; &lt;/td&gt;
+      &lt;td&gt; 1996,1998,2000,2002,2004,2006,2008,2010,2012,2014,2016,2018 &lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr class="even"&gt;
+      &lt;td&gt; 15 &lt;/td&gt;
+      &lt;td&gt; &lt;span class="caps"&gt;PARTIDO&lt;/span&gt; &lt;span class="caps"&gt;DO&lt;/span&gt; &lt;span class="caps"&gt;MOVIMENTO&lt;/span&gt; &lt;span class="caps"&gt;DEMOCRATICO&lt;/span&gt; &lt;span class="caps"&gt;BRASILEIRO&lt;/span&gt; &lt;/td&gt;
+      &lt;td&gt; 1996,1998,2000,2002,2004,2006,2008,2010,2012,2014,2016 &lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr class="odd"&gt;
+      &lt;td&gt; 15 &lt;/td&gt;
+      &lt;td&gt; &lt;span class="caps"&gt;MOVIMENTO&lt;/span&gt; &lt;span class="caps"&gt;DEMOCRATICO&lt;/span&gt; &lt;span class="caps"&gt;BRASILEIRO&lt;/span&gt; &lt;/td&gt;
+      &lt;td&gt; 2016,2018 &lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr class="even"&gt;
+      &lt;td&gt; 16 &lt;/td&gt;
+      &lt;td&gt; &lt;span class="caps"&gt;PARTIDO&lt;/span&gt; &lt;span class="caps"&gt;SOCIALISTA&lt;/span&gt; &lt;span class="caps"&gt;DOS&lt;/span&gt; &lt;span class="caps"&gt;TRABALHADORES&lt;/span&gt; &lt;span class="caps"&gt;UNIFICADO&lt;/span&gt; &lt;/td&gt;
+      &lt;td&gt; 1996,1998,2000,2002,2004,2006,2008,2010,2012,2014,2016,2018 &lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr class="odd"&gt;
+      &lt;td&gt; &amp;#8230; &lt;/td&gt;
+      &lt;td&gt; &amp;#8230; &lt;/td&gt;
+      &lt;td&gt; &amp;#8230; &lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr class="even"&gt;
+      &lt;td&gt; 51 &lt;/td&gt;
+      &lt;td&gt; &lt;span class="caps"&gt;PATRIOTA&lt;/span&gt; &lt;/td&gt;
+      &lt;td&gt; 2016,2018 &lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr class="odd"&gt;
+      &lt;td&gt; 54 &lt;/td&gt;
+      &lt;td&gt; &lt;span class="caps"&gt;PARTIDO&lt;/span&gt; &lt;span class="caps"&gt;PATRIA&lt;/span&gt; &lt;span class="caps"&gt;LIVRE&lt;/span&gt; &lt;/td&gt;
+      &lt;td&gt; 2012,2014,2016,2018 &lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr class="even"&gt;
+      &lt;td&gt; 55 &lt;/td&gt;
+      &lt;td&gt; &lt;span class="caps"&gt;PARTIDO&lt;/span&gt; &lt;span class="caps"&gt;SOCIAL&lt;/span&gt; &lt;span class="caps"&gt;DEMOCRATICO&lt;/span&gt; &lt;/td&gt;
+      &lt;td&gt; 2012,2014,2016,2018 &lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr class="odd"&gt;
+      &lt;td&gt; 56 &lt;/td&gt;
+      &lt;td&gt; &lt;span class="caps"&gt;PARTIDO&lt;/span&gt; &lt;span class="caps"&gt;DA&lt;/span&gt; &lt;span class="caps"&gt;REEDIFICACAO&lt;/span&gt; &lt;span class="caps"&gt;DA&lt;/span&gt; &lt;span class="caps"&gt;ORDEM&lt;/span&gt; &lt;span class="caps"&gt;NACIONAL&lt;/span&gt; &lt;/td&gt;
+      &lt;td&gt; 1996,1998,2000,2002,2004 &lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr class="even"&gt;
+      &lt;td&gt; 56 &lt;/td&gt;
+      &lt;td&gt; &lt;span class="caps"&gt;PARTIDO&lt;/span&gt; &lt;span class="caps"&gt;DE&lt;/span&gt; &lt;span class="caps"&gt;REEDIFICACAO&lt;/span&gt; &lt;span class="caps"&gt;DA&lt;/span&gt; &lt;span class="caps"&gt;ORDEM&lt;/span&gt; &lt;span class="caps"&gt;NACIONAL&lt;/span&gt; &lt;/td&gt;
+      &lt;td&gt; 2006 &lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr class="odd"&gt;
+      &lt;td&gt; 65 &lt;/td&gt;
+      &lt;td&gt; &lt;span class="caps"&gt;PARTIDO&lt;/span&gt; &lt;span class="caps"&gt;COMUNISTA&lt;/span&gt; &lt;span class="caps"&gt;DO&lt;/span&gt; &lt;span class="caps"&gt;BRASIL&lt;/span&gt; &lt;/td&gt;
+      &lt;td&gt; 1996,1998,2000,2002,2004,2006,2008,2010,2012,2014,2016,2018 &lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr class="even"&gt;
+      &lt;td&gt; 70 &lt;/td&gt;
+      &lt;td&gt; &lt;span class="caps"&gt;PARTIDO&lt;/span&gt; &lt;span class="caps"&gt;TRABALHISTA&lt;/span&gt; &lt;span class="caps"&gt;DO&lt;/span&gt; &lt;span class="caps"&gt;BRASIL&lt;/span&gt; &lt;/td&gt;
+      &lt;td&gt; 1996,1998,2000,2002,2004,2006,2008,2010,2012,2014,2016 &lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr class="odd"&gt;
+      &lt;td&gt; 70 &lt;/td&gt;
+      &lt;td&gt; &lt;span class="caps"&gt;AVANTE&lt;/span&gt; &lt;/td&gt;
+      &lt;td&gt; 2016,2018 &lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr class="even"&gt;
+      &lt;td&gt; 77 &lt;/td&gt;
+      &lt;td&gt; &lt;span class="caps"&gt;SOLIDARIEDADE&lt;/span&gt; &lt;/td&gt;
+      &lt;td&gt; 2012,2014,2016,2018 &lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr class="odd"&gt;
+      &lt;td&gt; 90 &lt;/td&gt;
+      &lt;td&gt; &lt;span class="caps"&gt;PARTIDO&lt;/span&gt; &lt;span class="caps"&gt;REPUBLICANO&lt;/span&gt; &lt;span class="caps"&gt;DA&lt;/span&gt; &lt;span class="caps"&gt;ORDEM&lt;/span&gt; &lt;span class="caps"&gt;SOCIAL&lt;/span&gt; &lt;/td&gt;
+      &lt;td&gt; 2014,2016,2018 &lt;/td&gt;
+    &lt;/tr&gt;
+
+  &lt;/tbody&gt;
+
+&lt;/table&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Inspecionando os dados podemos ver que 3 nomes de partidos utilizaram o número &lt;code&gt;11&lt;/code&gt;: &lt;code&gt;PARTIDO PROGRESSISTA BRASILEIRO&lt;/code&gt;, &lt;code&gt;PARTIDO PROGRESSISTA&lt;/code&gt; e &lt;code&gt;PROGRESSISTAS&lt;/code&gt;. Como os anos são contíguos (o primeiro utiliza até 2002, o segundo começa a partir de 2004 e assim por diante), podemos considerar que esse é o mesmo partido que mudou de nome. Isso não acontece com todos os números, como o número &lt;code&gt;30&lt;/code&gt;, que foi utilizado por &lt;code&gt;PARTIDO GERAL DOS TRABALHADORES&lt;/code&gt; até 2002 e a partir de 2016 pelo &lt;code&gt;PARTIDO NOVO&lt;/code&gt;.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="Melhorando-a-Visualiza&amp;#231;&amp;#227;o-do-Resultado"&gt;Melhorando a Visualiza&amp;#231;&amp;#227;o do Resultado&lt;a class="anchor-link" href="#Melhorando-a-Visualiza&amp;#231;&amp;#227;o-do-Resultado"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Para finalizar, vamos criar um script Python que agrupa o &lt;span class="caps"&gt;CSV&lt;/span&gt; gerado acima por número de partido e, 
+a partir de cada grupo, verifica os anos em que cada partido aparece para determinar se o partido mudou
+de nome ou se foi o caso de um partido mais recente reutilizar o número de um partido que não 
+existe mais. Como resultado, o script irá exibir na tela apenas os partidos que mudaram de nome, ou seja, os números de partido que tiveram nomes diferentes em anos de eleição&amp;nbsp;contíguos:&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[8]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;itertools&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;groupby&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;rows&lt;/span&gt;
+
+
+&lt;span class="c1"&gt;# Importamos os dados:&lt;/span&gt;
+&lt;span class="n"&gt;partidos_por_numero&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;rows&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;import_from_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;partidos-por-numero.csv&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Agrupamos por número:&lt;/span&gt;
+&lt;span class="n"&gt;agrupamento&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;groupby&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;partidos_por_numero&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;partido&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;partido&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;numero&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;resultado&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;numero&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;partidos&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;agrupamento&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;partidos&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;partidos&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="c1"&gt;# Se esse número só possui 1 partido, significa que ele não mudou de nome&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;partidos&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;continue&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# Verificarmos os partidos, par a par, para identificar os que participaram&lt;/span&gt;
+    &lt;span class="c1"&gt;# de eleições contíguas - esses, adicionamos em uma lista, que será impressa&lt;/span&gt;
+    &lt;span class="c1"&gt;# no final&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;partido_1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;partido_2&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;zip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;partidos&lt;/span&gt;&lt;span class="p"&gt;[:&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;partidos&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:]):&lt;/span&gt;
+        &lt;span class="n"&gt;ano_final_partido_1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;max&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;partido_1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;anos&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;,&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+        &lt;span class="n"&gt;ano_inicial_partido_2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;min&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;partido_2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;anos&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;,&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nb"&gt;abs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ano_inicial_partido_2&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;ano_final_partido_1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="c1"&gt;# Eleições contíguas, então é o mesmo partido que mudou de nome!&lt;/span&gt;
+            &lt;span class="c1"&gt;# Agora vamos só ajustar o período em que a mudança aconteceu:&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;ano_final_partido_1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;ano_inicial_partido_2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;datas&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;ano_final_partido_1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+                &lt;span class="n"&gt;periodo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;em &lt;/span&gt;&lt;span class="si"&gt;{ano_final_partido_1}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+            &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;datas&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;sorted&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;ano_final_partido_1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ano_inicial_partido_2&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+                &lt;span class="n"&gt;periodo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;entre &lt;/span&gt;&lt;span class="si"&gt;{datas[0]}&lt;/span&gt;&lt;span class="s2"&gt; e &lt;/span&gt;&lt;span class="si"&gt;{datas[1]}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+            &lt;span class="n"&gt;texto&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{partido_1.nome}&lt;/span&gt;&lt;span class="s2"&gt; (&lt;/span&gt;&lt;span class="si"&gt;{numero}&lt;/span&gt;&lt;span class="s2"&gt;) mudou de nome para &lt;/span&gt;&lt;span class="si"&gt;{partido_2.nome}&lt;/span&gt;&lt;span class="s2"&gt; &lt;/span&gt;&lt;span class="si"&gt;{periodo}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+            &lt;span class="n"&gt;resultado&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;datas&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;texto&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+            
+&lt;span class="c1"&gt;# Agora vamos ordenar o resultado por data para imprimí-lo na ordem cronológica das alterações:&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;datas&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;texto&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;sorted&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;resultado&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;texto&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+    &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;PARTIDO SOLIDARISTA NACIONAL (31) mudou de nome para PARTIDO DA SOLIDARIEDADE NACIONAL entre 1996 e 1998
+PARTIDO DA SOLIDARIEDADE NACIONAL (31) mudou de nome para PARTIDO HUMANISTA DA SOLIDARIEDADE entre 1998 e 2000
+PARTIDO DA RECONSTRUCAO NACIONAL (36) mudou de nome para PARTIDO TRABALHISTA CRISTAO entre 2000 e 2002
+PARTIDO PROGRESSISTA BRASILEIRO (11) mudou de nome para PARTIDO PROGRESSISTA entre 2002 e 2004
+PARTIDO DA REEDIFICACAO DA ORDEM NACIONAL (56) mudou de nome para PARTIDO DE REEDIFICACAO DA ORDEM NACIONAL entre 2004 e 2006
+PARTIDO DA FRENTE LIBERAL (25) mudou de nome para DEMOCRATAS entre 2006 e 2008
+PARTIDO LIBERAL (22) mudou de nome para PARTIDO DA REPUBLICA entre 2006 e 2008
+PARTIDO TRABALHISTA NACIONAL (19) mudou de nome para PODEMOS entre 2014 e 2016
+PARTIDO DO MOVIMENTO DEMOCRATICO BRASILEIRO (15) mudou de nome para MOVIMENTO DEMOCRATICO BRASILEIRO em 2016
+PARTIDO ECOLOGICO NACIONAL (51) mudou de nome para PATRIOTA em 2016
+PARTIDO SOCIAL DEMOCRATA CRISTAO (27) mudou de nome para DEMOCRACIA CRISTA em 2016
+PARTIDO TRABALHISTA DO BRASIL (70) mudou de nome para AVANTE em 2016
+PARTIDO PROGRESSISTA (11) mudou de nome para PROGRESSISTAS entre 2016 e 2018
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="Conclus&amp;#227;o"&gt;Conclus&amp;#227;o&lt;a class="anchor-link" href="#Conclus&amp;#227;o"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;O fato de existirem dados disponíveis sobre os mais diversos temas nos permite responder a perguntas como essa de
+maneira imediata, sem a necessidade da criação um pedido de acesso à informação - por esse e outros motivos a
+&lt;strong&gt;transparência ativa&lt;/strong&gt; é muito importante. Porém, não conseguiríamos responder a essa pergunta em poucos minutos
+se os dados não estivessem disponíveis em um formato &lt;strong&gt;mais acessível e consolidado&lt;/strong&gt; no 
+&lt;a href="https://brasil.io/"&gt;Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt;: para gerar esse &lt;em&gt;dataset&lt;/em&gt; foram necessárias diversas horas de trabalho criando 
+um &lt;a href="https://github.com/turicas/eleicoes-brasil"&gt;programa que baixa, converte, limpa e consolida os dados do Tribunal Superior Eleitoral&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Se você acha o trabalho que desenvolvemos importante, considere
+&lt;strong&gt;&lt;a href="https://brasil.io/doe"&gt;fazer uma doação&lt;/a&gt;&lt;/strong&gt; ou &lt;a href="https://brasil.io/colabore"&gt;colaborar de outras formas&lt;/a&gt;.&amp;nbsp;;)&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+ 
+
+
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Álvaro Justen</dc:creator><pubDate>Tue, 28 May 2019 00:20:00 -0300</pubDate><guid isPermaLink="false">tag:blog.brasil.io,2019-05-28:2019/05/28/identificando-partidos-que-mudaram-de-nome/</guid><category>sql</category><category>command-line</category><category>python</category></item><item><title>Slides da Palestra “#opendata #fail: Causos da Transparência Brasileira”</title><link>https://blog.brasil.io/2019/04/30/slides-da-palestra-opendata-fail-causos-da-transparencia-brasileira/</link><description>&lt;p&gt;Ontem (29/04, meu aniversário!) aconteceu em Curitiba/&lt;span class="caps"&gt;PR&lt;/span&gt; o &lt;a href="https://www.meetup.com/Cerveja-cm-Dados/events/260152313/"&gt;Cerveja com Dados
 &lt;span class="caps"&gt;CWB&lt;/span&gt; #4&lt;/a&gt;, onde
 apresentei uma das palestras, contando de maneira cômica &lt;strong&gt;problemas
 relacionados à &lt;a href="https://pt.wikipedia.org/wiki/Lei_de_acesso_%C3%A0_informa%C3%A7%C3%A3o"&gt;Lei de Acesso à
