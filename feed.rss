@@ -1,5 +1,1535 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Brasil.IO - Blog</title><link>https://blog.brasil.io/</link><description>Dados abertos para mais democracia</description><lastBuildDate>Tue, 28 May 2019 00:20:00 -0300</lastBuildDate><item><title>Identificando Partidos que Mudaram de Nome</title><link>https://blog.brasil.io/2019/05/28/identificando-partidos-que-mudaram-de-nome/</link><description>&lt;style type="text/css"&gt;/*!
+<rss version="2.0"><channel><title>Brasil.IO - Blog</title><link>https://blog.brasil.io/</link><description>Dados abertos para mais democracia</description><lastBuildDate>Fri, 31 May 2019 15:10:00 -0300</lastBuildDate><item><title>Classificando Nomes por Gênero Usando Dados Públicos</title><link>https://blog.brasil.io/2019/05/31/classificando-nomes-por-genero-usando-dados-publicos/</link><description>&lt;style type="text/css"&gt;/*!
+*
+* IPython notebook
+*
+*/
+/* &lt;span class="caps"&gt;CSS&lt;/span&gt; font colors for translated &lt;span class="caps"&gt;ANSI&lt;/span&gt; escape sequences */
+/* The color values are a mix of
+   http://www.xcolors.net/dl/baskerville-ivorylight and
+   http://www.xcolors.net/dl/euphrasia */
+.ansi-black-fg {
+  color: #&lt;span class="caps"&gt;3E424D&lt;/span&gt;;
+}
+.ansi-black-bg {
+  background-color: #&lt;span class="caps"&gt;3E424D&lt;/span&gt;;
+}
+.ansi-black-intense-fg {
+  color: #282C36;
+}
+.ansi-black-intense-bg {
+  background-color: #282C36;
+}
+.ansi-red-fg {
+  color: #&lt;span class="caps"&gt;E75C58&lt;/span&gt;;
+}
+.ansi-red-bg {
+  background-color: #&lt;span class="caps"&gt;E75C58&lt;/span&gt;;
+}
+.ansi-red-intense-fg {
+  color: #&lt;span class="caps"&gt;B22B31&lt;/span&gt;;
+}
+.ansi-red-intense-bg {
+  background-color: #&lt;span class="caps"&gt;B22B31&lt;/span&gt;;
+}
+.ansi-green-fg {
+  color: #00A250;
+}
+.ansi-green-bg {
+  background-color: #00A250;
+}
+.ansi-green-intense-fg {
+  color: #007427;
+}
+.ansi-green-intense-bg {
+  background-color: #007427;
+}
+.ansi-yellow-fg {
+  color: #&lt;span class="caps"&gt;DDB62B&lt;/span&gt;;
+}
+.ansi-yellow-bg {
+  background-color: #&lt;span class="caps"&gt;DDB62B&lt;/span&gt;;
+}
+.ansi-yellow-intense-fg {
+  color: #&lt;span class="caps"&gt;B27D12&lt;/span&gt;;
+}
+.ansi-yellow-intense-bg {
+  background-color: #&lt;span class="caps"&gt;B27D12&lt;/span&gt;;
+}
+.ansi-blue-fg {
+  color: #&lt;span class="caps"&gt;208FFB&lt;/span&gt;;
+}
+.ansi-blue-bg {
+  background-color: #&lt;span class="caps"&gt;208FFB&lt;/span&gt;;
+}
+.ansi-blue-intense-fg {
+  color: #&lt;span class="caps"&gt;0065CA&lt;/span&gt;;
+}
+.ansi-blue-intense-bg {
+  background-color: #&lt;span class="caps"&gt;0065CA&lt;/span&gt;;
+}
+.ansi-magenta-fg {
+  color: #&lt;span class="caps"&gt;D160C4&lt;/span&gt;;
+}
+.ansi-magenta-bg {
+  background-color: #&lt;span class="caps"&gt;D160C4&lt;/span&gt;;
+}
+.ansi-magenta-intense-fg {
+  color: #A03196;
+}
+.ansi-magenta-intense-bg {
+  background-color: #A03196;
+}
+.ansi-cyan-fg {
+  color: #&lt;span class="caps"&gt;60C6C8&lt;/span&gt;;
+}
+.ansi-cyan-bg {
+  background-color: #&lt;span class="caps"&gt;60C6C8&lt;/span&gt;;
+}
+.ansi-cyan-intense-fg {
+  color: #&lt;span class="caps"&gt;258F8F&lt;/span&gt;;
+}
+.ansi-cyan-intense-bg {
+  background-color: #&lt;span class="caps"&gt;258F8F&lt;/span&gt;;
+}
+.ansi-white-fg {
+  color: #&lt;span class="caps"&gt;C5C1B4&lt;/span&gt;;
+}
+.ansi-white-bg {
+  background-color: #&lt;span class="caps"&gt;C5C1B4&lt;/span&gt;;
+}
+.ansi-white-intense-fg {
+  color: #&lt;span class="caps"&gt;A1A6B2&lt;/span&gt;;
+}
+.ansi-white-intense-bg {
+  background-color: #&lt;span class="caps"&gt;A1A6B2&lt;/span&gt;;
+}
+.ansi-default-inverse-fg {
+  color: #&lt;span class="caps"&gt;FFFFFF&lt;/span&gt;;
+}
+.ansi-default-inverse-bg {
+  background-color: #000000;
+}
+.ansi-bold {
+  font-weight: bold;
+}
+.ansi-underline {
+  text-decoration: underline;
+}
+/* The following styles are deprecated an will be removed in a future version */
+.ansibold {
+  font-weight: bold;
+}
+.ansi-inverse {
+  outline: 0.5px dotted;
+}
+/* use dark versions for foreground, to improve visibility */
+.ansiblack {
+  color: black;
+}
+.ansired {
+  color: darkred;
+}
+.ansigreen {
+  color: darkgreen;
+}
+.ansiyellow {
+  color: #c4a000;
+}
+.ansiblue {
+  color: darkblue;
+}
+.ansipurple {
+  color: darkviolet;
+}
+.ansicyan {
+  color: steelblue;
+}
+.ansigray {
+  color: gray;
+}
+/* and light for background, for the same reason */
+.ansibgblack {
+  background-color: black;
+}
+.ansibgred {
+  background-color: red;
+}
+.ansibggreen {
+  background-color: green;
+}
+.ansibgyellow {
+  background-color: yellow;
+}
+.ansibgblue {
+  background-color: blue;
+}
+.ansibgpurple {
+  background-color: magenta;
+}
+.ansibgcyan {
+  background-color: cyan;
+}
+.ansibggray {
+  background-color: gray;
+}
+div.cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  width: 100%;
+  padding: 5px;
+  /* This acts as a spacer between cells, that is outside the border */
+  margin: 0px;
+  outline: none;
+  position: relative;
+  overflow: visible;
+}
+div.cell:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: transparent;
+}
+div.cell.jupyter-soft-selected {
+  border-left-color: #&lt;span class="caps"&gt;E3F2FD&lt;/span&gt;;
+  border-left-width: 1px;
+  padding-left: 5px;
+  border-right-color: #&lt;span class="caps"&gt;E3F2FD&lt;/span&gt;;
+  border-right-width: 1px;
+  background: #&lt;span class="caps"&gt;E3F2FD&lt;/span&gt;;
+}
+@media print {
+  div.cell.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+div.cell.selected,
+div.cell.selected.jupyter-soft-selected {
+  border-color: #ababab;
+}
+div.cell.selected:before,
+div.cell.selected.jupyter-soft-selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #&lt;span class="caps"&gt;42A5F5&lt;/span&gt;;
+}
+@media print {
+  div.cell.selected,
+  div.cell.selected.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+.edit_mode div.cell.selected {
+  border-color: #&lt;span class="caps"&gt;66BB6A&lt;/span&gt;;
+}
+.edit_mode div.cell.selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #&lt;span class="caps"&gt;66BB6A&lt;/span&gt;;
+}
+@media print {
+  .edit_mode div.cell.selected {
+    border-color: transparent;
+  }
+}
+.prompt {
+  /* This needs to be wide enough for 3 digit prompt numbers: In[100]: */
+  min-width: 14ex;
+  /* This padding is tuned to match the padding on the CodeMirror editor. */
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace;
+  text-align: right;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+  /* Don't highlight prompt number selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Use default cursor */
+  cursor: default;
+}
+@media (max-width: 540px) {
+  .prompt {
+    text-align: left;
+  }
+}
+div.inner_cell {
+  min-width: 0;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_area {
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+  background: #f7f7f7;
+  line-height: 1.21429em;
+}
+/* This is needed so that empty prompt areas can collapse to zero height when there
+   is no content in the output_subarea and the prompt. The main purpose of this is
+   to make sure that empty JavaScript output_subareas have no height. */
+div.prompt:empty {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+div.unrecognized_cell {
+  padding: 5px 5px 5px 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.unrecognized_cell .inner_cell {
+  border-radius: 2px;
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+  border: 1px solid #cfcfcf;
+  background: #eaeaea;
+}
+div.unrecognized_cell .inner_cell a {
+  color: inherit;
+  text-decoration: none;
+}
+div.unrecognized_cell .inner_cell a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+@media (max-width: 540px) {
+  div.unrecognized_cell &gt; div.prompt {
+    display: none;
+  }
+}
+div.code_cell {
+  /* avoid page breaking on code cells when printing */
+}
+@media print {
+  div.code_cell {
+    page-break-inside: avoid;
+  }
+}
+/* any special styling for code cells that are currently running goes here */
+div.input {
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.input {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_prompt {
+  color: #&lt;span class="caps"&gt;303F9F&lt;/span&gt;;
+  border-top: 1px solid transparent;
+}
+div.input_area &gt; div.highlight {
+  margin: 0.4em;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+div.input_area &gt; div.highlight &gt; pre {
+  margin: 0px;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+/* The following gets added to the &lt;head&gt; if it is detected that the user has a
+ * monospace font with inconsistent normal/bold/italic height.  See
+ * notebookmain.js.  Such fonts will have keywords vertically offset with
+ * respect to the rest of the text.  The user should select a better font.
+ * See: https://github.com/ipython/ipython/issues/1503
+ *
+ * .CodeMirror span {
+ *      vertical-align: bottom;
+ * }
+ */
+.CodeMirror {
+  line-height: 1.21429em;
+  /* Changed from 1em to our global default */
+  font-size: 14px;
+  height: auto;
+  /* Changed to auto to autogrow */
+  background: none;
+  /* Changed from white to allow our bg to show through */
+}
+.CodeMirror-scroll {
+  /*  The CodeMirror docs are a bit fuzzy on if overflow-y should be hidden or visible.*/
+  /*  We have found that if it is visible, vertical scrollbars appear with font size changes.*/
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.CodeMirror-lines {
+  /* In &lt;span class="caps"&gt;CM2&lt;/span&gt;, this used to be 0.4em, but in &lt;span class="caps"&gt;CM3&lt;/span&gt; it went to 4px. We need the em value because */
+  /* we have set a different line-height and want this to scale with that. */
+  /* Note that this should set vertical padding only, since CodeMirror assumes
+       that horizontal padding will be set on CodeMirror pre */
+  padding: 0.4em 0;
+}
+.CodeMirror-linenumber {
+  padding: 0 8px 0 4px;
+}
+.CodeMirror-gutters {
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+.CodeMirror pre {
+  /* In &lt;span class="caps"&gt;CM3&lt;/span&gt; this went to 4px from 0 in &lt;span class="caps"&gt;CM2&lt;/span&gt;. This sets horizontal padding only,
+    use .CodeMirror-lines for vertical */
+  padding: 0 0.4em;
+  border: 0;
+  border-radius: 0;
+}
+.CodeMirror-cursor {
+  border-left: 1.4px solid black;
+}
+@media screen and (min-width: 2138px) and (max-width: 4319px) {
+  .CodeMirror-cursor {
+    border-left: 2px solid black;
+  }
+}
+@media screen and (min-width: 4320px) {
+  .CodeMirror-cursor {
+    border-left: 4px solid black;
+  }
+}
+/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev &lt;Maniac@SoftwareManiacs.Org&gt;
+Adapted from GitHub theme
+
+*/
+.highlight-base {
+  color: #000;
+}
+.highlight-variable {
+  color: #000;
+}
+.highlight-variable-2 {
+  color: #1a1a1a;
+}
+.highlight-variable-3 {
+  color: #333333;
+}
+.highlight-string {
+  color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt;;
+}
+.highlight-comment {
+  color: #408080;
+  font-style: italic;
+}
+.highlight-number {
+  color: #080;
+}
+.highlight-atom {
+  color: #88F;
+}
+.highlight-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.highlight-builtin {
+  color: #008000;
+}
+.highlight-error {
+  color: #f00;
+}
+.highlight-operator {
+  color: #&lt;span class="caps"&gt;AA22FF&lt;/span&gt;;
+  font-weight: bold;
+}
+.highlight-meta {
+  color: #&lt;span class="caps"&gt;AA22FF&lt;/span&gt;;
+}
+/* previously not defined, copying from default codemirror */
+.highlight-def {
+  color: #00f;
+}
+.highlight-string-2 {
+  color: #f50;
+}
+.highlight-qualifier {
+  color: #555;
+}
+.highlight-bracket {
+  color: #997;
+}
+.highlight-tag {
+  color: #170;
+}
+.highlight-attribute {
+  color: #00c;
+}
+.highlight-header {
+  color: blue;
+}
+.highlight-quote {
+  color: #090;
+}
+.highlight-link {
+  color: #00c;
+}
+/* apply the same style to codemirror */
+.cm-s-ipython span.cm-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-atom {
+  color: #88F;
+}
+.cm-s-ipython span.cm-number {
+  color: #080;
+}
+.cm-s-ipython span.cm-def {
+  color: #00f;
+}
+.cm-s-ipython span.cm-variable {
+  color: #000;
+}
+.cm-s-ipython span.cm-operator {
+  color: #&lt;span class="caps"&gt;AA22FF&lt;/span&gt;;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-variable-2 {
+  color: #1a1a1a;
+}
+.cm-s-ipython span.cm-variable-3 {
+  color: #333333;
+}
+.cm-s-ipython span.cm-comment {
+  color: #408080;
+  font-style: italic;
+}
+.cm-s-ipython span.cm-string {
+  color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt;;
+}
+.cm-s-ipython span.cm-string-2 {
+  color: #f50;
+}
+.cm-s-ipython span.cm-meta {
+  color: #&lt;span class="caps"&gt;AA22FF&lt;/span&gt;;
+}
+.cm-s-ipython span.cm-qualifier {
+  color: #555;
+}
+.cm-s-ipython span.cm-builtin {
+  color: #008000;
+}
+.cm-s-ipython span.cm-bracket {
+  color: #997;
+}
+.cm-s-ipython span.cm-tag {
+  color: #170;
+}
+.cm-s-ipython span.cm-attribute {
+  color: #00c;
+}
+.cm-s-ipython span.cm-header {
+  color: blue;
+}
+.cm-s-ipython span.cm-quote {
+  color: #090;
+}
+.cm-s-ipython span.cm-link {
+  color: #00c;
+}
+.cm-s-ipython span.cm-error {
+  color: #f00;
+}
+.cm-s-ipython span.cm-tab {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+div.output_wrapper {
+  /* this position must be relative to enable descendents to be absolute within it */
+  position: relative;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 1;
+}
+/* class for the output area when it should be height-limited */
+div.output_scroll {
+  /* ideally, this would be max-height, but &lt;span class="caps"&gt;FF&lt;/span&gt; barfs all over that */
+  height: 24em;
+  /* &lt;span class="caps"&gt;FF&lt;/span&gt; needs this *and the wrapper* to specify full width, or it will shrinkwrap */
+  width: 100%;
+  overflow: auto;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  display: block;
+}
+/* output div while it is collapsed */
+div.output_collapsed {
+  margin: 0px;
+  padding: 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+div.out_prompt_overlay {
+  height: 100%;
+  padding: 0px 0.4em;
+  position: absolute;
+  border-radius: 2px;
+}
+div.out_prompt_overlay:hover {
+  /* use inner shadow to get border that is computed the same on WebKit/&lt;span class="caps"&gt;FF&lt;/span&gt; */
+  -webkit-box-shadow: inset 0 0 1px #000;
+  box-shadow: inset 0 0 1px #000;
+  background: rgba(240, 240, 240, 0.5);
+}
+div.output_prompt {
+  color: #D84315;
+}
+/* This class is the outer container of all output sections. */
+div.output_area {
+  padding: 0px;
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.output_area .MathJax_Display {
+  text-align: left !important;
+}
+div.output_area 
+div.output_area 
+div.output_area img,
+div.output_area svg {
+  max-width: 100%;
+  height: auto;
+}
+div.output_area img.unconfined,
+div.output_area svg.unconfined {
+  max-width: none;
+}
+div.output_area .mglyph &gt; img {
+  max-width: none;
+}
+/* This is needed to protect the pre formating from global settings such
+   as that of bootstrap */
+.output {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.output_area {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+div.output_area pre {
+  margin: 0;
+  padding: 1px 0 1px 0;
+  border: 0;
+  vertical-align: baseline;
+  color: black;
+  background-color: transparent;
+  border-radius: 0;
+}
+/* This class is for the output subarea inside the output_area and after
+   the prompt div. */
+div.output_subarea {
+  overflow-x: auto;
+  padding: 0.4em;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+  max-width: calc(100% - 14ex);
+}
+div.output_scroll div.output_subarea {
+  overflow-x: visible;
+}
+/* The rest of the output_* classes are for special styling of the different
+   output types */
+/* all text output has this class: */
+div.output_text {
+  text-align: left;
+  color: #000;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+}
+/* stdout/stderr are 'text' as well as 'stream', but execute_result/error are *not* streams */
+div.output_stderr {
+  background: #fdd;
+  /* very light red background for stderr */
+}
+div.output_latex {
+  text-align: left;
+}
+/* Empty output_javascript divs should have no height */
+div.output_javascript:empty {
+  padding: 0;
+}
+.js-error {
+  color: darkred;
+}
+/* raw_input styles */
+div.raw_input_container {
+  line-height: 1.21429em;
+  padding-top: 5px;
+}
+pre.raw_input_prompt {
+  /* nothing needed here. */
+}
+input.raw_input {
+  font-family: monospace;
+  font-size: inherit;
+  color: inherit;
+  width: auto;
+  /* make sure input baseline aligns with prompt */
+  vertical-align: baseline;
+  /* padding + margin = 0.5em between prompt and cursor */
+  padding: 0em 0.25em;
+  margin: 0em 0.25em;
+}
+input.raw_input:focus {
+  box-shadow: none;
+}
+p.p-space {
+  margin-bottom: 10px;
+}
+div.output_unrecognized {
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+}
+div.output_unrecognized a {
+  color: inherit;
+  text-decoration: none;
+}
+div.output_unrecognized a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.rendered_html {
+  color: #000;
+  /* any extras will just be numbers: */
+}
+
+
+
+.rendered_html :link {
+  text-decoration: underline;
+}
+.rendered_html :visited {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+.rendered_html h1:first-child {
+  margin-top: 0.538em;
+}
+.rendered_html h2:first-child {
+  margin-top: 0.636em;
+}
+.rendered_html h3:first-child {
+  margin-top: 0.777em;
+}
+.rendered_html h4:first-child {
+  margin-top: 1em;
+}
+.rendered_html h5:first-child {
+  margin-top: 1em;
+}
+.rendered_html h6:first-child {
+  margin-top: 1em;
+}
+.rendered_html ul:not(.list-inline),
+.rendered_html ol:not(.list-inline) {
+  padding-left: 2em;
+}
+
+
+
+
+
+
+
+
+.rendered_html * + ul {
+  margin-top: 1em;
+}
+.rendered_html * + ol {
+  margin-top: 1em;
+}
+
+
+
+
+
+.rendered_html pre,
+
+
+
+
+.rendered_html tr,
+.rendered_html th,
+
+
+.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+.rendered_html * + table {
+  margin-top: 1em;
+}
+
+.rendered_html * + p {
+  margin-top: 1em;
+}
+
+.rendered_html * + img {
+  margin-top: 1em;
+}
+.rendered_html img,
+
+.rendered_html img.unconfined,
+
+
+.rendered_html * + .alert {
+  margin-top: 1em;
+}
+[dir="rtl"] 
+div.text_cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.text_cell &gt; div.prompt {
+    display: none;
+  }
+}
+div.text_cell_render {
+  /*font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+  outline: none;
+  resize: none;
+  width: inherit;
+  border-style: none;
+  padding: 0.5em 0.5em 0.5em 0.4em;
+  color: #000;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+a.anchor-link:link {
+  text-decoration: none;
+  padding: 0px 20px;
+  visibility: hidden;
+}
+h1:hover .anchor-link,
+h2:hover .anchor-link,
+h3:hover .anchor-link,
+h4:hover .anchor-link,
+h5:hover .anchor-link,
+h6:hover .anchor-link {
+  visibility: visible;
+}
+.text_cell.rendered .input_area {
+  display: none;
+}
+.text_cell.rendered 
+.text_cell.rendered .rendered_html tr,
+.text_cell.rendered .rendered_html th,
+.text_cell.rendered 
+.text_cell.unrendered .text_cell_render {
+  display: none;
+}
+.text_cell .dropzone .input_area {
+  border: 2px dashed #bababa;
+  margin: -1px;
+}
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cm-header-1 {
+  font-size: 185.7%;
+}
+.cm-header-2 {
+  font-size: 157.1%;
+}
+.cm-header-3 {
+  font-size: 128.6%;
+}
+.cm-header-4 {
+  font-size: 110%;
+}
+.cm-header-5 {
+  font-size: 100%;
+  font-style: italic;
+}
+.cm-header-6 {
+  font-size: 100%;
+  font-style: italic;
+}
+&lt;/style&gt;
+&lt;style type="text/css"&gt;.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f8f8f8; }
+.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #&lt;span class="caps"&gt;FF0000&lt;/span&gt; } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #&lt;span class="caps"&gt;BC7A00&lt;/span&gt; } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #&lt;span class="caps"&gt;FF0000&lt;/span&gt; } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #&lt;span class="caps"&gt;0044DD&lt;/span&gt; } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String */
+.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt;; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #&lt;span class="caps"&gt;AA22FF&lt;/span&gt; } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #&lt;span class="caps"&gt;D2413A&lt;/span&gt;; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt; } /* Name.Function */
+.highlight .nl { color: #&lt;span class="caps"&gt;A0A000&lt;/span&gt; } /* Name.Label */
+.highlight .nn { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt;; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #&lt;span class="caps"&gt;AA22FF&lt;/span&gt;; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Affix */
+.highlight .sb { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Backtick */
+.highlight .sc { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Char */
+.highlight .dl { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Delimiter */
+.highlight .sd { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt;; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Double */
+.highlight .se { color: #&lt;span class="caps"&gt;BB6622&lt;/span&gt;; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Heredoc */
+.highlight .si { color: #&lt;span class="caps"&gt;BB6688&lt;/span&gt;; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #&lt;span class="caps"&gt;BB6688&lt;/span&gt; } /* Literal.String.Regex */
+.highlight .s1 { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt; } /* Name.Function.Magic */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */&lt;/style&gt;
+&lt;style type="text/css"&gt;
+/* Temporary definitions which will become obsolete with Notebook release 5.0 */
+.ansi-black-fg { color: #&lt;span class="caps"&gt;3E424D&lt;/span&gt;; }
+.ansi-black-bg { background-color: #&lt;span class="caps"&gt;3E424D&lt;/span&gt;; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #&lt;span class="caps"&gt;E75C58&lt;/span&gt;; }
+.ansi-red-bg { background-color: #&lt;span class="caps"&gt;E75C58&lt;/span&gt;; }
+.ansi-red-intense-fg { color: #&lt;span class="caps"&gt;B22B31&lt;/span&gt;; }
+.ansi-red-intense-bg { background-color: #&lt;span class="caps"&gt;B22B31&lt;/span&gt;; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #&lt;span class="caps"&gt;DDB62B&lt;/span&gt;; }
+.ansi-yellow-bg { background-color: #&lt;span class="caps"&gt;DDB62B&lt;/span&gt;; }
+.ansi-yellow-intense-fg { color: #&lt;span class="caps"&gt;B27D12&lt;/span&gt;; }
+.ansi-yellow-intense-bg { background-color: #&lt;span class="caps"&gt;B27D12&lt;/span&gt;; }
+.ansi-blue-fg { color: #&lt;span class="caps"&gt;208FFB&lt;/span&gt;; }
+.ansi-blue-bg { background-color: #&lt;span class="caps"&gt;208FFB&lt;/span&gt;; }
+.ansi-blue-intense-fg { color: #&lt;span class="caps"&gt;0065CA&lt;/span&gt;; }
+.ansi-blue-intense-bg { background-color: #&lt;span class="caps"&gt;0065CA&lt;/span&gt;; }
+.ansi-magenta-fg { color: #&lt;span class="caps"&gt;D160C4&lt;/span&gt;; }
+.ansi-magenta-bg { background-color: #&lt;span class="caps"&gt;D160C4&lt;/span&gt;; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #&lt;span class="caps"&gt;60C6C8&lt;/span&gt;; }
+.ansi-cyan-bg { background-color: #&lt;span class="caps"&gt;60C6C8&lt;/span&gt;; }
+.ansi-cyan-intense-fg { color: #&lt;span class="caps"&gt;258F8F&lt;/span&gt;; }
+.ansi-cyan-intense-bg { background-color: #&lt;span class="caps"&gt;258F8F&lt;/span&gt;; }
+.ansi-white-fg { color: #&lt;span class="caps"&gt;C5C1B4&lt;/span&gt;; }
+.ansi-white-bg { background-color: #&lt;span class="caps"&gt;C5C1B4&lt;/span&gt;; }
+.ansi-white-intense-fg { color: #&lt;span class="caps"&gt;A1A6B2&lt;/span&gt;; }
+.ansi-white-intense-bg { background-color: #&lt;span class="caps"&gt;A1A6B2&lt;/span&gt;; }
+
+.ansi-bold { font-weight: bold; }
+&lt;/style&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Muitos &lt;em&gt;datasets&lt;/em&gt; que possuem dados sobre pessoas não possuem a informação de gênero correspondente, como o &lt;em&gt;dataset&lt;/em&gt; de candidatura das eleições para o ano de 1.996 divulgado pelo &lt;a href="http://www.tse.jus.br/"&gt;Tribunal Superior Eleitoral&lt;/a&gt; (&lt;a href="https://brasil.io/dataset/eleicoes-brasil/candidatos?ano_eleicao=1996"&gt;veja esse &lt;em&gt;dataset&lt;/em&gt; no Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt;) e o &lt;em&gt;dataset&lt;/em&gt; de salários dos magistrados divulgado pelo &lt;a href="http://cnj.jus.br/"&gt;Conselho Nacional de Justiça&lt;/a&gt; (&lt;a href="https://brasil.io/dataset/salarios-magistrados/contracheque"&gt;veja esse &lt;em&gt;dataset&lt;/em&gt; no Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt;). A falta dessa informação dificulta projetos de dados onde o recorte por gênero é necessário, como é o caso &lt;a href="https://www.youtube.com/watch?v=7yQ8U2tFFq4"&gt;desse vídeo&lt;/a&gt; que ajudei a construir, onde classificamos por gênero todos os nomes de ruas, avenidas e praças do&amp;nbsp;Brasil.&lt;/p&gt;
+&lt;p&gt;Nesse artigo vamos aprender a utilizar os dados de &lt;a href="https://censo2010.ibge.gov.br/nomes/#/search"&gt;nomes brasileiros do Censo 2010 do &lt;span class="caps"&gt;IBGE&lt;/span&gt;&lt;/a&gt; que estão &lt;a href="https://brasil.io/dataset/genero-nomes"&gt;disponíveis no Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt; para fazer essa classificação, utilizando como base mais de 100 mil nomes e a &lt;a href="https://www.python.org/"&gt;linguagem Python&lt;/a&gt;!&amp;nbsp;:)&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="Instalando-as-depend&amp;#234;ncias"&gt;Instalando as depend&amp;#234;ncias&lt;a class="anchor-link" href="#Instalando-as-depend&amp;#234;ncias"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Antes de iniciar o código criaremos um ambiente virtual (virtualenv) utilizando a versão 3.7 do Python (vou utilizar o
+&lt;a href="https://github.com/pyenv/pyenv"&gt;pyenv&lt;/a&gt; e &lt;a href="https://github.com/pyenv/pyenv-virtualenv"&gt;pyenv-virtualenv&lt;/a&gt; para isso, mas fique à vontade para utilizar outras ferramentas em seu ambiente). Para esse projeto utilizaremos apenas as bibliotecas da &lt;a href="https://docs.python.org/3/library/"&gt;&lt;em&gt;standard library&lt;/em&gt; do Python&lt;/a&gt;, ou seja, não precisaremos instalar bibliotecas&amp;nbsp;externas.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pyenv virtualenv &lt;span class="m"&gt;3&lt;/span&gt;.7.3 classificador-genero
+pyenv activate classificador-genero
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="Entendendo-o-Dataset"&gt;Entendendo o Dataset&lt;a class="anchor-link" href="#Entendendo-o-Dataset"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A &lt;a href="https://brasil.io/dataset/genero-nomes/nomes"&gt;tabela nomes do &lt;em&gt;dataset&lt;/em&gt; genero-nomes&lt;/a&gt; possui a lista de todos os nomes encontrados no Censo 2010, contendo a frequência desse nome para os gêneros masculino e feminino, a classificação baseada nessa frequência (o gênero que tiver frequência maior) e a probabilidade da classificação ser verdadeira (frequência do gênero que aparece mais dividida pela frequência total do nome), como podemos ver na seguinte&amp;nbsp;tabela:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://blog.brasil.io/images/2019-05-31-tabela-genero-nomes.png" alt="Tabela de gênero dos nomes"&gt;&lt;/p&gt;
+&lt;p&gt;Para o nome &lt;span class="caps"&gt;ABADIAS&lt;/span&gt;, por exemplo, existem 45 pessoas do gênero feminimo e 156 do masculino, então o nome é classificado com o gênero &lt;code&gt;M&lt;/code&gt; (masculino) com uma probabilidade de 78% (&lt;code&gt;156 / (156 + 45)&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Repare também que os nomes contidos nesse &lt;em&gt;dataset&lt;/em&gt; estão todos em letras maiúsculas e sem acentos, então precisaremos criar uma função para transformar o nome que queremos classificar (exemplo: &lt;code&gt;Álvaro&lt;/code&gt;) para esse formato. Para isso, vamos utilizar a função &lt;code&gt;normalize&lt;/code&gt; do módulo &lt;a href="https://docs.python.org/3/library/unicodedata.html"&gt;unicodedata&lt;/a&gt; para separar os acentos das letras e ignorar os erros ao converter para o &lt;em&gt;encoding&lt;/em&gt; &lt;span class="caps"&gt;ASCII&lt;/span&gt;, que eliminará todos os símbolos que não&amp;nbsp;queremos:&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;unicodedata&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;normalize&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;encode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;ascii_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;normalize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;NFKD&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;encode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ascii&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;errors&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ignore&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;decode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ascii&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;ascii_name&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;upper&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;encode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Álvaro&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+    &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;ALVARO
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="Poss&amp;#237;veis-Abordagens"&gt;Poss&amp;#237;veis Abordagens&lt;a class="anchor-link" href="#Poss&amp;#237;veis-Abordagens"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Para esse projeto vamos fazer um &lt;strong&gt;classificador simples&lt;/strong&gt;, sem a utilização de técnicas de aprendizado de máquina, ou seja, ele será capaz de classificar apenas os nomes já disponíveis em nosso dataset. Em próximos artigos mostraremos como criar outros tipos de&amp;nbsp;classificadores.&lt;/p&gt;
+&lt;p&gt;Para resolver essa questão, temos duas abordagens&amp;nbsp;possíveis:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Utilizar a &lt;a href="https://brasil.io/api/datasets"&gt;&lt;span class="caps"&gt;API&lt;/span&gt; do Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt;, fazendo uma requisição a cada nome a ser classificado;&amp;nbsp;e&lt;/li&gt;
+&lt;li&gt;Baixar o dataset completo e utilizar os dados&amp;nbsp;localmente.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cada uma das abordagens tem vantagens e desvantagens, que veremos a&amp;nbsp;seguir.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="M&amp;#233;todo-1:-Utilizando-a-API"&gt;M&amp;#233;todo 1: Utilizando a &lt;span class="caps"&gt;API&lt;/span&gt;&lt;a class="anchor-link" href="#M&amp;#233;todo-1:-Utilizando-a-API"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Vantagens:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Não precisaremos baixar o dataset&amp;nbsp;completo&lt;/li&gt;
+&lt;li&gt;Utiliza pouca&amp;nbsp;memória&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Desvantagens:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Classificação lenta (uma requisição &lt;span class="caps"&gt;HTTP&lt;/span&gt; por&amp;nbsp;classificação)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Vamos criar uma função que recebe o nome, faz a requisição &lt;span class="caps"&gt;HTTP&lt;/span&gt; usando a &lt;a href="https://docs.python.org/3/library/urllib.html"&gt;urllib&lt;/a&gt;, lê os dados com a &lt;a href="https://docs.python.org/3/library/json.html"&gt;json&lt;/a&gt; e retorna o resultado&amp;nbsp;encontrado:&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[2]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;json&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;urllib.request&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;urlopen&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;classify_api&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;encoded_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;encode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;https://brasil.io/api/dataset/genero-nomes/nomes/data?first_name=&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;encoded_name&lt;/span&gt;
+    &lt;span class="n"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;urlopen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;json_response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loads&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;response&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;json_response&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;results&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;classification&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;classify_api&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Álvaro&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+    &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;M
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Fica como sugestão de exercício melhorar a função acima, adicionando tratamento de erros caso o nome não seja&amp;nbsp;encontrado.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="M&amp;#233;todo-2:-Baixando-os-dados"&gt;M&amp;#233;todo 2: Baixando os dados&lt;a class="anchor-link" href="#M&amp;#233;todo-2:-Baixando-os-dados"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Vantagens:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Classificação rápida (acesso à chave de um&amp;nbsp;dicionário)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Desvantagens:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Precisaremos baixar o dataset&amp;nbsp;completo&lt;/li&gt;
+&lt;li&gt;Utiliza mais&amp;nbsp;memória&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Vamos utilizar o &lt;code&gt;wget&lt;/code&gt; no terminal para baixar a tabela &lt;code&gt;nomes&lt;/code&gt; completa:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget https://data.brasil.io/dataset/genero-nomes/nomes.csv.gz
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Agora, vamos ler o arquivo &lt;span class="caps"&gt;CSV&lt;/span&gt; e criar um dicionário em que cada chave será um nome e o valor será a classificação correspondente, para isso utilizaremos os módulos &lt;a href="https://docs.python.org/3/library/gzip.html"&gt;gzip&lt;/a&gt; (para descompactar o arquivo), &lt;a href="https://docs.python.org/3/library/io.html"&gt;io&lt;/a&gt; (para decodificar o conteúdo do arquivo descompactado) e &lt;a href="https://docs.python.org/3/library/csv.html"&gt;csv&lt;/a&gt; (para ler o&amp;nbsp;arquivo).&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[3]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;csv&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;gzip&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;io&lt;/span&gt;
+
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;load_data&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;fobj&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;TextIOWrapper&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;gzip&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;nomes.csv.gz&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;encoding&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;csv_reader&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;csv&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DictReader&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fobj&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;first_name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;classification&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;csv_reader&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="n"&gt;fobj&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;
+
+&lt;span class="n"&gt;name_data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;load_data&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Dicionário criado com {len(name_data)} nomes.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+    &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;Dicionário criado com 100787 nomes.
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Com a variável &lt;code&gt;name_data&lt;/code&gt; definida podemos criar a função de classificação&amp;nbsp;facilmente:&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[4]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;classify_download&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;encoded_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;encode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;name_data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;encoded_name&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;classify_download&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Álvaro&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+    &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;M
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="Comparando-as-Solu&amp;#231;&amp;#245;es"&gt;Comparando as Solu&amp;#231;&amp;#245;es&lt;a class="anchor-link" href="#Comparando-as-Solu&amp;#231;&amp;#245;es"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A primeira solução não exige tempo de &lt;em&gt;download&lt;/em&gt; inicial, nem de carragamento dos dados, porém é bem mais lenta - cada classificação demora em torno de 1 segundo (esse valor pode variar, dependendo de sua conexão à Internet e à carga nos servidores do Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;):&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[5]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;timeit&lt;/span&gt; classify_api(&amp;quot;Álvaro&amp;quot;)
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+    &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;1.14 s ± 309 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Já a segunda solução requer o &lt;em&gt;download&lt;/em&gt; (uma única vez) de um arquivo de 1,&lt;span class="caps"&gt;9MB&lt;/span&gt; e mais um tempo inicial de quase meio segundo para carregar os dados em memória, porém é 1 milhão de vezes mais rápida - cada classificação demora em torno de 1 microssegundo (esse valor pode variar dependendo do processador e velocidades do disco e da&amp;nbsp;memória):&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[6]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;timeit&lt;/span&gt; load_data()
+&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;timeit&lt;/span&gt; classify_download(&amp;quot;Álvaro&amp;quot;)
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+    &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;478 ms ± 37.1 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+1.02 µs ± 33.2 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="Conclus&amp;#227;o"&gt;Conclus&amp;#227;o&lt;a class="anchor-link" href="#Conclus&amp;#227;o"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Podemos utilizar dados públicos para enriquecer diversos outros &lt;em&gt;datasets&lt;/em&gt;, possibilitando análises que antes não seriam possíveis. A utilização da &lt;span class="caps"&gt;API&lt;/span&gt; do Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; é bem simples e pode ser útil em casos de poucas consultas, mas quando a quantidade de consultas aumenta, o ideal é baixar os dados e trabalhar com eles&amp;nbsp;localmente.&lt;/p&gt;
+&lt;p&gt;Curtiu o artigo? Se você acha o trabalho que desenvolvemos importante, considere
+&lt;strong&gt;&lt;a href="https://brasil.io/doe"&gt;fazer uma doação&lt;/a&gt;&lt;/strong&gt; ou &lt;a href="https://brasil.io/colabore"&gt;colaborar de outras formas&lt;/a&gt;.&amp;nbsp;;)&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+ 
+
+
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Álvaro Justen</dc:creator><pubDate>Fri, 31 May 2019 15:10:00 -0300</pubDate><guid isPermaLink="false">tag:blog.brasil.io,2019-05-31:2019/05/31/classificando-nomes-por-genero-usando-dados-publicos/</guid><category>python</category><category>data science</category></item><item><title>Identificando Partidos que Mudaram de Nome</title><link>https://blog.brasil.io/2019/05/28/identificando-partidos-que-mudaram-de-nome/</link><description>&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
