@@ -29,7 +29,8 @@ chegamos na casa dos terabytes*.
 
 Por isso, enfatizo: **você não precisa de tecnologia de ponta para impactar a
 sociedade**. Gerar valor não está diretamente ligado às ferramenas que você
-utiliza, mas sim em como você as utiliza.
+utiliza, mas sim em como você as utiliza. **Tecnologia deveria ser um meio, não
+um fim.**
 
 Mas então o que é *big data*? Em resumo: qualquer informação que seja
 suficientemente grande ou complexa para que softwares de processamento de dados
