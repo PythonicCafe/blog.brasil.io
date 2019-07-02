@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Brasil.IO - Blog</title><link>https://blog.brasil.io/</link><description>Dados abertos para mais democracia</description><lastBuildDate>Fri, 31 May 2019 15:10:00 -0300</lastBuildDate><item><title>Classificando Nomes por Gênero Usando Dados Públicos</title><link>https://blog.brasil.io/2019/05/31/classificando-nomes-por-genero-usando-dados-publicos/</link><description>&lt;style type="text/css"&gt;/*!
+<rss version="2.0"><channel><title>Brasil.IO - Blog</title><link>https://blog.brasil.io/</link><description>Dados abertos para mais democracia</description><lastBuildDate>Tue, 02 Jul 2019 15:40:00 -0300</lastBuildDate><item><title>Você (provavelmente) não precisa de big data</title><link>https://blog.brasil.io/2019/07/02/voce-provavelmente-nao-precisa-de-big-data/</link><description>&lt;p&gt;&lt;em&gt;Big data&lt;/em&gt;, &lt;em&gt;artificial intelligence&lt;/em&gt;, &lt;em&gt;deep learning&lt;/em&gt; e outras tecnologias são
+as &lt;a href="https://en.wikipedia.org/wiki/Buzzword"&gt;&lt;em&gt;buzzwords&lt;/em&gt;&lt;/a&gt; do momento. Fala-se
+tanto disso que diversas pessoas (principalmente quem está chegando na área
+agora) acreditam que precisam utilizar essas tecnologias para trabalhar com
+dados (que esse é o único caminho, ou o caminho &lt;em&gt;mais correto&lt;/em&gt;), sem nem saber
+exatamente o que significam e para que&amp;nbsp;servem.&lt;/p&gt;
+&lt;p&gt;Na minha visão isso acontece porque influenciadores da tecnologia falam
+&lt;em&gt;apaixonadamente&lt;/em&gt; sobre o tema em palestras motivacionais, e falam tanto a
+ponto de moldar o senso comum, fazendo com que muita gente procure usar &lt;em&gt;big
+data&lt;/em&gt; para resolver problemas que algumas fórmulas num software de planilha
+resolveriam.  Senso comum não é bom senso e essa ideia é uma &lt;strong&gt;falácia que pode
+ser nociva&lt;/strong&gt;, aumentando a barreira (psicológica) de entrada de quem é de áreas
+fora da tecnologia e quer/precisa trabalhar com&amp;nbsp;dados.&lt;/p&gt;
+&lt;p&gt;Um contraexemplo para essa falácia é o próprio &lt;a href="https://brasil.io/"&gt;Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt;:
+conseguimos impactar milhares de jornalistas, programadores e pesquisadores
+por &lt;strong&gt;disponibilizarmos dados relevantes de forma acessível&lt;/strong&gt; - e ainda &lt;em&gt;nem
+chegamos na casa dos terabytes&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Por isso, enfatizo: &lt;strong&gt;você não precisa de tecnologia de ponta para impactar a
+sociedade&lt;/strong&gt;. Gerar valor não está diretamente ligado às ferramenas que você
+utiliza, mas sim em como você as&amp;nbsp;utiliza.&lt;/p&gt;
+&lt;p&gt;Mas então o que é &lt;em&gt;big data&lt;/em&gt;? Em resumo: qualquer informação que seja
+suficientemente grande ou complexa para que softwares de processamento de dados
+tradicionais consigam dar conta. Para saber mais detalhes, assista à palestra
+(de 20 minutos) que apresentei durante o encontro do
+&lt;a href="https://gedai.com.br/"&gt;&lt;span class="caps"&gt;GEDAI&lt;/span&gt;/&lt;span class="caps"&gt;UFPR&lt;/span&gt;&lt;/a&gt; em que mostro exemplos de casos reais
+envolvendo o tema - o &lt;a href="https://www.youtube.com/watch?v=1FEYQBmyk2Y"&gt;vídeo está disponível no
+YouTube&lt;/a&gt;:&lt;/p&gt;
+&lt;iframe width="1267" height="487" src="https://www.youtube.com/embed/teS9gBSkGnw?start=5248" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Os slides estão disponíveis &lt;a href="http://turicas.info/slides/big-data/"&gt;em formato de um
+site&lt;/a&gt; (&lt;a href="https://github.com/turicas/slides/blob/gh-pages/big-data/index.html"&gt;o código do site está
+disponível&lt;/a&gt;)
+e também &lt;a href="https://www.slideshare.net/turicas/realmente-precisamos-de-big-data"&gt;no
+slideshare&lt;/a&gt;,
+onde é possível fazer o download em &lt;span class="caps"&gt;PDF&lt;/span&gt;:&lt;/p&gt;
+&lt;iframe src="//www.slideshare.net/slideshow/embed_code/key/hlRMjaP6qWEH7t" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen&gt; &lt;/iframe&gt;
+
+&lt;p&gt;Se você acha importante que o trabalho do &lt;a href="https://brasil.io/"&gt;Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt;
+continue existindo &lt;em&gt;mesmo sem big data&lt;/em&gt;, considere &lt;a href="https://brasil.io/doe"&gt;doar
+para o projeto&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Álvaro Justen</dc:creator><pubDate>Tue, 02 Jul 2019 15:40:00 -0300</pubDate><guid isPermaLink="false">tag:blog.brasil.io,2019-07-02:2019/07/02/voce-provavelmente-nao-precisa-de-big-data/</guid><category>opendata</category><category>bigdata</category><category>acessibilidade</category></item><item><title>Classificando Nomes por Gênero Usando Dados Públicos</title><link>https://blog.brasil.io/2019/05/31/classificando-nomes-por-genero-usando-dados-publicos/</link><description>&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
