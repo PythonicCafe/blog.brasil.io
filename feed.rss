@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Brasil.IO - Blog</title><link>https://blog.brasil.io/</link><description>Dados abertos para mais democracia</description><lastBuildDate>Tue, 02 Jul 2019 15:40:00 -0300</lastBuildDate><item><title>Você (provavelmente) não precisa de big data</title><link>https://blog.brasil.io/2019/07/02/voce-provavelmente-nao-precisa-de-big-data/</link><description>&lt;p&gt;&lt;em&gt;Big data&lt;/em&gt;, &lt;em&gt;artificial intelligence&lt;/em&gt;, &lt;em&gt;deep learning&lt;/em&gt; e outras tecnologias são
+<rss version="2.0"><channel><title>Brasil.IO - Blog</title><link>https://blog.brasil.io/</link><description>Dados abertos para mais democracia</description><lastBuildDate>Wed, 13 Nov 2019 13:35:00 -0200</lastBuildDate><item><title>Em parceria com a Abraji, fomos selecionados pelo Google News Initiative!</title><link>https://blog.brasil.io/2019/11/13/em-parceria-com-a-abraji-fomos-selecionados-pelo-google-news-initiative/</link><description>&lt;p&gt;O projeto &lt;strong&gt;CruzaGrafos&lt;/strong&gt;, apresentado em parceria entre a &lt;a href="https://www.abraji.org.br/"&gt;Abraji (Associação
+Brasileira de Jornalismo Investigativo)&lt;/a&gt; e o
+&lt;a href="https://brasil.io/"&gt;Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt;, foi selecionado para receber apoio do Desafio
+de Inovação da &lt;a href="https://newsinitiative.withgoogle.com/"&gt;Google News
+Initiative&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;A ideia surgiu a partir de um protótipo que criei de &lt;a href="https://pt.wikipedia.org/wiki/Teoria_dos_grafos"&gt;visualização em
+grafo&lt;/a&gt; dos dados disponíveis
+no Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; e, após conversa com a Abraji, decidimos nos juntar para o
+desenvolvimento do projeto, que será muito útil a quem trabalha com jornalismo
+investigativo. Além dos dados que já temos, também integraremos os dados
+coletados pelo jornalista &lt;a href="https://pt.wikipedia.org/wiki/Cl%C3%A1udio_Weber_Abramo"&gt;Claudio Weber
+Abramo&lt;/a&gt;, pioneiro do
+jornalismo de dados no Brasil, que faleceu em agosto de 2018 (sua família
+gentilmente cedeu para a Abraji os bancos de dados e ferramentas que ele&amp;nbsp;criou).&lt;/p&gt;
+&lt;p&gt;A ferramenta gráfica de análise de grafos &lt;strong&gt;será licenciada como software
+livre&lt;/strong&gt; e facilitará descobrir relações entre pessoas em empresas, mesmo que
+elas apareçam em &lt;em&gt;datasets&lt;/em&gt; distintos - será possível, por exemplo, explorar
+visualmente as conexões entre um político e seus doadores de campanha, empresas
+de sua propriedade, parceiros de negócios e empreiteiros pagos com recursos&amp;nbsp;públicos.&lt;/p&gt;
+&lt;p&gt;A verba disponibilizada pela Google News Initiative será utilizada para o
+desenvolvimento do software (aproveitando: &lt;a href="https://twitter.com/turicas/status/1192637037242920968"&gt;estamos contratando desenvolveras
+&lt;em&gt;front-end&lt;/em&gt;&lt;/a&gt;) e, apesar
+de não ser destinada ao desenvolvimento do Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;, terá um impacto positivo
+nos usuários da plataforma: precisaremos coletar &lt;em&gt;datasets&lt;/em&gt; que ainda não estão
+disponíveis aqui e, no fim, teremos &lt;strong&gt;mais dados abertos acessíveis a todos&lt;/strong&gt;!&lt;/p&gt;
+&lt;p&gt;A concorrência foi grande: foram 303 projetos inscritos e, junto com o
+CruzaGrafos, outros 29 projetos de 10 países da América Latina foram
+selecionados: &lt;a href="https://newsinitiative.withgoogle.com/intl/pt_br/innovation-challenges/funding/latin-america/"&gt;veja a lista completa de
+projetos&lt;/a&gt;
+e &lt;a href="https://brasil.googleblog.com/2019/11/acelerando-criacao-de-novos-produtos-e-modelos-de-negocio-na-industria-jornalistica-da-america-latina-em-30-projetos.html"&gt;a publicação no Blog Google Brasil sobre os projetos
+apoiados&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Em breve mais novidades!&amp;nbsp;:)&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Álvaro Justen</dc:creator><pubDate>Wed, 13 Nov 2019 13:35:00 -0200</pubDate><guid isPermaLink="false">tag:blog.brasil.io,2019-11-13:2019/11/13/em-parceria-com-a-abraji-fomos-selecionados-pelo-google-news-initiative/</guid><category>grafos</category><category>dados abertos</category><category>financiamento</category></item><item><title>Você (provavelmente) não precisa de big data</title><link>https://blog.brasil.io/2019/07/02/voce-provavelmente-nao-precisa-de-big-data/</link><description>&lt;p&gt;&lt;em&gt;Big data&lt;/em&gt;, &lt;em&gt;artificial intelligence&lt;/em&gt;, &lt;em&gt;deep learning&lt;/em&gt; e outras tecnologias são
 as &lt;a href="https://en.wikipedia.org/wiki/Buzzword"&gt;&lt;em&gt;buzzwords&lt;/em&gt;&lt;/a&gt; do momento. Fala-se
 tanto disso que diversas pessoas (principalmente quem está chegando na área
 agora) acreditam que precisam utilizar essas tecnologias para trabalhar com

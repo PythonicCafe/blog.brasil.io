@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Brasil.IO - Blog</title><link href="https://blog.brasil.io/" rel="alternate"></link><link href="https://blog.brasil.io/feeds/meta.atom.xml" rel="self"></link><id>https://blog.brasil.io/</id><updated>2019-04-18T23:05:00-03:00</updated><entry><title>1 Ano de Dados Acessíveis</title><link href="https://blog.brasil.io/2019/04/18/1-ano-de-dados-acessiveis/" rel="alternate"></link><published>2019-04-18T23:05:00-03:00</published><updated>2019-04-18T23:05:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-04-18:2019/04/18/1-ano-de-dados-acessiveis/</id><summary type="html">&lt;p&gt;Tive a &lt;a href="http://whois.domaintools.com/brasil.io"&gt;ideia de criar o Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; há muitos anos, em
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Brasil.IO - Blog</title><link href="https://blog.brasil.io/" rel="alternate"></link><link href="https://blog.brasil.io/feeds/meta.atom.xml" rel="self"></link><id>https://blog.brasil.io/</id><updated>2019-11-13T13:35:00-02:00</updated><entry><title>Em parceria com a Abraji, fomos selecionados pelo Google News Initiative!</title><link href="https://blog.brasil.io/2019/11/13/em-parceria-com-a-abraji-fomos-selecionados-pelo-google-news-initiative/" rel="alternate"></link><published>2019-11-13T13:35:00-02:00</published><updated>2019-11-13T13:35:00-02:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-11-13:2019/11/13/em-parceria-com-a-abraji-fomos-selecionados-pelo-google-news-initiative/</id><summary type="html">&lt;p&gt;O projeto &lt;strong&gt;CruzaGrafos&lt;/strong&gt;, apresentado em parceria entre a &lt;a href="https://www.abraji.org.br/"&gt;Abraji (Associação
+Brasileira de Jornalismo Investigativo)&lt;/a&gt; e o
+&lt;a href="https://brasil.io/"&gt;Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt;, foi selecionado para receber apoio do Desafio
+de Inovação da &lt;a href="https://newsinitiative.withgoogle.com/"&gt;Google News
+Initiative&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;A ideia surgiu a partir de um protótipo que criei de &lt;a href="https://pt.wikipedia.org/wiki/Teoria_dos_grafos"&gt;visualização em
+grafo&lt;/a&gt; dos dados disponíveis
+no Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; e, após conversa com a Abraji, decidimos nos juntar para o
+desenvolvimento do projeto, que será muito útil a quem trabalha com jornalismo
+investigativo. Além dos dados que já temos, também integraremos os dados
+coletados pelo jornalista &lt;a href="https://pt.wikipedia.org/wiki/Cl%C3%A1udio_Weber_Abramo"&gt;Claudio Weber
+Abramo&lt;/a&gt;, pioneiro do
+jornalismo de dados no Brasil, que faleceu em agosto de 2018 (sua família
+gentilmente cedeu para a Abraji os bancos de dados e ferramentas que ele&amp;nbsp;criou).&lt;/p&gt;
+&lt;p&gt;A ferramenta gráfica de análise de grafos &lt;strong&gt;será licenciada como software
+livre&lt;/strong&gt; e facilitará descobrir relações entre pessoas em empresas, mesmo que
+elas apareçam em &lt;em&gt;datasets&lt;/em&gt; distintos - será possível, por exemplo, explorar
+visualmente as conexões entre um político e seus doadores de campanha, empresas
+de sua propriedade, parceiros de negócios e empreiteiros pagos com recursos&amp;nbsp;públicos.&lt;/p&gt;
+&lt;p&gt;A verba disponibilizada pela Google News Initiative será utilizada para o
+desenvolvimento do software (aproveitando: &lt;a href="https://twitter.com/turicas/status/1192637037242920968"&gt;estamos contratando desenvolveras
+&lt;em&gt;front-end&lt;/em&gt;&lt;/a&gt;) e, apesar
+de não ser destinada ao desenvolvimento do Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;, terá um impacto positivo
+nos usuários da plataforma: precisaremos coletar &lt;em&gt;datasets&lt;/em&gt; que ainda não estão
+disponíveis aqui e, no fim, teremos &lt;strong&gt;mais dados abertos acessíveis a todos&lt;/strong&gt;!&lt;/p&gt;
+&lt;p&gt;A concorrência foi grande: foram 303 projetos inscritos e, junto com o
+CruzaGrafos, outros 29 projetos de 10 países da América Latina foram
+selecionados: &lt;a href="https://newsinitiative.withgoogle.com/intl/pt_br/innovation-challenges/funding/latin-america/"&gt;veja a lista completa de
+projetos&lt;/a&gt;
+e &lt;a href="https://brasil.googleblog.com/2019/11/acelerando-criacao-de-novos-produtos-e-modelos-de-negocio-na-industria-jornalistica-da-america-latina-em-30-projetos.html"&gt;a publicação no Blog Google Brasil sobre os projetos
+apoiados&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Em breve mais novidades!&amp;nbsp;:)&lt;/p&gt;</summary><category term="grafos"></category><category term="dados abertos"></category><category term="financiamento"></category></entry><entry><title>1 Ano de Dados Acessíveis</title><link href="https://blog.brasil.io/2019/04/18/1-ano-de-dados-acessiveis/" rel="alternate"></link><published>2019-04-18T23:05:00-03:00</published><updated>2019-04-18T23:05:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-04-18:2019/04/18/1-ano-de-dados-acessiveis/</id><summary type="html">&lt;p&gt;Tive a &lt;a href="http://whois.domaintools.com/brasil.io"&gt;ideia de criar o Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; há muitos anos, em
 2013&lt;/a&gt;, porém por diversos motivos
 (incluindo mudanças na ideia inicial) o desenvolvimento da plataforma como
 existe hoje foi iniciado somente em 2018 - o pontapé inicial aconteceu após
