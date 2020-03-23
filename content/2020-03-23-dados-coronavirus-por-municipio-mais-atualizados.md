@@ -40,7 +40,9 @@ Para nos ajudar nesse trabalho, você pode:
 
 - Divulgar os dados: [acesse o dataset no
   Brasil.IO](https://brasil.io/dataset/codiv19) ou [a API do
-  Brasil.IO](https://brasil.io/api/dataset/covid19);
+  Brasil.IO](https://brasil.io/api/dataset/covid19) - não se esqueça de dar
+  crédito e compartilhar sob a mesma licença (os dados estão sob
+  [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode));
 - Fazer cálculos e previsões por município;
 - Entrar em contato com as secretarias estaduais, exigindo que os dados sejam
   disponibilizados de maneira estruturada ([veja aqui as recomendações que
