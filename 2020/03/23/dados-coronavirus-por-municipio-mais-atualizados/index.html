@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Dados do coronavírus por município por dia mais recentes | Brasil.IO - Blog
+</title>
+  <link rel="canonical" href="https://blog.brasil.io/2020/03/23/dados-coronavirus-por-municipio-mais-atualizados/index.html">
+
+
+  <link rel="stylesheet" href="https://blog.brasil.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://blog.brasil.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://blog.brasil.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://blog.brasil.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://blog.brasil.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/rss+xml" title="Full RSS Feed"
+        href="https://blog.brasil.io/feed.rss">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://blog.brasil.io/feeds/datasets.atom.xml">  
+  <meta name="description" content="Os dados sobre o coronavírus disponibilizados pelo Ministério da Saúde não são suficientes para que possamos agir localmente com eficácia. Fizemos um mutirão com 33 voluntários e catalogamos manualmente os dados presentes em centenas de boletins epidemiológicos das secretarias de saúde estaduais (com o histórico). Nos ajude a divulgá-los!">
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o);
+      a.async = 1;
+      a.src = g;
+      m = s.getElementsByTagName(o)[0];
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-117698282-2', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+  <div class="col-sm-12">
+    <div class="col-sm-12">
+      <a href="https://blog.brasil.io/">
+        <img class="img-fluid rounded" src=https://blog.brasil.io/theme/images/logo-blog.brasil.io.png alt="Brasil.IO - Blog">
+      </a>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-9">
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://blog.brasil.io/" target="_blank">Blog</a></li>
+            <li class="list-inline-item"><a href="https://brasil.io/datasets" target="_blank">Datasets</a></li>
+            <li class="list-inline-item"><a href="https://brasil.io/colabore" target="_blank">Colabore</a></li>
+            <li class="list-inline-item"><a href="https://brasil.io/contato" target="_blank">Contato</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3 text-right">
+        <a href="https://blog.brasil.io/feed.rss"><i class="fa fa-rss"></i></a>
+        <a href="https://github.com/turicas/blog.brasil.io"><i class="fa fa-github"></i></a>
+      </div>
+    </div>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Dados do coronavírus por município por dia mais&nbsp;recentes
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2020-03-23T08:00:00-03:00">
+          <i class="fa fa-clock-o"></i>
+          seg 23 março 2020
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://blog.brasil.io/category/datasets.html">datasets</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://blog.brasil.io/author/alvaro-justen.html">Álvaro Justen</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://blog.brasil.io/tag/covid19.html">#covid19</a>,               <a href="https://blog.brasil.io/tag/opendata.html">#opendata</a>,               <a href="https://blog.brasil.io/tag/ddj.html">#ddj</a>,               <a href="https://blog.brasil.io/tag/colaboracao.html">#colaboração</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <blockquote>
+<p>Nota: essa publicação será atualizada conforme tivermos mais detalhes sobre
+esse&nbsp;dataset.</p>
+</blockquote>
+<p>Nesse ano a <a href="https://artigo19.org/wp-content/blogs.dir/24/files/2017/05/Os-5-anos-da-Lei-de-Acesso-%c3%a0-Informa%c3%a7%c3%a3o-%e2%80%93-uma-an%c3%a1lise-de-casos-de-transpar%c3%aancia.pdf">Lei de Acesso à Informação completou 8
+anos</a>
+e ainda temos problemas graves na divulgação de dados abertos. Os dados sobre o
+coronavírus disponibilizados pelo Ministério da Saúde não são suficientes para
+que possamos agir localmente com eficácia,&nbsp;pois:</p>
+<ul>
+<li>O processo de atualização é lento pouco&nbsp;frequente;</li>
+<li>O site sai do ar&nbsp;frequentemente;</li>
+<li>Os dados não estão&nbsp;estruturados.</li>
+</ul>
+<p>Para conter a epidemia precisamos de atitudes locais bem específicas, ou seja,
+temos que agir a nível municipal e estadual, o mais rápido possível. Para
+resolver essas questões dos dados, <a href="https://twitter.com/turicas/status/1241068121202536448">comecei uma catalogação manual e pedi ajuda
+a voluntários</a> e nesse
+fim de semana, junto com 32 outras pessoas incríveis, catalogamos manualmente
+os dados presentes em centenas de boletins epidemiológicos das secretarias de
+saúde estaduais, com o histórico (esse processo colaborativo intenso merece uma
+publicação dedicada, além de um agradecimento especial a todos os voluntários -
+em&nbsp;breve).</p>
+<p>Ainda não terminamos todos os estados (faltam: <span class="caps">AM</span> e <span class="caps">TO</span>), mas já temos os dados
+atuais para cada um dos municípios (para os estados que conseguimos catalogar)
+e nossos dados já são maiores/mais atuais que os divulgados pelo Ministério da
+Saúde (1550 <em>versus</em> 1546 para a versão que liberamos agora pela manhã de&nbsp;23/03).</p>
+<p>Para nos ajudar nesse trabalho, você&nbsp;pode:</p>
+<ul>
+<li>Divulgar os dados: <a href="https://brasil.io/dataset/codiv19">acesse o dataset no
+  Brasil.<span class="caps">IO</span></a> ou <a href="https://brasil.io/api/dataset/covid19">a <span class="caps">API</span> do
+  Brasil.<span class="caps">IO</span></a>;</li>
+<li>Fazer cálculos e previsões por&nbsp;município;</li>
+<li>Entrar em contato com as secretarias estaduais, exigindo que os dados sejam
+  disponibilizados de maneira estruturada (<a href="https://github.com/turicas/covid19-br/blob/master/recomendacoes.md">veja aqui as recomendações que
+  escrevi</a>
+  e mais detalhes&nbsp;abaixo).</li>
+<li>Alertar à população da <strong>necessidade de isolamento social o mais rápido
+  possível</strong>;</li>
+<li><a href="https://brasil.io/contato">Relatar problema com os dados</a>;</li>
+<li><a href="https://brasil.io/colabore">Colaborar</a> ou mesmo <a href="https://brasil.io/doe">doar para o
+  Brasil.<span class="caps">IO</span></a></li>
+</ul>
+<p>Se você trabalha numa secretaria, veja exemplos do que <strong>não deve ser feito</strong>:</p>
+<ul>
+<li><a href="http://www.saude.pr.gov.br/arquivos/File/CORONA_22032020.pdf">Boletim com a tabela <span class="caps">PDF</span>
+  (Paraná)</a> -
+  poderia ser uma planilha (<span class="caps">CSV</span>, <span class="caps">ODS</span>, <span class="caps">XLS</span>, <span class="caps">XLSX</span>);</li>
+<li><a href="http://www.saude.ma.gov.br/downloads/notascovid/nota10.pdf">Boletim em <span class="caps">PDF</span> contendo uma imagem
+  (Maranhão)</a>;</li>
+<li><a href="http://www.adcon.rn.gov.br/ACERVO/sesap/DOC/DOC000000000227515.PDF">Boletim sem tabelas e número de casos escrito por extenso no meio dos
+parágrafos (Rio Grande do Norte)</a>;</li>
+<li>Possuir mais de um site onde os boletins são publicados, sem coesão entre
+  eles (Rio de&nbsp;Janeiro);</li>
+<li>Falta de seção específica e de fácil acesso no site só para os boletins do
+  covid19 (vários&nbsp;estados);</li>
+<li>Deixar de atualizar os dados nos fins de&nbsp;semana.</li>
+</ul>
+<p>Outros links que podem ser&nbsp;úteis:</p>
+<ul>
+<li><a href="https://drive.google.com/open?id=1S77CvorwQripFZjlWTOZeBhK42rh3u57aRL1XZGhSdI">Links para os sites das secretarias estaduais de saúde e planilhas que
+  estamos&nbsp;preenchendo</a></li>
+<li><a href="https://drive.google.com/open?id=1escumcbjS8inzAKvuXOQocMcQ8ZCqbyHU5X5hFrPpn4">Metodologia que criamos para a coleta de
+  dados</a>
+  (está em constante&nbsp;atualização)</li>
+</ul>
+<p>Ah, e fica aqui o lembrete: depois da pandemia precisamos voltar à questão da
+Lei de Acesso à Informação (sites fora do ar, informação oficial não constando
+no site, dados não estruturados, dados incompletos), mas enquanto ela não
+termina, nossa equipe de voluntários tem uma batalha diária: <strong>atualizar esses
+dados - manualmente</strong>.</p>
+    </div>
+  </article>
+  <hr>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function() {
+      this.page.url = 'https://blog.brasil.io/2020/03/23/dados-coronavirus-por-municipio-mais-atualizados/index.html';
+      this.page.identifier = 'dados-coronavirus-por-municipio-mais-atualizados';
+    };
+    (function() {
+      var d = document;
+      var s = d.createElement('script');
+      s.src = '//brasilio.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript class="text-muted">
+    Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+  </noscript>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://blog.brasil.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://blog.brasil.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://blog.brasil.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://blog.brasil.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

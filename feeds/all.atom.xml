@@ -1,5 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Brasil.IO - Blog</title><link href="https://blog.brasil.io/" rel="alternate"></link><link href="https://blog.brasil.io/feeds/all.atom.xml" rel="self"></link><id>https://blog.brasil.io/</id><updated>2019-11-13T13:35:00-02:00</updated><entry><title>Em parceria com a Abraji, fomos selecionados pelo Google News Initiative!</title><link href="https://blog.brasil.io/2019/11/13/em-parceria-com-a-abraji-fomos-selecionados-pelo-google-news-initiative/" rel="alternate"></link><published>2019-11-13T13:35:00-02:00</published><updated>2019-11-13T13:35:00-02:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-11-13:2019/11/13/em-parceria-com-a-abraji-fomos-selecionados-pelo-google-news-initiative/</id><summary type="html">&lt;p&gt;O projeto &lt;strong&gt;CruzaGrafos&lt;/strong&gt;, apresentado em parceria entre a &lt;a href="https://www.abraji.org.br/"&gt;Abraji (Associação
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Brasil.IO - Blog</title><link href="https://blog.brasil.io/" rel="alternate"></link><link href="https://blog.brasil.io/feeds/all.atom.xml" rel="self"></link><id>https://blog.brasil.io/</id><updated>2020-03-23T08:00:00-03:00</updated><entry><title>Dados do coronavírus por município por dia mais recentes</title><link href="https://blog.brasil.io/2020/03/23/dados-coronavirus-por-municipio-mais-atualizados/" rel="alternate"></link><published>2020-03-23T08:00:00-03:00</published><updated>2020-03-23T08:00:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2020-03-23:2020/03/23/dados-coronavirus-por-municipio-mais-atualizados/</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Nota: essa publicação será atualizada conforme tivermos mais detalhes sobre
+esse&amp;nbsp;dataset.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Nesse ano a &lt;a href="https://artigo19.org/wp-content/blogs.dir/24/files/2017/05/Os-5-anos-da-Lei-de-Acesso-%c3%a0-Informa%c3%a7%c3%a3o-%e2%80%93-uma-an%c3%a1lise-de-casos-de-transpar%c3%aancia.pdf"&gt;Lei de Acesso à Informação completou 8
+anos&lt;/a&gt;
+e ainda temos problemas graves na divulgação de dados abertos. Os dados sobre o
+coronavírus disponibilizados pelo Ministério da Saúde não são suficientes para
+que possamos agir localmente com eficácia,&amp;nbsp;pois:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;O processo de atualização é lento pouco&amp;nbsp;frequente;&lt;/li&gt;
+&lt;li&gt;O site sai do ar&amp;nbsp;frequentemente;&lt;/li&gt;
+&lt;li&gt;Os dados não estão&amp;nbsp;estruturados.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Para conter a epidemia precisamos de atitudes locais bem específicas, ou seja,
+temos que agir a nível municipal e estadual, o mais rápido possível. Para
+resolver essas questões dos dados, &lt;a href="https://twitter.com/turicas/status/1241068121202536448"&gt;comecei uma catalogação manual e pedi ajuda
+a voluntários&lt;/a&gt; e nesse
+fim de semana, junto com 32 outras pessoas incríveis, catalogamos manualmente
+os dados presentes em centenas de boletins epidemiológicos das secretarias de
+saúde estaduais, com o histórico (esse processo colaborativo intenso merece uma
+publicação dedicada, além de um agradecimento especial a todos os voluntários -
+em&amp;nbsp;breve).&lt;/p&gt;
+&lt;p&gt;Ainda não terminamos todos os estados (faltam: &lt;span class="caps"&gt;AM&lt;/span&gt; e &lt;span class="caps"&gt;TO&lt;/span&gt;), mas já temos os dados
+atuais para cada um dos municípios (para os estados que conseguimos catalogar)
+e nossos dados já são maiores/mais atuais que os divulgados pelo Ministério da
+Saúde (1550 &lt;em&gt;versus&lt;/em&gt; 1546 para a versão que liberamos agora pela manhã de&amp;nbsp;23/03).&lt;/p&gt;
+&lt;p&gt;Para nos ajudar nesse trabalho, você&amp;nbsp;pode:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Divulgar os dados: &lt;a href="https://brasil.io/dataset/codiv19"&gt;acesse o dataset no
+  Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt; ou &lt;a href="https://brasil.io/api/dataset/covid19"&gt;a &lt;span class="caps"&gt;API&lt;/span&gt; do
+  Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Fazer cálculos e previsões por&amp;nbsp;município;&lt;/li&gt;
+&lt;li&gt;Entrar em contato com as secretarias estaduais, exigindo que os dados sejam
+  disponibilizados de maneira estruturada (&lt;a href="https://github.com/turicas/covid19-br/blob/master/recomendacoes.md"&gt;veja aqui as recomendações que
+  escrevi&lt;/a&gt;
+  e mais detalhes&amp;nbsp;abaixo).&lt;/li&gt;
+&lt;li&gt;Alertar à população da &lt;strong&gt;necessidade de isolamento social o mais rápido
+  possível&lt;/strong&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://brasil.io/contato"&gt;Relatar problema com os dados&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://brasil.io/colabore"&gt;Colaborar&lt;/a&gt; ou mesmo &lt;a href="https://brasil.io/doe"&gt;doar para o
+  Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Se você trabalha numa secretaria, veja exemplos do que &lt;strong&gt;não deve ser feito&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.saude.pr.gov.br/arquivos/File/CORONA_22032020.pdf"&gt;Boletim com a tabela &lt;span class="caps"&gt;PDF&lt;/span&gt;
+  (Paraná)&lt;/a&gt; -
+  poderia ser uma planilha (&lt;span class="caps"&gt;CSV&lt;/span&gt;, &lt;span class="caps"&gt;ODS&lt;/span&gt;, &lt;span class="caps"&gt;XLS&lt;/span&gt;, &lt;span class="caps"&gt;XLSX&lt;/span&gt;);&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.saude.ma.gov.br/downloads/notascovid/nota10.pdf"&gt;Boletim em &lt;span class="caps"&gt;PDF&lt;/span&gt; contendo uma imagem
+  (Maranhão)&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.adcon.rn.gov.br/ACERVO/sesap/DOC/DOC000000000227515.PDF"&gt;Boletim sem tabelas e número de casos escrito por extenso no meio dos
+parágrafos (Rio Grande do Norte)&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Possuir mais de um site onde os boletins são publicados, sem coesão entre
+  eles (Rio de&amp;nbsp;Janeiro);&lt;/li&gt;
+&lt;li&gt;Falta de seção específica e de fácil acesso no site só para os boletins do
+  covid19 (vários&amp;nbsp;estados);&lt;/li&gt;
+&lt;li&gt;Deixar de atualizar os dados nos fins de&amp;nbsp;semana.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Outros links que podem ser&amp;nbsp;úteis:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://drive.google.com/open?id=1S77CvorwQripFZjlWTOZeBhK42rh3u57aRL1XZGhSdI"&gt;Links para os sites das secretarias estaduais de saúde e planilhas que
+  estamos&amp;nbsp;preenchendo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://drive.google.com/open?id=1escumcbjS8inzAKvuXOQocMcQ8ZCqbyHU5X5hFrPpn4"&gt;Metodologia que criamos para a coleta de
+  dados&lt;/a&gt;
+  (está em constante&amp;nbsp;atualização)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ah, e fica aqui o lembrete: depois da pandemia precisamos voltar à questão da
+Lei de Acesso à Informação (sites fora do ar, informação oficial não constando
+no site, dados não estruturados, dados incompletos), mas enquanto ela não
+termina, nossa equipe de voluntários tem uma batalha diária: &lt;strong&gt;atualizar esses
+dados - manualmente&lt;/strong&gt;.&lt;/p&gt;</summary><category term="covid19"></category><category term="opendata"></category><category term="ddj"></category><category term="colaboração"></category></entry><entry><title>Em parceria com a Abraji, fomos selecionados pelo Google News Initiative!</title><link href="https://blog.brasil.io/2019/11/13/em-parceria-com-a-abraji-fomos-selecionados-pelo-google-news-initiative/" rel="alternate"></link><published>2019-11-13T13:35:00-02:00</published><updated>2019-11-13T13:35:00-02:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-11-13:2019/11/13/em-parceria-com-a-abraji-fomos-selecionados-pelo-google-news-initiative/</id><summary type="html">&lt;p&gt;O projeto &lt;strong&gt;CruzaGrafos&lt;/strong&gt;, apresentado em parceria entre a &lt;a href="https://www.abraji.org.br/"&gt;Abraji (Associação
 Brasileira de Jornalismo Investigativo)&lt;/a&gt; e o
 &lt;a href="https://brasil.io/"&gt;Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt;, foi selecionado para receber apoio do Desafio
 de Inovação da &lt;a href="https://newsinitiative.withgoogle.com/"&gt;Google News
