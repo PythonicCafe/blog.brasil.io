@@ -1,6 +1,6 @@
-Title: Dados do coronavírus por município por dia mais recentes
+Title: Dados diários mais recentes do coronavírus por município brasileiro
 Slug: dados-coronavirus-por-municipio-mais-atualizados
-Date: 2020-03-23 08:00
+Date: 2020-03-23 09:00
 Category: datasets
 Tags: covid19, opendata, ddj, colaboração
 Author: Álvaro Justen
@@ -26,9 +26,9 @@ resolver essas questões dos dados, [comecei uma catalogação manual e pedi aju
 a voluntários](https://twitter.com/turicas/status/1241068121202536448) e nesse
 fim de semana, junto com 32 outras pessoas incríveis, catalogamos manualmente
 os dados presentes em centenas de boletins epidemiológicos das secretarias de
-saúde estaduais, com o histórico (esse processo colaborativo intenso merece uma
-publicação dedicada, além de um agradecimento especial a todos os voluntários -
-em breve).
+saúde estaduais incluindo o histórico (esse processo colaborativo intenso
+merece uma publicação dedicada, além de um agradecimento especial a todos os
+voluntários - em breve).
 
 Ainda não terminamos todos os estados (faltam: AM e TO), mas já temos os dados
 atuais para cada um dos municípios (para os estados que conseguimos catalogar)
