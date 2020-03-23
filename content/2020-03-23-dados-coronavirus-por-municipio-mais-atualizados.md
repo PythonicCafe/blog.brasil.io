@@ -39,7 +39,7 @@ Saúde (1550 *versus* 1546 para a versão que liberamos agora pela manhã de
 Para nos ajudar nesse trabalho, você pode:
 
 - Divulgar os dados: [acesse o dataset no
-  Brasil.IO](https://brasil.io/dataset/codiv19) ou [a API do
+  Brasil.IO](https://brasil.io/dataset/covid19) ou [a API do
   Brasil.IO](https://brasil.io/api/dataset/covid19) - não se esqueça de dar
   crédito e compartilhar sob a mesma licença (os dados estão sob
   [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode));
