@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Brasil.IO - Blog</title><link>https://blog.brasil.io/</link><description>Dados abertos para mais democracia</description><lastBuildDate>Mon, 23 Mar 2020 08:00:00 -0300</lastBuildDate><item><title>Dados do coronavírus por município por dia mais recentes</title><link>https://blog.brasil.io/2020/03/23/dados-coronavirus-por-municipio-mais-atualizados/</link><description>&lt;blockquote&gt;
+<rss version="2.0"><channel><title>Brasil.IO - Blog</title><link>https://blog.brasil.io/</link><description>Dados abertos para mais democracia</description><lastBuildDate>Mon, 23 Mar 2020 09:00:00 -0300</lastBuildDate><item><title>Dados diários mais recentes do coronavírus por município brasileiro</title><link>https://blog.brasil.io/2020/03/23/dados-coronavirus-por-municipio-mais-atualizados/</link><description>&lt;blockquote&gt;
 &lt;p&gt;Nota: essa publicação será atualizada conforme tivermos mais detalhes sobre
 esse&amp;nbsp;dataset.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -19,9 +19,9 @@ resolver essas questões dos dados, &lt;a href="https://twitter.com/turicas/stat
 a voluntários&lt;/a&gt; e nesse
 fim de semana, junto com 32 outras pessoas incríveis, catalogamos manualmente
 os dados presentes em centenas de boletins epidemiológicos das secretarias de
-saúde estaduais, com o histórico (esse processo colaborativo intenso merece uma
-publicação dedicada, além de um agradecimento especial a todos os voluntários -
-em&amp;nbsp;breve).&lt;/p&gt;
+saúde estaduais incluindo o histórico (esse processo colaborativo intenso
+merece uma publicação dedicada, além de um agradecimento especial a todos os
+voluntários - em&amp;nbsp;breve).&lt;/p&gt;
 &lt;p&gt;Ainda não terminamos todos os estados (faltam: &lt;span class="caps"&gt;AM&lt;/span&gt; e &lt;span class="caps"&gt;TO&lt;/span&gt;), mas já temos os dados
 atuais para cada um dos municípios (para os estados que conseguimos catalogar)
 e nossos dados já são maiores/mais atuais que os divulgados pelo Ministério da
@@ -71,7 +71,7 @@ parágrafos (Rio Grande do Norte)&lt;/a&gt;;&lt;/li&gt;
 Lei de Acesso à Informação (sites fora do ar, informação oficial não constando
 no site, dados não estruturados, dados incompletos), mas enquanto ela não
 termina, nossa equipe de voluntários tem uma batalha diária: &lt;strong&gt;atualizar esses
-dados - manualmente&lt;/strong&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Álvaro Justen</dc:creator><pubDate>Mon, 23 Mar 2020 08:00:00 -0300</pubDate><guid isPermaLink="false">tag:blog.brasil.io,2020-03-23:2020/03/23/dados-coronavirus-por-municipio-mais-atualizados/</guid><category>covid19</category><category>opendata</category><category>ddj</category><category>colaboração</category></item><item><title>Em parceria com a Abraji, fomos selecionados pelo Google News Initiative!</title><link>https://blog.brasil.io/2019/11/13/em-parceria-com-a-abraji-fomos-selecionados-pelo-google-news-initiative/</link><description>&lt;p&gt;O projeto &lt;strong&gt;CruzaGrafos&lt;/strong&gt;, apresentado em parceria entre a &lt;a href="https://www.abraji.org.br/"&gt;Abraji (Associação
+dados - manualmente&lt;/strong&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Álvaro Justen</dc:creator><pubDate>Mon, 23 Mar 2020 09:00:00 -0300</pubDate><guid isPermaLink="false">tag:blog.brasil.io,2020-03-23:2020/03/23/dados-coronavirus-por-municipio-mais-atualizados/</guid><category>covid19</category><category>opendata</category><category>ddj</category><category>colaboração</category></item><item><title>Em parceria com a Abraji, fomos selecionados pelo Google News Initiative!</title><link>https://blog.brasil.io/2019/11/13/em-parceria-com-a-abraji-fomos-selecionados-pelo-google-news-initiative/</link><description>&lt;p&gt;O projeto &lt;strong&gt;CruzaGrafos&lt;/strong&gt;, apresentado em parceria entre a &lt;a href="https://www.abraji.org.br/"&gt;Abraji (Associação
 Brasileira de Jornalismo Investigativo)&lt;/a&gt; e o
 &lt;a href="https://brasil.io/"&gt;Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt;, foi selecionado para receber apoio do Desafio
 de Inovação da &lt;a href="https://newsinitiative.withgoogle.com/"&gt;Google News

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Brasil.IO - Blog</title><link href="https://blog.brasil.io/" rel="alternate"></link><link href="https://blog.brasil.io/feeds/all.atom.xml" rel="self"></link><id>https://blog.brasil.io/</id><updated>2020-03-23T08:00:00-03:00</updated><entry><title>Dados do coronavírus por município por dia mais recentes</title><link href="https://blog.brasil.io/2020/03/23/dados-coronavirus-por-municipio-mais-atualizados/" rel="alternate"></link><published>2020-03-23T08:00:00-03:00</published><updated>2020-03-23T08:00:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2020-03-23:2020/03/23/dados-coronavirus-por-municipio-mais-atualizados/</id><summary type="html">&lt;blockquote&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Brasil.IO - Blog</title><link href="https://blog.brasil.io/" rel="alternate"></link><link href="https://blog.brasil.io/feeds/all.atom.xml" rel="self"></link><id>https://blog.brasil.io/</id><updated>2020-03-23T09:00:00-03:00</updated><entry><title>Dados diários mais recentes do coronavírus por município brasileiro</title><link href="https://blog.brasil.io/2020/03/23/dados-coronavirus-por-municipio-mais-atualizados/" rel="alternate"></link><published>2020-03-23T09:00:00-03:00</published><updated>2020-03-23T09:00:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2020-03-23:2020/03/23/dados-coronavirus-por-municipio-mais-atualizados/</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;Nota: essa publicação será atualizada conforme tivermos mais detalhes sobre
 esse&amp;nbsp;dataset.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -19,9 +19,9 @@ resolver essas questões dos dados, &lt;a href="https://twitter.com/turicas/stat
 a voluntários&lt;/a&gt; e nesse
 fim de semana, junto com 32 outras pessoas incríveis, catalogamos manualmente
 os dados presentes em centenas de boletins epidemiológicos das secretarias de
-saúde estaduais, com o histórico (esse processo colaborativo intenso merece uma
-publicação dedicada, além de um agradecimento especial a todos os voluntários -
-em&amp;nbsp;breve).&lt;/p&gt;
+saúde estaduais incluindo o histórico (esse processo colaborativo intenso
+merece uma publicação dedicada, além de um agradecimento especial a todos os
+voluntários - em&amp;nbsp;breve).&lt;/p&gt;
 &lt;p&gt;Ainda não terminamos todos os estados (faltam: &lt;span class="caps"&gt;AM&lt;/span&gt; e &lt;span class="caps"&gt;TO&lt;/span&gt;), mas já temos os dados
 atuais para cada um dos municípios (para os estados que conseguimos catalogar)
 e nossos dados já são maiores/mais atuais que os divulgados pelo Ministério da
