@@ -7,8 +7,7 @@ Author: Álvaro Justen
 Summary: Os dados sobre o coronavírus disponibilizados pelo Ministério da Saúde não são suficientes para que possamos agir localmente com eficácia. Fizemos um mutirão com 33 voluntários e catalogamos manualmente os dados presentes em centenas de boletins epidemiológicos das secretarias de saúde estaduais (com o histórico). Nos ajude a divulgá-los!
 
 
-> Nota: essa publicação será atualizada conforme tivermos mais detalhes sobre
-> esse dataset.
+> Nota: publicação atualizada em 09 de abril de 2020 às 15:30.
 
 Nesse ano a [Lei de Acesso à Informação completou 8
 anos](https://artigo19.org/wp-content/blogs.dir/24/files/2017/05/Os-5-anos-da-Lei-de-Acesso-%c3%a0-Informa%c3%a7%c3%a3o-%e2%80%93-uma-an%c3%a1lise-de-casos-de-transpar%c3%aancia.pdf)
@@ -24,37 +23,39 @@ Para conter a epidemia precisamos de atitudes locais bem específicas, ou seja,
 temos que agir a nível municipal e estadual, o mais rápido possível. Para
 resolver essas questões dos dados, [comecei uma catalogação manual e pedi ajuda
 a voluntários](https://twitter.com/turicas/status/1241068121202536448) e nesse
-fim de semana, junto com 32 outras pessoas incríveis, catalogamos manualmente
+fim de semana, junto com 34 outras pessoas incríveis, catalogamos manualmente
 os dados presentes em centenas de boletins epidemiológicos das secretarias de
 saúde estaduais incluindo o histórico (esse processo colaborativo intenso
 merece uma publicação dedicada, além de um agradecimento especial a todos os
-voluntários - em breve).
+voluntários - em breve faremos isso).
 
-Ainda não terminamos todos os estados (faltam: AM e TO), mas já temos os dados
-atuais para cada um dos municípios (para os estados que conseguimos catalogar)
-e nossos dados já são maiores/mais atuais que os divulgados pelo Ministério da
-Saúde (1550 *versus* 1546 para a versão que liberamos agora pela manhã de
-23/03).
+Estamos coletando dados de todos os estados e temos informação para cada um dos
+municípios com casos de covid19 confirmados.
 
 Para nos ajudar nesse trabalho, você pode:
 
-- Divulgar os dados: [acesse o dataset no
+- Divulgar os dados: **[acesse o dataset no
   Brasil.IO](https://brasil.io/dataset/covid19) ou [a API do
-  Brasil.IO](https://brasil.io/api/dataset/covid19) - não se esqueça de dar
+  Brasil.IO](https://brasil.io/api/dataset/covid19)** - não se esqueça de dar
   crédito e compartilhar sob a mesma licença (os dados estão sob
   [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode));
-- Fazer cálculos e previsões por município;
-- Entrar em contato com as secretarias estaduais, exigindo que os dados sejam
-  disponibilizados de maneira estruturada ([veja aqui as recomendações que
+- Fazer cálculos e previsões por município, mas faça **com embasamento** em
+  epidemiologia, senão você corre o risco de disseminar desinformação: mesmo
+  que o dado divulgado esteja correto, a análise pode ser inválida do ponto de
+  vista epidemiológico e levar o público a crer em cenários irreais;
+- Entrar em contato com as Secretarias de Saúde estaduais e municipais,
+  exigindo que os dados sejam disponibilizados de maneira estruturada ([veja
+  aqui as recomendações que
   escrevi](https://github.com/turicas/covid19-br/blob/master/recomendacoes.md)
   e mais detalhes abaixo).
 - Alertar à população da **necessidade de isolamento social o mais rápido
   possível**;
 - [Relatar problema com os dados](https://brasil.io/contato);
-- [Colaborar](https://brasil.io/colabore) ou mesmo [doar para o
-  Brasil.IO](https://brasil.io/doe)
+- [**Doar para o Brasil.IO**](https://brasil.io/doe) (o projeto é feito de
+  maneira voluntária).
 
-Se você trabalha numa secretaria, veja exemplos do que **não deve ser feito**:
+Se você trabalha em uma Secretaria de Saúde, veja exemplos do que **não deve
+ser feito**:
 
 - [Boletim com a tabela PDF
   (Paraná)](http://www.saude.pr.gov.br/arquivos/File/CORONA_22032020.pdf) -
