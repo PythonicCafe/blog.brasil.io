@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Brasil.IO - Blog</title><link href="https://blog.brasil.io/" rel="alternate"></link><link href="https://blog.brasil.io/feeds/datasets.atom.xml" rel="self"></link><id>https://blog.brasil.io/</id><updated>2020-04-10T20:30:00-03:00</updated><entry><title>Óbitos por covid19 no Brasil são maiores que os divulgados oficialmente (passamos de mil mortes no dia 6 de abril)</title><link href="https://blog.brasil.io/2020/04/10/obitos-por-covid19-no-brasil-sao-maiores-que-os-divulgados-oficialmente-passamos-de-mil-mortes-no-dia-6-de-abril/" rel="alternate"></link><published>2020-04-10T20:30:00-03:00</published><updated>2020-04-10T20:30:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2020-04-10:2020/04/10/obitos-por-covid19-no-brasil-sao-maiores-que-os-divulgados-oficialmente-passamos-de-mil-mortes-no-dia-6-de-abril/</id><summary type="html">&lt;p&gt;Desde que &lt;a href="https://blog.brasil.io/2020/03/23/dados-coronavirus-por-municipio-mais-atualizados/"&gt;lançamos o dataset
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Brasil.IO - Blog</title><link href="https://blog.brasil.io/" rel="alternate"></link><link href="https://blog.brasil.io/feeds/datasets.atom.xml" rel="self"></link><id>https://blog.brasil.io/</id><updated>2020-04-18T19:45:00-03:00</updated><entry><title>Painel COVID-19 e 2 anos de Brasil.IO</title><link href="https://blog.brasil.io/2020/04/18/painel-covid19-e-2-anos-de-brasilio/" rel="alternate"></link><published>2020-04-18T19:45:00-03:00</published><updated>2020-04-18T19:45:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2020-04-18:2020/04/18/painel-covid19-e-2-anos-de-brasilio/</id><summary type="html">&lt;p&gt;O Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; &lt;a href="https://blog.brasil.io/2019/04/18/1-ano-de-dados-acessiveis/"&gt;está fazendo dois anos
+hoje&lt;/a&gt; e lançamos
+nossa primeira visualização de dados! O foco do projeto continua sendo coletar
+e disponibilizar dados públicos em formatos acessíveis, mas por ser um lugar
+central de dados abertos no país, podemos gerar maior impacto com os dados que
+publicamos se também tivermos visualizações: assim a informação fica mais fácil
+de ser consumida e fica acessível a mais&amp;nbsp;pessoas.&lt;/p&gt;
+&lt;p&gt;No &lt;a href="https://brasil.io/covid19/"&gt;Painel &lt;span class="caps"&gt;COVID&lt;/span&gt;-19&lt;/a&gt; é possível ver números gerais
+sobre a propagação da doença, bem como informações detalhadas sobre municípios
+em uma mapa e uma&amp;nbsp;tabela.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Mapa com dados da covid19 por município brasileiro" src="/images/2020-04-18-covid19-mapa.png" /&gt;&lt;/p&gt;
+&lt;p&gt;No mapa, é possível selecionar 4 variáveis diferentes: total de casos
+confirmados, confirmados por 100.000 habitantes, total de óbitos e taxa de
+letalidade. Também é possível dar zoom em cada estado e, ao passar o mouse
+sobre o município, informações detalhadas são exibidas no canto inferior
+direito. Usei uma escala logarítmica (log2) para determinar as cores de cada&amp;nbsp;município.&lt;/p&gt;
+&lt;p&gt;Apesar de parecer simples, exibir polígonos de municípios a nível nacional em
+um mapa que carregue rapidamente não é tarefa simples: o Brasil possui 5.570
+municípios e os polígonos disponibilizados pelo &lt;span class="caps"&gt;IBGE&lt;/span&gt; (&lt;em&gt;shapefiles&lt;/em&gt;) somam quase
+&lt;span class="caps"&gt;500MB&lt;/span&gt; quando convertidos para o formato GeoJSON (usado em visualizações na
+Web).  Para que o tempo de carregamento seja viável, é necessário simplificar
+os polígonos e, em alguns casos, filtrar para que nem todos os polígonos sejam
+baixados. Em breve publicaremos um dataset com esses &lt;em&gt;shapefiles&lt;/em&gt; de municípios
+brasileiros em formato GeoJSON, para facilitar a vida de quem precisa de
+visualizações desse&amp;nbsp;tipo.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Tabela com dados da covid19 por município brasileiro" src="/images/2020-04-18-covid19-tabela.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Na tabela é possível buscar facilmente as informações mais recentes sobre cada
+município e baixar os dados em formato &lt;span class="caps"&gt;CSV&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Espero que gostem.&amp;nbsp;;)&lt;/p&gt;
+&lt;p&gt;O &lt;a href="https://brasil.io/"&gt;Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt; surgiu como ideia em 2013, mas só entrou em
+operação como é hoje em 2018. Hoje faz 2 anos que estamos online, servindo
+dados acessíveis aos brasileiros gratuitamente. :) &lt;a href="https://apoia.se/brasilio"&gt;Contribua com o
+projeto&lt;/a&gt;.&lt;/p&gt;</summary><category term="covid19"></category><category term="opendata"></category><category term="ddj"></category><category term="colaboração"></category></entry><entry><title>Óbitos por covid19 no Brasil são maiores que os divulgados oficialmente (passamos de mil mortes no dia 6 de abril)</title><link href="https://blog.brasil.io/2020/04/10/obitos-por-covid19-no-brasil-sao-maiores-que-os-divulgados-oficialmente-passamos-de-mil-mortes-no-dia-6-de-abril/" rel="alternate"></link><published>2020-04-10T20:30:00-03:00</published><updated>2020-04-10T20:30:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2020-04-10:2020/04/10/obitos-por-covid19-no-brasil-sao-maiores-que-os-divulgados-oficialmente-passamos-de-mil-mortes-no-dia-6-de-abril/</id><summary type="html">&lt;p&gt;Desde que &lt;a href="https://blog.brasil.io/2020/03/23/dados-coronavirus-por-municipio-mais-atualizados/"&gt;lançamos o dataset
 covid19&lt;/a&gt;,
 todos os dias &lt;strong&gt;dezenas de voluntários&lt;/strong&gt; coletam os dados das Secretarias
 Estaduais de Saúde, checam, entram em contato para resolver inconsistências e

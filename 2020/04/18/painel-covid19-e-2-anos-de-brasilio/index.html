@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Painel COVID-19 e 2 anos de Brasil.IO | Brasil.IO - Blog
+</title>
+  <link rel="canonical" href="https://blog.brasil.io/2020/04/18/painel-covid19-e-2-anos-de-brasilio/index.html">
+
+
+  <link rel="stylesheet" href="https://blog.brasil.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://blog.brasil.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://blog.brasil.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://blog.brasil.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://blog.brasil.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/rss+xml" title="Full RSS Feed"
+        href="https://blog.brasil.io/feed.rss">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://blog.brasil.io/feeds/datasets.atom.xml">  
+  <meta name="description" content="No dia em que o Brasil.IO faz dois anos, lançamos nossa primeira visualização de dados: um mapa com os dados da COVID-19 no Brasil, com diversas informações por município.">
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o);
+      a.async = 1;
+      a.src = g;
+      m = s.getElementsByTagName(o)[0];
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-117698282-2', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+  <div class="col-sm-12">
+    <div class="col-sm-12">
+      <a href="https://blog.brasil.io/">
+        <img class="img-fluid rounded" src=https://blog.brasil.io/theme/images/logo-blog.brasil.io.png alt="Brasil.IO - Blog">
+      </a>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-9">
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://blog.brasil.io/" target="_blank">Blog</a></li>
+            <li class="list-inline-item"><a href="https://brasil.io/datasets" target="_blank">Datasets</a></li>
+            <li class="list-inline-item"><a href="https://brasil.io/colabore" target="_blank">Colabore</a></li>
+            <li class="list-inline-item"><a href="https://brasil.io/contato" target="_blank">Contato</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3 text-right">
+        <a href="https://blog.brasil.io/feed.rss"><i class="fa fa-rss"></i></a>
+        <a href="https://github.com/turicas/blog.brasil.io"><i class="fa fa-github"></i></a>
+      </div>
+    </div>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Painel <span class="caps">COVID</span>-19 e 2 anos de Brasil.<span class="caps">IO</span>
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2020-04-18T19:45:00-03:00">
+          <i class="fa fa-clock-o"></i>
+          sáb 18 abril 2020
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://blog.brasil.io/category/datasets.html">datasets</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://blog.brasil.io/author/alvaro-justen.html">Álvaro Justen</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://blog.brasil.io/tag/covid19.html">#covid19</a>,               <a href="https://blog.brasil.io/tag/opendata.html">#opendata</a>,               <a href="https://blog.brasil.io/tag/ddj.html">#ddj</a>,               <a href="https://blog.brasil.io/tag/colaboracao.html">#colaboração</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>O Brasil.<span class="caps">IO</span> <a href="https://blog.brasil.io/2019/04/18/1-ano-de-dados-acessiveis/">está fazendo dois anos
+hoje</a> e lançamos
+nossa primeira visualização de dados! O foco do projeto continua sendo coletar
+e disponibilizar dados públicos em formatos acessíveis, mas por ser um lugar
+central de dados abertos no país, podemos gerar maior impacto com os dados que
+publicamos se também tivermos visualizações: assim a informação fica mais fácil
+de ser consumida e fica acessível a mais&nbsp;pessoas.</p>
+<p>No <a href="https://brasil.io/covid19/">Painel <span class="caps">COVID</span>-19</a> é possível ver números gerais
+sobre a propagação da doença, bem como informações detalhadas sobre municípios
+em uma mapa e uma&nbsp;tabela.</p>
+<p><img alt="Mapa com dados da covid19 por município brasileiro" src="/images/2020-04-18-covid19-mapa.png" /></p>
+<p>No mapa, é possível selecionar 4 variáveis diferentes: total de casos
+confirmados, confirmados por 100.000 habitantes, total de óbitos e taxa de
+letalidade. Também é possível dar zoom em cada estado e, ao passar o mouse
+sobre o município, informações detalhadas são exibidas no canto inferior
+direito. Usei uma escala logarítmica (log2) para determinar as cores de cada&nbsp;município.</p>
+<p>Apesar de parecer simples, exibir polígonos de municípios a nível nacional em
+um mapa que carregue rapidamente não é tarefa simples: o Brasil possui 5.570
+municípios e os polígonos disponibilizados pelo <span class="caps">IBGE</span> (<em>shapefiles</em>) somam quase
+<span class="caps">500MB</span> quando convertidos para o formato GeoJSON (usado em visualizações na
+Web).  Para que o tempo de carregamento seja viável, é necessário simplificar
+os polígonos e, em alguns casos, filtrar para que nem todos os polígonos sejam
+baixados. Em breve publicaremos um dataset com esses <em>shapefiles</em> de municípios
+brasileiros em formato GeoJSON, para facilitar a vida de quem precisa de
+visualizações desse&nbsp;tipo.</p>
+<p><img alt="Tabela com dados da covid19 por município brasileiro" src="/images/2020-04-18-covid19-tabela.png" /></p>
+<p>Na tabela é possível buscar facilmente as informações mais recentes sobre cada
+município e baixar os dados em formato <span class="caps">CSV</span>.</p>
+<p>Espero que gostem.&nbsp;;)</p>
+<p>O <a href="https://brasil.io/">Brasil.<span class="caps">IO</span></a> surgiu como ideia em 2013, mas só entrou em
+operação como é hoje em 2018. Hoje faz 2 anos que estamos online, servindo
+dados acessíveis aos brasileiros gratuitamente. :) <a href="https://apoia.se/brasilio">Contribua com o
+projeto</a>.</p>
+    </div>
+  </article>
+  <hr>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function() {
+      this.page.url = 'https://blog.brasil.io/2020/04/18/painel-covid19-e-2-anos-de-brasilio/index.html';
+      this.page.identifier = 'painel-covid19-e-2-anos-de-brasilio';
+    };
+    (function() {
+      var d = document;
+      var s = d.createElement('script');
+      s.src = '//brasilio.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript class="text-muted">
+    Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+  </noscript>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://blog.brasil.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://blog.brasil.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://blog.brasil.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://blog.brasil.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>
