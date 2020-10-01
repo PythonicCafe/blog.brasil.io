@@ -1,5 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Brasil.IO - Blog</title><link href="https://blog.brasil.io/" rel="alternate"></link><link href="https://blog.brasil.io/feeds/all.atom.xml" rel="self"></link><id>https://blog.brasil.io/</id><updated>2020-04-18T19:45:00-03:00</updated><entry><title>Painel COVID-19 e 2 anos de Brasil.IO</title><link href="https://blog.brasil.io/2020/04/18/painel-covid19-e-2-anos-de-brasilio/" rel="alternate"></link><published>2020-04-18T19:45:00-03:00</published><updated>2020-04-18T19:45:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2020-04-18:2020/04/18/painel-covid19-e-2-anos-de-brasilio/</id><summary type="html">&lt;p&gt;O Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; &lt;a href="https://blog.brasil.io/2019/04/18/1-ano-de-dados-acessiveis/"&gt;está fazendo dois anos
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Brasil.IO - Blog</title><link href="https://blog.brasil.io/" rel="alternate"></link><link href="https://blog.brasil.io/feeds/all.atom.xml" rel="self"></link><id>https://blog.brasil.io/</id><updated>2020-10-01T16:25:00-03:00</updated><entry><title>Relatório mensal: setembro de 2020</title><link href="https://blog.brasil.io/2020/10/01/relatorio-mensal-setembro-de-2020/" rel="alternate"></link><published>2020-10-01T16:25:00-03:00</published><updated>2020-10-01T16:25:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2020-10-01:2020/10/01/relatorio-mensal-setembro-de-2020/</id><summary type="html">&lt;p&gt;Apesar de estarmos bastante atarefados por aqui, muitas das coisas que estamos
+fazendo no &lt;a href="https://brasil.io/"&gt;Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt; não são tão facilmente visíveis a
+todos, por isso resolvi criar relatórios mensais, que são parte de uma
+estratégia de comunicação mais estruturada, para tornar nosso processo mais
+transparente e nos aproximarmos de quem apoia e utiliza o&amp;nbsp;projeto.&lt;/p&gt;
+&lt;p&gt;Escrevo na primeira pessoa do plural pois do lado de cá temos muitas pessoas
+envolvidas no projeto: além das &lt;a href="https://brasil.io/covid19/voluntarios/"&gt;pessoas voluntárias no projeto
+&lt;span class="caps"&gt;COVID&lt;/span&gt;-19&lt;/a&gt;, eu (Álvaro Justen), Bernardo
+Fontes e Marcel Marques estamos trabalhando no desenvolvimento e infraestrutura
+(existem vários outros contribuidores de código também, em vários repositórios,
+mas nós 3 estamos no dia-a-dia trabalhando na&amp;nbsp;plataforma).&lt;/p&gt;
+&lt;h2&gt;O que&amp;nbsp;fizemos&lt;/h2&gt;
+&lt;p&gt;Vamos então ao que fizemos em setembro de&amp;nbsp;2020:&lt;/p&gt;
+&lt;h3&gt;Projeto &lt;span class="caps"&gt;COVID&lt;/span&gt;-19&lt;/h3&gt;
+&lt;p&gt;Trabalhamos &lt;strong&gt;diariamente&lt;/strong&gt; na atualização dos &lt;a href="https://brasil.io/covid19/"&gt;dados da
+&lt;span class="caps"&gt;COVID&lt;/span&gt;-19&lt;/a&gt; desde 20 de março de 2020. A partir de 6
+de junho, &lt;a href="https://www.bbc.com/portuguese/brasil-52974181"&gt;quando houve o apagão de dados do Ministério da
+Saúde&lt;/a&gt;, começamos a publicar um
+boletim próprio, com base nos dados que coletamos - já publicamos mais de&amp;nbsp;100!&lt;/p&gt;
+&lt;p&gt;Além do trabalho diário, nesse mês fizemos diversas melhorias e correções em
+ferramentas internas que utilizamos para checar os dados, atualizar o dataset&amp;nbsp;etc.&lt;/p&gt;
+&lt;p&gt;Nossos dados já foram utilizados por diversos veículos nacionais e
+internacionais, além de instituições renomadas como FioCruz e &lt;span class="caps"&gt;IBGE&lt;/span&gt;. &lt;a href="https://github.com/turicas/covid19-br/blob/master/clipping.md"&gt;Confira
+nosso
+&lt;em&gt;clipping&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Combate aos&amp;nbsp;ataques&lt;/h3&gt;
+&lt;p&gt;Sim, fomos atacados (virtualmente), mas não foi um ataque estilo &amp;#8220;invasão&amp;#8221;: nas
+últimas semanas recebemos uma quantidade muito grande de requisições
+coordenadas. Foram tantas que nossos servidores não aguentaram muito bem (o
+site ficou bastante lento em alguns momentos, inclusive atrasando a atualização
+de dados da &lt;span class="caps"&gt;COVID&lt;/span&gt;-19). Talvez a intenção não tenha sido fazer com que a
+plataforma caísse, mas não podemos aceitar que o site fique lento por conta de
+usuários abusivos e, por isso, precisamos implementar limitações de acesso à
+&lt;span class="caps"&gt;API&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;O processo foi relativamente longo (para mais detalhes &lt;a href="https://github.com/turicas/brasil.io/issues?q=is%3Aissue+cloudflare"&gt;veja as &lt;em&gt;issues&lt;/em&gt; no
+GitHub&lt;/a&gt;),
+mas já conseguimos resolver boa parte do problema e o site está responsivo
+novamente. Ainda temos algumas questões a serem endereçadas, mas já traçamos um&amp;nbsp;plano.&lt;/p&gt;
+&lt;h3&gt;Atualizações na página&amp;nbsp;inicial&lt;/h3&gt;
+&lt;p&gt;No caminho de aumentar a visibilidade do que estamos fazendo, adicionamos uma
+coluna de últimas atualizações na página inicial; lá ficarão todos os datasets
+que foram atualizados recentemente. Em breve adicionaremos mais detalhes a esse
+coluna e outras funcionalidades, como a opção de assinar as atualizações por
+&lt;span class="caps"&gt;RSS&lt;/span&gt; (e eventualmente até a opção de &amp;#8220;seguir&amp;#8221; um&amp;nbsp;dataset).&lt;/p&gt;
+&lt;h3&gt;Melhoria na importação de dados e Página de download de&amp;nbsp;arquivos&lt;/h3&gt;
+&lt;p&gt;Atualizar os dados da &lt;span class="caps"&gt;COVID&lt;/span&gt;-19 ainda nos toma muito tempo e, por isso, estamos
+sempre melhorando o processo de importação de dados, para que seja cada vez
+mais automático. Uma das melhorias que fizemos nesse mês tem a ver com a forma
+como os arquivos completos dos datasets são listados e hospedados: agora estão
+mais integrados com a plataforma e cada dataset possui um link mais amigável -
+o da &lt;span class="caps"&gt;COVID&lt;/span&gt;-19, por exemplo, ficou como
+&lt;a href="https://brasil.io/dataset/covid19/files/"&gt;brasil.io/dataset/covid19/files/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Apesar de pouco impacto para os usuários, essa alteração nos ajudou a ser mais
+produtivos na atualização dos datasets e a reestruturação no código abriu
+caminho para outras melhorias que&amp;nbsp;virão.&lt;/p&gt;
+&lt;h3&gt;Correção da página de&amp;nbsp;empresas&lt;/h3&gt;
+&lt;p&gt;A página que contém informações consolidadas de empresas (como &lt;a href="https://brasil.io/especiais/documento/15102288000182/"&gt;essa, da
+Odebrecht&lt;/a&gt;) estava com
+um pequeno bug, que não permitia visualizar algumas das empresas disponíveis no
+&lt;a href="https://brasil.io/dataset/socios-brasil/"&gt;dataset socios-brasil&lt;/a&gt;. Já foi
+corrigido e agora todas estão&amp;nbsp;acessíveis!&lt;/p&gt;
+&lt;h2&gt;Próximos&amp;nbsp;passos&lt;/h2&gt;
+&lt;p&gt;Para outubro,&amp;nbsp;pretendemos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Implementar autenticação na &lt;span class="caps"&gt;API&lt;/span&gt; (e por segurança precisaremos deixar o
+  cadastro mais&amp;nbsp;rigoroso);&lt;/li&gt;
+&lt;li&gt;Atualizar os seguintes&amp;nbsp;datasets:&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://brasil.io/dataset/eleicoes-brasil/"&gt;Eleições&lt;/a&gt; (atualizar e
+    melhorar código do programa que converte os dados e atualizar dados na&amp;nbsp;plataforma);&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://brasil.io/dataset/socios-brasil/"&gt;Empresas e sócios&lt;/a&gt; (atualizar
+    dados na&amp;nbsp;plataforma);&lt;/li&gt;
+&lt;li&gt;Criar dataset de candidatos em 2020 que possuem&amp;nbsp;empresas;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://brasil.io/dataset/govbr/auxilio_emergencial/"&gt;Auxílio emergencial&lt;/a&gt;
+    (atualizar dataset na plataforma, com novas&amp;nbsp;parcelas);&lt;/li&gt;
+&lt;li&gt;Criar páginas exclusivas para acessar dados das eleições, facilitando o
+  acesso de usuários&amp;nbsp;leigos;&lt;/li&gt;
+&lt;li&gt;Atualizar dados da população dos municípios (usados no &lt;a href="https://brasil.io/covid19/"&gt;Painel
+  &lt;span class="caps"&gt;COVID&lt;/span&gt;-19&lt;/a&gt; e no portal das eleições que será&amp;nbsp;criado);&lt;/li&gt;
+&lt;li&gt;Melhorar a documentação da &lt;span class="caps"&gt;API&lt;/span&gt;;&lt;/li&gt;
+&lt;li&gt;Continuar atualizando diariamente os dados da &lt;span class="caps"&gt;COVID&lt;/span&gt;-19.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Feedback sobre a&amp;nbsp;comunicação&lt;/h2&gt;
+&lt;p&gt;Ainda estamos experimentando as melhores formas de comunicar novidades do
+projeto. Algumas ideias&amp;nbsp;são:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Publicar o relatório mensal em &lt;a href="https://apoia.se/brasilio"&gt;nossa campanha de financiamento
+  coletivo&lt;/a&gt; e aqui no&amp;nbsp;blog;&lt;/li&gt;
+&lt;li&gt;Utilizar o &lt;a href="https://t.me/brasil_io"&gt;canal no Telegram&lt;/a&gt; para enviar de forma
+  imediata as principais&amp;nbsp;atualizações;&lt;/li&gt;
+&lt;li&gt;Reativar a &lt;a href="https://twitter.com/brasil_io"&gt;conta @brasil_io no TWitter&lt;/a&gt; para
+  publicar os boletins diários da &lt;span class="caps"&gt;COVID&lt;/span&gt;-19 e atualizações em&amp;nbsp;datasets;&lt;/li&gt;
+&lt;li&gt;Repensar o conteúdo e a periodicidade da&amp;nbsp;newsletter.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;E aí, o que achou?&amp;nbsp;Abração!&lt;/p&gt;</summary><category term="relatório"></category><category term="desenvolvimento"></category><category term="infraestrutura"></category></entry><entry><title>Painel COVID-19 e 2 anos de Brasil.IO</title><link href="https://blog.brasil.io/2020/04/18/painel-covid19-e-2-anos-de-brasilio/" rel="alternate"></link><published>2020-04-18T19:45:00-03:00</published><updated>2020-04-18T19:45:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2020-04-18:2020/04/18/painel-covid19-e-2-anos-de-brasilio/</id><summary type="html">&lt;p&gt;O Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; &lt;a href="https://blog.brasil.io/2019/04/18/1-ano-de-dados-acessiveis/"&gt;está fazendo dois anos
 hoje&lt;/a&gt; e lançamos
 nossa primeira visualização de dados! O foco do projeto continua sendo coletar
 e disponibilizar dados públicos em formatos acessíveis, mas por ser um lugar
