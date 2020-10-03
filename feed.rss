@@ -65,14 +65,16 @@ corrigido e agora todas estão&amp;nbsp;acessíveis!&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Implementar autenticação na &lt;span class="caps"&gt;API&lt;/span&gt; (e por segurança precisaremos deixar o
   cadastro mais&amp;nbsp;rigoroso);&lt;/li&gt;
-&lt;li&gt;Atualizar os seguintes&amp;nbsp;datasets:&lt;/li&gt;
+&lt;li&gt;Atualizar os seguintes datasets:&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://brasil.io/dataset/eleicoes-brasil/"&gt;Eleições&lt;/a&gt; (atualizar e
-    melhorar código do programa que converte os dados e atualizar dados na&amp;nbsp;plataforma);&lt;/li&gt;
+  melhorar código do programa que converte os dados e atualizar dados na&amp;nbsp;plataforma);&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://brasil.io/dataset/socios-brasil/"&gt;Empresas e sócios&lt;/a&gt; (atualizar
-    dados na&amp;nbsp;plataforma);&lt;/li&gt;
+  dados na&amp;nbsp;plataforma);&lt;/li&gt;
 &lt;li&gt;Criar dataset de candidatos em 2020 que possuem&amp;nbsp;empresas;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://brasil.io/dataset/govbr/auxilio_emergencial/"&gt;Auxílio emergencial&lt;/a&gt;
-    (atualizar dataset na plataforma, com novas&amp;nbsp;parcelas);&lt;/li&gt;
+  (atualizar dataset na plataforma, com novas&amp;nbsp;parcelas);&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Criar páginas exclusivas para acessar dados das eleições, facilitando o
   acesso de usuários&amp;nbsp;leigos;&lt;/li&gt;
 &lt;li&gt;Atualizar dados da população dos municípios (usados no &lt;a href="https://brasil.io/covid19/"&gt;Painel
