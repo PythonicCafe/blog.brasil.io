@@ -102,14 +102,14 @@ Para outubro, pretendemos:
 - Implementar autenticação na API (e por segurança precisaremos deixar o
   cadastro mais rigoroso);
 - Atualizar os seguintes datasets:
-  - [Eleições](https://brasil.io/dataset/eleicoes-brasil/) (atualizar e
-    melhorar código do programa que converte os dados e atualizar dados na
-    plataforma);
-  - [Empresas e sócios](https://brasil.io/dataset/socios-brasil/) (atualizar
-    dados na plataforma);
-  - Criar dataset de candidatos em 2020 que possuem empresas;
-  - [Auxílio emergencial](https://brasil.io/dataset/govbr/auxilio_emergencial/)
-    (atualizar dataset na plataforma, com novas parcelas);
+    - [Eleições](https://brasil.io/dataset/eleicoes-brasil/) (atualizar e
+      melhorar código do programa que converte os dados e atualizar dados na
+      plataforma);
+    - [Empresas e sócios](https://brasil.io/dataset/socios-brasil/) (atualizar
+      dados na plataforma);
+    - Criar dataset de candidatos em 2020 que possuem empresas;
+    - [Auxílio emergencial](https://brasil.io/dataset/govbr/auxilio_emergencial/)
+      (atualizar dataset na plataforma, com novas parcelas);
 - Criar páginas exclusivas para acessar dados das eleições, facilitando o
   acesso de usuários leigos;
 - Atualizar dados da população dos municípios (usados no [Painel
