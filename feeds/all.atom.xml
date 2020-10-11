@@ -1,5 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Brasil.IO - Blog</title><link href="https://blog.brasil.io/" rel="alternate"></link><link href="https://blog.brasil.io/feeds/all.atom.xml" rel="self"></link><id>https://blog.brasil.io/</id><updated>2020-10-01T16:25:00-03:00</updated><entry><title>Relatório mensal: setembro de 2020</title><link href="https://blog.brasil.io/2020/10/01/relatorio-mensal-setembro-de-2020/" rel="alternate"></link><published>2020-10-01T16:25:00-03:00</published><updated>2020-10-01T16:25:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2020-10-01:2020/10/01/relatorio-mensal-setembro-de-2020/</id><summary type="html">&lt;p&gt;Apesar de estarmos bastante atarefados por aqui, muitas das coisas que estamos
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Brasil.IO - Blog</title><link href="https://blog.brasil.io/" rel="alternate"></link><link href="https://blog.brasil.io/feeds/all.atom.xml" rel="self"></link><id>https://blog.brasil.io/</id><updated>2020-10-10T20:30:00-03:00</updated><subtitle>Dados abertos para mais democracia</subtitle><entry><title>Como acessar os dados do Brasil.IO</title><link href="https://blog.brasil.io/2020/10/10/como-acessar-os-dados-do-brasil-io/" rel="alternate"></link><published>2020-10-10T20:30:00-03:00</published><updated>2020-10-10T20:30:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2020-10-10:/2020/10/10/como-acessar-os-dados-do-brasil-io/</id><summary type="html">&lt;p&gt;Existem diversas maneiras de acessar os dados disponibilizados pelo Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;, cada uma com características específicas (algumas mais rápidas que outras, por exemplo). Veja todas as possibilidades, com exemplos de&amp;nbsp;código!&lt;/p&gt;</summary><content type="html">&lt;p&gt;Existem diversas maneiras de acessar os dados disponíveis no &lt;a href="https://brasil.io/"&gt;Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt;.
+Dentre elas, pedimos que dê preferência ao &lt;a href="#dados-completos"&gt;download de dados
+completos&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Nota 1: ainda estamos trabalhando nessa documentação e, em breve, teremos
+passos mais detalhados e claros. Fique à vontade para contribuir com exemplos
+de código em outras&amp;nbsp;linguagens.&lt;/p&gt;
+&lt;p&gt;Nota 2: para acessar o dicionário de dados de uma tabela, acesse a aba
+&amp;#8220;Metadados&amp;#8221; dentro da página da tabela, que segue o seguinte padrão:
+&lt;code&gt;https://brasil.io/dataset/&amp;lt;dataset-slug&amp;gt;/&amp;lt;table-name&amp;gt;/&lt;/code&gt;, exemplo: &lt;a href="https://brasil.io/dataset/covid19/caso/"&gt;tabela
+caso do dataset covid-19&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="dados-completos"&gt;&lt;a class="toclink" href="#dados-completos"&gt;Dados completos&lt;/a&gt;&lt;a class="headerlink" href="#dados-completos" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Essa é a melhor maneira de acessar os dados do &lt;a href="https://brasil.io/"&gt;Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt; e você
+deve preferí-la sobre as outras quando possível, pois onera menos nossos
+servidores (lembre-se: nosso projeto é desenvolvido por voltunários e &lt;a href="https://apoia.se/brasilio"&gt;depende
+de doações&lt;/a&gt; para pagar os&amp;nbsp;custos).&lt;/p&gt;
+&lt;p&gt;Siga os seguintes&amp;nbsp;passos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Acesse a página da tabela dentro do dataset desejado, exemplo: &lt;a href="https://brasil.io/dataset/covid19/caso/"&gt;tabela caso
+  do dataset&amp;nbsp;covid-19&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Clique no link &lt;a href="https://brasil.io/dataset/covid19/files/"&gt;baixar dados&amp;nbsp;completos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Na página com os arquivos, clique na tabela desejada (o nome será algo como
+  &lt;code&gt;tabela.csv.gz&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Descompacte o arquivo e abra o &lt;span class="caps"&gt;CSV&lt;/span&gt; da forma como&amp;nbsp;preferir&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Veja um exemplo de como fazer o download de forma automatizada, utilizando a
+linguagem Python: &lt;a href="https://gist.github.com/turicas/3e3621d61415e3453cd03a1997f7473f#file-brasil_io-py"&gt;&lt;code&gt;brasil_io.py&lt;/code&gt;&lt;/a&gt; (em breve essa biblioteca
+estará disponível no &lt;a href="https://pypi.org/"&gt;Python Package Index&lt;/a&gt;).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Nota 1: caso o &lt;span class="caps"&gt;CSV&lt;/span&gt; abra com erros de acentuação ou de formatação das colunas
+no Microsoft Excel, &lt;a href="https://www.youtube.com/watch?v=nl8gxzCOdCw"&gt;veja esse
+vídeo&lt;/a&gt; para aprender a maneira
+correta de abrir arquivos &lt;span class="caps"&gt;CSV&lt;/span&gt; no&amp;nbsp;Excel.&lt;/p&gt;
+&lt;p&gt;Nota 2: muitas vezes os arquivos CSVs são grandes e não abrirão facilmente
+num programa de planilhas eletrônicas como LibreOffice Calc, Microsoft Excel
+ou Google Spreadsheets. Nesse caso, é recomendável que você execute um dos
+seguintes passos:
+2.1) Filtrar o dataset antes de baixá-lo (veja mais em &lt;a href="#interface-web"&gt;Interface Web&lt;/a&gt;).
+2.2) Utilizar algum software mais robusto de banco de dados que consiga lidar
+com essa quantidade de dados, como SQLite, PostgreSQL, MySQL etc. Aprenda
+mais sobre como trabalhar com grandes bases de dados &lt;a href="https://github.com/turicas/braindump/blob/loading/mooc-ddj.md"&gt;nesse curso gratuito de
+introdução ao jornalismo de dados (no módulo 5,
+especificamente)&lt;/a&gt;.
+2.3) Caso você saiba programar e prefira acessar aos dados criando um
+programa específico para esse fim, evite carregar todo o arquivo em memória,
+prefira formas &amp;#8220;preguiçosas&amp;#8221; de extrair a informação que deseja (leia
+registro a registro, compute o que precisar e depois delete-o da&amp;nbsp;memória).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="api"&gt;&lt;a class="toclink" href="#api"&gt;&lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt;&lt;a class="headerlink" href="#api" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;ATENÇÃO&lt;/strong&gt;: essa opção &lt;strong&gt;não é recomendada&lt;/strong&gt; caso você precise automatizar
+tarefas de download/atualização de dados, pois ela onera muito mais nossos
+servidores que a opção apresentada anteriormente, além de possuir limite de
+requisições (em caso de abuso, seu &lt;span class="caps"&gt;IP&lt;/span&gt;/usuário/token será&amp;nbsp;bloqueado).&lt;/p&gt;
+&lt;p&gt;Veja um exemplo de como acessar a &lt;span class="caps"&gt;API&lt;/span&gt; utilizando a linguagem Python:
+&lt;a href="https://gist.github.com/turicas/3e3621d61415e3453cd03a1997f7473f#file-brasil_io-py"&gt;&lt;code&gt;brasil_io.py&lt;/code&gt;&lt;/a&gt; (em breve essa biblioteca
+estará disponível no &lt;a href="https://pypi.org/"&gt;Python Package Index&lt;/a&gt;).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://brasil.io/auth/entrar/"&gt;Cadastre-se no site&lt;/a&gt; e confirme seu&amp;nbsp;email&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://brasil.io/auth/login/"&gt;Autentique-se no&amp;nbsp;site&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Acesse a página &lt;a href="https://brasil.io/auth/tokens-api/"&gt;de criação de token&lt;/a&gt;,
+  crie um token e&amp;nbsp;guarde-o&lt;/li&gt;
+&lt;li&gt;Acesse a página da tabela dentro do dataset desejado, exemplo: &lt;a href="https://brasil.io/dataset/covid19/caso/"&gt;tabela caso
+  do dataset&amp;nbsp;covid-19&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Clique no link &amp;#8220;utilizar nossa &lt;span class="caps"&gt;API&lt;/span&gt;&amp;#8221;&lt;/li&gt;
+&lt;li&gt;Navegue pela interface, verificando a resposta em &lt;span class="caps"&gt;JSON&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Crie programas que acessem a &lt;span class="caps"&gt;API&lt;/span&gt; de maneira autenticada, passando o cabeçalho
+  &lt;span class="caps"&gt;HTTP&lt;/span&gt; &lt;code&gt;Authentication&lt;/code&gt; com o valor &lt;code&gt;Token &amp;lt;seu-token&amp;gt;&lt;/code&gt;. Veja um exemplo em
+  Python: &lt;a href="https://gist.github.com/turicas/3e3621d61415e3453cd03a1997f7473f#file-brasil_io-py"&gt;&lt;code&gt;brasil_io.py&lt;/code&gt;&lt;/a&gt; (em breve essa biblioteca estará
+  disponível no &lt;a href="https://pypi.org/"&gt;Python Package Index&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ainda não temos uma documentação completa sobre a &lt;span class="caps"&gt;API&lt;/span&gt;, com exceção de alguns
+datasets, como &lt;a href="https://github.com/turicas/covid19-br/blob/master/api.md"&gt;a documentação das tabelas do dataset
+covid19&lt;/a&gt;.  Criar uma
+documentação mais abrangente está em nossa lista de tarefas, mas enquanto isso,
+fique com as seguintes&amp;nbsp;dicas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;O padrão de &lt;span class="caps"&gt;URL&lt;/span&gt; para a &lt;span class="caps"&gt;API&lt;/span&gt; hoje é:
+  &lt;code&gt;http://brasil.io/api/dataset/&amp;lt;dataset-slug&amp;gt;/&amp;lt;table-name&amp;gt;/data/&lt;/code&gt; (nota: no
+  futuro esse padrão mudará para
+  &lt;code&gt;https://api.brasil.io/v1/dataset/&amp;lt;dataset-slug&amp;gt;/&amp;lt;table-name&amp;gt;/data&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;Todos os filtros que podem ser feitos na &lt;a href="#interface-web"&gt;interface Web&lt;/a&gt; (que
+  são passados via &lt;em&gt;query string&lt;/em&gt;) também funcionam na &lt;span class="caps"&gt;API&lt;/span&gt; (use
+  &lt;code&gt;search=palavra&lt;/code&gt; para &lt;em&gt;full-text-search&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;A paginação na &lt;span class="caps"&gt;API&lt;/span&gt; funciona passando &lt;code&gt;page=N&lt;/code&gt; via &lt;em&gt;query string&lt;/em&gt; e o número
+  de itens como &lt;code&gt;page_size=N&lt;/code&gt; (máximo de 10.000). Exemplo:
+  &lt;a href="https://brasil.io/api/dataset/covid19/caso/data/?page=3&amp;amp;page_size=10000`"&gt;&lt;code&gt;https://brasil.io/api/dataset/covid19/caso/data/?page=3&amp;amp;page_size=10000&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="interface-web"&gt;&lt;a class="toclink" href="#interface-web"&gt;Interface Web&lt;/a&gt;&lt;a class="headerlink" href="#interface-web" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;ATENÇÃO&lt;/strong&gt;: essa opção &lt;strong&gt;não é recomendada&lt;/strong&gt; caso você precise automatizar
+tarefas de download dos dados, pois ela possui um limite de 50.000 registros
+por &lt;span class="caps"&gt;CSV&lt;/span&gt; (esse valor pode mudar no futuro) e onera muito mais nossos servidores
+que as opções apresentadas anteriormente. Somente utilize-a caso você esteja
+navegando nos dados, senão você poderá ser bloqueado pela quantidade de
+requisições ao&amp;nbsp;site.&lt;/p&gt;
+&lt;p&gt;Siga os seguintes&amp;nbsp;passos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Acesse a página da tabela dentro do dataset desejado, exemplo: &lt;a href="https://brasil.io/dataset/covid19/caso/"&gt;tabela caso
+  do dataset&amp;nbsp;covid-19&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Faça os filtros que quiser através do formulário e clique em&amp;nbsp;&amp;#8220;Filtrar&amp;#8221;&lt;/li&gt;
+&lt;li&gt;Após o carregamento da página com os dados filtrados, clique em &amp;#8220;Baixar dados
+  em &lt;span class="caps"&gt;CSV&lt;/span&gt;&amp;#8221;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Nota 1: o botão de download dos dados em &lt;span class="caps"&gt;CSV&lt;/span&gt; não aparecerá caso o limite de
+registros tenha se excedido (nesse caso, faça mais filtros ou veja outro
+método de&amp;nbsp;download).&lt;/p&gt;
+&lt;p&gt;Nota 2: essa forma de download não baixa todas as colunas que a tabela
+possui, apenas as que são exibidas na interface Web. Caso necessite de todos
+os dados, considere &lt;a href="#dados-completos"&gt;baixar os dados completos&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Nota 3: caso o &lt;span class="caps"&gt;CSV&lt;/span&gt; abra com erros de acentuação ou de formatação das colunas
+no Microsoft Excel, &lt;a href="https://www.youtube.com/watch?v=nl8gxzCOdCw"&gt;veja esse
+vídeo&lt;/a&gt; para aprender a maneira
+correta de abrir arquivos &lt;span class="caps"&gt;CSV&lt;/span&gt; no&amp;nbsp;Excel.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="executando-os-scripts-de-captura-de-dados"&gt;&lt;a class="toclink" href="#executando-os-scripts-de-captura-de-dados"&gt;Executando os scripts de captura de dados&lt;/a&gt;&lt;a class="headerlink" href="#executando-os-scripts-de-captura-de-dados" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Cada dataset da plataforma possui seus dados gerados através de programas que
+capturam os dados nas fontes originais, convertem, limpam e consolidam tudo no
+formato que a plataforma precisa para importá-los (em geral, são arquivos &lt;span class="caps"&gt;CSV&lt;/span&gt;
+compactados). Todos esses programas são também software livre e seus
+repositórios de código estão&amp;nbsp;disponíveis.&lt;/p&gt;
+&lt;p&gt;Para executar por conta própria os scripts, siga os seguintes&amp;nbsp;passos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Acesse a página da tabela dentro do dataset desejado, exemplo: &lt;a href="https://brasil.io/dataset/covid19/caso/"&gt;tabela caso
+  do dataset&amp;nbsp;covid-19&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Clique no link referente ao &lt;strong&gt;código-fonte&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Siga as instruções no &lt;span class="caps"&gt;README&lt;/span&gt; do repositório de&amp;nbsp;código&lt;/li&gt;
+&lt;/ul&gt;</content><category term="meta"></category><category term="api"></category><category term="infraestrutura"></category></entry><entry><title>Relatório mensal: setembro de 2020</title><link href="https://blog.brasil.io/2020/10/01/relatorio-mensal-setembro-de-2020/" rel="alternate"></link><published>2020-10-01T16:25:00-03:00</published><updated>2020-10-01T16:25:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2020-10-01:/2020/10/01/relatorio-mensal-setembro-de-2020/</id><summary type="html">&lt;p&gt;Com o objetivo de aumentar a transparência do que estamos fazendo e nos aproximarmos dos apoiadores e usuários do projeto, estamos reestruturando nossa comunicação e os relatórios mensais são parte desse&amp;nbsp;processo.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Apesar de estarmos bastante atarefados por aqui, muitas das coisas que estamos
 fazendo no &lt;a href="https://brasil.io/"&gt;Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt; não são tão facilmente visíveis a
 todos, por isso resolvi criar relatórios mensais, que são parte de uma
 estratégia de comunicação mais estruturada, para tornar nosso processo mais
@@ -10,9 +137,9 @@ envolvidas no projeto: além das &lt;a href="https://brasil.io/covid19/voluntari
 Fontes e Marcel Marques estamos trabalhando no desenvolvimento e infraestrutura
 (existem vários outros contribuidores de código também, em vários repositórios,
 mas nós 3 estamos no dia-a-dia trabalhando na&amp;nbsp;plataforma).&lt;/p&gt;
-&lt;h2&gt;O que&amp;nbsp;fizemos&lt;/h2&gt;
+&lt;h3 id="o-que-fizemos"&gt;&lt;a class="toclink" href="#o-que-fizemos"&gt;O que fizemos&lt;/a&gt;&lt;a class="headerlink" href="#o-que-fizemos" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Vamos então ao que fizemos em setembro de&amp;nbsp;2020:&lt;/p&gt;
-&lt;h3&gt;Projeto &lt;span class="caps"&gt;COVID&lt;/span&gt;-19&lt;/h3&gt;
+&lt;h4 id="projeto-covid-19"&gt;&lt;a class="toclink" href="#projeto-covid-19"&gt;Projeto &lt;span class="caps"&gt;COVID&lt;/span&gt;-19&lt;/a&gt;&lt;a class="headerlink" href="#projeto-covid-19" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Trabalhamos &lt;strong&gt;diariamente&lt;/strong&gt; na atualização dos &lt;a href="https://brasil.io/covid19/"&gt;dados da
 &lt;span class="caps"&gt;COVID&lt;/span&gt;-19&lt;/a&gt; desde 20 de março de 2020. A partir de 6
 de junho, &lt;a href="https://www.bbc.com/portuguese/brasil-52974181"&gt;quando houve o apagão de dados do Ministério da
@@ -24,7 +151,7 @@ ferramentas internas que utilizamos para checar os dados, atualizar o dataset&am
 internacionais, além de instituições renomadas como FioCruz e &lt;span class="caps"&gt;IBGE&lt;/span&gt;. &lt;a href="https://github.com/turicas/covid19-br/blob/master/clipping.md"&gt;Confira
 nosso
 &lt;em&gt;clipping&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
-&lt;h3&gt;Combate aos&amp;nbsp;ataques&lt;/h3&gt;
+&lt;h4 id="combate-aos-ataques"&gt;&lt;a class="toclink" href="#combate-aos-ataques"&gt;Combate aos ataques&lt;/a&gt;&lt;a class="headerlink" href="#combate-aos-ataques" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Sim, fomos atacados (virtualmente), mas não foi um ataque estilo &amp;#8220;invasão&amp;#8221;: nas
 últimas semanas recebemos uma quantidade muito grande de requisições
 coordenadas. Foram tantas que nossos servidores não aguentaram muito bem (o
@@ -37,13 +164,13 @@ usuários abusivos e, por isso, precisamos implementar limitações de acesso à
 GitHub&lt;/a&gt;),
 mas já conseguimos resolver boa parte do problema e o site está responsivo
 novamente. Ainda temos algumas questões a serem endereçadas, mas já traçamos um&amp;nbsp;plano.&lt;/p&gt;
-&lt;h3&gt;Atualizações na página&amp;nbsp;inicial&lt;/h3&gt;
+&lt;h4 id="atualizacoes-na-pagina-inicial"&gt;&lt;a class="toclink" href="#atualizacoes-na-pagina-inicial"&gt;Atualizações na página inicial&lt;/a&gt;&lt;a class="headerlink" href="#atualizacoes-na-pagina-inicial" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;No caminho de aumentar a visibilidade do que estamos fazendo, adicionamos uma
 coluna de últimas atualizações na página inicial; lá ficarão todos os datasets
 que foram atualizados recentemente. Em breve adicionaremos mais detalhes a esse
 coluna e outras funcionalidades, como a opção de assinar as atualizações por
 &lt;span class="caps"&gt;RSS&lt;/span&gt; (e eventualmente até a opção de &amp;#8220;seguir&amp;#8221; um&amp;nbsp;dataset).&lt;/p&gt;
-&lt;h3&gt;Melhoria na importação de dados e Página de download de&amp;nbsp;arquivos&lt;/h3&gt;
+&lt;h4 id="melhoria-na-importacao-de-dados-e-pagina-de-download-de-arquivos"&gt;&lt;a class="toclink" href="#melhoria-na-importacao-de-dados-e-pagina-de-download-de-arquivos"&gt;Melhoria na importação de dados e Página de download de arquivos&lt;/a&gt;&lt;a class="headerlink" href="#melhoria-na-importacao-de-dados-e-pagina-de-download-de-arquivos" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Atualizar os dados da &lt;span class="caps"&gt;COVID&lt;/span&gt;-19 ainda nos toma muito tempo e, por isso, estamos
 sempre melhorando o processo de importação de dados, para que seja cada vez
 mais automático. Uma das melhorias que fizemos nesse mês tem a ver com a forma
@@ -54,13 +181,13 @@ o da &lt;span class="caps"&gt;COVID&lt;/span&gt;-19, por exemplo, ficou como
 &lt;p&gt;Apesar de pouco impacto para os usuários, essa alteração nos ajudou a ser mais
 produtivos na atualização dos datasets e a reestruturação no código abriu
 caminho para outras melhorias que&amp;nbsp;virão.&lt;/p&gt;
-&lt;h3&gt;Correção da página de&amp;nbsp;empresas&lt;/h3&gt;
+&lt;h4 id="correcao-da-pagina-de-empresas"&gt;&lt;a class="toclink" href="#correcao-da-pagina-de-empresas"&gt;Correção da página de empresas&lt;/a&gt;&lt;a class="headerlink" href="#correcao-da-pagina-de-empresas" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;A página que contém informações consolidadas de empresas (como &lt;a href="https://brasil.io/especiais/documento/15102288000182/"&gt;essa, da
 Odebrecht&lt;/a&gt;) estava com
 um pequeno bug, que não permitia visualizar algumas das empresas disponíveis no
 &lt;a href="https://brasil.io/dataset/socios-brasil/"&gt;dataset socios-brasil&lt;/a&gt;. Já foi
 corrigido e agora todas estão&amp;nbsp;acessíveis!&lt;/p&gt;
-&lt;h2&gt;Próximos&amp;nbsp;passos&lt;/h2&gt;
+&lt;h3 id="proximos-passos"&gt;&lt;a class="toclink" href="#proximos-passos"&gt;Próximos passos&lt;/a&gt;&lt;a class="headerlink" href="#proximos-passos" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Para outubro,&amp;nbsp;pretendemos:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Implementar autenticação na &lt;span class="caps"&gt;API&lt;/span&gt; (e por segurança precisaremos deixar o
@@ -82,7 +209,7 @@ corrigido e agora todas estão&amp;nbsp;acessíveis!&lt;/p&gt;
 &lt;li&gt;Melhorar a documentação da &lt;span class="caps"&gt;API&lt;/span&gt;;&lt;/li&gt;
 &lt;li&gt;Continuar atualizando diariamente os dados da &lt;span class="caps"&gt;COVID&lt;/span&gt;-19.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Feedback sobre a&amp;nbsp;comunicação&lt;/h2&gt;
+&lt;h3 id="feedback-sobre-a-comunicacao"&gt;&lt;a class="toclink" href="#feedback-sobre-a-comunicacao"&gt;Feedback sobre a comunicação&lt;/a&gt;&lt;a class="headerlink" href="#feedback-sobre-a-comunicacao" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Ainda estamos experimentando as melhores formas de comunicar novidades do
 projeto. Algumas ideias&amp;nbsp;são:&lt;/p&gt;
 &lt;ul&gt;
@@ -94,7 +221,7 @@ projeto. Algumas ideias&amp;nbsp;são:&lt;/p&gt;
   publicar os boletins diários da &lt;span class="caps"&gt;COVID&lt;/span&gt;-19 e atualizações em&amp;nbsp;datasets;&lt;/li&gt;
 &lt;li&gt;Repensar o conteúdo e a periodicidade da&amp;nbsp;newsletter.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;E aí, o que achou?&amp;nbsp;Abração!&lt;/p&gt;</summary><category term="relatório"></category><category term="desenvolvimento"></category><category term="infraestrutura"></category></entry><entry><title>Painel COVID-19 e 2 anos de Brasil.IO</title><link href="https://blog.brasil.io/2020/04/18/painel-covid19-e-2-anos-de-brasilio/" rel="alternate"></link><published>2020-04-18T19:45:00-03:00</published><updated>2020-04-18T19:45:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2020-04-18:2020/04/18/painel-covid19-e-2-anos-de-brasilio/</id><summary type="html">&lt;p&gt;O Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; &lt;a href="https://blog.brasil.io/2019/04/18/1-ano-de-dados-acessiveis/"&gt;está fazendo dois anos
+&lt;p&gt;E aí, o que achou?&amp;nbsp;Abração!&lt;/p&gt;</content><category term="meta"></category><category term="relatório"></category><category term="desenvolvimento"></category><category term="infraestrutura"></category></entry><entry><title>Painel COVID-19 e 2 anos de Brasil.IO</title><link href="https://blog.brasil.io/2020/04/18/painel-covid19-e-2-anos-de-brasilio/" rel="alternate"></link><published>2020-04-18T19:45:00-03:00</published><updated>2020-04-18T19:45:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2020-04-18:/2020/04/18/painel-covid19-e-2-anos-de-brasilio/</id><summary type="html">&lt;p&gt;No dia em que o Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; faz dois anos, lançamos nossa primeira visualização de dados: um mapa com os dados da &lt;span class="caps"&gt;COVID&lt;/span&gt;-19 no Brasil, com diversas informações por&amp;nbsp;município.&lt;/p&gt;</summary><content type="html">&lt;p&gt;O Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; &lt;a href="https://blog.brasil.io/2019/04/18/1-ano-de-dados-acessiveis/"&gt;está fazendo dois anos
 hoje&lt;/a&gt; e lançamos
 nossa primeira visualização de dados! O foco do projeto continua sendo coletar
 e disponibilizar dados públicos em formatos acessíveis, mas por ser um lugar
@@ -104,7 +231,7 @@ de ser consumida e fica acessível a mais&amp;nbsp;pessoas.&lt;/p&gt;
 &lt;p&gt;No &lt;a href="https://brasil.io/covid19/"&gt;Painel &lt;span class="caps"&gt;COVID&lt;/span&gt;-19&lt;/a&gt; é possível ver números gerais
 sobre a propagação da doença, bem como informações detalhadas sobre municípios
 em uma mapa e uma&amp;nbsp;tabela.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Mapa com dados da covid19 por município brasileiro" src="/images/2020-04-18-covid19-mapa.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Mapa com dados da covid19 por município brasileiro" src="/images/2020-04-18-covid19-mapa.png"&gt;&lt;/p&gt;
 &lt;p&gt;No mapa, é possível selecionar 4 variáveis diferentes: total de casos
 confirmados, confirmados por 100.000 habitantes, total de óbitos e taxa de
 letalidade. Também é possível dar zoom em cada estado e, ao passar o mouse
@@ -119,14 +246,14 @@ os polígonos e, em alguns casos, filtrar para que nem todos os polígonos sejam
 baixados. Em breve publicaremos um dataset com esses &lt;em&gt;shapefiles&lt;/em&gt; de municípios
 brasileiros em formato GeoJSON, para facilitar a vida de quem precisa de
 visualizações desse&amp;nbsp;tipo.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Tabela com dados da covid19 por município brasileiro" src="/images/2020-04-18-covid19-tabela.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Tabela com dados da covid19 por município brasileiro" src="/images/2020-04-18-covid19-tabela.png"&gt;&lt;/p&gt;
 &lt;p&gt;Na tabela é possível buscar facilmente as informações mais recentes sobre cada
 município e baixar os dados em formato &lt;span class="caps"&gt;CSV&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Espero que gostem.&amp;nbsp;;)&lt;/p&gt;
 &lt;p&gt;O &lt;a href="https://brasil.io/"&gt;Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt; surgiu como ideia em 2013, mas só entrou em
 operação como é hoje em 2018. Hoje faz 2 anos que estamos online, servindo
 dados acessíveis aos brasileiros gratuitamente. :) &lt;a href="https://apoia.se/brasilio"&gt;Contribua com o
-projeto&lt;/a&gt;.&lt;/p&gt;</summary><category term="covid19"></category><category term="opendata"></category><category term="ddj"></category><category term="colaboração"></category></entry><entry><title>Óbitos por covid19 no Brasil são maiores que os divulgados oficialmente (passamos de mil mortes no dia 6 de abril)</title><link href="https://blog.brasil.io/2020/04/10/obitos-por-covid19-no-brasil-sao-maiores-que-os-divulgados-oficialmente-passamos-de-mil-mortes-no-dia-6-de-abril/" rel="alternate"></link><published>2020-04-10T20:30:00-03:00</published><updated>2020-04-10T20:30:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2020-04-10:2020/04/10/obitos-por-covid19-no-brasil-sao-maiores-que-os-divulgados-oficialmente-passamos-de-mil-mortes-no-dia-6-de-abril/</id><summary type="html">&lt;p&gt;Desde que &lt;a href="https://blog.brasil.io/2020/03/23/dados-coronavirus-por-municipio-mais-atualizados/"&gt;lançamos o dataset
+projeto&lt;/a&gt;.&lt;/p&gt;</content><category term="datasets"></category><category term="covid19"></category><category term="opendata"></category><category term="ddj"></category><category term="colaboração"></category></entry><entry><title>Óbitos por covid19 no Brasil são maiores que os divulgados oficialmente (passamos de mil mortes no dia 6 de abril)</title><link href="https://blog.brasil.io/2020/04/10/obitos-por-covid19-no-brasil-sao-maiores-que-os-divulgados-oficialmente-passamos-de-mil-mortes-no-dia-6-de-abril/" rel="alternate"></link><published>2020-04-10T20:30:00-03:00</published><updated>2020-04-10T20:30:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2020-04-10:/2020/04/10/obitos-por-covid19-no-brasil-sao-maiores-que-os-divulgados-oficialmente-passamos-de-mil-mortes-no-dia-6-de-abril/</id><summary type="html">&lt;p&gt;Os dados sobre óbitos em decorrência da covid19 divulgados pelas Secretarias Estaduais de Saúde e pelo Ministério da Saúde estão sempre defasados: cartórios registram muito mais rapidamente óbitos por suspeita ou confirmação de covid19. Adicionamos esses dados ao Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; - confira as&amp;nbsp;diferenças!&lt;/p&gt;</summary><content type="html">&lt;p&gt;Desde que &lt;a href="https://blog.brasil.io/2020/03/23/dados-coronavirus-por-municipio-mais-atualizados/"&gt;lançamos o dataset
 covid19&lt;/a&gt;,
 todos os dias &lt;strong&gt;dezenas de voluntários&lt;/strong&gt; coletam os dados das Secretarias
 Estaduais de Saúde, checam, entram em contato para resolver inconsistências e
@@ -145,7 +272,7 @@ Civil&lt;/a&gt; criou uma
 página especial onde é possível ver a quantidade de óbitos por suspeita ou
 confirmação de covid19 por&amp;nbsp;dia:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Foto da página covid19 no Portal da Transparência do Registro
-Civil" src="/images/2020-04-10-registro-civil-covid19.png" /&gt;&lt;/p&gt;
+Civil" src="/images/2020-04-10-registro-civil-covid19.png"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Nota: o baixo número de casos para os 6 últimos dias &lt;strong&gt;não quer dizer que o
 número de óbitos diminuiu&lt;/strong&gt; - eles apenas não entraram no sistema e serão
@@ -171,7 +298,7 @@ coleta&lt;/a&gt; em
 óbitos no dia 6 de abril&lt;/strong&gt; (e não hoje), ou seja, &lt;strong&gt;os dados divulgados pelas
 &lt;span class="caps"&gt;SES&lt;/span&gt; e pelo Ministério da Saúde estão atrasados em 4 dias&lt;/strong&gt;.&amp;nbsp;Veja:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Gráfico mostrando diferença de óbitos das Secretarias Estaduais de Saúde e
-Registro Civil" src="/images/2020-04-10-diferenca-obitos.png" /&gt;&lt;/p&gt;
+Registro Civil" src="/images/2020-04-10-diferenca-obitos.png"&gt;&lt;/p&gt;
 &lt;p&gt;Além de óbitos em decorrência de suspeita ou confirmação de covid19,
 adicionamos também os &lt;strong&gt;óbitos em decorrência de pneumonia e insuficiência
 respiratória&lt;/strong&gt; para 2020 e 2019; esses dados poderão nos ajudar a &lt;strong&gt;estimar a
@@ -186,7 +313,7 @@ maneira voluntária e colaborativa é mantido através de doações; &lt;a href=
 doando&lt;/strong&gt; para nossa campanha de financiamento
 coletivo&lt;/a&gt; e se puder, fique em casa: &lt;a href="https://twitter.com/turicas/status/1248464099660279808"&gt;o isolamento
 social é a única forma de diminuirmos a quantidade de
-mortes&lt;/a&gt;!&lt;/p&gt;</summary><category term="covid19"></category><category term="opendata"></category><category term="ddj"></category><category term="colaboração"></category></entry><entry><title>Dados diários mais recentes do coronavírus por município brasileiro</title><link href="https://blog.brasil.io/2020/03/23/dados-coronavirus-por-municipio-mais-atualizados/" rel="alternate"></link><published>2020-03-23T09:00:00-03:00</published><updated>2020-03-23T09:00:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2020-03-23:2020/03/23/dados-coronavirus-por-municipio-mais-atualizados/</id><summary type="html">&lt;blockquote&gt;
+mortes&lt;/a&gt;!&lt;/p&gt;</content><category term="datasets"></category><category term="covid19"></category><category term="opendata"></category><category term="ddj"></category><category term="colaboração"></category></entry><entry><title>Dados diários mais recentes do coronavírus por município brasileiro</title><link href="https://blog.brasil.io/2020/03/23/dados-coronavirus-por-municipio-mais-atualizados/" rel="alternate"></link><published>2020-03-23T09:00:00-03:00</published><updated>2020-03-23T09:00:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2020-03-23:/2020/03/23/dados-coronavirus-por-municipio-mais-atualizados/</id><summary type="html">&lt;p&gt;Os dados sobre o coronavírus disponibilizados pelo Ministério da Saúde não são suficientes para que possamos agir localmente com eficácia. Fizemos um mutirão com 33 voluntários e catalogamos manualmente os dados presentes em centenas de boletins epidemiológicos das secretarias de saúde estaduais (com o histórico). Nos ajude a&amp;nbsp;divulgá-los!&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
 &lt;p&gt;Nota: publicação atualizada em 09 de abril de 2020 às&amp;nbsp;15:30.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Nesse ano a &lt;a href="https://artigo19.org/wp-content/blogs.dir/24/files/2017/05/Os-5-anos-da-Lei-de-Acesso-%c3%a0-Informa%c3%a7%c3%a3o-%e2%80%93-uma-an%c3%a1lise-de-casos-de-transpar%c3%aancia.pdf"&gt;Lei de Acesso à Informação completou 8
@@ -260,7 +387,7 @@ parágrafos (Rio Grande do Norte)&lt;/a&gt;;&lt;/li&gt;
 Lei de Acesso à Informação (sites fora do ar, informação oficial não constando
 no site, dados não estruturados, dados incompletos), mas enquanto ela não
 termina, nossa equipe de voluntários tem uma batalha diária: &lt;strong&gt;atualizar esses
-dados - manualmente&lt;/strong&gt;.&lt;/p&gt;</summary><category term="covid19"></category><category term="opendata"></category><category term="ddj"></category><category term="colaboração"></category></entry><entry><title>Em parceria com a Abraji, fomos selecionados pelo Google News Initiative!</title><link href="https://blog.brasil.io/2019/11/13/em-parceria-com-a-abraji-fomos-selecionados-pelo-google-news-initiative/" rel="alternate"></link><published>2019-11-13T13:35:00-02:00</published><updated>2019-11-13T13:35:00-02:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-11-13:2019/11/13/em-parceria-com-a-abraji-fomos-selecionados-pelo-google-news-initiative/</id><summary type="html">&lt;p&gt;O projeto &lt;strong&gt;CruzaGrafos&lt;/strong&gt;, apresentado em parceria entre a &lt;a href="https://www.abraji.org.br/"&gt;Abraji (Associação
+dados - manualmente&lt;/strong&gt;.&lt;/p&gt;</content><category term="datasets"></category><category term="covid19"></category><category term="opendata"></category><category term="ddj"></category><category term="colaboração"></category></entry><entry><title>Em parceria com a Abraji, fomos selecionados pelo Google News Initiative!</title><link href="https://blog.brasil.io/2019/11/13/em-parceria-com-a-abraji-fomos-selecionados-pelo-google-news-initiative/" rel="alternate"></link><published>2019-11-13T13:35:00-03:00</published><updated>2019-11-13T13:35:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-11-13:/2019/11/13/em-parceria-com-a-abraji-fomos-selecionados-pelo-google-news-initiative/</id><summary type="html">&lt;p&gt;O projeto CruzaGrafos, apresentado em parceria entre a Abraji (Associação Brasileira de Jornalismo Investigativo) e o Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;, foi selecionado para receber apoio do Desafio de Inovação da Google News&amp;nbsp;Initiative.&lt;/p&gt;</summary><content type="html">&lt;p&gt;O projeto &lt;strong&gt;CruzaGrafos&lt;/strong&gt;, apresentado em parceria entre a &lt;a href="https://www.abraji.org.br/"&gt;Abraji (Associação
 Brasileira de Jornalismo Investigativo)&lt;/a&gt; e o
 &lt;a href="https://brasil.io/"&gt;Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt;, foi selecionado para receber apoio do Desafio
 de Inovação da &lt;a href="https://newsinitiative.withgoogle.com/"&gt;Google News
@@ -291,7 +418,7 @@ selecionados: &lt;a href="https://newsinitiative.withgoogle.com/intl/pt_br/innov
 projetos&lt;/a&gt;
 e &lt;a href="https://brasil.googleblog.com/2019/11/acelerando-criacao-de-novos-produtos-e-modelos-de-negocio-na-industria-jornalistica-da-america-latina-em-30-projetos.html"&gt;a publicação no Blog Google Brasil sobre os projetos
 apoiados&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Em breve mais novidades!&amp;nbsp;:)&lt;/p&gt;</summary><category term="grafos"></category><category term="dados abertos"></category><category term="financiamento"></category></entry><entry><title>Você (provavelmente) não precisa de big data</title><link href="https://blog.brasil.io/2019/07/02/voce-provavelmente-nao-precisa-de-big-data/" rel="alternate"></link><published>2019-07-02T15:40:00-03:00</published><updated>2019-07-02T15:40:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-07-02:2019/07/02/voce-provavelmente-nao-precisa-de-big-data/</id><summary type="html">&lt;p&gt;&lt;em&gt;Big data&lt;/em&gt;, &lt;em&gt;artificial intelligence&lt;/em&gt;, &lt;em&gt;deep learning&lt;/em&gt; e outras tecnologias são
+&lt;p&gt;Em breve mais novidades!&amp;nbsp;:)&lt;/p&gt;</content><category term="meta"></category><category term="grafos"></category><category term="dados abertos"></category><category term="financiamento"></category></entry><entry><title>Você (provavelmente) não precisa de big data</title><link href="https://blog.brasil.io/2019/07/02/voce-provavelmente-nao-precisa-de-big-data/" rel="alternate"></link><published>2019-07-02T15:40:00-03:00</published><updated>2019-07-02T15:40:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-07-02:/2019/07/02/voce-provavelmente-nao-precisa-de-big-data/</id><summary type="html">&lt;p&gt;Big data é um tema de bastante visibilidade na atualidade e a paixão com que algumas pessoas abordam o tema (além da própria visibilidade) criam a ilusão de que todos precisam aprender sobre o assunto para criar algo relevante; essa ilusão, além de falaciosa, pode ser&amp;nbsp;nociva.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;Big data&lt;/em&gt;, &lt;em&gt;artificial intelligence&lt;/em&gt;, &lt;em&gt;deep learning&lt;/em&gt; e outras tecnologias são
 as &lt;a href="https://en.wikipedia.org/wiki/Buzzword"&gt;&lt;em&gt;buzzwords&lt;/em&gt;&lt;/a&gt; do momento. Fala-se
 tanto disso que diversas pessoas (principalmente quem está chegando na área
 agora) acreditam que precisam utilizar essas tecnologias para trabalhar com
@@ -331,7 +458,7 @@ onde é possível fazer o download em &lt;span class="caps"&gt;PDF&lt;/span&gt;:
 
 &lt;p&gt;Se você acha importante que o trabalho do &lt;a href="https://brasil.io/"&gt;Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt;
 continue existindo &lt;em&gt;mesmo sem big data&lt;/em&gt;, considere &lt;a href="https://brasil.io/doe"&gt;doar
-para o projeto&lt;/a&gt;.&lt;/p&gt;</summary><category term="opendata"></category><category term="bigdata"></category><category term="acessibilidade"></category></entry><entry><title>Classificando Nomes por Gênero Usando Dados Públicos</title><link href="https://blog.brasil.io/2019/05/31/classificando-nomes-por-genero-usando-dados-publicos/" rel="alternate"></link><published>2019-05-31T15:10:00-03:00</published><updated>2019-05-31T15:10:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-05-31:2019/05/31/classificando-nomes-por-genero-usando-dados-publicos/</id><summary type="html">&lt;style type="text/css"&gt;/*!
+para o projeto&lt;/a&gt;.&lt;/p&gt;</content><category term="mídia"></category><category term="opendata"></category><category term="bigdata"></category><category term="acessibilidade"></category></entry><entry><title>Classificando Nomes por Gênero Usando Dados Públicos</title><link href="https://blog.brasil.io/2019/05/31/classificando-nomes-por-genero-usando-dados-publicos/" rel="alternate"></link><published>2019-05-31T15:10:00-03:00</published><updated>2019-05-31T15:10:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-05-31:/2019/05/31/classificando-nomes-por-genero-usando-dados-publicos/</id><summary type="html">&lt;p&gt;Muitos datasets que possuem dados sobre pessoas não possuem a informação de gênero correspondente, dificultando projetos de dados onde o recorte por gênero é necessário. Nesse artigo vamos aprender a utilizar um dataset do Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; para fazer essa&amp;nbsp;classificação!&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -1374,113 +1501,80 @@ h6:hover .anchor-link {
   font-style: italic;
 }
 &lt;/style&gt;
-&lt;style type="text/css"&gt;.highlight .hll { background-color: #ffffcc }
-.highlight  { background: #f8f8f8; }
-.highlight .c { color: #408080; font-style: italic } /* Comment */
-.highlight .err { border: 1px solid #&lt;span class="caps"&gt;FF0000&lt;/span&gt; } /* Error */
-.highlight .k { color: #008000; font-weight: bold } /* Keyword */
-.highlight .o { color: #666666 } /* Operator */
-.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
-.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
-.highlight .cp { color: #&lt;span class="caps"&gt;BC7A00&lt;/span&gt; } /* Comment.Preproc */
-.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
-.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
-.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
-.highlight .gd { color: #A00000 } /* Generic.Deleted */
-.highlight .ge { font-style: italic } /* Generic.Emph */
-.highlight .gr { color: #&lt;span class="caps"&gt;FF0000&lt;/span&gt; } /* Generic.Error */
-.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.highlight .gi { color: #00A000 } /* Generic.Inserted */
-.highlight .go { color: #888888 } /* Generic.Output */
-.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
-.highlight .gs { font-weight: bold } /* Generic.Strong */
-.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.highlight .gt { color: #&lt;span class="caps"&gt;0044DD&lt;/span&gt; } /* Generic.Traceback */
-.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
-.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
-.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
-.highlight .kp { color: #008000 } /* Keyword.Pseudo */
-.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
-.highlight .kt { color: #B00040 } /* Keyword.Type */
-.highlight .m { color: #666666 } /* Literal.Number */
-.highlight .s { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String */
-.highlight .na { color: #7D9029 } /* Name.Attribute */
-.highlight .nb { color: #008000 } /* Name.Builtin */
-.highlight .nc { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt;; font-weight: bold } /* Name.Class */
-.highlight .no { color: #880000 } /* Name.Constant */
-.highlight .nd { color: #&lt;span class="caps"&gt;AA22FF&lt;/span&gt; } /* Name.Decorator */
-.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
-.highlight .ne { color: #&lt;span class="caps"&gt;D2413A&lt;/span&gt;; font-weight: bold } /* Name.Exception */
-.highlight .nf { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt; } /* Name.Function */
-.highlight .nl { color: #&lt;span class="caps"&gt;A0A000&lt;/span&gt; } /* Name.Label */
-.highlight .nn { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt;; font-weight: bold } /* Name.Namespace */
-.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
-.highlight .nv { color: #19177C } /* Name.Variable */
-.highlight .ow { color: #&lt;span class="caps"&gt;AA22FF&lt;/span&gt;; font-weight: bold } /* Operator.Word */
-.highlight .w { color: #bbbbbb } /* Text.Whitespace */
-.highlight .mb { color: #666666 } /* Literal.Number.Bin */
-.highlight .mf { color: #666666 } /* Literal.Number.Float */
-.highlight .mh { color: #666666 } /* Literal.Number.Hex */
-.highlight .mi { color: #666666 } /* Literal.Number.Integer */
-.highlight .mo { color: #666666 } /* Literal.Number.Oct */
-.highlight .sa { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Affix */
-.highlight .sb { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Backtick */
-.highlight .sc { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Char */
-.highlight .dl { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Delimiter */
-.highlight .sd { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt;; font-style: italic } /* Literal.String.Doc */
-.highlight .s2 { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Double */
-.highlight .se { color: #&lt;span class="caps"&gt;BB6622&lt;/span&gt;; font-weight: bold } /* Literal.String.Escape */
-.highlight .sh { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Heredoc */
-.highlight .si { color: #&lt;span class="caps"&gt;BB6688&lt;/span&gt;; font-weight: bold } /* Literal.String.Interpol */
-.highlight .sx { color: #008000 } /* Literal.String.Other */
-.highlight .sr { color: #&lt;span class="caps"&gt;BB6688&lt;/span&gt; } /* Literal.String.Regex */
-.highlight .s1 { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Single */
-.highlight .ss { color: #19177C } /* Literal.String.Symbol */
-.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.highlight .fm { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt; } /* Name.Function.Magic */
-.highlight .vc { color: #19177C } /* Name.Variable.Class */
-.highlight .vg { color: #19177C } /* Name.Variable.Global */
-.highlight .vi { color: #19177C } /* Name.Variable.Instance */
-.highlight .vm { color: #19177C } /* Name.Variable.Magic */
-.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */&lt;/style&gt;
-&lt;style type="text/css"&gt;
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #&lt;span class="caps"&gt;3E424D&lt;/span&gt;; }
-.ansi-black-bg { background-color: #&lt;span class="caps"&gt;3E424D&lt;/span&gt;; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #&lt;span class="caps"&gt;E75C58&lt;/span&gt;; }
-.ansi-red-bg { background-color: #&lt;span class="caps"&gt;E75C58&lt;/span&gt;; }
-.ansi-red-intense-fg { color: #&lt;span class="caps"&gt;B22B31&lt;/span&gt;; }
-.ansi-red-intense-bg { background-color: #&lt;span class="caps"&gt;B22B31&lt;/span&gt;; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #&lt;span class="caps"&gt;DDB62B&lt;/span&gt;; }
-.ansi-yellow-bg { background-color: #&lt;span class="caps"&gt;DDB62B&lt;/span&gt;; }
-.ansi-yellow-intense-fg { color: #&lt;span class="caps"&gt;B27D12&lt;/span&gt;; }
-.ansi-yellow-intense-bg { background-color: #&lt;span class="caps"&gt;B27D12&lt;/span&gt;; }
-.ansi-blue-fg { color: #&lt;span class="caps"&gt;208FFB&lt;/span&gt;; }
-.ansi-blue-bg { background-color: #&lt;span class="caps"&gt;208FFB&lt;/span&gt;; }
-.ansi-blue-intense-fg { color: #&lt;span class="caps"&gt;0065CA&lt;/span&gt;; }
-.ansi-blue-intense-bg { background-color: #&lt;span class="caps"&gt;0065CA&lt;/span&gt;; }
-.ansi-magenta-fg { color: #&lt;span class="caps"&gt;D160C4&lt;/span&gt;; }
-.ansi-magenta-bg { background-color: #&lt;span class="caps"&gt;D160C4&lt;/span&gt;; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #&lt;span class="caps"&gt;60C6C8&lt;/span&gt;; }
-.ansi-cyan-bg { background-color: #&lt;span class="caps"&gt;60C6C8&lt;/span&gt;; }
-.ansi-cyan-intense-fg { color: #&lt;span class="caps"&gt;258F8F&lt;/span&gt;; }
-.ansi-cyan-intense-bg { background-color: #&lt;span class="caps"&gt;258F8F&lt;/span&gt;; }
-.ansi-white-fg { color: #&lt;span class="caps"&gt;C5C1B4&lt;/span&gt;; }
-.ansi-white-bg { background-color: #&lt;span class="caps"&gt;C5C1B4&lt;/span&gt;; }
-.ansi-white-intense-fg { color: #&lt;span class="caps"&gt;A1A6B2&lt;/span&gt;; }
-.ansi-white-intense-bg { background-color: #&lt;span class="caps"&gt;A1A6B2&lt;/span&gt;; }
-
-.ansi-bold { font-weight: bold; }
-&lt;/style&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;style type="text/css"&gt;pre { line-height: 125%; margin: 0; }
+td.linenos pre { color: #000000; background-color: #f0f0f0; padding: 0 5px 0 5px; }
+span.linenos { color: #000000; background-color: #f0f0f0; padding: 0 5px 0 5px; }
+td.linenos pre.special { color: #000000; background-color: #ffffc0; padding: 0 5px 0 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding: 0 5px 0 5px; }
+ .highlight pre  .hll { background-color: #ffffcc }
+ .highlight pre  { background: #f8f8f8; }
+ .highlight pre  .c { color: #408080; font-style: italic } /* Comment */
+ .highlight pre  .err { border: 1px solid #&lt;span class="caps"&gt;FF0000&lt;/span&gt; } /* Error */
+ .highlight pre  .k { color: #008000; font-weight: bold } /* Keyword */
+ .highlight pre  .o { color: #666666 } /* Operator */
+ .highlight pre  .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+ .highlight pre  .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+ .highlight pre  .cp { color: #&lt;span class="caps"&gt;BC7A00&lt;/span&gt; } /* Comment.Preproc */
+ .highlight pre  .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+ .highlight pre  .c1 { color: #408080; font-style: italic } /* Comment.Single */
+ .highlight pre  .cs { color: #408080; font-style: italic } /* Comment.Special */
+ .highlight pre  .gd { color: #A00000 } /* Generic.Deleted */
+ .highlight pre  .ge { font-style: italic } /* Generic.Emph */
+ .highlight pre  .gr { color: #&lt;span class="caps"&gt;FF0000&lt;/span&gt; } /* Generic.Error */
+ .highlight pre  .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+ .highlight pre  .gi { color: #00A000 } /* Generic.Inserted */
+ .highlight pre  .go { color: #888888 } /* Generic.Output */
+ .highlight pre  .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+ .highlight pre  .gs { font-weight: bold } /* Generic.Strong */
+ .highlight pre  .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+ .highlight pre  .gt { color: #&lt;span class="caps"&gt;0044DD&lt;/span&gt; } /* Generic.Traceback */
+ .highlight pre  .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+ .highlight pre  .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+ .highlight pre  .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+ .highlight pre  .kp { color: #008000 } /* Keyword.Pseudo */
+ .highlight pre  .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+ .highlight pre  .kt { color: #B00040 } /* Keyword.Type */
+ .highlight pre  .m { color: #666666 } /* Literal.Number */
+ .highlight pre  .s { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String */
+ .highlight pre  .na { color: #7D9029 } /* Name.Attribute */
+ .highlight pre  .nb { color: #008000 } /* Name.Builtin */
+ .highlight pre  .nc { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt;; font-weight: bold } /* Name.Class */
+ .highlight pre  .no { color: #880000 } /* Name.Constant */
+ .highlight pre  .nd { color: #&lt;span class="caps"&gt;AA22FF&lt;/span&gt; } /* Name.Decorator */
+ .highlight pre  .ni { color: #999999; font-weight: bold } /* Name.Entity */
+ .highlight pre  .ne { color: #&lt;span class="caps"&gt;D2413A&lt;/span&gt;; font-weight: bold } /* Name.Exception */
+ .highlight pre  .nf { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt; } /* Name.Function */
+ .highlight pre  .nl { color: #&lt;span class="caps"&gt;A0A000&lt;/span&gt; } /* Name.Label */
+ .highlight pre  .nn { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt;; font-weight: bold } /* Name.Namespace */
+ .highlight pre  .nt { color: #008000; font-weight: bold } /* Name.Tag */
+ .highlight pre  .nv { color: #19177C } /* Name.Variable */
+ .highlight pre  .ow { color: #&lt;span class="caps"&gt;AA22FF&lt;/span&gt;; font-weight: bold } /* Operator.Word */
+ .highlight pre  .w { color: #bbbbbb } /* Text.Whitespace */
+ .highlight pre  .mb { color: #666666 } /* Literal.Number.Bin */
+ .highlight pre  .mf { color: #666666 } /* Literal.Number.Float */
+ .highlight pre  .mh { color: #666666 } /* Literal.Number.Hex */
+ .highlight pre  .mi { color: #666666 } /* Literal.Number.Integer */
+ .highlight pre  .mo { color: #666666 } /* Literal.Number.Oct */
+ .highlight pre  .sa { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Affix */
+ .highlight pre  .sb { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Backtick */
+ .highlight pre  .sc { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Char */
+ .highlight pre  .dl { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Delimiter */
+ .highlight pre  .sd { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt;; font-style: italic } /* Literal.String.Doc */
+ .highlight pre  .s2 { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Double */
+ .highlight pre  .se { color: #&lt;span class="caps"&gt;BB6622&lt;/span&gt;; font-weight: bold } /* Literal.String.Escape */
+ .highlight pre  .sh { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Heredoc */
+ .highlight pre  .si { color: #&lt;span class="caps"&gt;BB6688&lt;/span&gt;; font-weight: bold } /* Literal.String.Interpol */
+ .highlight pre  .sx { color: #008000 } /* Literal.String.Other */
+ .highlight pre  .sr { color: #&lt;span class="caps"&gt;BB6688&lt;/span&gt; } /* Literal.String.Regex */
+ .highlight pre  .s1 { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Single */
+ .highlight pre  .ss { color: #19177C } /* Literal.String.Symbol */
+ .highlight pre  .bp { color: #008000 } /* Name.Builtin.Pseudo */
+ .highlight pre  .fm { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt; } /* Name.Function.Magic */
+ .highlight pre  .vc { color: #19177C } /* Name.Variable.Class */
+ .highlight pre  .vg { color: #19177C } /* Name.Variable.Global */
+ .highlight pre  .vi { color: #19177C } /* Name.Variable.Instance */
+ .highlight pre  .vm { color: #19177C } /* Name.Variable.Magic */
+ .highlight pre  .il { color: #666666 } /* Literal.Number.Integer.Long */&lt;/style&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Muitos &lt;em&gt;datasets&lt;/em&gt; que possuem dados sobre pessoas não possuem a informação de gênero correspondente, como o &lt;em&gt;dataset&lt;/em&gt; de candidatura das eleições para o ano de 1.996 divulgado pelo &lt;a href="http://www.tse.jus.br/"&gt;Tribunal Superior Eleitoral&lt;/a&gt; (&lt;a href="https://brasil.io/dataset/eleicoes-brasil/candidatos?ano_eleicao=1996"&gt;veja esse &lt;em&gt;dataset&lt;/em&gt; no Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt;) e o &lt;em&gt;dataset&lt;/em&gt; de salários dos magistrados divulgado pelo &lt;a href="http://cnj.jus.br/"&gt;Conselho Nacional de Justiça&lt;/a&gt; (&lt;a href="https://brasil.io/dataset/salarios-magistrados/contracheque"&gt;veja esse &lt;em&gt;dataset&lt;/em&gt; no Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt;). A falta dessa informação dificulta projetos de dados onde o recorte por gênero é necessário, como é o caso &lt;a href="https://www.youtube.com/watch?v=7yQ8U2tFFq4"&gt;desse vídeo&lt;/a&gt; que ajudei a construir, onde classificamos por gênero todos os nomes de ruas, avenidas e praças do&amp;nbsp;Brasil.&lt;/p&gt;
@@ -1517,7 +1611,7 @@ pyenv activate classificador-genero
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;unicodedata&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;normalize&lt;/span&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;unicodedata&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;normalize&lt;/span&gt;
 
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;encode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="n"&gt;ascii_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;normalize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;NFKD&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;encode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ascii&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;errors&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ignore&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;decode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ascii&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1586,7 +1680,7 @@ pyenv activate classificador-genero
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;json&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;urllib.request&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;urlopen&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;urllib.request&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;urlopen&lt;/span&gt;
 
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;classify_api&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="n"&gt;encoded_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;encode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1671,7 +1765,7 @@ pyenv activate classificador-genero
 
 &lt;span class="n"&gt;name_data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;load_data&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Dicionário criado com {len(name_data)} nomes.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Dicionário criado com &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name_data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; nomes.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
     &lt;/div&gt;
@@ -1861,7 +1955,7 @@ pyenv activate classificador-genero
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</summary><category term="python"></category><category term="data science"></category></entry><entry><title>Identificando Partidos que Mudaram de Nome</title><link href="https://blog.brasil.io/2019/05/28/identificando-partidos-que-mudaram-de-nome/" rel="alternate"></link><published>2019-05-28T00:20:00-03:00</published><updated>2019-05-28T00:20:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-05-28:2019/05/28/identificando-partidos-que-mudaram-de-nome/</id><summary type="html">&lt;style type="text/css"&gt;/*!
+</content><category term="datasets"></category><category term="python"></category><category term="data science"></category></entry><entry><title>Identificando Partidos que Mudaram de Nome</title><link href="https://blog.brasil.io/2019/05/28/identificando-partidos-que-mudaram-de-nome/" rel="alternate"></link><published>2019-05-28T00:20:00-03:00</published><updated>2019-05-28T00:20:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-05-28:/2019/05/28/identificando-partidos-que-mudaram-de-nome/</id><summary type="html">&lt;p&gt;Diversos partidos brasileiros mudaram de nome em 2018, mas você sabe quais são?  Motivado por uma dúvida no Twitter resolvi utilizar o dataset eleicoes-brasil para listar as mudanças de nome que aconteceram desde 1996, utilizando Python, &lt;span class="caps"&gt;SQL&lt;/span&gt; e&amp;nbsp;rows!&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -2904,113 +2998,80 @@ h6:hover .anchor-link {
   font-style: italic;
 }
 &lt;/style&gt;
-&lt;style type="text/css"&gt;.highlight .hll { background-color: #ffffcc }
-.highlight  { background: #f8f8f8; }
-.highlight .c { color: #408080; font-style: italic } /* Comment */
-.highlight .err { border: 1px solid #&lt;span class="caps"&gt;FF0000&lt;/span&gt; } /* Error */
-.highlight .k { color: #008000; font-weight: bold } /* Keyword */
-.highlight .o { color: #666666 } /* Operator */
-.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
-.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
-.highlight .cp { color: #&lt;span class="caps"&gt;BC7A00&lt;/span&gt; } /* Comment.Preproc */
-.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
-.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
-.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
-.highlight .gd { color: #A00000 } /* Generic.Deleted */
-.highlight .ge { font-style: italic } /* Generic.Emph */
-.highlight .gr { color: #&lt;span class="caps"&gt;FF0000&lt;/span&gt; } /* Generic.Error */
-.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.highlight .gi { color: #00A000 } /* Generic.Inserted */
-.highlight .go { color: #888888 } /* Generic.Output */
-.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
-.highlight .gs { font-weight: bold } /* Generic.Strong */
-.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.highlight .gt { color: #&lt;span class="caps"&gt;0044DD&lt;/span&gt; } /* Generic.Traceback */
-.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
-.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
-.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
-.highlight .kp { color: #008000 } /* Keyword.Pseudo */
-.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
-.highlight .kt { color: #B00040 } /* Keyword.Type */
-.highlight .m { color: #666666 } /* Literal.Number */
-.highlight .s { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String */
-.highlight .na { color: #7D9029 } /* Name.Attribute */
-.highlight .nb { color: #008000 } /* Name.Builtin */
-.highlight .nc { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt;; font-weight: bold } /* Name.Class */
-.highlight .no { color: #880000 } /* Name.Constant */
-.highlight .nd { color: #&lt;span class="caps"&gt;AA22FF&lt;/span&gt; } /* Name.Decorator */
-.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
-.highlight .ne { color: #&lt;span class="caps"&gt;D2413A&lt;/span&gt;; font-weight: bold } /* Name.Exception */
-.highlight .nf { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt; } /* Name.Function */
-.highlight .nl { color: #&lt;span class="caps"&gt;A0A000&lt;/span&gt; } /* Name.Label */
-.highlight .nn { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt;; font-weight: bold } /* Name.Namespace */
-.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
-.highlight .nv { color: #19177C } /* Name.Variable */
-.highlight .ow { color: #&lt;span class="caps"&gt;AA22FF&lt;/span&gt;; font-weight: bold } /* Operator.Word */
-.highlight .w { color: #bbbbbb } /* Text.Whitespace */
-.highlight .mb { color: #666666 } /* Literal.Number.Bin */
-.highlight .mf { color: #666666 } /* Literal.Number.Float */
-.highlight .mh { color: #666666 } /* Literal.Number.Hex */
-.highlight .mi { color: #666666 } /* Literal.Number.Integer */
-.highlight .mo { color: #666666 } /* Literal.Number.Oct */
-.highlight .sa { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Affix */
-.highlight .sb { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Backtick */
-.highlight .sc { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Char */
-.highlight .dl { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Delimiter */
-.highlight .sd { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt;; font-style: italic } /* Literal.String.Doc */
-.highlight .s2 { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Double */
-.highlight .se { color: #&lt;span class="caps"&gt;BB6622&lt;/span&gt;; font-weight: bold } /* Literal.String.Escape */
-.highlight .sh { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Heredoc */
-.highlight .si { color: #&lt;span class="caps"&gt;BB6688&lt;/span&gt;; font-weight: bold } /* Literal.String.Interpol */
-.highlight .sx { color: #008000 } /* Literal.String.Other */
-.highlight .sr { color: #&lt;span class="caps"&gt;BB6688&lt;/span&gt; } /* Literal.String.Regex */
-.highlight .s1 { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Single */
-.highlight .ss { color: #19177C } /* Literal.String.Symbol */
-.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.highlight .fm { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt; } /* Name.Function.Magic */
-.highlight .vc { color: #19177C } /* Name.Variable.Class */
-.highlight .vg { color: #19177C } /* Name.Variable.Global */
-.highlight .vi { color: #19177C } /* Name.Variable.Instance */
-.highlight .vm { color: #19177C } /* Name.Variable.Magic */
-.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */&lt;/style&gt;
-&lt;style type="text/css"&gt;
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #&lt;span class="caps"&gt;3E424D&lt;/span&gt;; }
-.ansi-black-bg { background-color: #&lt;span class="caps"&gt;3E424D&lt;/span&gt;; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #&lt;span class="caps"&gt;E75C58&lt;/span&gt;; }
-.ansi-red-bg { background-color: #&lt;span class="caps"&gt;E75C58&lt;/span&gt;; }
-.ansi-red-intense-fg { color: #&lt;span class="caps"&gt;B22B31&lt;/span&gt;; }
-.ansi-red-intense-bg { background-color: #&lt;span class="caps"&gt;B22B31&lt;/span&gt;; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #&lt;span class="caps"&gt;DDB62B&lt;/span&gt;; }
-.ansi-yellow-bg { background-color: #&lt;span class="caps"&gt;DDB62B&lt;/span&gt;; }
-.ansi-yellow-intense-fg { color: #&lt;span class="caps"&gt;B27D12&lt;/span&gt;; }
-.ansi-yellow-intense-bg { background-color: #&lt;span class="caps"&gt;B27D12&lt;/span&gt;; }
-.ansi-blue-fg { color: #&lt;span class="caps"&gt;208FFB&lt;/span&gt;; }
-.ansi-blue-bg { background-color: #&lt;span class="caps"&gt;208FFB&lt;/span&gt;; }
-.ansi-blue-intense-fg { color: #&lt;span class="caps"&gt;0065CA&lt;/span&gt;; }
-.ansi-blue-intense-bg { background-color: #&lt;span class="caps"&gt;0065CA&lt;/span&gt;; }
-.ansi-magenta-fg { color: #&lt;span class="caps"&gt;D160C4&lt;/span&gt;; }
-.ansi-magenta-bg { background-color: #&lt;span class="caps"&gt;D160C4&lt;/span&gt;; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #&lt;span class="caps"&gt;60C6C8&lt;/span&gt;; }
-.ansi-cyan-bg { background-color: #&lt;span class="caps"&gt;60C6C8&lt;/span&gt;; }
-.ansi-cyan-intense-fg { color: #&lt;span class="caps"&gt;258F8F&lt;/span&gt;; }
-.ansi-cyan-intense-bg { background-color: #&lt;span class="caps"&gt;258F8F&lt;/span&gt;; }
-.ansi-white-fg { color: #&lt;span class="caps"&gt;C5C1B4&lt;/span&gt;; }
-.ansi-white-bg { background-color: #&lt;span class="caps"&gt;C5C1B4&lt;/span&gt;; }
-.ansi-white-intense-fg { color: #&lt;span class="caps"&gt;A1A6B2&lt;/span&gt;; }
-.ansi-white-intense-bg { background-color: #&lt;span class="caps"&gt;A1A6B2&lt;/span&gt;; }
-
-.ansi-bold { font-weight: bold; }
-&lt;/style&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;style type="text/css"&gt;pre { line-height: 125%; margin: 0; }
+td.linenos pre { color: #000000; background-color: #f0f0f0; padding: 0 5px 0 5px; }
+span.linenos { color: #000000; background-color: #f0f0f0; padding: 0 5px 0 5px; }
+td.linenos pre.special { color: #000000; background-color: #ffffc0; padding: 0 5px 0 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding: 0 5px 0 5px; }
+ .highlight pre  .hll { background-color: #ffffcc }
+ .highlight pre  { background: #f8f8f8; }
+ .highlight pre  .c { color: #408080; font-style: italic } /* Comment */
+ .highlight pre  .err { border: 1px solid #&lt;span class="caps"&gt;FF0000&lt;/span&gt; } /* Error */
+ .highlight pre  .k { color: #008000; font-weight: bold } /* Keyword */
+ .highlight pre  .o { color: #666666 } /* Operator */
+ .highlight pre  .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+ .highlight pre  .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+ .highlight pre  .cp { color: #&lt;span class="caps"&gt;BC7A00&lt;/span&gt; } /* Comment.Preproc */
+ .highlight pre  .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+ .highlight pre  .c1 { color: #408080; font-style: italic } /* Comment.Single */
+ .highlight pre  .cs { color: #408080; font-style: italic } /* Comment.Special */
+ .highlight pre  .gd { color: #A00000 } /* Generic.Deleted */
+ .highlight pre  .ge { font-style: italic } /* Generic.Emph */
+ .highlight pre  .gr { color: #&lt;span class="caps"&gt;FF0000&lt;/span&gt; } /* Generic.Error */
+ .highlight pre  .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+ .highlight pre  .gi { color: #00A000 } /* Generic.Inserted */
+ .highlight pre  .go { color: #888888 } /* Generic.Output */
+ .highlight pre  .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+ .highlight pre  .gs { font-weight: bold } /* Generic.Strong */
+ .highlight pre  .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+ .highlight pre  .gt { color: #&lt;span class="caps"&gt;0044DD&lt;/span&gt; } /* Generic.Traceback */
+ .highlight pre  .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+ .highlight pre  .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+ .highlight pre  .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+ .highlight pre  .kp { color: #008000 } /* Keyword.Pseudo */
+ .highlight pre  .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+ .highlight pre  .kt { color: #B00040 } /* Keyword.Type */
+ .highlight pre  .m { color: #666666 } /* Literal.Number */
+ .highlight pre  .s { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String */
+ .highlight pre  .na { color: #7D9029 } /* Name.Attribute */
+ .highlight pre  .nb { color: #008000 } /* Name.Builtin */
+ .highlight pre  .nc { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt;; font-weight: bold } /* Name.Class */
+ .highlight pre  .no { color: #880000 } /* Name.Constant */
+ .highlight pre  .nd { color: #&lt;span class="caps"&gt;AA22FF&lt;/span&gt; } /* Name.Decorator */
+ .highlight pre  .ni { color: #999999; font-weight: bold } /* Name.Entity */
+ .highlight pre  .ne { color: #&lt;span class="caps"&gt;D2413A&lt;/span&gt;; font-weight: bold } /* Name.Exception */
+ .highlight pre  .nf { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt; } /* Name.Function */
+ .highlight pre  .nl { color: #&lt;span class="caps"&gt;A0A000&lt;/span&gt; } /* Name.Label */
+ .highlight pre  .nn { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt;; font-weight: bold } /* Name.Namespace */
+ .highlight pre  .nt { color: #008000; font-weight: bold } /* Name.Tag */
+ .highlight pre  .nv { color: #19177C } /* Name.Variable */
+ .highlight pre  .ow { color: #&lt;span class="caps"&gt;AA22FF&lt;/span&gt;; font-weight: bold } /* Operator.Word */
+ .highlight pre  .w { color: #bbbbbb } /* Text.Whitespace */
+ .highlight pre  .mb { color: #666666 } /* Literal.Number.Bin */
+ .highlight pre  .mf { color: #666666 } /* Literal.Number.Float */
+ .highlight pre  .mh { color: #666666 } /* Literal.Number.Hex */
+ .highlight pre  .mi { color: #666666 } /* Literal.Number.Integer */
+ .highlight pre  .mo { color: #666666 } /* Literal.Number.Oct */
+ .highlight pre  .sa { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Affix */
+ .highlight pre  .sb { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Backtick */
+ .highlight pre  .sc { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Char */
+ .highlight pre  .dl { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Delimiter */
+ .highlight pre  .sd { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt;; font-style: italic } /* Literal.String.Doc */
+ .highlight pre  .s2 { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Double */
+ .highlight pre  .se { color: #&lt;span class="caps"&gt;BB6622&lt;/span&gt;; font-weight: bold } /* Literal.String.Escape */
+ .highlight pre  .sh { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Heredoc */
+ .highlight pre  .si { color: #&lt;span class="caps"&gt;BB6688&lt;/span&gt;; font-weight: bold } /* Literal.String.Interpol */
+ .highlight pre  .sx { color: #008000 } /* Literal.String.Other */
+ .highlight pre  .sr { color: #&lt;span class="caps"&gt;BB6688&lt;/span&gt; } /* Literal.String.Regex */
+ .highlight pre  .s1 { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Single */
+ .highlight pre  .ss { color: #19177C } /* Literal.String.Symbol */
+ .highlight pre  .bp { color: #008000 } /* Name.Builtin.Pseudo */
+ .highlight pre  .fm { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt; } /* Name.Function.Magic */
+ .highlight pre  .vc { color: #19177C } /* Name.Variable.Class */
+ .highlight pre  .vg { color: #19177C } /* Name.Variable.Global */
+ .highlight pre  .vi { color: #19177C } /* Name.Variable.Instance */
+ .highlight pre  .vm { color: #19177C } /* Name.Variable.Magic */
+ .highlight pre  .il { color: #666666 } /* Literal.Number.Integer.Long */&lt;/style&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Diversos partidos brasileiros &lt;a href="https://g1.globo.com/politica/noticia/diante-de-crise-politica-partidos-mudam-de-nome-para-atrair-eleitores-em-2018.ghtml"&gt;mudaram de nome em 2018&lt;/a&gt;, mas você sabe quais são? Motivado por &lt;a href="https://twitter.com/zananeno/status/1132989468028358661"&gt;uma dúvida no Twitter&lt;/a&gt; resolvi utilizar o &lt;a href="https://brasil.io/dataset/eleicoes-brasil"&gt;&lt;em&gt;dataset&lt;/em&gt; eleicoes-brasil&lt;/a&gt; para listar as mudanças de nome que aconteceram desde 1996. Vamos utilizar a &lt;a href="http://turicas.info/rows/cli/"&gt;interface de linha de comando da rows&lt;/a&gt;, um pouco de &lt;span class="caps"&gt;SQL&lt;/span&gt; e Python para essa&amp;nbsp;tarefa!&lt;/p&gt;
@@ -3323,7 +3384,7 @@ existe mais. Como resultado, o script irá exibir na tela apenas os partidos que
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[8]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;itertools&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;groupby&lt;/span&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;itertools&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;groupby&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;rows&lt;/span&gt;
 
 
@@ -3350,11 +3411,11 @@ existe mais. Como resultado, o script irá exibir na tela apenas os partidos que
             &lt;span class="c1"&gt;# Agora vamos só ajustar o período em que a mudança aconteceu:&lt;/span&gt;
             &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;ano_final_partido_1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;ano_inicial_partido_2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
                 &lt;span class="n"&gt;datas&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;ano_final_partido_1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-                &lt;span class="n"&gt;periodo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;em &lt;/span&gt;&lt;span class="si"&gt;{ano_final_partido_1}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+                &lt;span class="n"&gt;periodo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;em &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;ano_final_partido_1&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
             &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
                 &lt;span class="n"&gt;datas&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;sorted&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;ano_final_partido_1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ano_inicial_partido_2&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-                &lt;span class="n"&gt;periodo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;entre &lt;/span&gt;&lt;span class="si"&gt;{datas[0]}&lt;/span&gt;&lt;span class="s2"&gt; e &lt;/span&gt;&lt;span class="si"&gt;{datas[1]}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
-            &lt;span class="n"&gt;texto&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{partido_1.nome}&lt;/span&gt;&lt;span class="s2"&gt; (&lt;/span&gt;&lt;span class="si"&gt;{numero}&lt;/span&gt;&lt;span class="s2"&gt;) mudou de nome para &lt;/span&gt;&lt;span class="si"&gt;{partido_2.nome}&lt;/span&gt;&lt;span class="s2"&gt; &lt;/span&gt;&lt;span class="si"&gt;{periodo}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+                &lt;span class="n"&gt;periodo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;entre &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;datas&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; e &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;datas&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+            &lt;span class="n"&gt;texto&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;partido_1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;nome&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; (&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;numero&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;) mudou de nome para &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;partido_2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;nome&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;periodo&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
             &lt;span class="n"&gt;resultado&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;datas&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;texto&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
             
 &lt;span class="c1"&gt;# Agora vamos ordenar o resultado por data para imprimí-lo na ordem cronológica das alterações:&lt;/span&gt;
@@ -3443,7 +3504,7 @@ um &lt;a href="https://github.com/turicas/eleicoes-brasil"&gt;programa que baixa
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</summary><category term="sql"></category><category term="command-line"></category><category term="python"></category></entry><entry><title>Slides da Palestra “#opendata #fail: Causos da Transparência Brasileira”</title><link href="https://blog.brasil.io/2019/04/30/slides-da-palestra-opendata-fail-causos-da-transparencia-brasileira/" rel="alternate"></link><published>2019-04-30T12:00:00-03:00</published><updated>2019-04-30T12:00:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-04-30:2019/04/30/slides-da-palestra-opendata-fail-causos-da-transparencia-brasileira/</id><summary type="html">&lt;p&gt;Ontem (29/04, meu aniversário!) aconteceu em Curitiba/&lt;span class="caps"&gt;PR&lt;/span&gt; o &lt;a href="https://www.meetup.com/Cerveja-cm-Dados/events/260152313/"&gt;Cerveja com Dados
+</content><category term="datasets"></category><category term="sql"></category><category term="command-line"></category><category term="python"></category></entry><entry><title>Slides da Palestra “#opendata #fail: Causos da Transparência Brasileira”</title><link href="https://blog.brasil.io/2019/04/30/slides-da-palestra-opendata-fail-causos-da-transparencia-brasileira/" rel="alternate"></link><published>2019-04-30T12:00:00-03:00</published><updated>2019-04-30T12:00:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-04-30:/2019/04/30/slides-da-palestra-opendata-fail-causos-da-transparencia-brasileira/</id><summary type="html">&lt;p&gt;Slides da palestra onde apresentei alguns dos problemas relacionados à Lei de Acesso à Informação que enfrentamos diariamente para disponibilizar dados acessíveis aqui no Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;. Ajude-nos a mudar esse&amp;nbsp;cenário!&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ontem (29/04, meu aniversário!) aconteceu em Curitiba/&lt;span class="caps"&gt;PR&lt;/span&gt; o &lt;a href="https://www.meetup.com/Cerveja-cm-Dados/events/260152313/"&gt;Cerveja com Dados
 &lt;span class="caps"&gt;CWB&lt;/span&gt; #4&lt;/a&gt;, onde
 apresentei uma das palestras, contando de maneira cômica &lt;strong&gt;problemas
 relacionados à &lt;a href="https://pt.wikipedia.org/wiki/Lei_de_acesso_%C3%A0_informa%C3%A7%C3%A3o"&gt;Lei de Acesso à
@@ -3451,7 +3512,7 @@ Informação&lt;/a&gt;&lt;/strong&gt;
 que afetam diretamente a &lt;a href="https://www.cgu.gov.br/assuntos/transparencia-publica"&gt;transparência
 pública&lt;/a&gt; e o &lt;a href="https://www.cgu.gov.br/assuntos/controle-social"&gt;controle
 social&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Álvaro Justen apresentando os causos da transparência brasileira" src="https://blog.brasil.io/images/2019-04-29-alvaro-justen-cerveja-com-dados-cwb-4.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Álvaro Justen apresentando os causos da transparência brasileira" src="https://blog.brasil.io/images/2019-04-29-alvaro-justen-cerveja-com-dados-cwb-4.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;Os causos que contei retratam os seguintes&amp;nbsp;problemas:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Sites que disponibilizam dados sem criptografia (&lt;span class="caps"&gt;HTTPS&lt;/span&gt;)&lt;/li&gt;
@@ -3479,7 +3540,7 @@ slideshare&lt;/a&gt;
 (veja&amp;nbsp;abaixo).&lt;/p&gt;
 &lt;iframe src="//www.slideshare.net/slideshow/embed_code/key/7ZTByBwU4oxZx" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen&gt; &lt;/iframe&gt;
 
-&lt;p&gt;&lt;a href="https://brasil.io/manifesto"&gt;Do nosso manifesto&lt;/a&gt;: &lt;strong&gt;Restringir acesso a dados públicos é elitizar a&amp;nbsp;democracia.&lt;/strong&gt;&lt;/p&gt;</summary><category term="opendata"></category><category term="fail"></category><category term="datascience"></category></entry><entry><title>1 Ano de Dados Acessíveis</title><link href="https://blog.brasil.io/2019/04/18/1-ano-de-dados-acessiveis/" rel="alternate"></link><published>2019-04-18T23:05:00-03:00</published><updated>2019-04-18T23:05:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-04-18:2019/04/18/1-ano-de-dados-acessiveis/</id><summary type="html">&lt;p&gt;Tive a &lt;a href="http://whois.domaintools.com/brasil.io"&gt;ideia de criar o Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; há muitos anos, em
+&lt;p&gt;&lt;a href="https://brasil.io/manifesto"&gt;Do nosso manifesto&lt;/a&gt;: &lt;strong&gt;Restringir acesso a dados públicos é elitizar a&amp;nbsp;democracia.&lt;/strong&gt;&lt;/p&gt;</content><category term="midia"></category><category term="opendata"></category><category term="fail"></category><category term="datascience"></category></entry><entry><title>1 Ano de Dados Acessíveis</title><link href="https://blog.brasil.io/2019/04/18/1-ano-de-dados-acessiveis/" rel="alternate"></link><published>2019-04-18T23:05:00-03:00</published><updated>2019-04-18T23:05:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-04-18:/2019/04/18/1-ano-de-dados-acessiveis/</id><summary type="html">&lt;p&gt;A ideia do Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; surgiu em 2013, mas o projeto como é conhecido hoje está no ar há mais ou menos 1 ano. Veja algumas conquistas passadas e desafios&amp;nbsp;fututos.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Tive a &lt;a href="http://whois.domaintools.com/brasil.io"&gt;ideia de criar o Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; há muitos anos, em
 2013&lt;/a&gt;, porém por diversos motivos
 (incluindo mudanças na ideia inicial) o desenvolvimento da plataforma como
 existe hoje foi iniciado somente em 2018 - o pontapé inicial aconteceu após
@@ -3500,7 +3561,7 @@ de todos os &lt;em&gt;datasets&lt;/em&gt; da plataforma são servidos por ele e,
 resolvi fazer essa&amp;nbsp;homenagem.&lt;/p&gt;
 &lt;p&gt;Nesses últimos 12 meses tivemos algumas conquistas e ainda temos alguns
 desafios pela&amp;nbsp;frente:&lt;/p&gt;
-&lt;h2&gt;Interface&amp;nbsp;Acessível&lt;/h2&gt;
+&lt;h3 id="interface-acessivel"&gt;&lt;a class="toclink" href="#interface-acessivel"&gt;Interface Acessível&lt;/a&gt;&lt;a class="headerlink" href="#interface-acessivel" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Apesar de razoavelmente simples, &lt;strong&gt;nossa interface facilita muito o trabalho de
 diversas pessoas&lt;/strong&gt; (que possivelmente não teriam tempo/conhecimento
 técnico/dinheiro suficientes para fazer todo o trabalho de coleta, limpeza,
@@ -3511,7 +3572,7 @@ dos resultados (seja baixando como &lt;span class="caps"&gt;CSV&lt;/span&gt; ou 
 &lt;a href="http://brasil.io/especiais"&gt;páginas especiais&lt;/a&gt; facilitam o cruzamento entre
 datasets e análises mais profundas, com poucos&amp;nbsp;cliques.&lt;/p&gt;
 &lt;p&gt;Como ponto a melhorar temos a experiência do usuário e usabilidade das&amp;nbsp;páginas.&lt;/p&gt;
-&lt;h2&gt;Datasets&amp;nbsp;Relevantes&lt;/h2&gt;
+&lt;h3 id="datasets-relevantes"&gt;&lt;a class="toclink" href="#datasets-relevantes"&gt;Datasets Relevantes&lt;/a&gt;&lt;a class="headerlink" href="#datasets-relevantes" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Dois &lt;em&gt;datasets&lt;/em&gt; da plataforma são de extrema relevância tanto para jornalistas
 investigativos, cientistas políticos, advogados, ativistas, dentre outros:
 &lt;a href="https://brasil.io/dataset/socios-brasil/socios"&gt;socios-brasil&lt;/a&gt; (contém a lista
@@ -3538,7 +3599,7 @@ recentemente um em que extraí os &lt;a href="https://twitter.com/turicas/status
 Anistia&lt;/a&gt;), parte deles
 não está disponível porque precisamos melhorar o processo de criação e
 atualização de &lt;em&gt;datasets&lt;/em&gt;, que tem parte&amp;nbsp;manual.&lt;/p&gt;
-&lt;h2&gt;Luta por Dados&amp;nbsp;Abertos&lt;/h2&gt;
+&lt;h3 id="luta-por-dados-abertos"&gt;&lt;a class="toclink" href="#luta-por-dados-abertos"&gt;Luta por Dados Abertos&lt;/a&gt;&lt;a class="headerlink" href="#luta-por-dados-abertos" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Infelizmente, &lt;strong&gt;nem sempre os dados que precisamos estão disponíveis&lt;/strong&gt; - e
 quando isso acontece tenho duas tarefas: alertar sobre o problema e utilizar a
 &lt;a href="http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm"&gt;Lei de Acesso à
@@ -3563,7 +3624,7 @@ Twitter&lt;/a&gt; e &lt;a href="https://github.com/turicas/slides/tree/gh-pages/
 palestras&lt;/a&gt; para
 divulgar esses casos (em breve talvez eu faça uma sessão de vídeos contando em
 mais&amp;nbsp;detalhes!).&lt;/p&gt;
-&lt;h2&gt;Comunicação&lt;/h2&gt;
+&lt;h3 id="comunicacao"&gt;&lt;a class="toclink" href="#comunicacao"&gt;Comunicação&lt;/a&gt;&lt;a class="headerlink" href="#comunicacao" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Por muitas vezes a comunicação da plataforma foi falha, deixando dúvidas sobre
 seu funcionamento, processo de desenvolvimento, atualizações etc. Para suprir
 essa necessidade criamos uma &lt;em&gt;newsletter&lt;/em&gt; e, recentemente, &lt;a href="https://blog.brasil.io/2019/04/01/ola-brasil/"&gt;nosso
@@ -3571,7 +3632,7 @@ blog&lt;/a&gt; (que em breve terá mais
 publicações técnicas). Aos poucos estamos mudando as páginas da plataforma para
 comunicarem melhor o que gostaríamos (que inclusive irá diminuir o fluxo que
 recebo de emails com&amp;nbsp;dúvidas).&lt;/p&gt;
-&lt;h2&gt;Financiamento&lt;/h2&gt;
+&lt;h3 id="financiamento"&gt;&lt;a class="toclink" href="#financiamento"&gt;Financiamento&lt;/a&gt;&lt;a class="headerlink" href="#financiamento" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Durante os 12 últimos meses foquei bastante na questão técnica (criar novos
 programas coletores de dados, melhorar o código da plataforma) e divulgação
 (palestras) e acabei deixando de lado a questão financeira. Hoje &lt;strong&gt;o projeto é
@@ -3589,7 +3650,7 @@ entregável) e também clientes de projetos de &lt;em&gt;Web scraping&lt;/em&gt;
 que paguem o tempo de desenvolvimento de novos coletores ou a melhoria dos já
 existentes. Se você puder ajudar ou conhece alguém que possa, por favor &lt;a href="https://brasil.io/contato"&gt;entre
 em contato&lt;/a&gt;.&lt;/p&gt;
-&lt;h2&gt;Conclusão&lt;/h2&gt;
+&lt;h3 id="conclusao"&gt;&lt;a class="toclink" href="#conclusao"&gt;Conclusão&lt;/a&gt;&lt;a class="headerlink" href="#conclusao" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Os últimos 12 meses foram maravilhosos, a plataforma se mostrou madura e
 geramos diversos impactos positivos, porém ainda temos muito o que melhorar
 principalmente no que diz respeito à sustentabilidade financeira do projeto.
@@ -3598,7 +3659,7 @@ Para os próximos 12 meses estamos abertos a
 abertos acessíveis que facilite o surgimento de diversas iniciativas que tem
 como objetivo exercer &lt;a href="https://pt.wikipedia.org/wiki/Controlo_social"&gt;controle
 social&lt;/a&gt;. &lt;strong&gt;Vida longa ao
-Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;!&lt;/strong&gt;&lt;/p&gt;</summary><category term="história"></category><category term="opendata"></category><category term="crowdfunding"></category></entry><entry><title>Dissecando os custos (e a infraestrutura) do projeto</title><link href="https://blog.brasil.io/2019/04/17/dissecando-os-custos-e-a-infraestrutura-do-projeto/" rel="alternate"></link><published>2019-04-17T17:30:00-03:00</published><updated>2019-04-17T17:30:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-04-17:2019/04/17/dissecando-os-custos-e-a-infraestrutura-do-projeto/</id><summary type="html">&lt;p&gt;Quando visitamos um site geralmente não temos noção de todo o trabalho e
+Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;!&lt;/strong&gt;&lt;/p&gt;</content><category term="meta"></category><category term="história"></category><category term="opendata"></category><category term="crowdfunding"></category></entry><entry><title>Dissecando os custos (e a infraestrutura) do projeto</title><link href="https://blog.brasil.io/2019/04/17/dissecando-os-custos-e-a-infraestrutura-do-projeto/" rel="alternate"></link><published>2019-04-17T17:30:00-03:00</published><updated>2019-04-17T17:30:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-04-17:/2019/04/17/dissecando-os-custos-e-a-infraestrutura-do-projeto/</id><summary type="html">&lt;p&gt;Quando visitamos um site geralmente não temos noção de todo o trabalho e infraestrutura envolvidos para mantê-lo online; nesse artigo detalho os custos do Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; e falo um pouco da infraestrutura. &lt;em&gt;Spoiler&lt;/em&gt;: &lt;strong&gt;o projeto ainda está deficitário&lt;/strong&gt;.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Quando visitamos um site geralmente não temos noção de todo o trabalho e
 infraestrutura envolvidos para mantê-lo online; por trás dos dados apresentados
 no &lt;a href="https://brasil.io/"&gt;Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt; existem diversos programas que fazem
 raspagem de sites (&lt;em&gt;Web scraping&lt;/em&gt;), limpeza de dados, além de outros que
@@ -3611,11 +3672,11 @@ pessoas começaram a doar (porém a quantidade de doações que recebemos ainda 
 que temos hoje estão listados &lt;a href="https://docs.google.com/spreadsheets/d/1ZElv9dWuEmhi-X_K674vQ_8YlmLeMo_m6swIqsSfdF0/view"&gt;nessa
 planilha&lt;/a&gt;
 e segue abaixo um detalhamento de cada&amp;nbsp;item:&lt;/p&gt;
-&lt;h2&gt;Domínio &amp;#8220;brasil.io&amp;#8221;&amp;nbsp;(namecheap.com)&lt;/h2&gt;
+&lt;h3 id="dominio-brasilio-namecheapcom"&gt;&lt;a class="toclink" href="#dominio-brasilio-namecheapcom"&gt;Domínio &amp;#8220;brasil.io&amp;#8221; (namecheap.com)&lt;/a&gt;&lt;a class="headerlink" href="#dominio-brasilio-namecheapcom" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Domínio do projeto, registrado em 28 de novembro de 2013 (apesar da ideia ser
 antiga, a plataforma começou a ser desenvolvida como é hoje em&amp;nbsp;2018).&lt;/p&gt;
 &lt;p&gt;Custo: 35,00 &lt;span class="caps"&gt;USD&lt;/span&gt; /&amp;nbsp;ano.&lt;/p&gt;
-&lt;h2&gt;Servidor na DigitalOcean &lt;span class="caps"&gt;EUA&lt;/span&gt; (+ extra&amp;nbsp;storage)&lt;/h2&gt;
+&lt;h3 id="servidor-na-digitalocean-eua-extra-storage"&gt;&lt;a class="toclink" href="#servidor-na-digitalocean-eua-extra-storage"&gt;Servidor na DigitalOcean &lt;span class="caps"&gt;EUA&lt;/span&gt; (+ extra storage)&lt;/a&gt;&lt;a class="headerlink" href="#servidor-na-digitalocean-eua-extra-storage" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Servidor principal (&lt;span class="caps"&gt;VPS&lt;/span&gt;), onde é hospedada a plataforma. Características:
 Intel(R) Xeon(R) &lt;span class="caps"&gt;CPU&lt;/span&gt; E5-2650L v3 @ 1.80GHz (dual core), &lt;span class="caps"&gt;2GB&lt;/span&gt; &lt;span class="caps"&gt;RAM&lt;/span&gt;, &lt;span class="caps"&gt;60GB&lt;/span&gt; &lt;span class="caps"&gt;SSD&lt;/span&gt; + &lt;span class="caps"&gt;1TB&lt;/span&gt;
 extra de &lt;span class="caps"&gt;SSD&lt;/span&gt;. Está no datacenter de San&amp;nbsp;Francisco.&lt;/p&gt;
@@ -3627,7 +3688,7 @@ para &lt;a href="https://brasil.io/especiais"&gt;traçar caminhos entre pessoas 
 &lt;em&gt;platform-as-a-service&lt;/em&gt; livre) e, com isso, conseguimos subir alterações com um
 simples &lt;code&gt;git push&lt;/code&gt; (como no Heroku, porém mais&amp;nbsp;barato).&lt;/p&gt;
 &lt;p&gt;Custo: 120 &lt;span class="caps"&gt;USD&lt;/span&gt; /&amp;nbsp;mês.&lt;/p&gt;
-&lt;h2&gt;DigitalOcean Spaces (arquivos&amp;nbsp;estáticos)&lt;/h2&gt;
+&lt;h3 id="digitalocean-spaces-arquivos-estaticos"&gt;&lt;a class="toclink" href="#digitalocean-spaces-arquivos-estaticos"&gt;DigitalOcean Spaces (arquivos estáticos)&lt;/a&gt;&lt;a class="headerlink" href="#digitalocean-spaces-arquivos-estaticos" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://m.do.co/c/5b17037059e9"&gt;Digital Ocean Spaces&lt;/a&gt; é um serviço de
 hospedagem de arquivos estáticos, similar ao &lt;span class="caps"&gt;AWS&lt;/span&gt; S3. Está sendo utilizado em
 caráter de testes para hospedar os arquivos estáticos (para quem quer baixar um
@@ -3635,7 +3696,7 @@ dataset completo) e para os futuros &lt;em&gt;mirrors&lt;/em&gt; que teremos. At
 Google Drive pessoal está sendo utilizado para disponibilizar os arquivos
 completos, mas ele possui limitações e em breve migraremos&amp;nbsp;totalmente.&lt;/p&gt;
 &lt;p&gt;Custo: 5 &lt;span class="caps"&gt;USD&lt;/span&gt; /&amp;nbsp;mês.&lt;/p&gt;
-&lt;h2&gt;Servidor na &lt;span class="caps"&gt;OVH&lt;/span&gt; (+ extra&amp;nbsp;storage)&lt;/h2&gt;
+&lt;h3 id="servidor-na-ovh-extra-storage"&gt;&lt;a class="toclink" href="#servidor-na-ovh-extra-storage"&gt;Servidor na &lt;span class="caps"&gt;OVH&lt;/span&gt; (+ extra storage)&lt;/a&gt;&lt;a class="headerlink" href="#servidor-na-ovh-extra-storage" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Servidor secundário (dedicado), onde rodamos os programas que coletam, limpam e
 convertem os dados, hospedamos backups e fazemos outros testes.
 Características: Intel(R) Xeon(R) &lt;span class="caps"&gt;CPU&lt;/span&gt; D-1520 @ 2.20GHz (8 cores), &lt;span class="caps"&gt;32GB&lt;/span&gt; de &lt;span class="caps"&gt;RAM&lt;/span&gt;,
@@ -3644,13 +3705,13 @@ Características: Intel(R) Xeon(R) &lt;span class="caps"&gt;CPU&lt;/span&gt; D-1
 plataforma para esse servidor dedicado e rodar os scripts coletores em uma &lt;span class="caps"&gt;VPS&lt;/span&gt;
 mais barata (porém essa migração requer algum&amp;nbsp;trabalho).&lt;/p&gt;
 &lt;p&gt;Custo: 89,90 &lt;span class="caps"&gt;USD&lt;/span&gt; /&amp;nbsp;mês.&lt;/p&gt;
-&lt;h2&gt;Hospedagem rocketchat - chat.brasil.io&amp;nbsp;(Heroku)&lt;/h2&gt;
+&lt;h3 id="hospedagem-rocketchat-chatbrasilio-heroku"&gt;&lt;a class="toclink" href="#hospedagem-rocketchat-chatbrasilio-heroku"&gt;Hospedagem rocketchat - chat.brasil.io (Heroku)&lt;/a&gt;&lt;a class="headerlink" href="#hospedagem-rocketchat-chatbrasilio-heroku" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Instância do &lt;a href="https://rocket.chat/"&gt;Rocket.Chat&lt;/a&gt; que está por trás do
 &lt;a href="https://chat.brasil.io/"&gt;chat.brasil.io&lt;/a&gt;, onde os colaboradores podem se
 comunicar mais facilmente, com divisão por assunto. Roda em um dyno simples (o
 mais&amp;nbsp;barato).&lt;/p&gt;
 &lt;p&gt;Custo: 7,00 &lt;span class="caps"&gt;USD&lt;/span&gt; /&amp;nbsp;mês.&lt;/p&gt;
-&lt;h2&gt;Horas de&amp;nbsp;trabalho&lt;/h2&gt;
+&lt;h3 id="horas-de-trabalho"&gt;&lt;a class="toclink" href="#horas-de-trabalho"&gt;Horas de trabalho&lt;/a&gt;&lt;a class="headerlink" href="#horas-de-trabalho" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Trabalho de desenvolvimento de novos scripts de coleta de dados,
 desenvolvimento de novas funcionalidades na plataforma, manutenção da
 plataforma (verificação de erros, atualização de datasets etc.) e divulgação do
@@ -3665,7 +3726,7 @@ trabalho de &lt;a href="https://brasil.io/contribuidores"&gt;diversos outros vol
 porém como todos os pagamentos são feitos via cartão de crédito em Dólar o
 valor final pago é de 110,38% do que está descrito (4% de spread + 6,38% de
 &lt;span class="caps"&gt;IOF&lt;/span&gt;).&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="infra"></category><category term="hosting"></category><category term="crowdfunding"></category><category term="história"></category><category term="django"></category><category term="postgresql"></category><category term="neo4j"></category></entry><entry><title>Webinar sobre dados abertos e Python</title><link href="https://blog.brasil.io/2019/04/03/webinar-sobre-daos-abertos-e-python/" rel="alternate"></link><published>2019-04-03T15:40:00-03:00</published><updated>2019-04-03T15:40:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-04-03:2019/04/03/webinar-sobre-daos-abertos-e-python/</id><summary type="html">&lt;p&gt;Na última segunda-feira (01/04/2019) apresentei uma palestra online (webinar)
+&lt;/blockquote&gt;</content><category term="meta"></category><category term="infra"></category><category term="hosting"></category><category term="crowdfunding"></category><category term="história"></category><category term="django"></category><category term="postgresql"></category><category term="neo4j"></category></entry><entry><title>Webinar sobre dados abertos e Python</title><link href="https://blog.brasil.io/2019/04/03/webinar-sobre-daos-abertos-e-python/" rel="alternate"></link><published>2019-04-03T15:40:00-03:00</published><updated>2019-04-03T15:40:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-04-03:/2019/04/03/webinar-sobre-daos-abertos-e-python/</id><summary type="html">&lt;p&gt;Vídeo e slides de uma palestra online apresentada por Álvaro Justen sobre dados abertos e suas aplicações, acessibilidade de dados e demonstração do Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Na última segunda-feira (01/04/2019) apresentei uma palestra online (webinar)
 no &lt;a href="https://www.youtube.com/channel/UC2Qzw5aqCBk_z0lWJnumWQQ"&gt;canal da Glaucia Lemos no
 YouTube&lt;/a&gt;,
 apresentando conceitos como: dados abertos e suas aplicações no jornalismo e no
@@ -3682,7 +3743,7 @@ disponível&lt;/a&gt;)
 e também &lt;a href="https://www.slideshare.net/turicas/brasilio-dados-abertos-para-mais-democracia"&gt;no
 slideshare&lt;/a&gt;,
 onde é possível fazer o download em &lt;span class="caps"&gt;PDF&lt;/span&gt;:&lt;/p&gt;
-&lt;iframe src="//www.slideshare.net/slideshow/embed_code/key/49M0cuZGqc4995" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen&gt; &lt;/iframe&gt;</summary><category term="opendata"></category><category term="ddj"></category><category term="controlesocial"></category><category term="python"></category><category term="rows"></category><category term="csv"></category><category term="pdf"></category><category term="webscraping"></category><category term="acessibilidade"></category></entry><entry><title>Olá, Brasil!</title><link href="https://blog.brasil.io/2019/04/01/ola-brasil/" rel="alternate"></link><published>2019-04-01T16:20:00-03:00</published><updated>2019-04-01T16:20:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-04-01:2019/04/01/ola-brasil/</id><summary type="html">&lt;p&gt;Seja bem-vinda(o) à publicação de inauguração do &lt;a href="https://blog.brasil.io/"&gt;Blog do
+&lt;iframe src="//www.slideshare.net/slideshow/embed_code/key/49M0cuZGqc4995" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen&gt; &lt;/iframe&gt;</content><category term="mídia"></category><category term="opendata"></category><category term="ddj"></category><category term="controlesocial"></category><category term="python"></category><category term="rows"></category><category term="csv"></category><category term="pdf"></category><category term="webscraping"></category><category term="acessibilidade"></category></entry><entry><title>Olá, Brasil!</title><link href="https://blog.brasil.io/2019/04/01/ola-brasil/" rel="alternate"></link><published>2019-04-01T16:20:00-03:00</published><updated>2019-04-01T16:20:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-04-01:/2019/04/01/ola-brasil/</id><summary type="html">&lt;p&gt;Aqui se inicia um espaço colaborativo para falar sobre dados abertos, lei de acesso à informação, ciência de dados e interagir com a comunidade da&amp;nbsp;plataforma.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Seja bem-vinda(o) à publicação de inauguração do &lt;a href="https://blog.brasil.io/"&gt;Blog do
 Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt;; aqui se inicia um espaço colaborativo para
 falar sobre &lt;strong&gt;dados abertos&lt;/strong&gt;, &lt;strong&gt;lei de acesso à informação&lt;/strong&gt;, &lt;strong&gt;ciência de
 dados&lt;/strong&gt; e &lt;strong&gt;interagir com a comunidade&lt;/strong&gt; da&amp;nbsp;plataforma.&lt;/p&gt;
@@ -3727,4 +3788,4 @@ Notebook&lt;/a&gt;) ou tem alguma história
 interessante relacionada ao trabalho com dados abertos, por favor fique à
 vontade para colaborar criando um texto para o blog (&lt;a href="https://github.com/turicas/blog.brasil.io#contribuindo"&gt;veja aqui as
 instruções&lt;/a&gt;; &lt;a href="https://brasil.io/colabore"&gt;existem
-também outras formas de contribuir com o projeto&lt;/a&gt;).&amp;nbsp;:)&lt;/p&gt;</summary><category term="opendata"></category></entry></feed>
+também outras formas de contribuir com o projeto&lt;/a&gt;).&amp;nbsp;:)&lt;/p&gt;</content><category term="meta"></category><category term="opendata"></category></entry></feed>

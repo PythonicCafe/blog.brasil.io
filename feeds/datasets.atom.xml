@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Brasil.IO - Blog</title><link href="https://blog.brasil.io/" rel="alternate"></link><link href="https://blog.brasil.io/feeds/datasets.atom.xml" rel="self"></link><id>https://blog.brasil.io/</id><updated>2020-04-18T19:45:00-03:00</updated><entry><title>Painel COVID-19 e 2 anos de Brasil.IO</title><link href="https://blog.brasil.io/2020/04/18/painel-covid19-e-2-anos-de-brasilio/" rel="alternate"></link><published>2020-04-18T19:45:00-03:00</published><updated>2020-04-18T19:45:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2020-04-18:2020/04/18/painel-covid19-e-2-anos-de-brasilio/</id><summary type="html">&lt;p&gt;O Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; &lt;a href="https://blog.brasil.io/2019/04/18/1-ano-de-dados-acessiveis/"&gt;está fazendo dois anos
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Brasil.IO - Blog - datasets</title><link href="https://blog.brasil.io/" rel="alternate"></link><link href="https://blog.brasil.io/feeds/datasets.atom.xml" rel="self"></link><id>https://blog.brasil.io/</id><updated>2020-04-18T19:45:00-03:00</updated><subtitle>Dados abertos para mais democracia</subtitle><entry><title>Painel COVID-19 e 2 anos de Brasil.IO</title><link href="https://blog.brasil.io/2020/04/18/painel-covid19-e-2-anos-de-brasilio/" rel="alternate"></link><published>2020-04-18T19:45:00-03:00</published><updated>2020-04-18T19:45:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2020-04-18:/2020/04/18/painel-covid19-e-2-anos-de-brasilio/</id><summary type="html">&lt;p&gt;No dia em que o Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; faz dois anos, lançamos nossa primeira visualização de dados: um mapa com os dados da &lt;span class="caps"&gt;COVID&lt;/span&gt;-19 no Brasil, com diversas informações por&amp;nbsp;município.&lt;/p&gt;</summary><content type="html">&lt;p&gt;O Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; &lt;a href="https://blog.brasil.io/2019/04/18/1-ano-de-dados-acessiveis/"&gt;está fazendo dois anos
 hoje&lt;/a&gt; e lançamos
 nossa primeira visualização de dados! O foco do projeto continua sendo coletar
 e disponibilizar dados públicos em formatos acessíveis, mas por ser um lugar
@@ -9,7 +9,7 @@ de ser consumida e fica acessível a mais&amp;nbsp;pessoas.&lt;/p&gt;
 &lt;p&gt;No &lt;a href="https://brasil.io/covid19/"&gt;Painel &lt;span class="caps"&gt;COVID&lt;/span&gt;-19&lt;/a&gt; é possível ver números gerais
 sobre a propagação da doença, bem como informações detalhadas sobre municípios
 em uma mapa e uma&amp;nbsp;tabela.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Mapa com dados da covid19 por município brasileiro" src="/images/2020-04-18-covid19-mapa.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Mapa com dados da covid19 por município brasileiro" src="/images/2020-04-18-covid19-mapa.png"&gt;&lt;/p&gt;
 &lt;p&gt;No mapa, é possível selecionar 4 variáveis diferentes: total de casos
 confirmados, confirmados por 100.000 habitantes, total de óbitos e taxa de
 letalidade. Também é possível dar zoom em cada estado e, ao passar o mouse
@@ -24,14 +24,14 @@ os polígonos e, em alguns casos, filtrar para que nem todos os polígonos sejam
 baixados. Em breve publicaremos um dataset com esses &lt;em&gt;shapefiles&lt;/em&gt; de municípios
 brasileiros em formato GeoJSON, para facilitar a vida de quem precisa de
 visualizações desse&amp;nbsp;tipo.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Tabela com dados da covid19 por município brasileiro" src="/images/2020-04-18-covid19-tabela.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Tabela com dados da covid19 por município brasileiro" src="/images/2020-04-18-covid19-tabela.png"&gt;&lt;/p&gt;
 &lt;p&gt;Na tabela é possível buscar facilmente as informações mais recentes sobre cada
 município e baixar os dados em formato &lt;span class="caps"&gt;CSV&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Espero que gostem.&amp;nbsp;;)&lt;/p&gt;
 &lt;p&gt;O &lt;a href="https://brasil.io/"&gt;Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt; surgiu como ideia em 2013, mas só entrou em
 operação como é hoje em 2018. Hoje faz 2 anos que estamos online, servindo
 dados acessíveis aos brasileiros gratuitamente. :) &lt;a href="https://apoia.se/brasilio"&gt;Contribua com o
-projeto&lt;/a&gt;.&lt;/p&gt;</summary><category term="covid19"></category><category term="opendata"></category><category term="ddj"></category><category term="colaboração"></category></entry><entry><title>Óbitos por covid19 no Brasil são maiores que os divulgados oficialmente (passamos de mil mortes no dia 6 de abril)</title><link href="https://blog.brasil.io/2020/04/10/obitos-por-covid19-no-brasil-sao-maiores-que-os-divulgados-oficialmente-passamos-de-mil-mortes-no-dia-6-de-abril/" rel="alternate"></link><published>2020-04-10T20:30:00-03:00</published><updated>2020-04-10T20:30:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2020-04-10:2020/04/10/obitos-por-covid19-no-brasil-sao-maiores-que-os-divulgados-oficialmente-passamos-de-mil-mortes-no-dia-6-de-abril/</id><summary type="html">&lt;p&gt;Desde que &lt;a href="https://blog.brasil.io/2020/03/23/dados-coronavirus-por-municipio-mais-atualizados/"&gt;lançamos o dataset
+projeto&lt;/a&gt;.&lt;/p&gt;</content><category term="datasets"></category><category term="covid19"></category><category term="opendata"></category><category term="ddj"></category><category term="colaboração"></category></entry><entry><title>Óbitos por covid19 no Brasil são maiores que os divulgados oficialmente (passamos de mil mortes no dia 6 de abril)</title><link href="https://blog.brasil.io/2020/04/10/obitos-por-covid19-no-brasil-sao-maiores-que-os-divulgados-oficialmente-passamos-de-mil-mortes-no-dia-6-de-abril/" rel="alternate"></link><published>2020-04-10T20:30:00-03:00</published><updated>2020-04-10T20:30:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2020-04-10:/2020/04/10/obitos-por-covid19-no-brasil-sao-maiores-que-os-divulgados-oficialmente-passamos-de-mil-mortes-no-dia-6-de-abril/</id><summary type="html">&lt;p&gt;Os dados sobre óbitos em decorrência da covid19 divulgados pelas Secretarias Estaduais de Saúde e pelo Ministério da Saúde estão sempre defasados: cartórios registram muito mais rapidamente óbitos por suspeita ou confirmação de covid19. Adicionamos esses dados ao Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; - confira as&amp;nbsp;diferenças!&lt;/p&gt;</summary><content type="html">&lt;p&gt;Desde que &lt;a href="https://blog.brasil.io/2020/03/23/dados-coronavirus-por-municipio-mais-atualizados/"&gt;lançamos o dataset
 covid19&lt;/a&gt;,
 todos os dias &lt;strong&gt;dezenas de voluntários&lt;/strong&gt; coletam os dados das Secretarias
 Estaduais de Saúde, checam, entram em contato para resolver inconsistências e
@@ -50,7 +50,7 @@ Civil&lt;/a&gt; criou uma
 página especial onde é possível ver a quantidade de óbitos por suspeita ou
 confirmação de covid19 por&amp;nbsp;dia:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Foto da página covid19 no Portal da Transparência do Registro
-Civil" src="/images/2020-04-10-registro-civil-covid19.png" /&gt;&lt;/p&gt;
+Civil" src="/images/2020-04-10-registro-civil-covid19.png"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Nota: o baixo número de casos para os 6 últimos dias &lt;strong&gt;não quer dizer que o
 número de óbitos diminuiu&lt;/strong&gt; - eles apenas não entraram no sistema e serão
@@ -76,7 +76,7 @@ coleta&lt;/a&gt; em
 óbitos no dia 6 de abril&lt;/strong&gt; (e não hoje), ou seja, &lt;strong&gt;os dados divulgados pelas
 &lt;span class="caps"&gt;SES&lt;/span&gt; e pelo Ministério da Saúde estão atrasados em 4 dias&lt;/strong&gt;.&amp;nbsp;Veja:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Gráfico mostrando diferença de óbitos das Secretarias Estaduais de Saúde e
-Registro Civil" src="/images/2020-04-10-diferenca-obitos.png" /&gt;&lt;/p&gt;
+Registro Civil" src="/images/2020-04-10-diferenca-obitos.png"&gt;&lt;/p&gt;
 &lt;p&gt;Além de óbitos em decorrência de suspeita ou confirmação de covid19,
 adicionamos também os &lt;strong&gt;óbitos em decorrência de pneumonia e insuficiência
 respiratória&lt;/strong&gt; para 2020 e 2019; esses dados poderão nos ajudar a &lt;strong&gt;estimar a
@@ -91,7 +91,7 @@ maneira voluntária e colaborativa é mantido através de doações; &lt;a href=
 doando&lt;/strong&gt; para nossa campanha de financiamento
 coletivo&lt;/a&gt; e se puder, fique em casa: &lt;a href="https://twitter.com/turicas/status/1248464099660279808"&gt;o isolamento
 social é a única forma de diminuirmos a quantidade de
-mortes&lt;/a&gt;!&lt;/p&gt;</summary><category term="covid19"></category><category term="opendata"></category><category term="ddj"></category><category term="colaboração"></category></entry><entry><title>Dados diários mais recentes do coronavírus por município brasileiro</title><link href="https://blog.brasil.io/2020/03/23/dados-coronavirus-por-municipio-mais-atualizados/" rel="alternate"></link><published>2020-03-23T09:00:00-03:00</published><updated>2020-03-23T09:00:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2020-03-23:2020/03/23/dados-coronavirus-por-municipio-mais-atualizados/</id><summary type="html">&lt;blockquote&gt;
+mortes&lt;/a&gt;!&lt;/p&gt;</content><category term="datasets"></category><category term="covid19"></category><category term="opendata"></category><category term="ddj"></category><category term="colaboração"></category></entry><entry><title>Dados diários mais recentes do coronavírus por município brasileiro</title><link href="https://blog.brasil.io/2020/03/23/dados-coronavirus-por-municipio-mais-atualizados/" rel="alternate"></link><published>2020-03-23T09:00:00-03:00</published><updated>2020-03-23T09:00:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2020-03-23:/2020/03/23/dados-coronavirus-por-municipio-mais-atualizados/</id><summary type="html">&lt;p&gt;Os dados sobre o coronavírus disponibilizados pelo Ministério da Saúde não são suficientes para que possamos agir localmente com eficácia. Fizemos um mutirão com 33 voluntários e catalogamos manualmente os dados presentes em centenas de boletins epidemiológicos das secretarias de saúde estaduais (com o histórico). Nos ajude a&amp;nbsp;divulgá-los!&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
 &lt;p&gt;Nota: publicação atualizada em 09 de abril de 2020 às&amp;nbsp;15:30.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Nesse ano a &lt;a href="https://artigo19.org/wp-content/blogs.dir/24/files/2017/05/Os-5-anos-da-Lei-de-Acesso-%c3%a0-Informa%c3%a7%c3%a3o-%e2%80%93-uma-an%c3%a1lise-de-casos-de-transpar%c3%aancia.pdf"&gt;Lei de Acesso à Informação completou 8
@@ -165,7 +165,7 @@ parágrafos (Rio Grande do Norte)&lt;/a&gt;;&lt;/li&gt;
 Lei de Acesso à Informação (sites fora do ar, informação oficial não constando
 no site, dados não estruturados, dados incompletos), mas enquanto ela não
 termina, nossa equipe de voluntários tem uma batalha diária: &lt;strong&gt;atualizar esses
-dados - manualmente&lt;/strong&gt;.&lt;/p&gt;</summary><category term="covid19"></category><category term="opendata"></category><category term="ddj"></category><category term="colaboração"></category></entry><entry><title>Classificando Nomes por Gênero Usando Dados Públicos</title><link href="https://blog.brasil.io/2019/05/31/classificando-nomes-por-genero-usando-dados-publicos/" rel="alternate"></link><published>2019-05-31T15:10:00-03:00</published><updated>2019-05-31T15:10:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-05-31:2019/05/31/classificando-nomes-por-genero-usando-dados-publicos/</id><summary type="html">&lt;style type="text/css"&gt;/*!
+dados - manualmente&lt;/strong&gt;.&lt;/p&gt;</content><category term="datasets"></category><category term="covid19"></category><category term="opendata"></category><category term="ddj"></category><category term="colaboração"></category></entry><entry><title>Classificando Nomes por Gênero Usando Dados Públicos</title><link href="https://blog.brasil.io/2019/05/31/classificando-nomes-por-genero-usando-dados-publicos/" rel="alternate"></link><published>2019-05-31T15:10:00-03:00</published><updated>2019-05-31T15:10:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-05-31:/2019/05/31/classificando-nomes-por-genero-usando-dados-publicos/</id><summary type="html">&lt;p&gt;Muitos datasets que possuem dados sobre pessoas não possuem a informação de gênero correspondente, dificultando projetos de dados onde o recorte por gênero é necessário. Nesse artigo vamos aprender a utilizar um dataset do Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; para fazer essa&amp;nbsp;classificação!&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -1208,113 +1208,80 @@ h6:hover .anchor-link {
   font-style: italic;
 }
 &lt;/style&gt;
-&lt;style type="text/css"&gt;.highlight .hll { background-color: #ffffcc }
-.highlight  { background: #f8f8f8; }
-.highlight .c { color: #408080; font-style: italic } /* Comment */
-.highlight .err { border: 1px solid #&lt;span class="caps"&gt;FF0000&lt;/span&gt; } /* Error */
-.highlight .k { color: #008000; font-weight: bold } /* Keyword */
-.highlight .o { color: #666666 } /* Operator */
-.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
-.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
-.highlight .cp { color: #&lt;span class="caps"&gt;BC7A00&lt;/span&gt; } /* Comment.Preproc */
-.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
-.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
-.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
-.highlight .gd { color: #A00000 } /* Generic.Deleted */
-.highlight .ge { font-style: italic } /* Generic.Emph */
-.highlight .gr { color: #&lt;span class="caps"&gt;FF0000&lt;/span&gt; } /* Generic.Error */
-.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.highlight .gi { color: #00A000 } /* Generic.Inserted */
-.highlight .go { color: #888888 } /* Generic.Output */
-.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
-.highlight .gs { font-weight: bold } /* Generic.Strong */
-.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.highlight .gt { color: #&lt;span class="caps"&gt;0044DD&lt;/span&gt; } /* Generic.Traceback */
-.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
-.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
-.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
-.highlight .kp { color: #008000 } /* Keyword.Pseudo */
-.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
-.highlight .kt { color: #B00040 } /* Keyword.Type */
-.highlight .m { color: #666666 } /* Literal.Number */
-.highlight .s { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String */
-.highlight .na { color: #7D9029 } /* Name.Attribute */
-.highlight .nb { color: #008000 } /* Name.Builtin */
-.highlight .nc { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt;; font-weight: bold } /* Name.Class */
-.highlight .no { color: #880000 } /* Name.Constant */
-.highlight .nd { color: #&lt;span class="caps"&gt;AA22FF&lt;/span&gt; } /* Name.Decorator */
-.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
-.highlight .ne { color: #&lt;span class="caps"&gt;D2413A&lt;/span&gt;; font-weight: bold } /* Name.Exception */
-.highlight .nf { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt; } /* Name.Function */
-.highlight .nl { color: #&lt;span class="caps"&gt;A0A000&lt;/span&gt; } /* Name.Label */
-.highlight .nn { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt;; font-weight: bold } /* Name.Namespace */
-.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
-.highlight .nv { color: #19177C } /* Name.Variable */
-.highlight .ow { color: #&lt;span class="caps"&gt;AA22FF&lt;/span&gt;; font-weight: bold } /* Operator.Word */
-.highlight .w { color: #bbbbbb } /* Text.Whitespace */
-.highlight .mb { color: #666666 } /* Literal.Number.Bin */
-.highlight .mf { color: #666666 } /* Literal.Number.Float */
-.highlight .mh { color: #666666 } /* Literal.Number.Hex */
-.highlight .mi { color: #666666 } /* Literal.Number.Integer */
-.highlight .mo { color: #666666 } /* Literal.Number.Oct */
-.highlight .sa { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Affix */
-.highlight .sb { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Backtick */
-.highlight .sc { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Char */
-.highlight .dl { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Delimiter */
-.highlight .sd { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt;; font-style: italic } /* Literal.String.Doc */
-.highlight .s2 { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Double */
-.highlight .se { color: #&lt;span class="caps"&gt;BB6622&lt;/span&gt;; font-weight: bold } /* Literal.String.Escape */
-.highlight .sh { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Heredoc */
-.highlight .si { color: #&lt;span class="caps"&gt;BB6688&lt;/span&gt;; font-weight: bold } /* Literal.String.Interpol */
-.highlight .sx { color: #008000 } /* Literal.String.Other */
-.highlight .sr { color: #&lt;span class="caps"&gt;BB6688&lt;/span&gt; } /* Literal.String.Regex */
-.highlight .s1 { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Single */
-.highlight .ss { color: #19177C } /* Literal.String.Symbol */
-.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.highlight .fm { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt; } /* Name.Function.Magic */
-.highlight .vc { color: #19177C } /* Name.Variable.Class */
-.highlight .vg { color: #19177C } /* Name.Variable.Global */
-.highlight .vi { color: #19177C } /* Name.Variable.Instance */
-.highlight .vm { color: #19177C } /* Name.Variable.Magic */
-.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */&lt;/style&gt;
-&lt;style type="text/css"&gt;
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #&lt;span class="caps"&gt;3E424D&lt;/span&gt;; }
-.ansi-black-bg { background-color: #&lt;span class="caps"&gt;3E424D&lt;/span&gt;; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #&lt;span class="caps"&gt;E75C58&lt;/span&gt;; }
-.ansi-red-bg { background-color: #&lt;span class="caps"&gt;E75C58&lt;/span&gt;; }
-.ansi-red-intense-fg { color: #&lt;span class="caps"&gt;B22B31&lt;/span&gt;; }
-.ansi-red-intense-bg { background-color: #&lt;span class="caps"&gt;B22B31&lt;/span&gt;; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #&lt;span class="caps"&gt;DDB62B&lt;/span&gt;; }
-.ansi-yellow-bg { background-color: #&lt;span class="caps"&gt;DDB62B&lt;/span&gt;; }
-.ansi-yellow-intense-fg { color: #&lt;span class="caps"&gt;B27D12&lt;/span&gt;; }
-.ansi-yellow-intense-bg { background-color: #&lt;span class="caps"&gt;B27D12&lt;/span&gt;; }
-.ansi-blue-fg { color: #&lt;span class="caps"&gt;208FFB&lt;/span&gt;; }
-.ansi-blue-bg { background-color: #&lt;span class="caps"&gt;208FFB&lt;/span&gt;; }
-.ansi-blue-intense-fg { color: #&lt;span class="caps"&gt;0065CA&lt;/span&gt;; }
-.ansi-blue-intense-bg { background-color: #&lt;span class="caps"&gt;0065CA&lt;/span&gt;; }
-.ansi-magenta-fg { color: #&lt;span class="caps"&gt;D160C4&lt;/span&gt;; }
-.ansi-magenta-bg { background-color: #&lt;span class="caps"&gt;D160C4&lt;/span&gt;; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #&lt;span class="caps"&gt;60C6C8&lt;/span&gt;; }
-.ansi-cyan-bg { background-color: #&lt;span class="caps"&gt;60C6C8&lt;/span&gt;; }
-.ansi-cyan-intense-fg { color: #&lt;span class="caps"&gt;258F8F&lt;/span&gt;; }
-.ansi-cyan-intense-bg { background-color: #&lt;span class="caps"&gt;258F8F&lt;/span&gt;; }
-.ansi-white-fg { color: #&lt;span class="caps"&gt;C5C1B4&lt;/span&gt;; }
-.ansi-white-bg { background-color: #&lt;span class="caps"&gt;C5C1B4&lt;/span&gt;; }
-.ansi-white-intense-fg { color: #&lt;span class="caps"&gt;A1A6B2&lt;/span&gt;; }
-.ansi-white-intense-bg { background-color: #&lt;span class="caps"&gt;A1A6B2&lt;/span&gt;; }
-
-.ansi-bold { font-weight: bold; }
-&lt;/style&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;style type="text/css"&gt;pre { line-height: 125%; margin: 0; }
+td.linenos pre { color: #000000; background-color: #f0f0f0; padding: 0 5px 0 5px; }
+span.linenos { color: #000000; background-color: #f0f0f0; padding: 0 5px 0 5px; }
+td.linenos pre.special { color: #000000; background-color: #ffffc0; padding: 0 5px 0 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding: 0 5px 0 5px; }
+ .highlight pre  .hll { background-color: #ffffcc }
+ .highlight pre  { background: #f8f8f8; }
+ .highlight pre  .c { color: #408080; font-style: italic } /* Comment */
+ .highlight pre  .err { border: 1px solid #&lt;span class="caps"&gt;FF0000&lt;/span&gt; } /* Error */
+ .highlight pre  .k { color: #008000; font-weight: bold } /* Keyword */
+ .highlight pre  .o { color: #666666 } /* Operator */
+ .highlight pre  .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+ .highlight pre  .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+ .highlight pre  .cp { color: #&lt;span class="caps"&gt;BC7A00&lt;/span&gt; } /* Comment.Preproc */
+ .highlight pre  .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+ .highlight pre  .c1 { color: #408080; font-style: italic } /* Comment.Single */
+ .highlight pre  .cs { color: #408080; font-style: italic } /* Comment.Special */
+ .highlight pre  .gd { color: #A00000 } /* Generic.Deleted */
+ .highlight pre  .ge { font-style: italic } /* Generic.Emph */
+ .highlight pre  .gr { color: #&lt;span class="caps"&gt;FF0000&lt;/span&gt; } /* Generic.Error */
+ .highlight pre  .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+ .highlight pre  .gi { color: #00A000 } /* Generic.Inserted */
+ .highlight pre  .go { color: #888888 } /* Generic.Output */
+ .highlight pre  .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+ .highlight pre  .gs { font-weight: bold } /* Generic.Strong */
+ .highlight pre  .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+ .highlight pre  .gt { color: #&lt;span class="caps"&gt;0044DD&lt;/span&gt; } /* Generic.Traceback */
+ .highlight pre  .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+ .highlight pre  .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+ .highlight pre  .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+ .highlight pre  .kp { color: #008000 } /* Keyword.Pseudo */
+ .highlight pre  .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+ .highlight pre  .kt { color: #B00040 } /* Keyword.Type */
+ .highlight pre  .m { color: #666666 } /* Literal.Number */
+ .highlight pre  .s { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String */
+ .highlight pre  .na { color: #7D9029 } /* Name.Attribute */
+ .highlight pre  .nb { color: #008000 } /* Name.Builtin */
+ .highlight pre  .nc { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt;; font-weight: bold } /* Name.Class */
+ .highlight pre  .no { color: #880000 } /* Name.Constant */
+ .highlight pre  .nd { color: #&lt;span class="caps"&gt;AA22FF&lt;/span&gt; } /* Name.Decorator */
+ .highlight pre  .ni { color: #999999; font-weight: bold } /* Name.Entity */
+ .highlight pre  .ne { color: #&lt;span class="caps"&gt;D2413A&lt;/span&gt;; font-weight: bold } /* Name.Exception */
+ .highlight pre  .nf { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt; } /* Name.Function */
+ .highlight pre  .nl { color: #&lt;span class="caps"&gt;A0A000&lt;/span&gt; } /* Name.Label */
+ .highlight pre  .nn { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt;; font-weight: bold } /* Name.Namespace */
+ .highlight pre  .nt { color: #008000; font-weight: bold } /* Name.Tag */
+ .highlight pre  .nv { color: #19177C } /* Name.Variable */
+ .highlight pre  .ow { color: #&lt;span class="caps"&gt;AA22FF&lt;/span&gt;; font-weight: bold } /* Operator.Word */
+ .highlight pre  .w { color: #bbbbbb } /* Text.Whitespace */
+ .highlight pre  .mb { color: #666666 } /* Literal.Number.Bin */
+ .highlight pre  .mf { color: #666666 } /* Literal.Number.Float */
+ .highlight pre  .mh { color: #666666 } /* Literal.Number.Hex */
+ .highlight pre  .mi { color: #666666 } /* Literal.Number.Integer */
+ .highlight pre  .mo { color: #666666 } /* Literal.Number.Oct */
+ .highlight pre  .sa { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Affix */
+ .highlight pre  .sb { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Backtick */
+ .highlight pre  .sc { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Char */
+ .highlight pre  .dl { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Delimiter */
+ .highlight pre  .sd { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt;; font-style: italic } /* Literal.String.Doc */
+ .highlight pre  .s2 { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Double */
+ .highlight pre  .se { color: #&lt;span class="caps"&gt;BB6622&lt;/span&gt;; font-weight: bold } /* Literal.String.Escape */
+ .highlight pre  .sh { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Heredoc */
+ .highlight pre  .si { color: #&lt;span class="caps"&gt;BB6688&lt;/span&gt;; font-weight: bold } /* Literal.String.Interpol */
+ .highlight pre  .sx { color: #008000 } /* Literal.String.Other */
+ .highlight pre  .sr { color: #&lt;span class="caps"&gt;BB6688&lt;/span&gt; } /* Literal.String.Regex */
+ .highlight pre  .s1 { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Single */
+ .highlight pre  .ss { color: #19177C } /* Literal.String.Symbol */
+ .highlight pre  .bp { color: #008000 } /* Name.Builtin.Pseudo */
+ .highlight pre  .fm { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt; } /* Name.Function.Magic */
+ .highlight pre  .vc { color: #19177C } /* Name.Variable.Class */
+ .highlight pre  .vg { color: #19177C } /* Name.Variable.Global */
+ .highlight pre  .vi { color: #19177C } /* Name.Variable.Instance */
+ .highlight pre  .vm { color: #19177C } /* Name.Variable.Magic */
+ .highlight pre  .il { color: #666666 } /* Literal.Number.Integer.Long */&lt;/style&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Muitos &lt;em&gt;datasets&lt;/em&gt; que possuem dados sobre pessoas não possuem a informação de gênero correspondente, como o &lt;em&gt;dataset&lt;/em&gt; de candidatura das eleições para o ano de 1.996 divulgado pelo &lt;a href="http://www.tse.jus.br/"&gt;Tribunal Superior Eleitoral&lt;/a&gt; (&lt;a href="https://brasil.io/dataset/eleicoes-brasil/candidatos?ano_eleicao=1996"&gt;veja esse &lt;em&gt;dataset&lt;/em&gt; no Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt;) e o &lt;em&gt;dataset&lt;/em&gt; de salários dos magistrados divulgado pelo &lt;a href="http://cnj.jus.br/"&gt;Conselho Nacional de Justiça&lt;/a&gt; (&lt;a href="https://brasil.io/dataset/salarios-magistrados/contracheque"&gt;veja esse &lt;em&gt;dataset&lt;/em&gt; no Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt;). A falta dessa informação dificulta projetos de dados onde o recorte por gênero é necessário, como é o caso &lt;a href="https://www.youtube.com/watch?v=7yQ8U2tFFq4"&gt;desse vídeo&lt;/a&gt; que ajudei a construir, onde classificamos por gênero todos os nomes de ruas, avenidas e praças do&amp;nbsp;Brasil.&lt;/p&gt;
@@ -1351,7 +1318,7 @@ pyenv activate classificador-genero
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;unicodedata&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;normalize&lt;/span&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;unicodedata&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;normalize&lt;/span&gt;
 
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;encode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="n"&gt;ascii_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;normalize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;NFKD&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;encode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ascii&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;errors&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ignore&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;decode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ascii&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1420,7 +1387,7 @@ pyenv activate classificador-genero
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;json&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;urllib.request&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;urlopen&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;urllib.request&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;urlopen&lt;/span&gt;
 
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;classify_api&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="n"&gt;encoded_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;encode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1505,7 +1472,7 @@ pyenv activate classificador-genero
 
 &lt;span class="n"&gt;name_data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;load_data&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Dicionário criado com {len(name_data)} nomes.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Dicionário criado com &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name_data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; nomes.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
     &lt;/div&gt;
@@ -1695,7 +1662,7 @@ pyenv activate classificador-genero
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</summary><category term="python"></category><category term="data science"></category></entry><entry><title>Identificando Partidos que Mudaram de Nome</title><link href="https://blog.brasil.io/2019/05/28/identificando-partidos-que-mudaram-de-nome/" rel="alternate"></link><published>2019-05-28T00:20:00-03:00</published><updated>2019-05-28T00:20:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-05-28:2019/05/28/identificando-partidos-que-mudaram-de-nome/</id><summary type="html">&lt;style type="text/css"&gt;/*!
+</content><category term="datasets"></category><category term="python"></category><category term="data science"></category></entry><entry><title>Identificando Partidos que Mudaram de Nome</title><link href="https://blog.brasil.io/2019/05/28/identificando-partidos-que-mudaram-de-nome/" rel="alternate"></link><published>2019-05-28T00:20:00-03:00</published><updated>2019-05-28T00:20:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2019-05-28:/2019/05/28/identificando-partidos-que-mudaram-de-nome/</id><summary type="html">&lt;p&gt;Diversos partidos brasileiros mudaram de nome em 2018, mas você sabe quais são?  Motivado por uma dúvida no Twitter resolvi utilizar o dataset eleicoes-brasil para listar as mudanças de nome que aconteceram desde 1996, utilizando Python, &lt;span class="caps"&gt;SQL&lt;/span&gt; e&amp;nbsp;rows!&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -2738,113 +2705,80 @@ h6:hover .anchor-link {
   font-style: italic;
 }
 &lt;/style&gt;
-&lt;style type="text/css"&gt;.highlight .hll { background-color: #ffffcc }
-.highlight  { background: #f8f8f8; }
-.highlight .c { color: #408080; font-style: italic } /* Comment */
-.highlight .err { border: 1px solid #&lt;span class="caps"&gt;FF0000&lt;/span&gt; } /* Error */
-.highlight .k { color: #008000; font-weight: bold } /* Keyword */
-.highlight .o { color: #666666 } /* Operator */
-.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
-.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
-.highlight .cp { color: #&lt;span class="caps"&gt;BC7A00&lt;/span&gt; } /* Comment.Preproc */
-.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
-.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
-.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
-.highlight .gd { color: #A00000 } /* Generic.Deleted */
-.highlight .ge { font-style: italic } /* Generic.Emph */
-.highlight .gr { color: #&lt;span class="caps"&gt;FF0000&lt;/span&gt; } /* Generic.Error */
-.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.highlight .gi { color: #00A000 } /* Generic.Inserted */
-.highlight .go { color: #888888 } /* Generic.Output */
-.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
-.highlight .gs { font-weight: bold } /* Generic.Strong */
-.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.highlight .gt { color: #&lt;span class="caps"&gt;0044DD&lt;/span&gt; } /* Generic.Traceback */
-.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
-.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
-.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
-.highlight .kp { color: #008000 } /* Keyword.Pseudo */
-.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
-.highlight .kt { color: #B00040 } /* Keyword.Type */
-.highlight .m { color: #666666 } /* Literal.Number */
-.highlight .s { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String */
-.highlight .na { color: #7D9029 } /* Name.Attribute */
-.highlight .nb { color: #008000 } /* Name.Builtin */
-.highlight .nc { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt;; font-weight: bold } /* Name.Class */
-.highlight .no { color: #880000 } /* Name.Constant */
-.highlight .nd { color: #&lt;span class="caps"&gt;AA22FF&lt;/span&gt; } /* Name.Decorator */
-.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
-.highlight .ne { color: #&lt;span class="caps"&gt;D2413A&lt;/span&gt;; font-weight: bold } /* Name.Exception */
-.highlight .nf { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt; } /* Name.Function */
-.highlight .nl { color: #&lt;span class="caps"&gt;A0A000&lt;/span&gt; } /* Name.Label */
-.highlight .nn { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt;; font-weight: bold } /* Name.Namespace */
-.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
-.highlight .nv { color: #19177C } /* Name.Variable */
-.highlight .ow { color: #&lt;span class="caps"&gt;AA22FF&lt;/span&gt;; font-weight: bold } /* Operator.Word */
-.highlight .w { color: #bbbbbb } /* Text.Whitespace */
-.highlight .mb { color: #666666 } /* Literal.Number.Bin */
-.highlight .mf { color: #666666 } /* Literal.Number.Float */
-.highlight .mh { color: #666666 } /* Literal.Number.Hex */
-.highlight .mi { color: #666666 } /* Literal.Number.Integer */
-.highlight .mo { color: #666666 } /* Literal.Number.Oct */
-.highlight .sa { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Affix */
-.highlight .sb { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Backtick */
-.highlight .sc { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Char */
-.highlight .dl { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Delimiter */
-.highlight .sd { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt;; font-style: italic } /* Literal.String.Doc */
-.highlight .s2 { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Double */
-.highlight .se { color: #&lt;span class="caps"&gt;BB6622&lt;/span&gt;; font-weight: bold } /* Literal.String.Escape */
-.highlight .sh { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Heredoc */
-.highlight .si { color: #&lt;span class="caps"&gt;BB6688&lt;/span&gt;; font-weight: bold } /* Literal.String.Interpol */
-.highlight .sx { color: #008000 } /* Literal.String.Other */
-.highlight .sr { color: #&lt;span class="caps"&gt;BB6688&lt;/span&gt; } /* Literal.String.Regex */
-.highlight .s1 { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Single */
-.highlight .ss { color: #19177C } /* Literal.String.Symbol */
-.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.highlight .fm { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt; } /* Name.Function.Magic */
-.highlight .vc { color: #19177C } /* Name.Variable.Class */
-.highlight .vg { color: #19177C } /* Name.Variable.Global */
-.highlight .vi { color: #19177C } /* Name.Variable.Instance */
-.highlight .vm { color: #19177C } /* Name.Variable.Magic */
-.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */&lt;/style&gt;
-&lt;style type="text/css"&gt;
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #&lt;span class="caps"&gt;3E424D&lt;/span&gt;; }
-.ansi-black-bg { background-color: #&lt;span class="caps"&gt;3E424D&lt;/span&gt;; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #&lt;span class="caps"&gt;E75C58&lt;/span&gt;; }
-.ansi-red-bg { background-color: #&lt;span class="caps"&gt;E75C58&lt;/span&gt;; }
-.ansi-red-intense-fg { color: #&lt;span class="caps"&gt;B22B31&lt;/span&gt;; }
-.ansi-red-intense-bg { background-color: #&lt;span class="caps"&gt;B22B31&lt;/span&gt;; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #&lt;span class="caps"&gt;DDB62B&lt;/span&gt;; }
-.ansi-yellow-bg { background-color: #&lt;span class="caps"&gt;DDB62B&lt;/span&gt;; }
-.ansi-yellow-intense-fg { color: #&lt;span class="caps"&gt;B27D12&lt;/span&gt;; }
-.ansi-yellow-intense-bg { background-color: #&lt;span class="caps"&gt;B27D12&lt;/span&gt;; }
-.ansi-blue-fg { color: #&lt;span class="caps"&gt;208FFB&lt;/span&gt;; }
-.ansi-blue-bg { background-color: #&lt;span class="caps"&gt;208FFB&lt;/span&gt;; }
-.ansi-blue-intense-fg { color: #&lt;span class="caps"&gt;0065CA&lt;/span&gt;; }
-.ansi-blue-intense-bg { background-color: #&lt;span class="caps"&gt;0065CA&lt;/span&gt;; }
-.ansi-magenta-fg { color: #&lt;span class="caps"&gt;D160C4&lt;/span&gt;; }
-.ansi-magenta-bg { background-color: #&lt;span class="caps"&gt;D160C4&lt;/span&gt;; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #&lt;span class="caps"&gt;60C6C8&lt;/span&gt;; }
-.ansi-cyan-bg { background-color: #&lt;span class="caps"&gt;60C6C8&lt;/span&gt;; }
-.ansi-cyan-intense-fg { color: #&lt;span class="caps"&gt;258F8F&lt;/span&gt;; }
-.ansi-cyan-intense-bg { background-color: #&lt;span class="caps"&gt;258F8F&lt;/span&gt;; }
-.ansi-white-fg { color: #&lt;span class="caps"&gt;C5C1B4&lt;/span&gt;; }
-.ansi-white-bg { background-color: #&lt;span class="caps"&gt;C5C1B4&lt;/span&gt;; }
-.ansi-white-intense-fg { color: #&lt;span class="caps"&gt;A1A6B2&lt;/span&gt;; }
-.ansi-white-intense-bg { background-color: #&lt;span class="caps"&gt;A1A6B2&lt;/span&gt;; }
-
-.ansi-bold { font-weight: bold; }
-&lt;/style&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;style type="text/css"&gt;pre { line-height: 125%; margin: 0; }
+td.linenos pre { color: #000000; background-color: #f0f0f0; padding: 0 5px 0 5px; }
+span.linenos { color: #000000; background-color: #f0f0f0; padding: 0 5px 0 5px; }
+td.linenos pre.special { color: #000000; background-color: #ffffc0; padding: 0 5px 0 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding: 0 5px 0 5px; }
+ .highlight pre  .hll { background-color: #ffffcc }
+ .highlight pre  { background: #f8f8f8; }
+ .highlight pre  .c { color: #408080; font-style: italic } /* Comment */
+ .highlight pre  .err { border: 1px solid #&lt;span class="caps"&gt;FF0000&lt;/span&gt; } /* Error */
+ .highlight pre  .k { color: #008000; font-weight: bold } /* Keyword */
+ .highlight pre  .o { color: #666666 } /* Operator */
+ .highlight pre  .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+ .highlight pre  .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+ .highlight pre  .cp { color: #&lt;span class="caps"&gt;BC7A00&lt;/span&gt; } /* Comment.Preproc */
+ .highlight pre  .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+ .highlight pre  .c1 { color: #408080; font-style: italic } /* Comment.Single */
+ .highlight pre  .cs { color: #408080; font-style: italic } /* Comment.Special */
+ .highlight pre  .gd { color: #A00000 } /* Generic.Deleted */
+ .highlight pre  .ge { font-style: italic } /* Generic.Emph */
+ .highlight pre  .gr { color: #&lt;span class="caps"&gt;FF0000&lt;/span&gt; } /* Generic.Error */
+ .highlight pre  .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+ .highlight pre  .gi { color: #00A000 } /* Generic.Inserted */
+ .highlight pre  .go { color: #888888 } /* Generic.Output */
+ .highlight pre  .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+ .highlight pre  .gs { font-weight: bold } /* Generic.Strong */
+ .highlight pre  .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+ .highlight pre  .gt { color: #&lt;span class="caps"&gt;0044DD&lt;/span&gt; } /* Generic.Traceback */
+ .highlight pre  .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+ .highlight pre  .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+ .highlight pre  .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+ .highlight pre  .kp { color: #008000 } /* Keyword.Pseudo */
+ .highlight pre  .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+ .highlight pre  .kt { color: #B00040 } /* Keyword.Type */
+ .highlight pre  .m { color: #666666 } /* Literal.Number */
+ .highlight pre  .s { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String */
+ .highlight pre  .na { color: #7D9029 } /* Name.Attribute */
+ .highlight pre  .nb { color: #008000 } /* Name.Builtin */
+ .highlight pre  .nc { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt;; font-weight: bold } /* Name.Class */
+ .highlight pre  .no { color: #880000 } /* Name.Constant */
+ .highlight pre  .nd { color: #&lt;span class="caps"&gt;AA22FF&lt;/span&gt; } /* Name.Decorator */
+ .highlight pre  .ni { color: #999999; font-weight: bold } /* Name.Entity */
+ .highlight pre  .ne { color: #&lt;span class="caps"&gt;D2413A&lt;/span&gt;; font-weight: bold } /* Name.Exception */
+ .highlight pre  .nf { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt; } /* Name.Function */
+ .highlight pre  .nl { color: #&lt;span class="caps"&gt;A0A000&lt;/span&gt; } /* Name.Label */
+ .highlight pre  .nn { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt;; font-weight: bold } /* Name.Namespace */
+ .highlight pre  .nt { color: #008000; font-weight: bold } /* Name.Tag */
+ .highlight pre  .nv { color: #19177C } /* Name.Variable */
+ .highlight pre  .ow { color: #&lt;span class="caps"&gt;AA22FF&lt;/span&gt;; font-weight: bold } /* Operator.Word */
+ .highlight pre  .w { color: #bbbbbb } /* Text.Whitespace */
+ .highlight pre  .mb { color: #666666 } /* Literal.Number.Bin */
+ .highlight pre  .mf { color: #666666 } /* Literal.Number.Float */
+ .highlight pre  .mh { color: #666666 } /* Literal.Number.Hex */
+ .highlight pre  .mi { color: #666666 } /* Literal.Number.Integer */
+ .highlight pre  .mo { color: #666666 } /* Literal.Number.Oct */
+ .highlight pre  .sa { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Affix */
+ .highlight pre  .sb { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Backtick */
+ .highlight pre  .sc { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Char */
+ .highlight pre  .dl { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Delimiter */
+ .highlight pre  .sd { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt;; font-style: italic } /* Literal.String.Doc */
+ .highlight pre  .s2 { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Double */
+ .highlight pre  .se { color: #&lt;span class="caps"&gt;BB6622&lt;/span&gt;; font-weight: bold } /* Literal.String.Escape */
+ .highlight pre  .sh { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Heredoc */
+ .highlight pre  .si { color: #&lt;span class="caps"&gt;BB6688&lt;/span&gt;; font-weight: bold } /* Literal.String.Interpol */
+ .highlight pre  .sx { color: #008000 } /* Literal.String.Other */
+ .highlight pre  .sr { color: #&lt;span class="caps"&gt;BB6688&lt;/span&gt; } /* Literal.String.Regex */
+ .highlight pre  .s1 { color: #&lt;span class="caps"&gt;BA2121&lt;/span&gt; } /* Literal.String.Single */
+ .highlight pre  .ss { color: #19177C } /* Literal.String.Symbol */
+ .highlight pre  .bp { color: #008000 } /* Name.Builtin.Pseudo */
+ .highlight pre  .fm { color: #&lt;span class="caps"&gt;0000FF&lt;/span&gt; } /* Name.Function.Magic */
+ .highlight pre  .vc { color: #19177C } /* Name.Variable.Class */
+ .highlight pre  .vg { color: #19177C } /* Name.Variable.Global */
+ .highlight pre  .vi { color: #19177C } /* Name.Variable.Instance */
+ .highlight pre  .vm { color: #19177C } /* Name.Variable.Magic */
+ .highlight pre  .il { color: #666666 } /* Literal.Number.Integer.Long */&lt;/style&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Diversos partidos brasileiros &lt;a href="https://g1.globo.com/politica/noticia/diante-de-crise-politica-partidos-mudam-de-nome-para-atrair-eleitores-em-2018.ghtml"&gt;mudaram de nome em 2018&lt;/a&gt;, mas você sabe quais são? Motivado por &lt;a href="https://twitter.com/zananeno/status/1132989468028358661"&gt;uma dúvida no Twitter&lt;/a&gt; resolvi utilizar o &lt;a href="https://brasil.io/dataset/eleicoes-brasil"&gt;&lt;em&gt;dataset&lt;/em&gt; eleicoes-brasil&lt;/a&gt; para listar as mudanças de nome que aconteceram desde 1996. Vamos utilizar a &lt;a href="http://turicas.info/rows/cli/"&gt;interface de linha de comando da rows&lt;/a&gt;, um pouco de &lt;span class="caps"&gt;SQL&lt;/span&gt; e Python para essa&amp;nbsp;tarefa!&lt;/p&gt;
@@ -3157,7 +3091,7 @@ existe mais. Como resultado, o script irá exibir na tela apenas os partidos que
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[8]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;itertools&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;groupby&lt;/span&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;itertools&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;groupby&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;rows&lt;/span&gt;
 
 
@@ -3184,11 +3118,11 @@ existe mais. Como resultado, o script irá exibir na tela apenas os partidos que
             &lt;span class="c1"&gt;# Agora vamos só ajustar o período em que a mudança aconteceu:&lt;/span&gt;
             &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;ano_final_partido_1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;ano_inicial_partido_2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
                 &lt;span class="n"&gt;datas&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;ano_final_partido_1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-                &lt;span class="n"&gt;periodo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;em &lt;/span&gt;&lt;span class="si"&gt;{ano_final_partido_1}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+                &lt;span class="n"&gt;periodo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;em &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;ano_final_partido_1&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
             &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
                 &lt;span class="n"&gt;datas&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;sorted&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;ano_final_partido_1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ano_inicial_partido_2&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-                &lt;span class="n"&gt;periodo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;entre &lt;/span&gt;&lt;span class="si"&gt;{datas[0]}&lt;/span&gt;&lt;span class="s2"&gt; e &lt;/span&gt;&lt;span class="si"&gt;{datas[1]}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
-            &lt;span class="n"&gt;texto&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{partido_1.nome}&lt;/span&gt;&lt;span class="s2"&gt; (&lt;/span&gt;&lt;span class="si"&gt;{numero}&lt;/span&gt;&lt;span class="s2"&gt;) mudou de nome para &lt;/span&gt;&lt;span class="si"&gt;{partido_2.nome}&lt;/span&gt;&lt;span class="s2"&gt; &lt;/span&gt;&lt;span class="si"&gt;{periodo}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+                &lt;span class="n"&gt;periodo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;entre &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;datas&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; e &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;datas&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+            &lt;span class="n"&gt;texto&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;partido_1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;nome&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; (&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;numero&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;) mudou de nome para &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;partido_2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;nome&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;periodo&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
             &lt;span class="n"&gt;resultado&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;datas&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;texto&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
             
 &lt;span class="c1"&gt;# Agora vamos ordenar o resultado por data para imprimí-lo na ordem cronológica das alterações:&lt;/span&gt;
@@ -3277,4 +3211,4 @@ um &lt;a href="https://github.com/turicas/eleicoes-brasil"&gt;programa que baixa
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</summary><category term="sql"></category><category term="command-line"></category><category term="python"></category></entry></feed>
+</content><category term="datasets"></category><category term="sql"></category><category term="command-line"></category><category term="python"></category></entry></feed>

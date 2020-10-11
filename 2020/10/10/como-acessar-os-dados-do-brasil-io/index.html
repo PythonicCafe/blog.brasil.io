@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Como acessar os dados do Brasil.IO | Brasil.IO - Blog
+</title>
+  <link rel="canonical" href="https://blog.brasil.io/2020/10/10/como-acessar-os-dados-do-brasil-io/index.html">
+
+
+  <link rel="stylesheet" href="https://blog.brasil.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://blog.brasil.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://blog.brasil.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://blog.brasil.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://blog.brasil.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/rss+xml" title="Full RSS Feed"
+        href="https://blog.brasil.io/feed.rss">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://blog.brasil.io/feeds/meta.atom.xml">  
+  <meta name="description" content="Existem diversas maneiras de acessar os dados disponibilizados pelo Brasil.IO, cada uma com características específicas (algumas mais rápidas que outras, por exemplo). Veja todas as possibilidades, com exemplos de código!">
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o);
+      a.async = 1;
+      a.src = g;
+      m = s.getElementsByTagName(o)[0];
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-117698282-2', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+  <div class="col-sm-12">
+    <div class="col-sm-12">
+      <a href="https://blog.brasil.io/">
+        <img class="img-fluid rounded" src=https://blog.brasil.io/theme/images/logo-blog.brasil.io.png alt="Brasil.IO - Blog">
+      </a>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-9">
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://blog.brasil.io/" target="_blank">Blog</a></li>
+            <li class="list-inline-item"><a href="https://brasil.io/datasets" target="_blank">Datasets</a></li>
+            <li class="list-inline-item"><a href="https://brasil.io/colabore" target="_blank">Colabore</a></li>
+            <li class="list-inline-item"><a href="https://brasil.io/contato" target="_blank">Contato</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3 text-right">
+        <a href="https://blog.brasil.io/feed.rss"><i class="fa fa-rss"></i></a>
+        <a href="https://github.com/turicas/blog.brasil.io"><i class="fa fa-github"></i></a>
+      </div>
+    </div>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Como acessar os dados do Brasil.<span class="caps">IO</span>
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2020-10-10T20:30:00-03:00">
+          <i class="fa fa-clock-o"></i>
+          sáb 10 outubro 2020
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://blog.brasil.io/category/meta.html">meta</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://blog.brasil.io/author/alvaro-justen.html">Álvaro Justen</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://blog.brasil.io/tag/api.html">#api</a>,               <a href="https://blog.brasil.io/tag/infraestrutura.html">#infraestrutura</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Existem diversas maneiras de acessar os dados disponíveis no <a href="https://brasil.io/">Brasil.<span class="caps">IO</span></a>.
+Dentre elas, pedimos que dê preferência ao <a href="#dados-completos">download de dados
+completos</a>.</p>
+<blockquote>
+<p>Nota 1: ainda estamos trabalhando nessa documentação e, em breve, teremos
+passos mais detalhados e claros. Fique à vontade para contribuir com exemplos
+de código em outras&nbsp;linguagens.</p>
+<p>Nota 2: para acessar o dicionário de dados de uma tabela, acesse a aba
+&#8220;Metadados&#8221; dentro da página da tabela, que segue o seguinte padrão:
+<code>https://brasil.io/dataset/&lt;dataset-slug&gt;/&lt;table-name&gt;/</code>, exemplo: <a href="https://brasil.io/dataset/covid19/caso/">tabela
+caso do dataset covid-19</a>.</p>
+</blockquote>
+<h3 id="dados-completos"><a class="toclink" href="#dados-completos">Dados completos</a><a class="headerlink" href="#dados-completos" title="Permanent link">&para;</a></h3>
+<p>Essa é a melhor maneira de acessar os dados do <a href="https://brasil.io/">Brasil.<span class="caps">IO</span></a> e você
+deve preferí-la sobre as outras quando possível, pois onera menos nossos
+servidores (lembre-se: nosso projeto é desenvolvido por voltunários e <a href="https://apoia.se/brasilio">depende
+de doações</a> para pagar os&nbsp;custos).</p>
+<p>Siga os seguintes&nbsp;passos:</p>
+<ul>
+<li>Acesse a página da tabela dentro do dataset desejado, exemplo: <a href="https://brasil.io/dataset/covid19/caso/">tabela caso
+  do dataset&nbsp;covid-19</a></li>
+<li>Clique no link <a href="https://brasil.io/dataset/covid19/files/">baixar dados&nbsp;completos</a></li>
+<li>Na página com os arquivos, clique na tabela desejada (o nome será algo como
+  <code>tabela.csv.gz</code>)</li>
+<li>Descompacte o arquivo e abra o <span class="caps">CSV</span> da forma como&nbsp;preferir</li>
+</ul>
+<p>Veja um exemplo de como fazer o download de forma automatizada, utilizando a
+linguagem Python: <a href="https://gist.github.com/turicas/3e3621d61415e3453cd03a1997f7473f#file-brasil_io-py"><code>brasil_io.py</code></a> (em breve essa biblioteca
+estará disponível no <a href="https://pypi.org/">Python Package Index</a>).</p>
+<blockquote>
+<p>Nota 1: caso o <span class="caps">CSV</span> abra com erros de acentuação ou de formatação das colunas
+no Microsoft Excel, <a href="https://www.youtube.com/watch?v=nl8gxzCOdCw">veja esse
+vídeo</a> para aprender a maneira
+correta de abrir arquivos <span class="caps">CSV</span> no&nbsp;Excel.</p>
+<p>Nota 2: muitas vezes os arquivos CSVs são grandes e não abrirão facilmente
+num programa de planilhas eletrônicas como LibreOffice Calc, Microsoft Excel
+ou Google Spreadsheets. Nesse caso, é recomendável que você execute um dos
+seguintes passos:
+2.1) Filtrar o dataset antes de baixá-lo (veja mais em <a href="#interface-web">Interface Web</a>).
+2.2) Utilizar algum software mais robusto de banco de dados que consiga lidar
+com essa quantidade de dados, como SQLite, PostgreSQL, MySQL etc. Aprenda
+mais sobre como trabalhar com grandes bases de dados <a href="https://github.com/turicas/braindump/blob/loading/mooc-ddj.md">nesse curso gratuito de
+introdução ao jornalismo de dados (no módulo 5,
+especificamente)</a>.
+2.3) Caso você saiba programar e prefira acessar aos dados criando um
+programa específico para esse fim, evite carregar todo o arquivo em memória,
+prefira formas &#8220;preguiçosas&#8221; de extrair a informação que deseja (leia
+registro a registro, compute o que precisar e depois delete-o da&nbsp;memória).</p>
+</blockquote>
+<h3 id="api"><a class="toclink" href="#api"><span class="caps">API</span></a><a class="headerlink" href="#api" title="Permanent link">&para;</a></h3>
+<p><strong>ATENÇÃO</strong>: essa opção <strong>não é recomendada</strong> caso você precise automatizar
+tarefas de download/atualização de dados, pois ela onera muito mais nossos
+servidores que a opção apresentada anteriormente, além de possuir limite de
+requisições (em caso de abuso, seu <span class="caps">IP</span>/usuário/token será&nbsp;bloqueado).</p>
+<p>Veja um exemplo de como acessar a <span class="caps">API</span> utilizando a linguagem Python:
+<a href="https://gist.github.com/turicas/3e3621d61415e3453cd03a1997f7473f#file-brasil_io-py"><code>brasil_io.py</code></a> (em breve essa biblioteca
+estará disponível no <a href="https://pypi.org/">Python Package Index</a>).</p>
+<ul>
+<li><a href="https://brasil.io/auth/entrar/">Cadastre-se no site</a> e confirme seu&nbsp;email</li>
+<li><a href="https://brasil.io/auth/login/">Autentique-se no&nbsp;site</a></li>
+<li>Acesse a página <a href="https://brasil.io/auth/tokens-api/">de criação de token</a>,
+  crie um token e&nbsp;guarde-o</li>
+<li>Acesse a página da tabela dentro do dataset desejado, exemplo: <a href="https://brasil.io/dataset/covid19/caso/">tabela caso
+  do dataset&nbsp;covid-19</a></li>
+<li>Clique no link &#8220;utilizar nossa <span class="caps">API</span>&#8221;</li>
+<li>Navegue pela interface, verificando a resposta em <span class="caps">JSON</span></li>
+<li>Crie programas que acessem a <span class="caps">API</span> de maneira autenticada, passando o cabeçalho
+  <span class="caps">HTTP</span> <code>Authentication</code> com o valor <code>Token &lt;seu-token&gt;</code>. Veja um exemplo em
+  Python: <a href="https://gist.github.com/turicas/3e3621d61415e3453cd03a1997f7473f#file-brasil_io-py"><code>brasil_io.py</code></a> (em breve essa biblioteca estará
+  disponível no <a href="https://pypi.org/">Python Package Index</a>)</li>
+</ul>
+<p>Ainda não temos uma documentação completa sobre a <span class="caps">API</span>, com exceção de alguns
+datasets, como <a href="https://github.com/turicas/covid19-br/blob/master/api.md">a documentação das tabelas do dataset
+covid19</a>.  Criar uma
+documentação mais abrangente está em nossa lista de tarefas, mas enquanto isso,
+fique com as seguintes&nbsp;dicas:</p>
+<ul>
+<li>O padrão de <span class="caps">URL</span> para a <span class="caps">API</span> hoje é:
+  <code>http://brasil.io/api/dataset/&lt;dataset-slug&gt;/&lt;table-name&gt;/data/</code> (nota: no
+  futuro esse padrão mudará para
+  <code>https://api.brasil.io/v1/dataset/&lt;dataset-slug&gt;/&lt;table-name&gt;/data</code>).</li>
+<li>Todos os filtros que podem ser feitos na <a href="#interface-web">interface Web</a> (que
+  são passados via <em>query string</em>) também funcionam na <span class="caps">API</span> (use
+  <code>search=palavra</code> para <em>full-text-search</em>)</li>
+<li>A paginação na <span class="caps">API</span> funciona passando <code>page=N</code> via <em>query string</em> e o número
+  de itens como <code>page_size=N</code> (máximo de 10.000). Exemplo:
+  <a href="https://brasil.io/api/dataset/covid19/caso/data/?page=3&amp;page_size=10000`"><code>https://brasil.io/api/dataset/covid19/caso/data/?page=3&amp;page_size=10000</code></a></li>
+</ul>
+<h3 id="interface-web"><a class="toclink" href="#interface-web">Interface Web</a><a class="headerlink" href="#interface-web" title="Permanent link">&para;</a></h3>
+<p><strong>ATENÇÃO</strong>: essa opção <strong>não é recomendada</strong> caso você precise automatizar
+tarefas de download dos dados, pois ela possui um limite de 50.000 registros
+por <span class="caps">CSV</span> (esse valor pode mudar no futuro) e onera muito mais nossos servidores
+que as opções apresentadas anteriormente. Somente utilize-a caso você esteja
+navegando nos dados, senão você poderá ser bloqueado pela quantidade de
+requisições ao&nbsp;site.</p>
+<p>Siga os seguintes&nbsp;passos:</p>
+<ul>
+<li>Acesse a página da tabela dentro do dataset desejado, exemplo: <a href="https://brasil.io/dataset/covid19/caso/">tabela caso
+  do dataset&nbsp;covid-19</a></li>
+<li>Faça os filtros que quiser através do formulário e clique em&nbsp;&#8220;Filtrar&#8221;</li>
+<li>Após o carregamento da página com os dados filtrados, clique em &#8220;Baixar dados
+  em <span class="caps">CSV</span>&#8221;</li>
+</ul>
+<blockquote>
+<p>Nota 1: o botão de download dos dados em <span class="caps">CSV</span> não aparecerá caso o limite de
+registros tenha se excedido (nesse caso, faça mais filtros ou veja outro
+método de&nbsp;download).</p>
+<p>Nota 2: essa forma de download não baixa todas as colunas que a tabela
+possui, apenas as que são exibidas na interface Web. Caso necessite de todos
+os dados, considere <a href="#dados-completos">baixar os dados completos</a>.</p>
+<p>Nota 3: caso o <span class="caps">CSV</span> abra com erros de acentuação ou de formatação das colunas
+no Microsoft Excel, <a href="https://www.youtube.com/watch?v=nl8gxzCOdCw">veja esse
+vídeo</a> para aprender a maneira
+correta de abrir arquivos <span class="caps">CSV</span> no&nbsp;Excel.</p>
+</blockquote>
+<h3 id="executando-os-scripts-de-captura-de-dados"><a class="toclink" href="#executando-os-scripts-de-captura-de-dados">Executando os scripts de captura de dados</a><a class="headerlink" href="#executando-os-scripts-de-captura-de-dados" title="Permanent link">&para;</a></h3>
+<p>Cada dataset da plataforma possui seus dados gerados através de programas que
+capturam os dados nas fontes originais, convertem, limpam e consolidam tudo no
+formato que a plataforma precisa para importá-los (em geral, são arquivos <span class="caps">CSV</span>
+compactados). Todos esses programas são também software livre e seus
+repositórios de código estão&nbsp;disponíveis.</p>
+<p>Para executar por conta própria os scripts, siga os seguintes&nbsp;passos:</p>
+<ul>
+<li>Acesse a página da tabela dentro do dataset desejado, exemplo: <a href="https://brasil.io/dataset/covid19/caso/">tabela caso
+  do dataset&nbsp;covid-19</a></li>
+<li>Clique no link referente ao <strong>código-fonte</strong></li>
+<li>Siga as instruções no <span class="caps">README</span> do repositório de&nbsp;código</li>
+</ul>
+    </div>
+  </article>
+  <hr>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function() {
+      this.page.url = 'https://blog.brasil.io/2020/10/10/como-acessar-os-dados-do-brasil-io/index.html';
+      this.page.identifier = 'como-acessar-os-dados-do-brasil-io';
+    };
+    (function() {
+      var d = document;
+      var s = d.createElement('script');
+      s.src = '//brasilio.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript class="text-muted">
+    Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+  </noscript>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://blog.brasil.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://blog.brasil.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://blog.brasil.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://blog.brasil.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>
