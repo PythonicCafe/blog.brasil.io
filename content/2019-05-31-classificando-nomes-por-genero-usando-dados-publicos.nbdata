@@ -1,7 +1,0 @@
-Title: Classificando Nomes por Gênero Usando Dados Públicos
-Slug: classificando-nomes-por-genero-usando-dados-publicos
-Date: 2019-05-31 15:10
-Category: datasets
-Tags: python, data science
-Author: Álvaro Justen
-Summary: Muitos datasets que possuem dados sobre pessoas não possuem a informação de gênero correspondente, dificultando projetos de dados onde o recorte por gênero é necessário. Nesse artigo vamos aprender a utilizar um dataset do Brasil.IO para fazer essa classificação!

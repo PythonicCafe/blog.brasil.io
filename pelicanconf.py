@@ -1,6 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
 
 AUTHOR = "Álvaro Justen"
 SITENAME = "Brasil.IO - Blog"
@@ -35,9 +33,6 @@ LINKS = (
     ("Contato", "https://brasil.io/contato"),
 )
 
-# Social widget
-SOCIAL = (("You can add links in your config file", "#"), ("Another social link", "#"))
-
 DEFAULT_PAGINATION = 10
 TYPOGRIFY = True
 ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}/'
@@ -49,13 +44,27 @@ RELATIVE_URLS = True
 
 
 MARKUP = ("md", "ipynb")
+MARKDOWN = {
+    "extension_configs": {
+        "markdown.extensions.codehilite": {
+            "css_class": "highlight",
+        },
+        "markdown.extensions.extra": {},
+        "markdown.extensions.meta": {},
+        "markdown.extensions.toc": {
+            "anchorlink": True,
+            "baselevel": 2,
+            "permalink": True,
+        },
+    },
+    "output_format": "html5",
+}
 
-PLUGIN_PATHS = ["./plugins"]
-PLUGINS = ["ipynb.markup"]
-
-# if you create jupyter files in the content dir, snapshots are saved with the same
-# metadata. These need to be ignored.
+from pelican_jupyter import markup as nb_markup
+PLUGINS = [nb_markup]
+IPYNB_MARKUP_USE_FIRST_CELL = True
 IGNORE_FILES = [".ipynb_checkpoints"]
+
 THEME = "themes/pelican-alchemy/alchemy"
 
 DISQUS_SITENAME = "brasilio"

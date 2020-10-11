@@ -99,7 +99,6 @@ nossas metas desse ano é justamente conseguir tornar a plataforma sustentável
 economicamente. Atualmente trabalho em torno de 60 horas mensais (além do
 trabalho de [diversos outros voluntários](https://brasil.io/contribuidores)).
 
-
 > Nota: os valores descritos são os cobrados pelos provedores de serviços,
 > porém como todos os pagamentos são feitos via cartão de crédito em Dólar o
 > valor final pago é de 110,38% do que está descrito (4% de spread + 6,38% de

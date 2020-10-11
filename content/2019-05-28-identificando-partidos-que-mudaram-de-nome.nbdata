@@ -1,7 +1,0 @@
-Title: Identificando Partidos que Mudaram de Nome
-Slug: identificando-partidos-que-mudaram-de-nome
-Date: 2019-05-28 00:20
-Category: datasets
-Tags: sql, command-line, python
-Author: Álvaro Justen
-Summary: Diversos partidos brasileiros mudaram de nome em 2018, mas você sabe quais são?  Motivado por uma dúvida no Twitter resolvi utilizar o dataset eleicoes-brasil para listar as mudanças de nome que aconteceram desde 1996, utilizando Python, SQL e rows!
