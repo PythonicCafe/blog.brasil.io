@@ -54,7 +54,7 @@ MARKDOWN = {
         "markdown.extensions.toc": {
             "anchorlink": True,
             "baselevel": 2,
-            "permalink": True,
+            "permalink": False,
         },
     },
     "output_format": "html5",
