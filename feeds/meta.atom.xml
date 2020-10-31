@@ -1,5 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Brasil.IO - Blog - meta</title><link href="https://blog.brasil.io/" rel="alternate"></link><link href="https://blog.brasil.io/feeds/meta.atom.xml" rel="self"></link><id>https://blog.brasil.io/</id><updated>2020-10-10T20:30:00-03:00</updated><subtitle>Dados abertos para mais democracia</subtitle><entry><title>Como acessar os dados do Brasil.IO</title><link href="https://blog.brasil.io/2020/10/10/como-acessar-os-dados-do-brasil-io/" rel="alternate"></link><published>2020-10-10T20:30:00-03:00</published><updated>2020-10-10T20:30:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2020-10-10:/2020/10/10/como-acessar-os-dados-do-brasil-io/</id><summary type="html">&lt;p&gt;Existem diversas maneiras de acessar os dados disponibilizados pelo Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;, cada uma com características específicas (algumas mais rápidas que outras, por exemplo). Veja todas as possibilidades, com exemplos de&amp;nbsp;código!&lt;/p&gt;</summary><content type="html">&lt;p&gt;Existem diversas maneiras de acessar os dados disponíveis no &lt;a href="https://brasil.io/"&gt;Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt;.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Brasil.IO - Blog - meta</title><link href="https://blog.brasil.io/" rel="alternate"></link><link href="https://blog.brasil.io/feeds/meta.atom.xml" rel="self"></link><id>https://blog.brasil.io/</id><updated>2020-10-31T16:30:00-03:00</updated><subtitle>Dados abertos para mais democracia</subtitle><entry><title>Nossa API será obrigatoriamente autenticada</title><link href="https://blog.brasil.io/2020/10/31/nossa-api-sera-obrigatoriamente-autenticada/" rel="alternate"></link><published>2020-10-31T16:30:00-03:00</published><updated>2020-10-31T16:30:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2020-10-31:/2020/10/31/nossa-api-sera-obrigatoriamente-autenticada/</id><summary type="html">&lt;p&gt;A partir do dia 9 de novembro de 2020 nossa &lt;span class="caps"&gt;API&lt;/span&gt; só aceitará requisições autenticadas. Entenda como acessá-la a partir dessa data e porque precisamos fazer essa&amp;nbsp;alteração.&lt;/p&gt;</summary><content type="html">&lt;p&gt;A partir do dia &lt;strong&gt;9 de novembro de 2020&lt;/strong&gt; nossa &lt;span class="caps"&gt;API&lt;/span&gt; aceitará &lt;strong&gt;somente
+requisições autenticadas&lt;/strong&gt;. Entenda como acessá-la a partir dessa data e porque
+precisamos fazer essa&amp;nbsp;alteração:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#como-acessar-a-api-autenticada"&gt;Como acessar a &lt;span class="caps"&gt;API&lt;/span&gt;&amp;nbsp;autenticada&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#entendendo-o-problema"&gt;Entendendo o&amp;nbsp;Problema&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#licoes-aprendidas"&gt;Lições&amp;nbsp;Aprendidas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#como-voce-pode-ajudar"&gt;Como Você Pode&amp;nbsp;Ajudar&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="como-acessar-a-api-autenticada"&gt;&lt;a class="toclink" href="#como-acessar-a-api-autenticada"&gt;Como acessar a &lt;span class="caps"&gt;API&lt;/span&gt;&amp;nbsp;autenticada&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Em resumo: você precisará criar cadastro na plataforma, criar um &lt;em&gt;token&lt;/em&gt; e
+enviá-lo no cabeçalho &lt;span class="caps"&gt;HTTP&lt;/span&gt; &lt;code&gt;Authorization&lt;/code&gt;. Vamos ao&amp;nbsp;passo-a-passo:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Caso você não possua um cadastro na plataforma,
+  &lt;strong&gt;&lt;a href="https://brasil.io/auth/entrar/"&gt;cadastre-se&lt;/a&gt; e confirme seu email&lt;/strong&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://brasil.io/auth/login/"&gt;&lt;strong&gt;Autentique-se&lt;/strong&gt; na plataforma&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Acesse a página &lt;a href="https://brasil.io/auth/tokens-api/"&gt;de &lt;strong&gt;criação de &lt;em&gt;&lt;span class="caps"&gt;API&lt;/span&gt;
+  tokens&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;, crie um e guarde-o em local&amp;nbsp;seguro;&lt;/li&gt;
+&lt;li&gt;Ao criar programas que acessem a &lt;span class="caps"&gt;API&lt;/span&gt; do Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;, utilize apenas o &lt;em&gt;host&lt;/em&gt;
+  &lt;code&gt;api.brasil.io&lt;/code&gt; (em vez do antigo &lt;code&gt;brasil.io/api&lt;/code&gt;) e envie o &lt;strong&gt;cabeçalho &lt;span class="caps"&gt;HTTP&lt;/span&gt;
+  &lt;code&gt;Authentication&lt;/code&gt; com o valor &lt;code&gt;Token &amp;lt;seu-token&amp;gt;&lt;/code&gt;&lt;/strong&gt;. Veja um exemplo em
+  Python: &lt;a href="https://gist.github.com/turicas/3e3621d61415e3453cd03a1997f7473f#file-brasil_io-py"&gt;&lt;code&gt;brasil_io.py&lt;/code&gt;&lt;/a&gt; (em breve essa biblioteca estará
+  disponível no &lt;a href="https://pypi.org/"&gt;Python Package Index&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Você já pode alterar seus programas &lt;strong&gt;agora&lt;/strong&gt; e testá-los na &lt;span class="caps"&gt;API&lt;/span&gt; e, caso as
+requisições sejam feitas com sucesso utilizando a autenticação, você não
+precisará fazer alterações em seus programas no dia 9 de novembro. Caso tenha
+problemas, &lt;a href="https://brasil.io/contato/"&gt;entre em contato conosco&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span class="caps"&gt;IMPORTANTE&lt;/span&gt;&lt;/strong&gt;: caso você precise acessar uma quantidade muito grande de
+dados, é provável que seja mais eficiente baixar os datasets completos. Para
+entender como fazer isso e detalhes de como acessar os dados através da &lt;span class="caps"&gt;API&lt;/span&gt;,
+veja nosso artigo &lt;a href="/2020/10/10/como-acessar-os-dados-do-brasil-io/"&gt;Como acessar os dados do
+Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="entendendo-o-problema"&gt;&lt;a class="toclink" href="#entendendo-o-problema"&gt;Entendendo o&amp;nbsp;Problema&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Apesar de existir como é hoje desde 2018, o &lt;a href="https://brasil.io/"&gt;Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt; ganhou muita
+visibilidade após lançarmos o &lt;a href="https://brasil.io/dataset/covid19/"&gt;dataset &lt;span class="caps"&gt;COVID&lt;/span&gt;-19&lt;/a&gt; em março de
+2020, o que mostra a &lt;strong&gt;carência por dados abertos acessíveis sobre a pandemia&lt;/strong&gt;
+e a &lt;strong&gt;importância de nosso trabalho&lt;/strong&gt;. Desde março, além de diversas demandas
+para sanar dúvidas sobre os dados e entrevistas sobre os apagões de dados,
+precisamos fazer (e fizemos) várias otimizações no código do nosso &lt;em&gt;backend&lt;/em&gt;
+para que a &lt;span class="caps"&gt;API&lt;/span&gt; funcionasse mais rapidamente e conseguisse atender a todos;
+essas alterações (como implementação de um sistema de cache mais robusto) nos
+tomaram tempo, mas foram necessárias devido ao novo tamanho e às novas
+responsabilidades que o projeto&amp;nbsp;assumiu.&lt;/p&gt;
+&lt;p&gt;Apesar de pequenas lentidões pontuais, conseguimos contornar o problema da
+quantidade de acessos, até que durante dias recebemos uma &lt;strong&gt;quantidade enorme
+de requisições complexas&lt;/strong&gt; (com muitos filtros, custosas aos nossos servidores)
+aos &lt;a href="https://brasil.io/dataset/govbr/auxilio_emergencial/"&gt;dados do auxílio emergencial&lt;/a&gt;, desproporcional com o
+tamanho da plataforma (mesmo depois do recente crescimento). Essas requisições
+impactaram negativamente a experiência de quem acessa o site, deixando-o mais
+lento que o normal e impossibilitou, inclusive, que diversas &lt;a href="https://brasil.io/covid19/voluntarios/"&gt;pessoas
+voluntárias&lt;/a&gt; pudessem subir os dados da
+&lt;span class="caps"&gt;COVID&lt;/span&gt;-19, que são atualizados várias vezes por dia e utilizados por diversas
+instituições no acompanhamento da pandemia no&amp;nbsp;Brasil.&lt;/p&gt;
+&lt;p&gt;Sempre acreditei que &lt;strong&gt;a &lt;span class="caps"&gt;API&lt;/span&gt; do Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; deveria ser aberta&lt;/strong&gt; (sem
+autenticação), para facilitar o uso dos dados, por exemplo na criação de
+aplicações Web &lt;em&gt;front-end&lt;/em&gt; que não necessitem de um &lt;em&gt;backend&lt;/em&gt; próprio. Isso
+potencializa o controle social, como mostrei &lt;a href="https://www.youtube.com/watch?v=EbbSx41BGRw"&gt;em uma palestra em 2014 durante o
+Fórum Internacional de Software Livre&lt;/a&gt;, antes mesmo do
+&lt;a href="https://brasil.io/"&gt;Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt; existir como é&amp;nbsp;hoje.&lt;/p&gt;
+&lt;p&gt;Porém, a partir do momento em que essas requisições impedem que outros usuários
+acessem o site e que consigamos fazer a atualização devida, precisamos tomar
+alguma atitude. Emergencialmente, implementamos limites à quantidade de acessos
+por &lt;span class="caps"&gt;IP&lt;/span&gt; por minuto e bloqueios para os IPs que excederem várias vezes os limites
+(bloqueando diretamente na &lt;a href="https://www.cloudflare.com/"&gt;CloudFlare&lt;/a&gt;, a &lt;a href="https://pt.wikipedia.org/wiki/Rede_de_fornecimento_de_conte%C3%BAdo"&gt;rede de distribuição de
+conteúdo&lt;/a&gt; que utilizamos, e baixando a pressão sobre nossos servidores).
+Também precisei entrar em contato diretamente com alguns provedores, reportando
+o abuso vindo de alguns IPs (nem todos&amp;nbsp;responderam).&lt;/p&gt;
+&lt;p&gt;Com os limites e bloqueios a plataforma se estabilizou, mas sabemos que essa
+não é a melhor alternativa a longo prazo. Queremos aumentar os limites e
+gostaríamos de ter contato mais próximo com quem usa a &lt;span class="caps"&gt;API&lt;/span&gt; (pelo fato de não
+conseguirmos identificar as pessoas que fizeram essas requisições, tivemos
+dificuldade não somente em comunicar melhores práticas de acesso aos dados,
+como também de bloquear mais facilmente esses usos abusivos). Por isso,
+decidmos que todo acesso à &lt;span class="caps"&gt;API&lt;/span&gt; será autenticado e, para isso, melhoramos nosso
+cadastro, adicionando &lt;em&gt;captcha&lt;/em&gt; e confirmação por e-mail. A partir do cadastro
+mais robusto conseguiremos não somente controlar os acessos (e bloqueá-los, se
+necessário), mas também contatar os responsáveis por eventuais&amp;nbsp;abusos.&lt;/p&gt;
+&lt;p&gt;Se você quiser saber mais detalhes técnicos por trás dessa decisão, acesse as
+&lt;em&gt;issues&lt;/em&gt; &lt;a href="https://github.com/turicas/brasil.io/issues/392"&gt;392&lt;/a&gt;, &lt;a href="https://github.com/turicas/brasil.io/issues/426"&gt;426&lt;/a&gt;, &lt;a href="https://github.com/turicas/brasil.io/issues/427"&gt;427&lt;/a&gt;, &lt;a href="https://github.com/turicas/brasil.io/issues/438"&gt;438&lt;/a&gt;
+e &lt;a href="https://github.com/turicas/brasil.io/issues/474"&gt;474&lt;/a&gt;. Também estamos trabalhando na melhoria da &lt;span class="caps"&gt;API&lt;/span&gt; na &lt;a href="https://github.com/turicas/brasil.io/issues/488"&gt;&lt;em&gt;issue&lt;/em&gt;
+488&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id="ataques-ou-uso-massivo"&gt;&lt;a class="toclink" href="#ataques-ou-uso-massivo"&gt;Ataques ou uso&amp;nbsp;massivo?&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;É possível (apesar de eu achar improvável) que a(s) pessoa(s) que fez(fizeram)
+todas essas requisições nocivas não tenham feito com o intuito de atacar a
+plataforma, mas de fato o resultado foi prejudicial a todos os usuários. Seria
+muito mais fácil e eficiente tecnicamente se a pessoa simplesmente baixasse o
+&lt;em&gt;dataset&lt;/em&gt;&amp;nbsp;completo.&lt;/p&gt;
+&lt;p&gt;As características do ataque me levam a crer que tenha sido um DDoS
+(&lt;em&gt;distributed denial of service&lt;/em&gt;), pelo fato de serem muitas requisições de IPs
+completamente diferentes e mirando apenas um &lt;em&gt;dataset&lt;/em&gt;, com filtros muito
+parecidos. Além disso, na mesma época em que sofremos esses ataques, o &lt;a href="http://transparencia.gov.br/"&gt;Portal
+da Transparência do Governo Federal&lt;/a&gt; também recebeu
+muitas requisições (tornando seu uso bastante lento) para o mesmo &lt;em&gt;dataset&lt;/em&gt; e
+cheguei a receber um email de alguém supostamente da Polícia Federal, exigindo
+que eu retirasse do ar esses dados pois estavam sendo usados por criminosos (o
+que não faz sentido, dado que os dados são públicos e temos total respeito com
+a privacidade das pessoas descritas nesse &lt;em&gt;dataset&lt;/em&gt;, não informando dados
+sensíveis como &lt;span class="caps"&gt;CPF&lt;/span&gt;, mesmo que a fonte oficial divulgue essas&amp;nbsp;informações).&lt;/p&gt;
+&lt;p&gt;Se você não sabe o que é um ataque DDoS, imagine uma pizzaria que recebe 50
+pedidos por dia em média e, num determinado dia, passa a receber ligações de
+diversas pessoas a partir de telefones que nunca antes ligaram, fazendo um
+total de 500 pedidos, passando endereços falsos. Imagine o caos na cozinha
+dessa pizzaria nesse dia e a quantidade de clientes fiés que não terão suas
+pizzas em casa no tempo previso. Em outras palavras, num ataque de negação de
+serviço o atacante estressa o sistema com requisições inválidas, para que o
+sistema não consiga atender aos clientes reais. Vale notar que no caso do
+Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; os &amp;#8220;clientes&amp;#8221; &lt;strong&gt;não pagam&lt;/strong&gt; pelo serviço e os &amp;#8220;cozinheiros&amp;#8221; são
+voluntários que doam seu tempo com o objetivo de disponibilizar dados
+brasileiros mais&amp;nbsp;acessíveis.&lt;/p&gt;
+&lt;h3 id="licoes-aprendidas"&gt;&lt;a class="toclink" href="#licoes-aprendidas"&gt;Lições&amp;nbsp;Aprendidas&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Não podemos contar com o bom senso das pessoas para questões que podem
+  impactar negativamente o projeto&lt;/strong&gt;: infelizmente, muitas vezes pessoas agem
+  sem empatia e foi exatamente o que aconteceu nesse caso. Algumas
+  (possivelmente poucas) pessoas abusaram da &lt;span class="caps"&gt;API&lt;/span&gt; e fizeram com que muitas
+  outras pessoas fossem prejudicadas (nesse caso, desabilitamos a &lt;span class="caps"&gt;API&lt;/span&gt; para esse
+  &lt;em&gt;dataset&lt;/em&gt; e não prosseguimos com a atualização de dados que estava
+  programada). Em casos como esses precisamos assumir uma &lt;strong&gt;postura
+  defensiva&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Precisamos investir mais tempo em educar usuários&lt;/strong&gt;: tempo não investido em
+  mostrar aos usuários da plataforma como utilizá-la da melhor forma é
+  revertido em tempo gasto na mitigação dos problemas causados por isso e, com
+  isso, teremos menos para evoluir a plataforma, adicionando funcionalidades e
+  &lt;em&gt;datasets&lt;/em&gt;. Nesse ponto, precisamos melhorar a documentação de uso e
+  contribuição com a plataforma (esse caminho já está sendo&amp;nbsp;trilhado).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Precisamos nos aproximar mais dos usuários&lt;/strong&gt;: fica evidente a necessidade
+  de estarmos em contato mais próximo com quem utiliza nossos dados e a
+  plataforma (esse foi um dos motivos de obrigatoriedade da &lt;span class="caps"&gt;API&lt;/span&gt;: assim
+  conseguimos identificar cada um e, caso necessário, entrar em contato). Para
+  ajudar a resolver isso, criamos um &lt;a href="https://t.me/brasil_io"&gt;canal no Telegram&lt;/a&gt;,
+  reativamos nossa &lt;a href="https://twitter.com/brasil_io"&gt;conta no Twitter&lt;/a&gt; e me comprometo a
+  publicar relatórios mensais (&lt;a href="/2020/10/01/relatorio-mensal-setembro-de-2020/"&gt;como o de setembro de
+  2020&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="como-voce-pode-ajudar"&gt;&lt;a class="toclink" href="#como-voce-pode-ajudar"&gt;Como Você Pode&amp;nbsp;Ajudar&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Ainda temos muito trabalho a fazer e, se você quiser nos ajudar nesse jornada
+de &lt;strong&gt;tornar acessíveis os dados públicos brasileiros&lt;/strong&gt;, considere &lt;a href="https://apoia.se/brasilio"&gt;doar em
+nossa campanha de financiamento coletivo&lt;/a&gt; ou se unir às
+&lt;a href="https://brasil.io/covid19/voluntarios/"&gt;pessoas voluntárias do projeto &lt;span class="caps"&gt;COVID&lt;/span&gt;-19&lt;/a&gt;
+através do &lt;a href="https://chat.brasil.io/"&gt;nosso chat&lt;/a&gt;.&lt;/p&gt;</content><category term="meta"></category><category term="api"></category><category term="infraestrutura"></category></entry><entry><title>Como acessar os dados do Brasil.IO</title><link href="https://blog.brasil.io/2020/10/10/como-acessar-os-dados-do-brasil-io/" rel="alternate"></link><published>2020-10-10T20:30:00-03:00</published><updated>2020-10-10T20:30:00-03:00</updated><author><name>Álvaro Justen</name></author><id>tag:blog.brasil.io,2020-10-10:/2020/10/10/como-acessar-os-dados-do-brasil-io/</id><summary type="html">&lt;p&gt;Existem diversas maneiras de acessar os dados disponibilizados pelo Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;, cada uma com características específicas (algumas mais rápidas que outras, por exemplo). Veja todas as possibilidades, com exemplos de&amp;nbsp;código!&lt;/p&gt;</summary><content type="html">&lt;p&gt;Existem diversas maneiras de acessar os dados disponíveis no &lt;a href="https://brasil.io/"&gt;Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt;.
 Dentre elas, pedimos que dê preferência ao &lt;a href="#dados-completos"&gt;download de dados
 completos&lt;/a&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -11,7 +153,7 @@ de código em outras&amp;nbsp;linguagens.&lt;/p&gt;
 &lt;code&gt;https://brasil.io/dataset/&amp;lt;dataset-slug&amp;gt;/&amp;lt;table-name&amp;gt;/&lt;/code&gt;, exemplo: &lt;a href="https://brasil.io/dataset/covid19/caso/"&gt;tabela
 caso do dataset covid-19&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id="dados-completos"&gt;&lt;a class="toclink" href="#dados-completos"&gt;Dados completos&lt;/a&gt;&lt;a class="headerlink" href="#dados-completos" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="dados-completos"&gt;&lt;a class="toclink" href="#dados-completos"&gt;Dados&amp;nbsp;completos&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Essa é a melhor maneira de acessar os dados do &lt;a href="https://brasil.io/"&gt;Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;&lt;/a&gt; e você
 deve preferí-la sobre as outras quando possível, pois onera menos nossos
 servidores (lembre-se: nosso projeto é desenvolvido por voltunários e &lt;a href="https://apoia.se/brasilio"&gt;depende
@@ -48,7 +190,7 @@ programa específico para esse fim, evite carregar todo o arquivo em memória,
 prefira formas &amp;#8220;preguiçosas&amp;#8221; de extrair a informação que deseja (leia
 registro a registro, compute o que precisar e depois delete-o da&amp;nbsp;memória).&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id="api"&gt;&lt;a class="toclink" href="#api"&gt;&lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt;&lt;a class="headerlink" href="#api" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="api"&gt;&lt;a class="toclink" href="#api"&gt;&lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;ATENÇÃO&lt;/strong&gt;: essa opção &lt;strong&gt;não é recomendada&lt;/strong&gt; caso você precise automatizar
 tarefas de download/atualização de dados, pois ela onera muito mais nossos
 servidores que a opção apresentada anteriormente, além de possuir limite de
@@ -87,7 +229,7 @@ fique com as seguintes&amp;nbsp;dicas:&lt;/p&gt;
   de itens como &lt;code&gt;page_size=N&lt;/code&gt; (máximo de 10.000). Exemplo:
   &lt;a href="https://brasil.io/api/dataset/covid19/caso/data/?page=3&amp;amp;page_size=10000`"&gt;&lt;code&gt;https://brasil.io/api/dataset/covid19/caso/data/?page=3&amp;amp;page_size=10000&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="interface-web"&gt;&lt;a class="toclink" href="#interface-web"&gt;Interface Web&lt;/a&gt;&lt;a class="headerlink" href="#interface-web" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="interface-web"&gt;&lt;a class="toclink" href="#interface-web"&gt;Interface&amp;nbsp;Web&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;ATENÇÃO&lt;/strong&gt;: essa opção &lt;strong&gt;não é recomendada&lt;/strong&gt; caso você precise automatizar
 tarefas de download dos dados, pois ela possui um limite de 50.000 registros
 por &lt;span class="caps"&gt;CSV&lt;/span&gt; (esse valor pode mudar no futuro) e onera muito mais nossos servidores
@@ -114,7 +256,7 @@ no Microsoft Excel, &lt;a href="https://www.youtube.com/watch?v=nl8gxzCOdCw"&gt;
 vídeo&lt;/a&gt; para aprender a maneira
 correta de abrir arquivos &lt;span class="caps"&gt;CSV&lt;/span&gt; no&amp;nbsp;Excel.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id="executando-os-scripts-de-captura-de-dados"&gt;&lt;a class="toclink" href="#executando-os-scripts-de-captura-de-dados"&gt;Executando os scripts de captura de dados&lt;/a&gt;&lt;a class="headerlink" href="#executando-os-scripts-de-captura-de-dados" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="executando-os-scripts-de-captura-de-dados"&gt;&lt;a class="toclink" href="#executando-os-scripts-de-captura-de-dados"&gt;Executando os scripts de captura de&amp;nbsp;dados&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Cada dataset da plataforma possui seus dados gerados através de programas que
 capturam os dados nas fontes originais, convertem, limpam e consolidam tudo no
 formato que a plataforma precisa para importá-los (em geral, são arquivos &lt;span class="caps"&gt;CSV&lt;/span&gt;
@@ -137,9 +279,9 @@ envolvidas no projeto: além das &lt;a href="https://brasil.io/covid19/voluntari
 Fontes e Marcel Marques estamos trabalhando no desenvolvimento e infraestrutura
 (existem vários outros contribuidores de código também, em vários repositórios,
 mas nós 3 estamos no dia-a-dia trabalhando na&amp;nbsp;plataforma).&lt;/p&gt;
-&lt;h3 id="o-que-fizemos"&gt;&lt;a class="toclink" href="#o-que-fizemos"&gt;O que fizemos&lt;/a&gt;&lt;a class="headerlink" href="#o-que-fizemos" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="o-que-fizemos"&gt;&lt;a class="toclink" href="#o-que-fizemos"&gt;O que&amp;nbsp;fizemos&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Vamos então ao que fizemos em setembro de&amp;nbsp;2020:&lt;/p&gt;
-&lt;h4 id="projeto-covid-19"&gt;&lt;a class="toclink" href="#projeto-covid-19"&gt;Projeto &lt;span class="caps"&gt;COVID&lt;/span&gt;-19&lt;/a&gt;&lt;a class="headerlink" href="#projeto-covid-19" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id="projeto-covid-19"&gt;&lt;a class="toclink" href="#projeto-covid-19"&gt;Projeto &lt;span class="caps"&gt;COVID&lt;/span&gt;-19&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Trabalhamos &lt;strong&gt;diariamente&lt;/strong&gt; na atualização dos &lt;a href="https://brasil.io/covid19/"&gt;dados da
 &lt;span class="caps"&gt;COVID&lt;/span&gt;-19&lt;/a&gt; desde 20 de março de 2020. A partir de 6
 de junho, &lt;a href="https://www.bbc.com/portuguese/brasil-52974181"&gt;quando houve o apagão de dados do Ministério da
@@ -151,7 +293,7 @@ ferramentas internas que utilizamos para checar os dados, atualizar o dataset&am
 internacionais, além de instituições renomadas como FioCruz e &lt;span class="caps"&gt;IBGE&lt;/span&gt;. &lt;a href="https://github.com/turicas/covid19-br/blob/master/clipping.md"&gt;Confira
 nosso
 &lt;em&gt;clipping&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
-&lt;h4 id="combate-aos-ataques"&gt;&lt;a class="toclink" href="#combate-aos-ataques"&gt;Combate aos ataques&lt;/a&gt;&lt;a class="headerlink" href="#combate-aos-ataques" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id="combate-aos-ataques"&gt;&lt;a class="toclink" href="#combate-aos-ataques"&gt;Combate aos&amp;nbsp;ataques&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Sim, fomos atacados (virtualmente), mas não foi um ataque estilo &amp;#8220;invasão&amp;#8221;: nas
 últimas semanas recebemos uma quantidade muito grande de requisições
 coordenadas. Foram tantas que nossos servidores não aguentaram muito bem (o
@@ -164,13 +306,13 @@ usuários abusivos e, por isso, precisamos implementar limitações de acesso à
 GitHub&lt;/a&gt;),
 mas já conseguimos resolver boa parte do problema e o site está responsivo
 novamente. Ainda temos algumas questões a serem endereçadas, mas já traçamos um&amp;nbsp;plano.&lt;/p&gt;
-&lt;h4 id="atualizacoes-na-pagina-inicial"&gt;&lt;a class="toclink" href="#atualizacoes-na-pagina-inicial"&gt;Atualizações na página inicial&lt;/a&gt;&lt;a class="headerlink" href="#atualizacoes-na-pagina-inicial" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id="atualizacoes-na-pagina-inicial"&gt;&lt;a class="toclink" href="#atualizacoes-na-pagina-inicial"&gt;Atualizações na página&amp;nbsp;inicial&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;No caminho de aumentar a visibilidade do que estamos fazendo, adicionamos uma
 coluna de últimas atualizações na página inicial; lá ficarão todos os datasets
 que foram atualizados recentemente. Em breve adicionaremos mais detalhes a esse
 coluna e outras funcionalidades, como a opção de assinar as atualizações por
 &lt;span class="caps"&gt;RSS&lt;/span&gt; (e eventualmente até a opção de &amp;#8220;seguir&amp;#8221; um&amp;nbsp;dataset).&lt;/p&gt;
-&lt;h4 id="melhoria-na-importacao-de-dados-e-pagina-de-download-de-arquivos"&gt;&lt;a class="toclink" href="#melhoria-na-importacao-de-dados-e-pagina-de-download-de-arquivos"&gt;Melhoria na importação de dados e Página de download de arquivos&lt;/a&gt;&lt;a class="headerlink" href="#melhoria-na-importacao-de-dados-e-pagina-de-download-de-arquivos" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id="melhoria-na-importacao-de-dados-e-pagina-de-download-de-arquivos"&gt;&lt;a class="toclink" href="#melhoria-na-importacao-de-dados-e-pagina-de-download-de-arquivos"&gt;Melhoria na importação de dados e Página de download de&amp;nbsp;arquivos&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Atualizar os dados da &lt;span class="caps"&gt;COVID&lt;/span&gt;-19 ainda nos toma muito tempo e, por isso, estamos
 sempre melhorando o processo de importação de dados, para que seja cada vez
 mais automático. Uma das melhorias que fizemos nesse mês tem a ver com a forma
@@ -181,13 +323,13 @@ o da &lt;span class="caps"&gt;COVID&lt;/span&gt;-19, por exemplo, ficou como
 &lt;p&gt;Apesar de pouco impacto para os usuários, essa alteração nos ajudou a ser mais
 produtivos na atualização dos datasets e a reestruturação no código abriu
 caminho para outras melhorias que&amp;nbsp;virão.&lt;/p&gt;
-&lt;h4 id="correcao-da-pagina-de-empresas"&gt;&lt;a class="toclink" href="#correcao-da-pagina-de-empresas"&gt;Correção da página de empresas&lt;/a&gt;&lt;a class="headerlink" href="#correcao-da-pagina-de-empresas" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id="correcao-da-pagina-de-empresas"&gt;&lt;a class="toclink" href="#correcao-da-pagina-de-empresas"&gt;Correção da página de&amp;nbsp;empresas&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;A página que contém informações consolidadas de empresas (como &lt;a href="https://brasil.io/especiais/documento/15102288000182/"&gt;essa, da
 Odebrecht&lt;/a&gt;) estava com
 um pequeno bug, que não permitia visualizar algumas das empresas disponíveis no
 &lt;a href="https://brasil.io/dataset/socios-brasil/"&gt;dataset socios-brasil&lt;/a&gt;. Já foi
 corrigido e agora todas estão&amp;nbsp;acessíveis!&lt;/p&gt;
-&lt;h3 id="proximos-passos"&gt;&lt;a class="toclink" href="#proximos-passos"&gt;Próximos passos&lt;/a&gt;&lt;a class="headerlink" href="#proximos-passos" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="proximos-passos"&gt;&lt;a class="toclink" href="#proximos-passos"&gt;Próximos&amp;nbsp;passos&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Para outubro,&amp;nbsp;pretendemos:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Implementar autenticação na &lt;span class="caps"&gt;API&lt;/span&gt; (e por segurança precisaremos deixar o
@@ -209,7 +351,7 @@ corrigido e agora todas estão&amp;nbsp;acessíveis!&lt;/p&gt;
 &lt;li&gt;Melhorar a documentação da &lt;span class="caps"&gt;API&lt;/span&gt;;&lt;/li&gt;
 &lt;li&gt;Continuar atualizando diariamente os dados da &lt;span class="caps"&gt;COVID&lt;/span&gt;-19.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="feedback-sobre-a-comunicacao"&gt;&lt;a class="toclink" href="#feedback-sobre-a-comunicacao"&gt;Feedback sobre a comunicação&lt;/a&gt;&lt;a class="headerlink" href="#feedback-sobre-a-comunicacao" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="feedback-sobre-a-comunicacao"&gt;&lt;a class="toclink" href="#feedback-sobre-a-comunicacao"&gt;Feedback sobre a&amp;nbsp;comunicação&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Ainda estamos experimentando as melhores formas de comunicar novidades do
 projeto. Algumas ideias&amp;nbsp;são:&lt;/p&gt;
 &lt;ul&gt;
@@ -273,7 +415,7 @@ de todos os &lt;em&gt;datasets&lt;/em&gt; da plataforma são servidos por ele e,
 resolvi fazer essa&amp;nbsp;homenagem.&lt;/p&gt;
 &lt;p&gt;Nesses últimos 12 meses tivemos algumas conquistas e ainda temos alguns
 desafios pela&amp;nbsp;frente:&lt;/p&gt;
-&lt;h3 id="interface-acessivel"&gt;&lt;a class="toclink" href="#interface-acessivel"&gt;Interface Acessível&lt;/a&gt;&lt;a class="headerlink" href="#interface-acessivel" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="interface-acessivel"&gt;&lt;a class="toclink" href="#interface-acessivel"&gt;Interface&amp;nbsp;Acessível&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Apesar de razoavelmente simples, &lt;strong&gt;nossa interface facilita muito o trabalho de
 diversas pessoas&lt;/strong&gt; (que possivelmente não teriam tempo/conhecimento
 técnico/dinheiro suficientes para fazer todo o trabalho de coleta, limpeza,
@@ -284,7 +426,7 @@ dos resultados (seja baixando como &lt;span class="caps"&gt;CSV&lt;/span&gt; ou 
 &lt;a href="http://brasil.io/especiais"&gt;páginas especiais&lt;/a&gt; facilitam o cruzamento entre
 datasets e análises mais profundas, com poucos&amp;nbsp;cliques.&lt;/p&gt;
 &lt;p&gt;Como ponto a melhorar temos a experiência do usuário e usabilidade das&amp;nbsp;páginas.&lt;/p&gt;
-&lt;h3 id="datasets-relevantes"&gt;&lt;a class="toclink" href="#datasets-relevantes"&gt;Datasets Relevantes&lt;/a&gt;&lt;a class="headerlink" href="#datasets-relevantes" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="datasets-relevantes"&gt;&lt;a class="toclink" href="#datasets-relevantes"&gt;Datasets&amp;nbsp;Relevantes&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Dois &lt;em&gt;datasets&lt;/em&gt; da plataforma são de extrema relevância tanto para jornalistas
 investigativos, cientistas políticos, advogados, ativistas, dentre outros:
 &lt;a href="https://brasil.io/dataset/socios-brasil/socios"&gt;socios-brasil&lt;/a&gt; (contém a lista
@@ -311,7 +453,7 @@ recentemente um em que extraí os &lt;a href="https://twitter.com/turicas/status
 Anistia&lt;/a&gt;), parte deles
 não está disponível porque precisamos melhorar o processo de criação e
 atualização de &lt;em&gt;datasets&lt;/em&gt;, que tem parte&amp;nbsp;manual.&lt;/p&gt;
-&lt;h3 id="luta-por-dados-abertos"&gt;&lt;a class="toclink" href="#luta-por-dados-abertos"&gt;Luta por Dados Abertos&lt;/a&gt;&lt;a class="headerlink" href="#luta-por-dados-abertos" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="luta-por-dados-abertos"&gt;&lt;a class="toclink" href="#luta-por-dados-abertos"&gt;Luta por Dados&amp;nbsp;Abertos&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Infelizmente, &lt;strong&gt;nem sempre os dados que precisamos estão disponíveis&lt;/strong&gt; - e
 quando isso acontece tenho duas tarefas: alertar sobre o problema e utilizar a
 &lt;a href="http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm"&gt;Lei de Acesso à
@@ -336,7 +478,7 @@ Twitter&lt;/a&gt; e &lt;a href="https://github.com/turicas/slides/tree/gh-pages/
 palestras&lt;/a&gt; para
 divulgar esses casos (em breve talvez eu faça uma sessão de vídeos contando em
 mais&amp;nbsp;detalhes!).&lt;/p&gt;
-&lt;h3 id="comunicacao"&gt;&lt;a class="toclink" href="#comunicacao"&gt;Comunicação&lt;/a&gt;&lt;a class="headerlink" href="#comunicacao" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="comunicacao"&gt;&lt;a class="toclink" href="#comunicacao"&gt;Comunicação&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Por muitas vezes a comunicação da plataforma foi falha, deixando dúvidas sobre
 seu funcionamento, processo de desenvolvimento, atualizações etc. Para suprir
 essa necessidade criamos uma &lt;em&gt;newsletter&lt;/em&gt; e, recentemente, &lt;a href="https://blog.brasil.io/2019/04/01/ola-brasil/"&gt;nosso
@@ -344,7 +486,7 @@ blog&lt;/a&gt; (que em breve terá mais
 publicações técnicas). Aos poucos estamos mudando as páginas da plataforma para
 comunicarem melhor o que gostaríamos (que inclusive irá diminuir o fluxo que
 recebo de emails com&amp;nbsp;dúvidas).&lt;/p&gt;
-&lt;h3 id="financiamento"&gt;&lt;a class="toclink" href="#financiamento"&gt;Financiamento&lt;/a&gt;&lt;a class="headerlink" href="#financiamento" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="financiamento"&gt;&lt;a class="toclink" href="#financiamento"&gt;Financiamento&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Durante os 12 últimos meses foquei bastante na questão técnica (criar novos
 programas coletores de dados, melhorar o código da plataforma) e divulgação
 (palestras) e acabei deixando de lado a questão financeira. Hoje &lt;strong&gt;o projeto é
@@ -362,7 +504,7 @@ entregável) e também clientes de projetos de &lt;em&gt;Web scraping&lt;/em&gt;
 que paguem o tempo de desenvolvimento de novos coletores ou a melhoria dos já
 existentes. Se você puder ajudar ou conhece alguém que possa, por favor &lt;a href="https://brasil.io/contato"&gt;entre
 em contato&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id="conclusao"&gt;&lt;a class="toclink" href="#conclusao"&gt;Conclusão&lt;/a&gt;&lt;a class="headerlink" href="#conclusao" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="conclusao"&gt;&lt;a class="toclink" href="#conclusao"&gt;Conclusão&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Os últimos 12 meses foram maravilhosos, a plataforma se mostrou madura e
 geramos diversos impactos positivos, porém ainda temos muito o que melhorar
 principalmente no que diz respeito à sustentabilidade financeira do projeto.
@@ -384,11 +526,11 @@ pessoas começaram a doar (porém a quantidade de doações que recebemos ainda 
 que temos hoje estão listados &lt;a href="https://docs.google.com/spreadsheets/d/1ZElv9dWuEmhi-X_K674vQ_8YlmLeMo_m6swIqsSfdF0/view"&gt;nessa
 planilha&lt;/a&gt;
 e segue abaixo um detalhamento de cada&amp;nbsp;item:&lt;/p&gt;
-&lt;h3 id="dominio-brasilio-namecheapcom"&gt;&lt;a class="toclink" href="#dominio-brasilio-namecheapcom"&gt;Domínio &amp;#8220;brasil.io&amp;#8221; (namecheap.com)&lt;/a&gt;&lt;a class="headerlink" href="#dominio-brasilio-namecheapcom" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="dominio-brasilio-namecheapcom"&gt;&lt;a class="toclink" href="#dominio-brasilio-namecheapcom"&gt;Domínio &amp;#8220;brasil.io&amp;#8221;&amp;nbsp;(namecheap.com)&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Domínio do projeto, registrado em 28 de novembro de 2013 (apesar da ideia ser
 antiga, a plataforma começou a ser desenvolvida como é hoje em&amp;nbsp;2018).&lt;/p&gt;
 &lt;p&gt;Custo: 35,00 &lt;span class="caps"&gt;USD&lt;/span&gt; /&amp;nbsp;ano.&lt;/p&gt;
-&lt;h3 id="servidor-na-digitalocean-eua-extra-storage"&gt;&lt;a class="toclink" href="#servidor-na-digitalocean-eua-extra-storage"&gt;Servidor na DigitalOcean &lt;span class="caps"&gt;EUA&lt;/span&gt; (+ extra storage)&lt;/a&gt;&lt;a class="headerlink" href="#servidor-na-digitalocean-eua-extra-storage" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="servidor-na-digitalocean-eua-extra-storage"&gt;&lt;a class="toclink" href="#servidor-na-digitalocean-eua-extra-storage"&gt;Servidor na DigitalOcean &lt;span class="caps"&gt;EUA&lt;/span&gt; (+ extra&amp;nbsp;storage)&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Servidor principal (&lt;span class="caps"&gt;VPS&lt;/span&gt;), onde é hospedada a plataforma. Características:
 Intel(R) Xeon(R) &lt;span class="caps"&gt;CPU&lt;/span&gt; E5-2650L v3 @ 1.80GHz (dual core), &lt;span class="caps"&gt;2GB&lt;/span&gt; &lt;span class="caps"&gt;RAM&lt;/span&gt;, &lt;span class="caps"&gt;60GB&lt;/span&gt; &lt;span class="caps"&gt;SSD&lt;/span&gt; + &lt;span class="caps"&gt;1TB&lt;/span&gt;
 extra de &lt;span class="caps"&gt;SSD&lt;/span&gt;. Está no datacenter de San&amp;nbsp;Francisco.&lt;/p&gt;
@@ -400,7 +542,7 @@ para &lt;a href="https://brasil.io/especiais"&gt;traçar caminhos entre pessoas 
 &lt;em&gt;platform-as-a-service&lt;/em&gt; livre) e, com isso, conseguimos subir alterações com um
 simples &lt;code&gt;git push&lt;/code&gt; (como no Heroku, porém mais&amp;nbsp;barato).&lt;/p&gt;
 &lt;p&gt;Custo: 120 &lt;span class="caps"&gt;USD&lt;/span&gt; /&amp;nbsp;mês.&lt;/p&gt;
-&lt;h3 id="digitalocean-spaces-arquivos-estaticos"&gt;&lt;a class="toclink" href="#digitalocean-spaces-arquivos-estaticos"&gt;DigitalOcean Spaces (arquivos estáticos)&lt;/a&gt;&lt;a class="headerlink" href="#digitalocean-spaces-arquivos-estaticos" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="digitalocean-spaces-arquivos-estaticos"&gt;&lt;a class="toclink" href="#digitalocean-spaces-arquivos-estaticos"&gt;DigitalOcean Spaces (arquivos&amp;nbsp;estáticos)&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://m.do.co/c/5b17037059e9"&gt;Digital Ocean Spaces&lt;/a&gt; é um serviço de
 hospedagem de arquivos estáticos, similar ao &lt;span class="caps"&gt;AWS&lt;/span&gt; S3. Está sendo utilizado em
 caráter de testes para hospedar os arquivos estáticos (para quem quer baixar um
@@ -408,7 +550,7 @@ dataset completo) e para os futuros &lt;em&gt;mirrors&lt;/em&gt; que teremos. At
 Google Drive pessoal está sendo utilizado para disponibilizar os arquivos
 completos, mas ele possui limitações e em breve migraremos&amp;nbsp;totalmente.&lt;/p&gt;
 &lt;p&gt;Custo: 5 &lt;span class="caps"&gt;USD&lt;/span&gt; /&amp;nbsp;mês.&lt;/p&gt;
-&lt;h3 id="servidor-na-ovh-extra-storage"&gt;&lt;a class="toclink" href="#servidor-na-ovh-extra-storage"&gt;Servidor na &lt;span class="caps"&gt;OVH&lt;/span&gt; (+ extra storage)&lt;/a&gt;&lt;a class="headerlink" href="#servidor-na-ovh-extra-storage" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="servidor-na-ovh-extra-storage"&gt;&lt;a class="toclink" href="#servidor-na-ovh-extra-storage"&gt;Servidor na &lt;span class="caps"&gt;OVH&lt;/span&gt; (+ extra&amp;nbsp;storage)&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Servidor secundário (dedicado), onde rodamos os programas que coletam, limpam e
 convertem os dados, hospedamos backups e fazemos outros testes.
 Características: Intel(R) Xeon(R) &lt;span class="caps"&gt;CPU&lt;/span&gt; D-1520 @ 2.20GHz (8 cores), &lt;span class="caps"&gt;32GB&lt;/span&gt; de &lt;span class="caps"&gt;RAM&lt;/span&gt;,
@@ -417,13 +559,13 @@ Características: Intel(R) Xeon(R) &lt;span class="caps"&gt;CPU&lt;/span&gt; D-1
 plataforma para esse servidor dedicado e rodar os scripts coletores em uma &lt;span class="caps"&gt;VPS&lt;/span&gt;
 mais barata (porém essa migração requer algum&amp;nbsp;trabalho).&lt;/p&gt;
 &lt;p&gt;Custo: 89,90 &lt;span class="caps"&gt;USD&lt;/span&gt; /&amp;nbsp;mês.&lt;/p&gt;
-&lt;h3 id="hospedagem-rocketchat-chatbrasilio-heroku"&gt;&lt;a class="toclink" href="#hospedagem-rocketchat-chatbrasilio-heroku"&gt;Hospedagem rocketchat - chat.brasil.io (Heroku)&lt;/a&gt;&lt;a class="headerlink" href="#hospedagem-rocketchat-chatbrasilio-heroku" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="hospedagem-rocketchat-chatbrasilio-heroku"&gt;&lt;a class="toclink" href="#hospedagem-rocketchat-chatbrasilio-heroku"&gt;Hospedagem rocketchat - chat.brasil.io&amp;nbsp;(Heroku)&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Instância do &lt;a href="https://rocket.chat/"&gt;Rocket.Chat&lt;/a&gt; que está por trás do
 &lt;a href="https://chat.brasil.io/"&gt;chat.brasil.io&lt;/a&gt;, onde os colaboradores podem se
 comunicar mais facilmente, com divisão por assunto. Roda em um dyno simples (o
 mais&amp;nbsp;barato).&lt;/p&gt;
 &lt;p&gt;Custo: 7,00 &lt;span class="caps"&gt;USD&lt;/span&gt; /&amp;nbsp;mês.&lt;/p&gt;
-&lt;h3 id="horas-de-trabalho"&gt;&lt;a class="toclink" href="#horas-de-trabalho"&gt;Horas de trabalho&lt;/a&gt;&lt;a class="headerlink" href="#horas-de-trabalho" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id="horas-de-trabalho"&gt;&lt;a class="toclink" href="#horas-de-trabalho"&gt;Horas de&amp;nbsp;trabalho&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Trabalho de desenvolvimento de novos scripts de coleta de dados,
 desenvolvimento de novas funcionalidades na plataforma, manutenção da
 plataforma (verificação de erros, atualização de datasets etc.) e divulgação do
