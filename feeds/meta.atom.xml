@@ -182,7 +182,7 @@ enviá-lo no cabeçalho &lt;span class="caps"&gt;HTTP&lt;/span&gt; &lt;code&gt;A
   tokens&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;, crie um e guarde-o em local&amp;nbsp;seguro;&lt;/li&gt;
 &lt;li&gt;Ao criar programas que acessem a &lt;span class="caps"&gt;API&lt;/span&gt; do Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;, utilize apenas o &lt;em&gt;host&lt;/em&gt;
   &lt;code&gt;api.brasil.io&lt;/code&gt; (em vez do antigo &lt;code&gt;brasil.io/api&lt;/code&gt;) e envie o &lt;strong&gt;cabeçalho &lt;span class="caps"&gt;HTTP&lt;/span&gt;
-  &lt;code&gt;Authentication&lt;/code&gt; com o valor &lt;code&gt;Token &amp;lt;seu-token&amp;gt;&lt;/code&gt;&lt;/strong&gt;. Veja um exemplo em
+  &lt;code&gt;Authorization&lt;/code&gt; com o valor &lt;code&gt;Token &amp;lt;seu-token&amp;gt;&lt;/code&gt;&lt;/strong&gt;. Veja um exemplo em
   Python: &lt;a href="https://gist.github.com/turicas/3e3621d61415e3453cd03a1997f7473f#file-brasil_io-py"&gt;&lt;code&gt;brasil_io.py&lt;/code&gt;&lt;/a&gt; (em breve essa biblioteca estará
   disponível no &lt;a href="https://pypi.org/"&gt;Python Package Index&lt;/a&gt;).&lt;/li&gt;
 &lt;/ul&gt;
