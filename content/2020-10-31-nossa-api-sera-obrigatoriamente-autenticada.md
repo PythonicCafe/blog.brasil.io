@@ -29,7 +29,7 @@ enviá-lo no cabeçalho HTTP `Authorization`. Vamos ao passo-a-passo:
   seguro;
 - Ao criar programas que acessem a API do Brasil.IO, utilize apenas o *host*
   `api.brasil.io` (em vez do antigo `brasil.io/api`) e envie o **cabeçalho HTTP
-  `Authentication` com o valor `Token <seu-token>`**. Veja um exemplo em
+  `Authorization` com o valor `Token <seu-token>`**. Veja um exemplo em
   Python: [`brasil_io.py`][brasil-io-python] (em breve essa biblioteca estará
   disponível no [Python Package Index][pypi]).
 
