@@ -30,7 +30,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Method to call elements from json files
-def getContentElements(path):
+def get_authors_data(path):
     dict = {}
     for f in glob.glob(path):
         dict[os.path.basename(f).split('.')[0]] = json.load(open(f, 'r', encoding='utf-8'))
