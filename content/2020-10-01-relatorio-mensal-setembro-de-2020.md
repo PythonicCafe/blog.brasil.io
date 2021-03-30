@@ -3,9 +3,8 @@ Slug: relatorio-mensal-setembro-de-2020
 Date: 2020-10-01 16:25:00
 Category: meta
 Tags: relatório, desenvolvimento, infraestrutura
-Author: Álvaro Justen
+Author: turicas
 Summary: Com o objetivo de aumentar a transparência do que estamos fazendo e nos aproximarmos dos apoiadores e usuários do projeto, estamos reestruturando nossa comunicação e os relatórios mensais são parte desse processo.
-
 
 Apesar de estarmos bastante atarefados por aqui, muitas das coisas que estamos
 fazendo no [Brasil.IO](https://brasil.io/) não são tão facilmente visíveis a
@@ -20,11 +19,9 @@ Fontes e Marcel Marques estamos trabalhando no desenvolvimento e infraestrutura
 (existem vários outros contribuidores de código também, em vários repositórios,
 mas nós 3 estamos no dia-a-dia trabalhando na plataforma).
 
-
 ## O que fizemos
 
 Vamos então ao que fizemos em setembro de 2020:
-
 
 ### Projeto COVID-19
 
@@ -41,8 +38,7 @@ etc.
 Nossos dados já foram utilizados por diversos veículos nacionais e
 internacionais, além de instituições renomadas como FioCruz e IBGE. [Confira
 nosso
-*clipping*](https://github.com/turicas/covid19-br/blob/master/clipping.md).
-
+_clipping_](https://github.com/turicas/covid19-br/blob/master/clipping.md).
 
 ### Combate aos ataques
 
@@ -55,12 +51,11 @@ plataforma caísse, mas não podemos aceitar que o site fique lento por conta de
 usuários abusivos e, por isso, precisamos implementar limitações de acesso à
 API.
 
-O processo foi relativamente longo (para mais detalhes [veja as *issues* no
+O processo foi relativamente longo (para mais detalhes [veja as _issues_ no
 GitHub](https://github.com/turicas/brasil.io/issues?q=is%3Aissue+cloudflare)),
 mas já conseguimos resolver boa parte do problema e o site está responsivo
 novamente. Ainda temos algumas questões a serem endereçadas, mas já traçamos um
 plano.
-
 
 ### Atualizações na página inicial
 
@@ -69,7 +64,6 @@ coluna de últimas atualizações na página inicial; lá ficarão todos os data
 que foram atualizados recentemente. Em breve adicionaremos mais detalhes a esse
 coluna e outras funcionalidades, como a opção de assinar as atualizações por
 RSS (e eventualmente até a opção de "seguir" um dataset).
-
 
 ### Melhoria na importação de dados e Página de download de arquivos
 
@@ -85,7 +79,6 @@ Apesar de pouco impacto para os usuários, essa alteração nos ajudou a ser mai
 produtivos na atualização dos datasets e a reestruturação no código abriu
 caminho para outras melhorias que virão.
 
-
 ### Correção da página de empresas
 
 A página que contém informações consolidadas de empresas (como [essa, da
@@ -94,7 +87,6 @@ um pequeno bug, que não permitia visualizar algumas das empresas disponíveis n
 [dataset socios-brasil](https://brasil.io/dataset/socios-brasil/). Já foi
 corrigido e agora todas estão acessíveis!
 
-
 ## Próximos passos
 
 Para outubro, pretendemos:
@@ -102,14 +94,14 @@ Para outubro, pretendemos:
 - Implementar autenticação na API (e por segurança precisaremos deixar o
   cadastro mais rigoroso);
 - Atualizar os seguintes datasets:
-    - [Eleições](https://brasil.io/dataset/eleicoes-brasil/) (atualizar e
-      melhorar código do programa que converte os dados e atualizar dados na
-      plataforma);
-    - [Empresas e sócios](https://brasil.io/dataset/socios-brasil/) (atualizar
-      dados na plataforma);
-    - Criar dataset de candidatos em 2020 que possuem empresas;
-    - [Auxílio emergencial](https://brasil.io/dataset/govbr/auxilio_emergencial/)
-      (atualizar dataset na plataforma, com novas parcelas);
+  - [Eleições](https://brasil.io/dataset/eleicoes-brasil/) (atualizar e
+    melhorar código do programa que converte os dados e atualizar dados na
+    plataforma);
+  - [Empresas e sócios](https://brasil.io/dataset/socios-brasil/) (atualizar
+    dados na plataforma);
+  - Criar dataset de candidatos em 2020 que possuem empresas;
+  - [Auxílio emergencial](https://brasil.io/dataset/govbr/auxilio_emergencial/)
+    (atualizar dataset na plataforma, com novas parcelas);
 - Criar páginas exclusivas para acessar dados das eleições, facilitando o
   acesso de usuários leigos;
 - Atualizar dados da população dos municípios (usados no [Painel
@@ -117,7 +109,6 @@ Para outubro, pretendemos:
   criado);
 - Melhorar a documentação da API;
 - Continuar atualizando diariamente os dados da COVID-19.
-
 
 ## Feedback sobre a comunicação
 

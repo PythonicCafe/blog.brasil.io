@@ -3,9 +3,8 @@ Slug: dados-coronavirus-por-municipio-mais-atualizados
 Date: 2020-03-23 09:00
 Category: datasets
 Tags: covid19, opendata, ddj, colaboração
-Author: Álvaro Justen
+Author: turicas
 Summary: Os dados sobre o coronavírus disponibilizados pelo Ministério da Saúde não são suficientes para que possamos agir localmente com eficácia. Fizemos um mutirão com 33 voluntários e catalogamos manualmente os dados presentes em centenas de boletins epidemiológicos das secretarias de saúde estaduais (com o histórico). Nos ajude a divulgá-los!
-
 
 > Nota: publicação atualizada em 09 de abril de 2020 às 15:30.
 
@@ -63,7 +62,7 @@ ser feito**:
 - [Boletim em PDF contendo uma imagem
   (Maranhão)](http://www.saude.ma.gov.br/downloads/notascovid/nota10.pdf);
 - [Boletim sem tabelas e número de casos escrito por extenso no meio dos
-parágrafos (Rio Grande do Norte)](http://www.adcon.rn.gov.br/ACERVO/sesap/DOC/DOC000000000227515.PDF);
+  parágrafos (Rio Grande do Norte)](http://www.adcon.rn.gov.br/ACERVO/sesap/DOC/DOC000000000227515.PDF);
 - Possuir mais de um site onde os boletins são publicados, sem coesão entre
   eles (Rio de Janeiro);
 - Falta de seção específica e de fácil acesso no site só para os boletins do

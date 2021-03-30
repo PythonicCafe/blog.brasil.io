@@ -3,9 +3,8 @@ Slug: 1-ano-de-dados-acessiveis
 Date: 2019-04-18 23:05
 Category: meta
 Tags: história, opendata, crowdfunding
-Author: Álvaro Justen
+Author: turicas
 Summary: A ideia do Brasil.IO surgiu em 2013, mas o projeto como é conhecido hoje está no ar há mais ou menos 1 ano. Veja algumas conquistas passadas e desafios fututos.
-
 
 Tive a [ideia de criar o Brasil.IO há muitos anos, em
 2013](http://whois.domaintools.com/brasil.io), porém por diversos motivos
@@ -25,7 +24,7 @@ PostgreSQL](https://github.com/turicas/brasil.io/commit/9968c8c80bc13c1a5f135571
 [PostgreSQL](https://www.postgresql.org/) é um dos mais avançados sistemas de
 gerenciamento de banco de dados, é software livre e peça fundamental no
 [Brasil.IO](https://brasil.io/): os metadados, os dados e os índices de busca
-de todos os *datasets* da plataforma são servidos por ele e, por conta disso,
+de todos os _datasets_ da plataforma são servidos por ele e, por conta disso,
 resolvi fazer essa homenagem.
 
 Nesses últimos 12 meses tivemos algumas conquistas e ainda temos alguns
@@ -36,19 +35,18 @@ desafios pela frente:
 Apesar de razoavelmente simples, **nossa interface facilita muito o trabalho de
 diversas pessoas** (que possivelmente não teriam tempo/conhecimento
 técnico/dinheiro suficientes para fazer todo o trabalho de coleta, limpeza,
-conversão e hospedagem dos dados), pois apresenta *datasets* com milhões de
+conversão e hospedagem dos dados), pois apresenta _datasets_ com milhões de
 registros de uma maneira rápida, possibilitando filtros, paginação e exportação
 dos resultados (seja baixando como CSV ou através de [nossa
-API](https://brasil.io/api/datasets)). Além das páginas de *datasets*, as
+API](https://brasil.io/api/datasets)). Além das páginas de _datasets_, as
 [páginas especiais](http://brasil.io/especiais) facilitam o cruzamento entre
 datasets e análises mais profundas, com poucos cliques.
 
 Como ponto a melhorar temos a experiência do usuário e usabilidade das páginas.
 
-
 ## Datasets Relevantes
 
-Dois *datasets* da plataforma são de extrema relevância tanto para jornalistas
+Dois _datasets_ da plataforma são de extrema relevância tanto para jornalistas
 investigativos, cientistas políticos, advogados, ativistas, dentre outros:
 [socios-brasil](https://brasil.io/dataset/socios-brasil/socios) (contém a lista
 de CNPJs das empresas brasileiras e seus sócios) e
@@ -72,13 +70,12 @@ processo eleitoral:
 - [Políticos do Brasil (Poder360)](https://eleicoes.poder360.com.br/)
 - [Perfil Político (Open Knowledge Foundation Brasil)](https://perfilpolitico.serenata.ai/)
 
-Como ponto a melhorar, precisamos adicionar mais *datasets* à plataforma:
+Como ponto a melhorar, precisamos adicionar mais _datasets_ à plataforma:
 apesar de eu ter criado divesos outros programas de coleta de dados (como
 recentemente um em que extraí os [beneficiados da Lei da
 Anistia](https://twitter.com/turicas/status/1112491956314259457)), parte deles
 não está disponível porque precisamos melhorar o processo de criação e
-atualização de *datasets*, que tem parte manual.
-
+atualização de _datasets_, que tem parte manual.
 
 ## Luta por Dados Abertos
 
@@ -109,17 +106,15 @@ palestras](https://github.com/turicas/slides/tree/gh-pages/brasil.io) para
 divulgar esses casos (em breve talvez eu faça uma sessão de vídeos contando em
 mais detalhes!).
 
-
 ## Comunicação
 
 Por muitas vezes a comunicação da plataforma foi falha, deixando dúvidas sobre
 seu funcionamento, processo de desenvolvimento, atualizações etc. Para suprir
-essa necessidade criamos uma *newsletter* e, recentemente, [nosso
+essa necessidade criamos uma _newsletter_ e, recentemente, [nosso
 blog](https://blog.brasil.io/2019/04/01/ola-brasil/) (que em breve terá mais
 publicações técnicas). Aos poucos estamos mudando as páginas da plataforma para
 comunicarem melhor o que gostaríamos (que inclusive irá diminuir o fluxo que
 recebo de emails com dúvidas).
-
 
 ## Financiamento
 
@@ -136,12 +131,11 @@ valor não contempla horas de trabalho) e por enquanto [nossa campanha de
 financiamento coletivo](https://apoia.se/brasilio) recebe metade desse valor.
 
 Estou buscando instituições que acreditem nos valores do projeto e queiram
-apoiá-lo (seja em forma de apoios voluntários ou *grants*/editais com algum
-entregável) e também clientes de projetos de *Web scraping* de dados públicos
+apoiá-lo (seja em forma de apoios voluntários ou _grants_/editais com algum
+entregável) e também clientes de projetos de _Web scraping_ de dados públicos
 que paguem o tempo de desenvolvimento de novos coletores ou a melhoria dos já
 existentes. Se você puder ajudar ou conhece alguém que possa, por favor [entre
 em contato](https://brasil.io/contato).
-
 
 ## Conclusão
 

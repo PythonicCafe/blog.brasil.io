@@ -3,7 +3,7 @@ Slug: em-parceria-com-a-abraji-fomos-selecionados-pelo-google-news-initiative
 Date: 2019-11-13 13:35
 Category: meta
 Tags: grafos, dados abertos, financiamento
-Author: Álvaro Justen
+Author: turicas
 Summary: O projeto CruzaGrafos, apresentado em parceria entre a Abraji (Associação Brasileira de Jornalismo Investigativo) e o Brasil.IO, foi selecionado para receber apoio do Desafio de Inovação da Google News Initiative.
 
 O projeto **CruzaGrafos**, apresentado em parceria entre a [Abraji (Associação
@@ -25,16 +25,16 @@ criou).
 
 A ferramenta gráfica de análise de grafos **será licenciada como software
 livre** e facilitará descobrir relações entre pessoas em empresas, mesmo que
-elas apareçam em *datasets* distintos - será possível, por exemplo, explorar
+elas apareçam em _datasets_ distintos - será possível, por exemplo, explorar
 visualmente as conexões entre um político e seus doadores de campanha, empresas
 de sua propriedade, parceiros de negócios e empreiteiros pagos com recursos
 públicos.
 
 A verba disponibilizada pela Google News Initiative será utilizada para o
 desenvolvimento do software (aproveitando: [estamos contratando desenvolveras
-*front-end*](https://twitter.com/turicas/status/1192637037242920968)) e, apesar
+_front-end_](https://twitter.com/turicas/status/1192637037242920968)) e, apesar
 de não ser destinada ao desenvolvimento do Brasil.IO, terá um impacto positivo
-nos usuários da plataforma: precisaremos coletar *datasets* que ainda não estão
+nos usuários da plataforma: precisaremos coletar _datasets_ que ainda não estão
 disponíveis aqui e, no fim, teremos **mais dados abertos acessíveis a todos**!
 
 A concorrência foi grande: foram 303 projetos inscritos e, junto com o
