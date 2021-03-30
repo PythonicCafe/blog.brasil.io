@@ -3,7 +3,6 @@
 Esse repositório contém o código e as publicações do [Blog do
 Brasil.IO](https://blog.brasil.io/).
 
-
 ## Contribuindo
 
 Caso você não tenha conhecimentos de git, GitHub e markdown mas tenha interesse
@@ -27,8 +26,26 @@ Slug: slug (utilize o mesmo do nome do arquivo, sem extensão)
 Date: YYYY-MM-DD HH:MM
 Category: categoria1, categoria2
 Tags: tag1, tag2
-Author: Seu Nome
+Author: seu_usuário_git
 Summary: Primeiro parágrafo do texto ou resumo
+```
+
+### Adicionar novo Autor(a)
+
+Para que o autor apareça com imagem e descrição ao final de cada postagem é preciso
+adicionar os arquivos ao blog seguindo os passos descritos a seguir
+
+1. Adicione a sua imagem na pasta `content/images/authors/` a imagem deve conter o mesmo nome de seu usuário no github e conter a extensão .jpeg
+
+2. Crie um novo arquivo na pasta `content/authors/`, o arquivo deve ter extensão .json e precisa ter os seguintes campos preenchidos:
+
+```
+{
+    "name": "Seu nome",
+    "image": "/images/authors/seu_usuario_git.jpg",
+    "description":"breve descrição"
+}
+
 ```
 
 ### Rodando Localmente
@@ -53,7 +70,6 @@ cd output && python -m pelican.server
 
 Então basta acessar [localhost:8000](http://localhost:8000) em seu navegador.
 
-
 ### Publicando
 
 ```bash
@@ -64,7 +80,6 @@ make github  # Irá gerar novamente o site e subir para o branch gh-pages
 
 Se você curte o projeto e quer contribuir de outras formas também, [veja
 como](https://brasil.io/colabore).
-
 
 ## Licença
 
