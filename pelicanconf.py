@@ -36,7 +36,7 @@ def get_authors_data(path):
         dict[os.path.basename(f).split('.')[0]] = json.load(open(f, 'r', encoding='utf-8'))
     return dict
 
-AUTHOR_DETAIL = getContentElements('content/authors/*.json')
+AUTHOR_DETAIL = get_authors_data('content/authors/*.json')
 
 # Blogroll
 LINKS = (
