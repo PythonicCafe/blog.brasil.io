@@ -1,9 +1,9 @@
 {% extends "index.html" %}
 
 {% block title %}
-  {{AUTHOR_DETAIL[author|string]['name']}} Publicações | {{ SITENAME }}
+  Publicações de {{AUTHOR_DETAIL[author|string]['name']}} | {{ SITENAME }}
 {% endblock %}
 
 {% block page_header %}
-  {{AUTHOR_DETAIL[author|string]['name']}}   Publicações
+  Publicações de {{AUTHOR_DETAIL[author|string]['name']}}
 {% endblock %}
