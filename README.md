@@ -26,7 +26,7 @@ Slug: slug (utilize o mesmo do nome do arquivo, sem extensão)
 Date: YYYY-MM-DD HH:MM
 Category: categoria1, categoria2
 Tags: tag1, tag2
-Author: seu_usuário_git
+Author: username_no_github
 Summary: Primeiro parágrafo do texto ou resumo
 ```
 
@@ -35,17 +35,16 @@ Summary: Primeiro parágrafo do texto ou resumo
 Para que o autor apareça com imagem e descrição ao final de cada postagem é preciso
 adicionar os arquivos ao blog seguindo os passos descritos a seguir
 
-1. Adicione a sua imagem na pasta `content/images/authors/` a imagem deve conter o mesmo nome de seu usuário no github e conter a extensão .jpeg
+1. Adicione a sua imagem na pasta `content/images/authors/` a imagem deve conter o mesmo nome de seu usuário no github e conter a extensão `.jpg`.
 
 2. Crie um novo arquivo na pasta `content/authors/`, o arquivo deve ter extensão .json e precisa ter os seguintes campos preenchidos:
 
 ```
 {
     "name": "Seu nome",
-    "image": "/images/authors/seu_usuario_git.jpg",
+    "image": "/images/authors/username_no_github.jpg",
     "description":"breve descrição"
 }
-
 ```
 
 ### Rodando Localmente
