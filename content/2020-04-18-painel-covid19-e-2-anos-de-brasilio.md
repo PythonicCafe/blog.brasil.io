@@ -3,7 +3,7 @@ Slug: painel-covid19-e-2-anos-de-brasilio
 Date: 2020-04-18 19:45
 Category: datasets
 Tags: covid19, opendata, ddj, colaboração
-Author: Álvaro Justen
+Author: turicas
 Summary: No dia em que o Brasil.IO faz dois anos, lançamos nossa primeira visualização de dados: um mapa com os dados da COVID-19 no Brasil, com diversas informações por município.
 
 O Brasil.IO [está fazendo dois anos
@@ -29,11 +29,11 @@ município.
 
 Apesar de parecer simples, exibir polígonos de municípios a nível nacional em
 um mapa que carregue rapidamente não é tarefa simples: o Brasil possui 5.570
-municípios e os polígonos disponibilizados pelo IBGE (*shapefiles*) somam quase
+municípios e os polígonos disponibilizados pelo IBGE (_shapefiles_) somam quase
 500MB quando convertidos para o formato GeoJSON (usado em visualizações na
-Web).  Para que o tempo de carregamento seja viável, é necessário simplificar
+Web). Para que o tempo de carregamento seja viável, é necessário simplificar
 os polígonos e, em alguns casos, filtrar para que nem todos os polígonos sejam
-baixados. Em breve publicaremos um dataset com esses *shapefiles* de municípios
+baixados. Em breve publicaremos um dataset com esses _shapefiles_ de municípios
 brasileiros em formato GeoJSON, para facilitar a vida de quem precisa de
 visualizações desse tipo.
 

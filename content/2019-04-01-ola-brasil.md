@@ -3,9 +3,8 @@ Slug: ola-brasil
 Date: 2019-04-01 16:20
 Category: meta
 Tags: opendata
-Author: Álvaro Justen
+Author: turicas
 Summary: Aqui se inicia um espaço colaborativo para falar sobre dados abertos, lei de acesso à informação, ciência de dados e interagir com a comunidade da plataforma.
-
 
 Seja bem-vinda(o) à publicação de inauguração do [Blog do
 Brasil.IO](https://blog.brasil.io/); aqui se inicia um espaço colaborativo para

@@ -3,7 +3,7 @@ Slug: nossa-api-sera-obrigatoriamente-autenticada
 Date: 2020-10-31 16:30:00
 Category: meta
 Tags: api, infraestrutura
-Author: Álvaro Justen
+Author: turicas
 Summary: A partir do dia 9 de novembro de 2020 nossa API só aceitará requisições autenticadas. Entenda como acessá-la a partir dessa data e porque precisamos fazer essa alteração.
 
 A partir do dia **9 de novembro de 2020** nossa API aceitará **somente
@@ -15,19 +15,18 @@ precisamos fazer essa alteração:
 - [Lições Aprendidas](#licoes-aprendidas)
 - [Como Você Pode Ajudar](#como-voce-pode-ajudar)
 
-
 ## Como acessar a API autenticada
 
-Em resumo: você precisará criar cadastro na plataforma, criar um *token* e
+Em resumo: você precisará criar cadastro na plataforma, criar um _token_ e
 enviá-lo no cabeçalho HTTP `Authorization`. Vamos ao passo-a-passo:
 
 - Caso você não possua um cadastro na plataforma,
   **[cadastre-se](https://brasil.io/auth/entrar/) e confirme seu email**;
 - [**Autentique-se** na plataforma](https://brasil.io/auth/login/);
-- Acesse a página [de **criação de *API
-  tokens***](https://brasil.io/auth/tokens-api/), crie um e guarde-o em local
+- Acesse a página [de **criação de _API
+  tokens_**](https://brasil.io/auth/tokens-api/), crie um e guarde-o em local
   seguro;
-- Ao criar programas que acessem a API do Brasil.IO, utilize apenas o *host*
+- Ao criar programas que acessem a API do Brasil.IO, utilize apenas o _host_
   `api.brasil.io` (em vez do antigo `brasil.io/api`) e envie o **cabeçalho HTTP
   `Authorization` com o valor `Token <seu-token>`**. Veja um exemplo em
   Python: [`brasil_io.py`][brasil-io-python] (em breve essa biblioteca estará
@@ -44,7 +43,6 @@ problemas, [entre em contato conosco][brasil-io-contato].
 > veja nosso artigo [Como acessar os dados do
 > Brasil.IO][brasil-io-como-acessar-dados].
 
-
 ## Entendendo o Problema
 
 Apesar de existir como é hoje desde 2018, o [Brasil.IO][brasil-io] ganhou muita
@@ -52,7 +50,7 @@ visibilidade após lançarmos o [dataset COVID-19][brasil-io-covid19] em março 
 2020, o que mostra a **carência por dados abertos acessíveis sobre a pandemia**
 e a **importância de nosso trabalho**. Desde março, além de diversas demandas
 para sanar dúvidas sobre os dados e entrevistas sobre os apagões de dados,
-precisamos fazer (e fizemos) várias otimizações no código do nosso *backend*
+precisamos fazer (e fizemos) várias otimizações no código do nosso _backend_
 para que a API funcionasse mais rapidamente e conseguisse atender a todos;
 essas alterações (como implementação de um sistema de cache mais robusto) nos
 tomaram tempo, mas foram necessárias devido ao novo tamanho e às novas
@@ -71,7 +69,7 @@ instituições no acompanhamento da pandemia no Brasil.
 
 Sempre acreditei que **a API do Brasil.IO deveria ser aberta** (sem
 autenticação), para facilitar o uso dos dados, por exemplo na criação de
-aplicações Web *front-end* que não necessitem de um *backend* próprio. Isso
+aplicações Web _front-end_ que não necessitem de um _backend_ próprio. Isso
 potencializa o controle social, como mostrei [em uma palestra em 2014 durante o
 Fórum Internacional de Software Livre][palestra-fisl], antes mesmo do
 [Brasil.IO][brasil-io] existir como é hoje.
@@ -92,15 +90,14 @@ conseguirmos identificar as pessoas que fizeram essas requisições, tivemos
 dificuldade não somente em comunicar melhores práticas de acesso aos dados,
 como também de bloquear mais facilmente esses usos abusivos). Por isso,
 decidmos que todo acesso à API será autenticado e, para isso, melhoramos nosso
-cadastro, adicionando *captcha* e confirmação por e-mail. A partir do cadastro
+cadastro, adicionando _captcha_ e confirmação por e-mail. A partir do cadastro
 mais robusto conseguiremos não somente controlar os acessos (e bloqueá-los, se
 necessário), mas também contatar os responsáveis por eventuais abusos.
 
 Se você quiser saber mais detalhes técnicos por trás dessa decisão, acesse as
-*issues* [392][issue-392], [426][issue-426], [427][issue-427], [438][issue-438]
-e [474][issue-474]. Também estamos trabalhando na melhoria da API na [*issue*
+_issues_ [392][issue-392], [426][issue-426], [427][issue-427], [438][issue-438]
+e [474][issue-474]. Também estamos trabalhando na melhoria da API na [_issue_
 488][issue-488].
-
 
 ### Ataques ou uso massivo?
 
@@ -108,18 +105,18 @@ e [474][issue-474]. Também estamos trabalhando na melhoria da API na [*issue*
 todas essas requisições nocivas não tenham feito com o intuito de atacar a
 plataforma, mas de fato o resultado foi prejudicial a todos os usuários. Seria
 muito mais fácil e eficiente tecnicamente se a pessoa simplesmente baixasse o
-*dataset* completo.
+_dataset_ completo.
 
 As características do ataque me levam a crer que tenha sido um DDoS
-(*distributed denial of service*), pelo fato de serem muitas requisições de IPs
-completamente diferentes e mirando apenas um *dataset*, com filtros muito
+(_distributed denial of service_), pelo fato de serem muitas requisições de IPs
+completamente diferentes e mirando apenas um _dataset_, com filtros muito
 parecidos. Além disso, na mesma época em que sofremos esses ataques, o [Portal
 da Transparência do Governo Federal][transparencia-gov-br] também recebeu
-muitas requisições (tornando seu uso bastante lento) para o mesmo *dataset* e
+muitas requisições (tornando seu uso bastante lento) para o mesmo _dataset_ e
 cheguei a receber um email de alguém supostamente da Polícia Federal, exigindo
 que eu retirasse do ar esses dados pois estavam sendo usados por criminosos (o
 que não faz sentido, dado que os dados são públicos e temos total respeito com
-a privacidade das pessoas descritas nesse *dataset*, não informando dados
+a privacidade das pessoas descritas nesse _dataset_, não informando dados
 sensíveis como CPF, mesmo que a fonte oficial divulgue essas informações).
 
 Se você não sabe o que é um ataque DDoS, imagine uma pizzaria que recebe 50
@@ -134,7 +131,6 @@ Brasil.IO os "clientes" **não pagam** pelo serviço e os "cozinheiros" são
 voluntários que doam seu tempo com o objetivo de disponibilizar dados
 brasileiros mais acessíveis.
 
-
 ## Lições Aprendidas
 
 - **Não podemos contar com o bom senso das pessoas para questões que podem
@@ -142,14 +138,14 @@ brasileiros mais acessíveis.
   sem empatia e foi exatamente o que aconteceu nesse caso. Algumas
   (possivelmente poucas) pessoas abusaram da API e fizeram com que muitas
   outras pessoas fossem prejudicadas (nesse caso, desabilitamos a API para esse
-  *dataset* e não prosseguimos com a atualização de dados que estava
+  _dataset_ e não prosseguimos com a atualização de dados que estava
   programada). Em casos como esses precisamos assumir uma **postura
   defensiva**.
 - **Precisamos investir mais tempo em educar usuários**: tempo não investido em
   mostrar aos usuários da plataforma como utilizá-la da melhor forma é
   revertido em tempo gasto na mitigação dos problemas causados por isso e, com
   isso, teremos menos para evoluir a plataforma, adicionando funcionalidades e
-  *datasets*. Nesse ponto, precisamos melhorar a documentação de uso e
+  _datasets_. Nesse ponto, precisamos melhorar a documentação de uso e
   contribuição com a plataforma (esse caminho já está sendo trilhado).
 - **Precisamos nos aproximar mais dos usuários**: fica evidente a necessidade
   de estarmos em contato mais próximo com quem utiliza nossos dados e a
@@ -159,7 +155,6 @@ brasileiros mais acessíveis.
   reativamos nossa [conta no Twitter][brasil-io-twitter] e me comprometo a
   publicar relatórios mensais ([como o de setembro de
   2020][brasil-io-relatorio-set2020]).
-
 
 ## Como Você Pode Ajudar
 

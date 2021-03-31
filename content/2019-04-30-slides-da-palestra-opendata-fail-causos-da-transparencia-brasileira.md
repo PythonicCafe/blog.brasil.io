@@ -3,9 +3,8 @@ Slug: slides-da-palestra-opendata-fail-causos-da-transparencia-brasileira
 Date: 2019-04-30 12:00
 Category: midia
 Tags: opendata, fail, datascience
-Author: Álvaro Justen
+Author: turicas
 Summary: Slides da palestra onde apresentei alguns dos problemas relacionados à Lei de Acesso à Informação que enfrentamos diariamente para disponibilizar dados acessíveis aqui no Brasil.IO. Ajude-nos a mudar esse cenário!
-
 
 Ontem (29/04, meu aniversário!) aconteceu em Curitiba/PR o [Cerveja com Dados
 CWB #4](https://www.meetup.com/Cerveja-cm-Dados/events/260152313/), onde
@@ -24,7 +23,7 @@ Os causos que contei retratam os seguintes problemas:
 - Bloqueio de portais de transparência por região geográfica, impossibilitando
   o acesso de fora do Brasil
 - Arquivos que desaparecem dos sites
-- *Download* de arquivos muito lentos (podendo demorar dias)
+- _Download_ de arquivos muito lentos (podendo demorar dias)
 - Licenças que não permitem redistribuição e uso comercial (ou seja, não é dado
   aberto)
 - Arquivos disponíveis apenas em formatos proprietários
@@ -46,8 +45,6 @@ HTML](http://turicas.info/slides/brasil.io/causos-da-transparencia/) e também
 slideshare](https://www.slideshare.net/turicas/opendata-fail-causos-da-transparncia-brasileira-142967375)
 (veja abaixo).
 
-
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/7ZTByBwU4oxZx" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-
 
 [Do nosso manifesto](https://brasil.io/manifesto): **Restringir acesso a dados públicos é elitizar a democracia.**

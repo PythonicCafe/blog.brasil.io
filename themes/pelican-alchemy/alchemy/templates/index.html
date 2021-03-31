@@ -32,7 +32,7 @@
             <li>
               <i class="fa fa-user-o"></i>
               {% for author in article.authors %}
-                <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>{% if not loop.last %}, {% endif %}
+                <a href="{{ SITEURL }}/{{ author.url }}">{{AUTHOR_DETAIL[author|string]['name']}} </a>{% if not loop.last %}, {% endif %}
               {% endfor %}
             </li>
           {% endif %}

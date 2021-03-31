@@ -3,9 +3,8 @@ Slug: como-acessar-os-dados-do-brasil-io
 Date: 2020-10-10 20:30:00
 Category: meta
 Tags: api, infraestrutura
-Author: Álvaro Justen
+Author: turicas
 Summary: Existem diversas maneiras de acessar os dados disponibilizados pelo Brasil.IO, cada uma com características específicas (algumas mais rápidas que outras, por exemplo). Veja todas as possibilidades, com exemplos de código!
-
 
 Existem diversas maneiras de acessar os dados disponíveis no [Brasil.IO][brasil-io].
 Dentre elas, pedimos que dê preferência ao [download de dados
@@ -19,7 +18,6 @@ completos](#dados-completos).
 > "Metadados" dentro da página da tabela, que segue o seguinte padrão:
 > `https://brasil.io/dataset/<dataset-slug>/<table-name>/`, exemplo: [tabela
 > caso do dataset covid-19][covid19-caso].
-
 
 ## Dados completos
 
@@ -62,7 +60,6 @@ estará disponível no [Python Package Index][pypi]).
 > prefira formas "preguiçosas" de extrair a informação que deseja (leia
 > registro a registro, compute o que precisar e depois delete-o da memória).
 
-
 ## API
 
 **ATENÇÃO**: essa opção **não é recomendada** caso você precise automatizar
@@ -89,7 +86,7 @@ estará disponível no [Python Package Index][pypi]).
 
 Ainda não temos uma documentação completa sobre a API, com exceção de alguns
 datasets, como [a documentação das tabelas do dataset
-covid19](https://github.com/turicas/covid19-br/blob/master/api.md).  Criar uma
+covid19](https://github.com/turicas/covid19-br/blob/master/api.md). Criar uma
 documentação mais abrangente está em nossa lista de tarefas, mas enquanto isso,
 fique com as seguintes dicas:
 
@@ -98,12 +95,11 @@ fique com as seguintes dicas:
   futuro esse padrão mudará para
   `https://api.brasil.io/v1/dataset/<dataset-slug>/<table-name>/data`).
 - Todos os filtros que podem ser feitos na [interface Web](#interface-web) (que
-  são passados via *query string*) também funcionam na API (use
-  `search=palavra` para *full-text-search*)
-- A paginação na API funciona passando `page=N` via *query string* e o número
+  são passados via _query string_) também funcionam na API (use
+  `search=palavra` para _full-text-search_)
+- A paginação na API funciona passando `page=N` via _query string_ e o número
   de itens como `page_size=N` (máximo de 10.000). Exemplo:
   [`https://brasil.io/api/dataset/covid19/caso/data/?page=3&page_size=10000`](https://brasil.io/api/dataset/covid19/caso/data/?page=3&page_size=10000`)
-
 
 ## Interface Web
 
@@ -135,7 +131,6 @@ Siga os seguintes passos:
 > vídeo](https://www.youtube.com/watch?v=nl8gxzCOdCw) para aprender a maneira
 > correta de abrir arquivos CSV no Excel.
 
-
 ## Executando os scripts de captura de dados
 
 Cada dataset da plataforma possui seus dados gerados através de programas que
@@ -150,7 +145,6 @@ Para executar por conta própria os scripts, siga os seguintes passos:
   do dataset covid-19][covid19-caso]
 - Clique no link referente ao **código-fonte**
 - Siga as instruções no README do repositório de código
-
 
 [brasil-io-python]: https://gist.github.com/turicas/3e3621d61415e3453cd03a1997f7473f#file-brasil_io-py
 [brasil-io]: https://brasil.io/

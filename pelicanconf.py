@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 
+import glob
+import json
+import os
+
 AUTHOR = "Álvaro Justen"
 SITENAME = "Brasil.IO - Blog"
 SITESUBTITLE = "Dados abertos para mais democracia"
@@ -24,6 +28,15 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+
+# Method to call elements from json files
+def get_authors_data(path):
+    dict = {}
+    for f in glob.glob(path):
+        dict[os.path.basename(f).split('.')[0]] = json.load(open(f, 'r', encoding='utf-8'))
+    return dict
+
+AUTHOR_DETAIL = get_authors_data('content/authors/*.json')
 
 # Blogroll
 LINKS = (

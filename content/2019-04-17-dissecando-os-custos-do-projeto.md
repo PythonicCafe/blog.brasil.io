@@ -3,14 +3,13 @@ Slug: dissecando-os-custos-e-a-infraestrutura-do-projeto
 Date: 2019-04-17 17:30
 Category: meta
 Tags: infra, hosting, crowdfunding, história, django, postgresql, neo4j
-Author: Álvaro Justen
-Summary: Quando visitamos um site geralmente não temos noção de todo o trabalho e infraestrutura envolvidos para mantê-lo online; nesse artigo detalho os custos do Brasil.IO e falo um pouco da infraestrutura. *Spoiler*: **o projeto ainda está deficitário**.
-
+Author: turicas
+Summary: Quando visitamos um site geralmente não temos noção de todo o trabalho e infraestrutura envolvidos para mantê-lo online; nesse artigo detalho os custos do Brasil.IO e falo um pouco da infraestrutura. _Spoiler_: **o projeto ainda está deficitário**.
 
 Quando visitamos um site geralmente não temos noção de todo o trabalho e
 infraestrutura envolvidos para mantê-lo online; por trás dos dados apresentados
 no [Brasil.IO](https://brasil.io/) existem diversos programas que fazem
-raspagem de sites (*Web scraping*), limpeza de dados, além de outros que
+raspagem de sites (_Web scraping_), limpeza de dados, além de outros que
 armazenam e servem as centenas de gigabytes de dados que temos atualmente;
 esses programas rodam em servidores que nos custam em torno de **R$1.100,00**
 mensais.
@@ -23,14 +22,12 @@ que temos hoje estão listados [nessa
 planilha](https://docs.google.com/spreadsheets/d/1ZElv9dWuEmhi-X_K674vQ_8YlmLeMo_m6swIqsSfdF0/view)
 e segue abaixo um detalhamento de cada item:
 
-
 ## Domínio "brasil.io" (namecheap.com)
 
 Domínio do projeto, registrado em 28 de novembro de 2013 (apesar da ideia ser
 antiga, a plataforma começou a ser desenvolvida como é hoje em 2018).
 
 Custo: 35,00 USD / ano.
-
 
 ## Servidor na DigitalOcean EUA (+ extra storage)
 
@@ -43,24 +40,22 @@ de dados PostgreSQL (utilizado para [hospedar os
 dados](https://brasil.io/datasets) e os índices de busca) e Neo4J (utilizado
 para [traçar caminhos entre pessoas e empresas](https://brasil.io/especiais)).
 
-Para o *deployment* utilizamos o [dokku](https://github.com/dokku/dokku) (um
-*platform-as-a-service* livre) e, com isso, conseguimos subir alterações com um
+Para o _deployment_ utilizamos o [dokku](https://github.com/dokku/dokku) (um
+_platform-as-a-service_ livre) e, com isso, conseguimos subir alterações com um
 simples `git push` (como no Heroku, porém mais barato).
 
 Custo: 120 USD / mês.
-
 
 ## DigitalOcean Spaces (arquivos estáticos)
 
 [Digital Ocean Spaces](https://m.do.co/c/5b17037059e9) é um serviço de
 hospedagem de arquivos estáticos, similar ao AWS S3. Está sendo utilizado em
 caráter de testes para hospedar os arquivos estáticos (para quem quer baixar um
-dataset completo) e para os futuros *mirrors* que teremos. Atualmente o meu
+dataset completo) e para os futuros _mirrors_ que teremos. Atualmente o meu
 Google Drive pessoal está sendo utilizado para disponibilizar os arquivos
 completos, mas ele possui limitações e em breve migraremos totalmente.
 
 Custo: 5 USD / mês.
-
 
 ## Servidor na OVH (+ extra storage)
 
@@ -75,7 +70,6 @@ mais barata (porém essa migração requer algum trabalho).
 
 Custo: 89,90 USD / mês.
 
-
 ## Hospedagem rocketchat - chat.brasil.io (Heroku)
 
 Instância do [Rocket.Chat](https://rocket.chat/) que está por trás do
@@ -84,7 +78,6 @@ comunicar mais facilmente, com divisão por assunto. Roda em um dyno simples (o
 mais barato).
 
 Custo: 7,00 USD / mês.
-
 
 ## Horas de trabalho
 

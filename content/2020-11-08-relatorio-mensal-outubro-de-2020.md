@@ -3,7 +3,7 @@ Slug: relatorio-mensal-outubro-de-2020
 Date: 2020-11-08 12:00:00
 Category: meta
 Tags: relatório, desenvolvimento, infraestrutura
-Author: Álvaro Justen
+Author: turicas
 Summary: Além da atualização de diversos datasets (COVID-19, empresas/sócios e auxílio emergencial), fizemos diversas melhorias no backend e trabalhamos nos dados das eleições.
 
 Pretendia publicar esse relatório no primeiro dia do mês, mas por conta de
@@ -14,7 +14,6 @@ primeira semana de novembro. Vamos lá:
 - [O que Fizemos](#o-que-fizemos)
 - [Próximos Passos](#proximos-passos)
 - [Como Você Pode Ajudar](#como-voce-pode-ajudar)
-
 
 ## O que Fizemos
 
@@ -31,12 +30,11 @@ voluntárias][brasil-io-covid19-voluntarios], que coletam e checam os dados
 diretamente das Secretarias Estaduais de Saúde. Nossos dados já foram utilizados por diversos veículos nacionais e
 internacionais, além de instituições renomadas como FioCruz e IBGE. [Confira
 nosso
-*clipping*](https://github.com/turicas/covid19-br/blob/master/clipping.md).
+_clipping_](https://github.com/turicas/covid19-br/blob/master/clipping.md).
 
 Em 15 de outubro reativamos o perfil do [@brasil_io no
 Twitter][twitter-brasil-io] e passamos a publicar nosso boletim diário por lá
 também (antes era publicado em [meu perfil pessoal][twitter-turicas]).
-
 
 ### Atualização da população dos municípios
 
@@ -49,16 +47,15 @@ usado apenas internamente), mas você pode acessar [o código de captura dos
 dados do censo do IBGE][censo-ibge] e [os arquivos CSV com estimativas da
 população][censo-ibge-dados].
 
-
 ### Implementação da autenticação na API
 
 Deixamos nosso cadastro mais robusto (agora, existe um captcha e é necessário
 confirmar o email) e implementamos autenticação obrigatória na API, passos
-importantes para a nossa defesa contra novos ataques.  O código já foi revisado
+importantes para a nossa defesa contra novos ataques. O código já foi revisado
 e devidamente testado, mas a autenticação obrigatória ainda não está habilitada
 para que os usuários tenham tempo hábil para migração de suas bases de código.
 
-Aproveitando essas alterações, também migramos o *hostname* de acesso à API
+Aproveitando essas alterações, também migramos o _hostname_ de acesso à API
 (agora será: `https://api.brasil.io/v1/`) e configuramos redirecionamentos nas
 URLs antigas. Essa alteração, além de facilitar a criação de futuras versões,
 nos ajudará a executar o backend da API independente do backend do site em si
@@ -66,7 +63,6 @@ nos ajudará a executar o backend da API independente do backend do site em si
 
 Habilitaremos a **autenticação obrigatória na API amanhã, 9 de novembro**. Se
 você utiliza a API, [entenda como proceder][blog-api-autenticada].
-
 
 ### Dataset atualizado: auxílio emergencial
 
@@ -86,7 +82,6 @@ irregularidades no recebimento.
 - [Baixe os dados originais](https://data.brasil.io/mirror/govbr/_meta/list.html)
 - [Veja o código de captura, conversão e limpeza dos
   dados](https://github.com/turicas/transparencia-gov-br)
-
 
 ### Dataset atualizado: empresas, sócios e atividades empresariais (CNAE)
 
@@ -114,7 +109,6 @@ tínhamos publicado os dados na plataforma.
 > estarem atualizados). Estamos trabalhando na migração desses dados e, em
 > breve, teremos mais novidades.
 
-
 ### Últimas Atualizações na Página Inicial
 
 Com o intuito de dar mais visibilidade ao que estamos fazendo, adicionamos uma
@@ -127,16 +121,14 @@ Estamos planejando a melhoria dessas atualizações, com notificações
 personalizadas, mas essa etapa ainda deve demorar um pouco por conta de outras
 prioridades.
 
-
 ### Melhorias no Código do Backend
 
 Apesar de não ficarem visíveis para quem acessa o site e os dados, fizemos
-melhorias importantes no código do *backend*, que nos ajudarão a evoluir mais
+melhorias importantes no código do _backend_, que nos ajudarão a evoluir mais
 rapidamente no futuro (e, possivelmente, destacar parte do código em outras
 bibliotecas, para que outras pessoas possam também utilizá-las - isso diminuirá
 a complexidade do código da plataforma e o tornará ainda mais fácil de manter).
-Caso queira saber mais, veja os *pull requests* [#455][pr-455] e [466][pr-466].
-
+Caso queira saber mais, veja os _pull requests_ [#455][pr-455] e [466][pr-466].
 
 ### O que não conseguimos finalizar
 
@@ -146,10 +138,10 @@ finalizadas). São elas:
 
 - **Atualizar dataset eleições brasil com dados de 2020**: não conseguimos
   concluir a atualização porque:
-    - Precisaremos migrar o schema dos dados (e para isso precisaremos
-      implementar alguns redirecionamentos, para não quebrar links antigos),
-    - O trabalho de normalizar os nomes de colunas foi maior do que
-      esperávamos e ainda estamos concluindo.
+  - Precisaremos migrar o schema dos dados (e para isso precisaremos
+    implementar alguns redirecionamentos, para não quebrar links antigos),
+  - O trabalho de normalizar os nomes de colunas foi maior do que
+    esperávamos e ainda estamos concluindo.
 - **Criar tabela com candidatos em 2020 que possuem empresas**: para a correta
   extração desses dados dependemos da finalização da tarefa acima.
 - **Melhorar a documentação da API**: iniciamos, mas não finalizamos por conta
@@ -159,7 +151,6 @@ finalizadas). São elas:
   acesso de usuários leigos: iniciamos um esboço das telas, mas como essa
   página depende totalmente dos dados das eleições, preferimos pausar o
   desenvolvimento até que o dataset seja atualizado.
-
 
 ## Próximos passos
 
@@ -177,14 +168,13 @@ Para o restante do mês de novembro, pretendemos:
   o schema (nomes de colunas e das tabelas) e, ainda assim, manter os links
   antigos funcionais
 - [Dataset de eleições brasileiras][brasil-io-eleicoes]:
-    - Checar e finalizar normalizações de nomes de colunas das tabelas de
-      receitas e despesas de partidos, comitês/diretórios e candidaturas
-      (trabalho já iniciado, com ajuda de [Rhenan Bartels][rhenan-bartels]).
-    - Implementar os redirecionamentos do schema antigo para o novo.
-    - Atualizar dados na plataforma.
+  - Checar e finalizar normalizações de nomes de colunas das tabelas de
+    receitas e despesas de partidos, comitês/diretórios e candidaturas
+    (trabalho já iniciado, com ajuda de [Rhenan Bartels][rhenan-bartels]).
+  - Implementar os redirecionamentos do schema antigo para o novo.
+  - Atualizar dados na plataforma.
 - Continuar **atualizando diariamente** os dados da COVID-19 e publicando
   boletins.
-
 
 ## Como Você Pode Ajudar
 
