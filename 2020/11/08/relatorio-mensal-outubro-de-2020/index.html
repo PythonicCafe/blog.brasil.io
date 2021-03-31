@@ -88,7 +88,7 @@
         </li>
           <li class="list-inline-item">
             <i class="fa fa-user-o"></i>
-              <a href="https://blog.brasil.io/author/alvaro-justen.html">Álvaro Justen</a>          </li>
+              <a href="https://blog.brasil.io/author/turicas.html">Álvaro Justen</a>          </li>
           <li class="list-inline-item">
             <i class="fa fa-files-o"></i>
               <a href="https://blog.brasil.io/tag/relatorio.html">#relatório</a>,               <a href="https://blog.brasil.io/tag/desenvolvimento.html">#desenvolvimento</a>,               <a href="https://blog.brasil.io/tag/infraestrutura.html">#infraestrutura</a>          </li>
@@ -133,7 +133,7 @@ população</a>.</p>
 <h4 id="implementacao-da-autenticacao-na-api"><a class="toclink" href="#implementacao-da-autenticacao-na-api">Implementação da autenticação na <span class="caps">API</span></a></h4>
 <p>Deixamos nosso cadastro mais robusto (agora, existe um captcha e é necessário
 confirmar o email) e implementamos autenticação obrigatória na <span class="caps">API</span>, passos
-importantes para a nossa defesa contra novos ataques.  O código já foi revisado
+importantes para a nossa defesa contra novos ataques. O código já foi revisado
 e devidamente testado, mas a autenticação obrigatória ainda não está habilitada
 para que os usuários tenham tempo hábil para migração de suas bases de&nbsp;código.</p>
 <p>Aproveitando essas alterações, também migramos o <em>hostname</em> de acesso à <span class="caps">API</span>
@@ -202,13 +202,11 @@ coisas), não conseguimos finalizar todas as tarefas (algumas já estão quase
 finalizadas). São&nbsp;elas:</p>
 <ul>
 <li><strong>Atualizar dataset eleições brasil com dados de 2020</strong>: não conseguimos
-  concluir a atualização porque:<ul>
+  concluir a atualização&nbsp;porque:</li>
 <li>Precisaremos migrar o schema dos dados (e para isso precisaremos
-  implementar alguns redirecionamentos, para não quebrar links&nbsp;antigos),</li>
+    implementar alguns redirecionamentos, para não quebrar links&nbsp;antigos),</li>
 <li>O trabalho de normalizar os nomes de colunas foi maior do que
-  esperávamos e ainda estamos&nbsp;concluindo.</li>
-</ul>
-</li>
+    esperávamos e ainda estamos&nbsp;concluindo.</li>
 <li><strong>Criar tabela com candidatos em 2020 que possuem empresas</strong>: para a correta
   extração desses dados dependemos da finalização da tarefa&nbsp;acima.</li>
 <li><strong>Melhorar a documentação da <span class="caps">API</span></strong>: iniciamos, mas não finalizamos por conta
@@ -232,14 +230,12 @@ finalizadas). São&nbsp;elas:</p>
 <li>Implementar redirecionamentos nos datasets, para que seja possível migrarmos
   o schema (nomes de colunas e das tabelas) e, ainda assim, manter os links
   antigos&nbsp;funcionais</li>
-<li><a href="https://brasil.io/dataset/eleicoes-brasil/">Dataset de eleições brasileiras</a>:<ul>
+<li><a href="https://brasil.io/dataset/eleicoes-brasil/">Dataset de eleições brasileiras</a>:</li>
 <li>Checar e finalizar normalizações de nomes de colunas das tabelas de
-  receitas e despesas de partidos, comitês/diretórios e candidaturas
-  (trabalho já iniciado, com ajuda de <a href="https://github.com/rhenanbartels/">Rhenan Bartels</a>).</li>
+    receitas e despesas de partidos, comitês/diretórios e candidaturas
+    (trabalho já iniciado, com ajuda de <a href="https://github.com/rhenanbartels/">Rhenan Bartels</a>).</li>
 <li>Implementar os redirecionamentos do schema antigo para o&nbsp;novo.</li>
 <li>Atualizar dados na&nbsp;plataforma.</li>
-</ul>
-</li>
 <li>Continuar <strong>atualizando diariamente</strong> os dados da <span class="caps">COVID</span>-19 e publicando&nbsp;boletins.</li>
 </ul>
 <h3 id="como-voce-pode-ajudar"><a class="toclink" href="#como-voce-pode-ajudar">Como Você Pode&nbsp;Ajudar</a></h3>
@@ -260,7 +256,39 @@ públicos brasileiros</strong>,&nbsp;considere:</p>
 </ul>
 <p>Até a próxima!&nbsp;:)</p>
     </div>
-  </article>
+<div class="py-4 px-2">
+  <h4 class="h5"> Autor </h4>
+
+  <div class="row pt-2">
+      <div class="card col-sm-12 mx-auto mb-2 p-2">
+        <div class="card-body row pt-3 px-2">
+          <div class="col-12 col-md-4">
+            <img class="rounded-circle mx-auto d-block align-middle"
+                  src="/images/authors/turicas.jpg" alt="turicas"
+                alt="avatar"
+                width="150"
+            />
+          </div>
+          <div class="col-12 col-md-8">
+            <div class="mt-3">
+              <h5 class="card-title">Álvaro Justen</h5>
+              <div style="max-width:540x">
+                <span class="card-text">
+                  Álvaro Justen é programador, professor e empreendedor. Ativista de software livre e de dados abertos, desenvolve e gerencia projetos de captura e análise de dados (principalmente públicos), majoritariamente com Python; adora compartilhar conhecimento e colabora com a comunidade de jornalismo de dados brasileira; é fundador do portal de dados abertos acessíveis Brasil.IO e quando não está programando ou dando aulas, viaja, prova e torra cafés especiais.
+                </span>
+              </div>
+              <div class="card-text pt-1">
+                <a href="https://blog.brasil.io/author/turicas.html">
+                  <small>Publicações de Álvaro Justen</small>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div>
+</div>  </article>
   <hr>
   <div id="disqus_thread"></div>
   <script>
