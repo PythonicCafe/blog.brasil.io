@@ -1,5 +1,10 @@
 {
     "name": "Álvaro Justen",
     "image": "/images/authors/turicas.jpg",
-    "description": "Álvaro Justen é programador, professor e empreendedor. Ativista de software livre e de dados abertos, desenvolve e gerencia projetos de captura e análise de dados (principalmente públicos), majoritariamente com Python; adora compartilhar conhecimento e colabora com a comunidade de jornalismo de dados brasileira; é fundador do portal de dados abertos acessíveis Brasil.IO e quando não está programando ou dando aulas, viaja, prova e torra cafés especiais."
+    "description": "Álvaro Justen é programador, professor e empreendedor. Ativista de software livre e de dados abertos, desenvolve e gerencia projetos de captura e análise de dados (principalmente públicos), majoritariamente com Python; adora compartilhar conhecimento e colabora com a comunidade de jornalismo de dados brasileira; é fundador do portal de dados abertos acessíveis Brasil.IO e quando não está programando ou dando aulas, viaja, prova e torra cafés especiais.",
+    "social": {
+        "github": "https://github.com/turicas",
+        "twitter": "https://twitter.com/turicas",
+        "linkedin": "https://br.linkedin.com/in/alvarojusten"
+    }
 }
