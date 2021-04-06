@@ -4,9 +4,9 @@
   <div class="row pt-2">
     {% for author in article.authors %}
       <div class="card col-sm-12 mx-auto mb-2 p-2">
-        <div class="card-body row pt-3 px-2">
-          <div class="col-12 col-md-4">
-            <img class="rounded-circle mx-auto d-block align-middle"
+        <div class="card-body row pt-3 px-2">          
+          <div class="col-12 col-md-4 my-auto text-center">
+            <img class="rounded-circle mx-auto d-block" 
                 {% if AUTHOR_DETAIL[author|string]['image'] %}
                   src="{{ AUTHOR_DETAIL[author|string]['image'] }}" alt="{{ author }}"
                 {% else %}
@@ -15,11 +15,16 @@
                 alt="avatar"
                 width="150"
             />
+            {% for social, url in AUTHOR_DETAIL[author|string]['social'].items() %}
+            <a href="{{url}}" target="_blank" title="{{social}} de {{author}} " class="mt-3 px-1" style="text-decoration: none;">
+              <i class="fa fa-{{social}} my-2" style="font-size:22px; color:rgb(78, 78, 78)"></i>
+            </a>
+            {% endfor %}
           </div>
           <div class="col-12 col-md-8">
             <div class="mt-3">
-              <h5 class="card-title">{{ AUTHOR_DETAIL[author|string]['name'] }}</h5>
-              <div style="max-width:540x">
+              <h5 class="card-title">{{AUTHOR_DETAIL[author|string]['name']}}</h5>
+              <div style="max-width:500px">
                 <span class="card-text">
                   {{ AUTHOR_DETAIL[author|string]['description'] }}
                 </span>
