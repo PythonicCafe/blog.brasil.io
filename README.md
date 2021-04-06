@@ -43,7 +43,12 @@ adicionar os arquivos ao blog seguindo os passos descritos a seguir
 {
     "name": "Seu nome",
     "image": "/images/authors/username_no_github.jpg",
-    "description":"breve descrição"
+    "description":"breve descrição",
+    "social": {
+        "github": "https://github.com/username_no_github",
+        "twitter": "https://twitter.com/username_no_twitter",
+        "linkedin": "https://br.linkedin.com/in/username_no_linkedin"
+    }
 }
 ```
 
