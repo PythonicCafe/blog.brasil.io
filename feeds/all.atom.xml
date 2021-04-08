@@ -1,5 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Brasil.IO - Blog</title><link href="https://blog.brasil.io/" rel="alternate"></link><link href="https://blog.brasil.io/feeds/all.atom.xml" rel="self"></link><id>https://blog.brasil.io/</id><updated>2020-11-08T12:00:00-03:00</updated><subtitle>Dados abertos para mais democracia</subtitle><entry><title>Relatório mensal: outubro de 2020</title><link href="https://blog.brasil.io/2020/11/08/relatorio-mensal-outubro-de-2020/" rel="alternate"></link><published>2020-11-08T12:00:00-03:00</published><updated>2020-11-08T12:00:00-03:00</updated><author><name>turicas</name></author><id>tag:blog.brasil.io,2020-11-08:/2020/11/08/relatorio-mensal-outubro-de-2020/</id><summary type="html">&lt;p&gt;Além da atualização de diversos datasets (&lt;span class="caps"&gt;COVID&lt;/span&gt;-19, empresas/sócios e auxílio emergencial), fizemos diversas melhorias no backend e trabalhamos nos dados das&amp;nbsp;eleições.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Pretendia publicar esse relatório no primeiro dia do mês, mas por conta de
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Brasil.IO - Blog</title><link href="https://blog.brasil.io/" rel="alternate"></link><link href="https://blog.brasil.io/feeds/all.atom.xml" rel="self"></link><id>https://blog.brasil.io/</id><updated>2021-04-07T21:00:00-03:00</updated><subtitle>Dados abertos para mais democracia</subtitle><entry><title>Um ano de coleta diária de dados da COVID-19: Um balanço sobre o projeto e sua importância</title><link href="https://blog.brasil.io/2021/04/07/um-ano-de-coleta-diaria-covid19/" rel="alternate"></link><published>2021-04-07T21:00:00-03:00</published><updated>2021-04-07T21:00:00-03:00</updated><author><name>bru-menani</name></author><id>tag:blog.brasil.io,2021-04-07:/2021/04/07/um-ano-de-coleta-diaria-covid19/</id><summary type="html">&lt;p&gt;Após um ano de coleta de dados sobre a &lt;span class="caps"&gt;COVID&lt;/span&gt;-19, contamos um pouco sobre esse projeto, as pessoas envolvidas e fazemos um paralelo com notícias atuais, demonstrando a importância de dados abertos estarem disponíveis a&amp;nbsp;todos.&lt;/p&gt;</summary><content type="html">&lt;p&gt;20 de março de 2020 foi o início de um projeto marcante aqui no Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;: a
+coleta de &lt;a href="https://brasil.io/covid19/"&gt;dados diários a nível municipal sobre a &lt;span class="caps"&gt;COVID&lt;/span&gt;-19&lt;/a&gt;,
+doença que havia acabado de ser &lt;a href="https://twitter.com/WHO/status/1237774421307228160"&gt;declarada como Pandemia pela Organização
+Mundial da Saúde&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Naquele momento, como o governo já dava sinais de que os dados da pandemia
+poderiam não ser disponibilizados de forma estruturada e acessível, o que,
+inclusive, &lt;a href="https://g1.globo.com/politica/noticia/2020/06/06/apos-reduzir-boletim-governo-bolsonaro-retira-dados-acumulados-da-covid-19-de-site-oficial.ghtml"&gt;se comprovou mais tarde&lt;/a&gt;, a ideia era tentar
+ajudar a comunidade a tomar decisões certeiras no combate à pandemia. A partir
+de uma primeira análise das diversas formas e meios pelos quais as informações
+estavam sendo fornecidas pelas autoridades locais, foram convocados
+&lt;a href="https://brasil.io/covid19/voluntarios/"&gt;voluntários&lt;/a&gt; a ajudar no&amp;nbsp;projeto.&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;/p&gt;
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="pt" dir="ltr"&gt;&lt;span class="caps"&gt;DADOS&lt;/span&gt;: &lt;span class="caps"&gt;CASOS&lt;/span&gt; &lt;span class="caps"&gt;DE&lt;/span&gt; &lt;a href="https://twitter.com/hashtag/COVID19?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#&lt;span class="caps"&gt;COVID19&lt;/span&gt;&lt;/a&gt; &lt;span class="caps"&gt;POR&lt;/span&gt; MUNICÍPIO &lt;span class="caps"&gt;POR&lt;/span&gt; &lt;span class="caps"&gt;DIA&lt;/span&gt;!&lt;br&gt;&lt;br&gt;A população precisa saber o quanto antes a quantidade de casos em seu município, bem como sua evolução *diária*, só assim teremos agilidade e efetividade nas ações de combate à propagação do vírus. Quer os dados? Segue o&amp;nbsp;fio:&lt;/p&gt;&amp;mdash; Álvaro Justen #UsePFF2 #VacinaJá (@turicas) &lt;a href="https://twitter.com/turicas/status/1241068121202536448?ref_src=twsrc%5Etfw"&gt;March 20, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;p&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;Desde então, pessoas de diversos lugares do mundo (tem brasileiro até da
+Inglaterra coletando dados) dispõem de alguns minutos do seu dia para traduzir
+um monte de dados esparsos em informação limpa, organizada e estruturada.
+Algumas precisaram sair da equipe por questões pessoais, outras entraram
+depois, mas sem elas não seria possível publicarmos atualizações diárias.
+Definimos uma metodologia para a coleta e checagem, automatizamos diversos
+processos e finalmente passamos a ter dados confiáveis sobre a pandemia no
+Brasil (houve dias em que até os dados oficiais do Governo Federal foram
+publicados com erros, mas os nossos estavam corretos). Com a disponibilização
+dessa informação, jornais (nacionais e internacionais, pequenos e grandes, na
+Web e em manchetes no impresso) e órgãos como a Fio Cruz e o &lt;span class="caps"&gt;IBGE&lt;/span&gt; começaram a
+utilizá-la. Mais info no &lt;a href="https://github.com/turicas/covid19-br/blob/master/clipping.md"&gt;clipping&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Em junho do ano passado, devido ao &lt;a href="https://noticias.uol.com.br/ultimas-noticias/ansa/2020/06/06/ministerio-da-saude-tira-portal-com-dados-sobre-covid-do-ar.htm"&gt;apagão proposital de dados do Ministério da
+Saúde&lt;/a&gt;, reunimos mais uma força-tarefa para criar um boletim diário
+com os totais informados pelos estados em seus boletins. Enquanto os
+voluntários de cada Estado coletavam a base completa com os dados dos
+Municípios, essa outra equipe começou a coletar o total de casos
+confirmados/óbitos por Estado. Desde então, todos os dias, sem exceção,
+divulgamos nosso &lt;a href="https://brasil.io/covid19/boletins/"&gt;boletim&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;
+&lt;a href="https://brasil.io/covid19/boletins/"&gt;
+  &lt;img
+    alt="Boletim Brasil.IO COVID-19 de 7 de abril de 2021"
+    src="https://data.brasil.io/dataset/covid19/boletim/2021-04-07.png"
+    width="80%"&gt;
+&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;Com os meses se passando, outros dados relevantes foram incorporados, como os
+óbitos registrados em &lt;a href="https://brasil.io/dataset/covid19/obito_cartorio"&gt;cartórios&lt;/a&gt;, &lt;a href="https://brasil.io/dataset/govbr/auxilio_emergencial"&gt;beneficiários do auxílio
+emergencial&lt;/a&gt; e os microdados de &lt;a href="https://twitter.com/brasil_io/status/1376682456028438530"&gt;vacinação&lt;/a&gt;. Também
+criamos nosso próprio &lt;a href="https://brasil.io/covid19/"&gt;painel&lt;/a&gt;, no qual é possível ver mapas e&amp;nbsp;gráficos.&lt;/p&gt;
+&lt;p&gt;Não podemos deixar de ressaltar como essa iniciativa de coleta de dados diária
+&lt;strong&gt;demonstra sua importância todos os dias&lt;/strong&gt;. Um exemplo disso foi quando &lt;a href="https://g1.globo.com/bemestar/coronavirus/noticia/2021/03/24/apos-recorde-de-mortes-por-covid-19-ministerio-da-saude-altera-criterios-de-confirmacao-dos-obitos.ghtml"&gt;o
+Governo Federal alterou os parâmetros para inserção de dados no Sivep-Gripe
+(Sistema de Informação de Vigilância da Gripe)&lt;/a&gt;, cujo
+preenchimento é obrigatório desde 2009 para casos gripais e também está sendo
+utilizado para monitorar a &lt;span class="caps"&gt;COVID&lt;/span&gt;-19. Dentre as alterações, que não foram
+combinadas com estados e municípios, passou-se a ser obrigatória a informação
+de pelo menos um de dois números: o &lt;span class="caps"&gt;CPF&lt;/span&gt; e, na ausência deste, o do  cartão &lt;span class="caps"&gt;SUS&lt;/span&gt;.
+Isso ocasionou diversos problemas, que impactaram a notificação de óbitos pela
+doença, levando a uma diminuição irreal nesses números enquanto a mudança ficou&amp;nbsp;vigente.&lt;/p&gt;
+&lt;p&gt;Apesar do Ministério da Saúde ter &lt;a href="https://www.gov.br/saude/pt-br/assuntos/noticias/nota-a-imprensa-sivep-gripe"&gt;voltado atrás na alteração da
+ferramenta&lt;/a&gt;, isso é bem mais grave do que parece. Há
+estados em que os números são preenchidos diretamente no Sivep, enquanto outros
+possuem seus próprios registros e, com isso, o atraso de preenchimento do Sivep
+resultaria em dados completamente diferentes sendo divulgados por órgãos
+oficiais (estados e Governo Federal), o que poderia dificultar ainda mais o
+acesso à informação de qualidade, resultando em mais&amp;nbsp;desinformação.&lt;/p&gt;
+&lt;p&gt;A falta de dados atuais, confiáveis e padronizados, como seria esperado que o
+Ministério da Saúde fizesse, dificultam o controle da pandemia, causando mortes
+que poderiam ser evitadas. Na história do Brasil infelizmente temos um outro
+exemplo disso: &lt;a href="https://blogs.oglobo.globo.com/blog-do-acervo/post/epidemia-de-meningite-que-ditadura-militar-no-brasil-tentou-esconder-da-populacao.html"&gt;durante a ditadura militar, na década de 70, o país sofreu uma
+epidemia de meningite&lt;/a&gt; e, naquela época, os profissionais
+de saúde e comunicação foram proibidos de se manifestar sobre o que estava
+acontecendo, conduta que gerou prejuízos irreparáveis, já que nem os médicos
+tinham informações sobre qual doença estava atingindo gravemente tantas&amp;nbsp;pessoas.&lt;/p&gt;
+&lt;p&gt;Apesar de saber que essa crise poderia ser muito pior caso não houvesse
+iniciativas como esta, nós, colaboradores do projeto, nunca esquecemos que cada
+número preenchido na planilha significa uma cadeira vazia na mesa das famílias
+durante as refeições. E como a gente gostaria de não ter que contabilizar isso!
+Esperamos que a velocidade com que esses números vêm aumentando seja freada em
+breve, mas, até que a maioria da população seja vacinada e essa fase dolorosa
+não passe, conte com nosso trabalho para acompanhar os dados sobre a pandemia
+e, se você puder e quiser, colabore com nosso projeto divulgando-o,
+&lt;a href="https://brasil.io/contribuidores"&gt;programando&lt;/a&gt; ou mesmo &lt;a href="http://apoia.se/brasilio"&gt;doando para nossa campanha de
+financiamento coletivo&lt;/a&gt;.&lt;/p&gt;</content><category term="meta"></category><category term="datasets"></category></entry><entry><title>Relatório mensal: outubro de 2020</title><link href="https://blog.brasil.io/2020/11/08/relatorio-mensal-outubro-de-2020/" rel="alternate"></link><published>2020-11-08T12:00:00-03:00</published><updated>2020-11-08T12:00:00-03:00</updated><author><name>turicas</name></author><id>tag:blog.brasil.io,2020-11-08:/2020/11/08/relatorio-mensal-outubro-de-2020/</id><summary type="html">&lt;p&gt;Além da atualização de diversos datasets (&lt;span class="caps"&gt;COVID&lt;/span&gt;-19, empresas/sócios e auxílio emergencial), fizemos diversas melhorias no backend e trabalhamos nos dados das&amp;nbsp;eleições.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Pretendia publicar esse relatório no primeiro dia do mês, mas por conta de
 &lt;a href="https://www.youtube.com/watch?v=cUYFIga_JXU"&gt;meu keynote na Python Brasil 2020&lt;/a&gt; acabei atrasando. Como
 saiu atrasado, então aproveitei para listar o que fizemos em outubro e nessa
 primeira semana de novembro. Vamos&amp;nbsp;lá:&lt;/p&gt;
