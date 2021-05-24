@@ -148,9 +148,9 @@ números citados acima. O pedido ainda não foi respondido, o prazo para respost
   mais gerais.
 
 Para finalizar, gostaria de agradecer especialmente à [Fabiana
-Cambricoli][twitter-cambricoli] para decidir quais análises poderíamos fazer na
-base para checar as inconsistências e ao [Fabrizio de Mello][twitter-fabrizio]
-pelas otimizações em nosso banco PostgreSQL.
+Cambricoli][twitter-cambricoli] na definição de quais análises podem ser feitas
+na base para identificar inconsistências e ao [Fabrizio de
+Mello][twitter-fabrizio] pelas otimizações em nosso banco PostgreSQL.
 
 
 [analise-sql]: https://github.com/turicas/covid19-br/tree/master/analises/microdados-vacinacao
