@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  Os problemas nos microdados de vacinação | Brasil.IO - Blog
+</title>
+  <link rel="canonical" href="https://blog.brasil.io/2021/05/24/os-problemas-nos-microdados-de-vacinacao/index.html">
+
+
+  <link rel="stylesheet" href="https://blog.brasil.io/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://blog.brasil.io/theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://blog.brasil.io/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="https://blog.brasil.io/theme/css/theme.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
+        href="https://blog.brasil.io/feeds/all.atom.xml">
+  <link rel="alternate" type="application/rss+xml" title="Full RSS Feed"
+        href="https://blog.brasil.io/feed.rss">  <link rel="alternate" type="application/atom+xml" title="Categories Atom Feed"
+        href="https://blog.brasil.io/feeds/meta.atom.xml">  
+  <meta name="description" content="Desde fevereiro disponibilizamos nossa versão dos microdados de vacinação com diversas melhorias, mas o dataset possui inúmeras inconsistências que devem ser levadas em consideração antes de qualquer análise. Criamos um pedido de acesso à informação para que o Ministério da Saúde esclareça esses problemas.">
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o);
+      a.async = 1;
+      a.src = g;
+      m = s.getElementsByTagName(o)[0];
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-117698282-2', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+  <div class="col-sm-12">
+    <div class="col-sm-12">
+      <a href="https://blog.brasil.io/">
+        <img class="img-fluid rounded" src=https://blog.brasil.io/theme/images/logo-blog.brasil.io.png alt="Brasil.IO - Blog">
+      </a>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-9">
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://blog.brasil.io/" target="_blank">Blog</a></li>
+            <li class="list-inline-item"><a href="https://brasil.io/datasets" target="_blank">Datasets</a></li>
+            <li class="list-inline-item"><a href="https://brasil.io/colabore" target="_blank">Colabore</a></li>
+            <li class="list-inline-item"><a href="https://brasil.io/contato" target="_blank">Contato</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3 text-right">
+        <a href="https://blog.brasil.io/feed.rss"><i class="fa fa-rss"></i></a>
+        <a href="https://github.com/turicas/blog.brasil.io"><i class="fa fa-github"></i></a>
+      </div>
+    </div>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  Os problemas nos microdados de&nbsp;vacinação
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2021-05-24T18:00:00-03:00">
+          <i class="fa fa-clock-o"></i>
+          seg 24 maio 2021
+        </li>
+        <li class="list-inline-item">
+          <i class="fa fa-folder-open-o"></i>
+          <a href="https://blog.brasil.io/category/meta.html">meta</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fa fa-user-o"></i>
+              <a href="https://blog.brasil.io/author/turicas.html">Álvaro Justen</a>          </li>
+          <li class="list-inline-item">
+            <i class="fa fa-files-o"></i>
+              <a href="https://blog.brasil.io/tag/datasets.html">#datasets</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <p>Desde que identificamos que o <a href="https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao">OpenDataSUS passou a disponibilizar os
+microdados de vacinação</a> ganhei uma tarefa diária de
+baixar, analisar e melhorar esses dados (que crescem todos os dias). Logo no
+começo identifiquei diversos problemas no dataset e depois de bastante trabalho
+convertendo e limpando os dados, no dia 14 de fevereiro <a href="https://twitter.com/brasil_io/status/1361080270791864321">anunciamos a nossa
+versão dos microdados de vacinação para que qualquer um possa
+baixar</a>. <strong>A nossa versão tem maior qualidade</strong> que a
+original (facilitando análises), mas é preciso ressaltar que <strong>a base original
+possui inconsistências</strong> importantes que devem ser levadas em consideração
+quando analisa-se essa base. Na semana passada criei um pedido de acesso à
+informação, solicitando ao Ministério da Saúde que esclareça essas
+inconsistências (ainda não respondido) e abaixo esclareço as melhorias que
+implementei e as inconsistências&nbsp;encontradas.</p>
+<h3 id="melhorias-e-correcoes"><a class="toclink" href="#melhorias-e-correcoes">Melhorias e&nbsp;correções</a></h3>
+<p>O <a href="https://github.com/turicas/covid19-br/blob/master/covid19br/vacinacao.py">programa que criei para converter os microdados</a> é
+software livre e qualquer um pode checar todas as melhorias implementadas;
+ele identifica diversos problemas e limpa a base de dados, <strong>tornando o
+trabalho de quem vai analisar muito mais fácil</strong>, pois os dados são convertidos
+para um formato mais consistente e organizado. Por conta de todas as melhorias,
+<strong>nossa base de dados é bem menor que a do Ministério</strong> (de <span class="caps">24GB</span> para <span class="caps">18GB</span>,
+para os dados capturados na semana passada) e, para agilizar ainda mais o
+processo, disponibilizamos nosso <span class="caps">CSV</span> já compactado (de <span class="caps">18GB</span> para 5,<span class="caps">5GB</span>), que
+faz com que nossos usuários economizem tempo de&nbsp;download.</p>
+<p>As principais melhorias&nbsp;são:</p>
+<p>Melhorias&nbsp;gerais:</p>
+<ul>
+<li>As colunas são renomeadas para que tenham <strong>nomes mais intuitivos e
+  padronizados</strong>, facilitando o entendimento de quem vê a base pela primeira
+  vez (alguns exemplos: <code>paciente_racaCor_valor</code> vira <code>paciente_etnia</code>,
+  <code>estabelecimento_valor</code> vira <code>estabelecimento_codigo_cnes</code> e
+  <code>vacina_categoria_nome</code> vira <code>paciente_grupo</code>);</li>
+<li>Todos os <strong>valores que sejam equivalentes a nulo</strong> (como &#8220;<span class="caps">SEM</span> <span class="caps">INFORMACAO</span>&#8221;)
+  são removidos e ficam em branco, poupando espaço e facilitando os filtros por
+  estarem mais&nbsp;uniformes;</li>
+<li><strong>Espaços em branco desnecessários</strong> (em dobro, ou sobrando no começo ou no
+  fim das células) são retirados de todas as&nbsp;colunas;</li>
+<li><strong>Valores impossíveis</strong> (como datas no futuro, datas de vacinação antes de
+  2020 e <span class="caps">UF</span> &#8220;<span class="caps">XX</span>&#8221;) são trocados para nulo (em&nbsp;branco);</li>
+<li>Os campos de data/hora contém sempre os mesmos valores para
+  hora/minuto/segundo e, por isso, são transformados <strong>apenas em datas</strong> (dessa
+  forma economizamos&nbsp;espaço);</li>
+<li>A coluna <code>numero_dose</code>, que originalmente contém valores como &#8221;   1ª Dose&#8221;, é
+  <strong>convertida para o tipo inteiro</strong> e contém os seguintes valores: (nulo), &#8220;1&#8221;
+  ou&nbsp;&#8220;2&#8221;;</li>
+<li>Os valores para a coluna <code>sistema_origem</code> são normalizados, <strong>removendo as
+  repetições</strong> por diferenças na&nbsp;grafia;</li>
+<li>Os <strong>nomes das vacinas são normalizados</strong> (existem diferenças na grafia para
+  uma mesma vacina) e ficam bem&nbsp;menores.</li>
+</ul>
+<p>Melhorias nos dados de&nbsp;municípios:</p>
+<ul>
+<li>Os códigos <span class="caps">IBGE</span> (do paciente e do estabelecimento de saúde) são substituídos
+  pelo código de 7 dígitos em vez do código de 6 dígitos original para
+  facilitar o cruzamento com outras bases de&nbsp;dados;</li>
+<li>A grafia dos municípios é melhorada e fica mais apresentável (&#8220;<span class="caps">SAO</span> <span class="caps">PAULO</span>&#8221;
+  vira &#8220;São Paulo&#8221;, por exemplo), pois usamos como base os nomes oficiais do
+  <span class="caps">IBGE</span> (nomes com acentos e apenas as primeiras letras&nbsp;maiúsculas);</li>
+<li>Diversos nomes, UFs e códigos <span class="caps">IBGE</span> de municípios são corrigidos: alguns
+  municípios possuem o código errado (dado o nome/<span class="caps">UF</span>), já outros possuem nomes
+  errados (exemplo: vários municípios de Goiás que foram transferidos para o
+  Tocantins possuem &#8220;<span class="caps">GO</span>&#8221; como <span class="caps">UF</span> e o nome seguido de &#8220;(<span class="caps">TRANSF</span>. P/<span class="caps">TO</span>)&#8221;);</li>
+</ul>
+<p>Melhorias nos dados de&nbsp;pacientes:</p>
+<ul>
+<li>Os valores possíveis para a coluna <code>paciente_racaCor_valor</code> são colocados em
+  um formato mais apresentável (&#8220;<span class="caps">INDIGENA</span>&#8221; vira &#8220;Indígena&#8221;, por&nbsp;exemplo);</li>
+<li>A idade de alguns pacientes estava incorreta e, por isso, é recalculada
+  a partir da data de&nbsp;nascimento;</li>
+<li>Nós <strong>não publicamos a data de nascimento</strong> dos pacientes: em vez
+  disso, adicionamos uma coluna de faixa etária, que facilita análises e ao
+  mesmo tempo não expõe um dado sensível da população&nbsp;brasileira;</li>
+<li>As colunas <code>paciente_id</code> e <code>documento_id</code> são transformadas em
+  <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier"><span class="caps">UUID</span></a>s, utilizando <a href="https://github.com/turicas/brasil.io/issues/182">uma metodologia que desenvolvi para criação de
+  identificadores universais em bases de dados diferentes</a>.
+  Como <span class="caps">UUID</span> é suportado por diversas bases de dados nativamente, é muito mais
+  fácil e rápido importar, filtrar e agrupar por essas colunas, além de
+  adicionar mais um nível de indireção nos dados (preservando ainda mais dados
+  possivelmente&nbsp;sensíveis).</li>
+</ul>
+<h3 id="os-problemas-e-o-pedido-de-acesso-a-informacao"><a class="toclink" href="#os-problemas-e-o-pedido-de-acesso-a-informacao">Os problemas e o pedido de acesso à&nbsp;informação</a></h3>
+<p>Nossa base não possui as inconsistências apontadas na seção anterior, pois o
+programa que criei faz as correções automaticamente, mas essa base <strong>possui
+outros problemas (mais graves)</strong> que precisamos levar em consideração ao&nbsp;analisá-la:</p>
+<ul>
+<li>Calculei a <strong>média de atraso de importação</strong> dos dados a partir da diferença
+  entre as colunas <code>data_importacao_rnds</code> e <code>data_aplicacao</code>. Existe um atraso
+  de importação médio nacional de 5.23 dias. A nível estadual, <span class="caps">DF</span>, <span class="caps">RR</span>, <span class="caps">RJ</span> e <span class="caps">MS</span>
+  possuem as maiores médias (mais de 10&nbsp;dias);</li>
+<li>Existem 467.985 <code>paciente_id</code> únicos que <strong>possuem 3 ou mais registros de
+  aplicação</strong> (totalizando 1.492.626 registros), o que não deveria ocorrer pois
+  as vacinas são administradas no máximo em duas doses - pode ser indício de&nbsp;fraude;</li>
+<li>Para todo o Brasil, existem 659.878 <code>paciente_id</code> que <strong>possuem apenas a
+  segunda dose registrada</strong> (no total, são 671.417 registros) e para o estado
+  de <span class="caps">MG</span> existem 174 registros com o valor para <code>vacina_descricao_dose</code> como &#8220;3ª
+  Dose&#8221; ou apenas&nbsp;&#8220;Dose&#8221;;</li>
+<li>As colunas <code>vacina_codigo</code>, <code>vacina_nome</code>, <code>vacina_fabricante_nome</code> e
+  <code>vacina_fabricante_referencia</code> <strong>possuem valores conflitantes</strong>, como códigos
+  diferentes para a mesma vacina e nomenclatura diferente para mesmos
+  fabricantes. No total, essas 4 colunas geram uma combinação de 199 valores
+  distintos, enquanto o esperado seria bem menos (no máximo, o total de vacinas
+  vezes o total de&nbsp;fabricantes);</li>
+<li>Existem 170.129 registros de doses aplicadas em indivíduos classificados como
+  grupo prioritário &#8220;Faixa Etária&#8221; na coluna <code>vacina_categoria_nome</code>, mas que
+  referem-se a <strong>pessoas com menos de 60 anos</strong> (pela coluna <code>paciente_idade</code>)
+  e que, portanto, não fariam parte do citado grupo prioritário (idosos) -
+  também pode ser um indício de&nbsp;fraude.</li>
+</ul>
+<p>Veja na íntegra <a href="https://github.com/turicas/covid19-br/blob/master/analises/microdados-vacinacao/README.md#pedido-de-acesso-%C3%A0-informa%C3%A7%C3%A3o">o pedido de acesso à informação que fiz</a> e os
+<a href="https://github.com/turicas/covid19-br/tree/master/analises/microdados-vacinacao">arquivos <span class="caps">SQL</span></a> utilizados para fazer as consultas e chegar nos
+números citados acima. O pedido ainda não foi respondido, o prazo para resposta
+é de até&nbsp;07/06/2021.</p>
+<h3 id="proximos-passos"><a class="toclink" href="#proximos-passos">Próximos&nbsp;passos</a></h3>
+<ul>
+<li>Publicar mais rapidamente e com maior frequência: já tive bastante trabalho
+  durante as últimas semanas para chegar até a forma mais eficiente de baixar e
+  converter esses dados, mas ainda podemos agilizar algumas&nbsp;etapas;</li>
+<li>Adicionar base à plataforma: apesar de [disponibilizarmos o <span class="caps">CSV</span> para
+  download][download-csv], essa base de dados ainda não está disponível para
+  acesso/filtragem na plataforma Web/<span class="caps">API</span>. Decidi ainda não disponibilizá-la até
+  ter uma resposta oficial do Ministério. Antes de adicionar um dataset no
+  Brasil.<span class="caps">IO</span> passamos muito tempo verificando e analisando a base para ter
+  certeza da consistência dos dados na fonte original (esse é um trabalho
+  praticamente invisível que&nbsp;fazemos);</li>
+<li>Painel com análises: estamos trabalhando em um painel que mostrará os dados
+  dos vacinados de maneira mais rápida para quem só precisar acompanhar valores
+  mais&nbsp;gerais.</li>
+</ul>
+<p>Para finalizar, gostaria de agradecer especialmente à <a href="https://twitter.com/Cambricoli">Fabiana
+Cambricoli</a> para decidir quais análises poderíamos fazer na
+base para checar as inconsistências e ao <a href="https://twitter.com/fabriziomello">Fabrizio de Mello</a>
+pelas otimizações em nosso banco&nbsp;PostgreSQL.</p>
+    </div>
+<div class="py-4 px-2">
+  <h4 class="h5"> Autor </h4>
+
+  <div class="row pt-2">
+      <div class="card col-sm-12 mx-auto mb-2 p-2">
+        <div class="card-body row pt-3 px-2">          
+          <div class="col-12 col-md-4 my-auto text-center">
+            <img class="rounded-circle mx-auto d-block" 
+                  src="/images/authors/turicas.jpg" alt="turicas"
+                alt="avatar"
+                width="150"
+            />
+            <a href="https://github.com/turicas" target="_blank" title="github de turicas " class="mt-3 px-1" style="text-decoration: none;">
+              <i class="fa fa-github my-2" style="font-size:22px; color:rgb(78, 78, 78)"></i>
+            </a>
+            <a href="https://twitter.com/turicas" target="_blank" title="twitter de turicas " class="mt-3 px-1" style="text-decoration: none;">
+              <i class="fa fa-twitter my-2" style="font-size:22px; color:rgb(78, 78, 78)"></i>
+            </a>
+            <a href="https://br.linkedin.com/in/alvarojusten" target="_blank" title="linkedin de turicas " class="mt-3 px-1" style="text-decoration: none;">
+              <i class="fa fa-linkedin my-2" style="font-size:22px; color:rgb(78, 78, 78)"></i>
+            </a>
+          </div>
+          <div class="col-12 col-md-8">
+            <div class="mt-3">
+              <h5 class="card-title">Álvaro Justen</h5>
+              <div style="max-width:500px">
+                <span class="card-text">
+                  Álvaro Justen é programador, professor e empreendedor. Ativista de software livre e de dados abertos, desenvolve e gerencia projetos de captura e análise de dados (principalmente públicos), majoritariamente com Python; adora compartilhar conhecimento e colabora com a comunidade de jornalismo de dados brasileira; é fundador do portal de dados abertos acessíveis Brasil.IO e quando não está programando ou dando aulas, viaja, prova e torra cafés especiais.
+                </span>
+              </div>
+              <div class="card-text pt-1">
+                <a href="https://blog.brasil.io/author/turicas.html">
+                  <small>Publicações de Álvaro Justen</small>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div>
+</div>  </article>
+  <hr>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function() {
+      this.page.url = 'https://blog.brasil.io/2021/05/24/os-problemas-nos-microdados-de-vacinacao/index.html';
+      this.page.identifier = 'os-problemas-nos-microdados-de-vacinacao';
+    };
+    (function() {
+      var d = document;
+      var s = d.createElement('script');
+      s.src = '//brasilio.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript class="text-muted">
+    Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+  </noscript>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="https://blog.brasil.io/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="https://blog.brasil.io/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="https://blog.brasil.io/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="https://blog.brasil.io/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+</body>
+
+</html>

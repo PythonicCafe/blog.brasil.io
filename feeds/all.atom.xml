@@ -1,5 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Brasil.IO - Blog</title><link href="https://blog.brasil.io/" rel="alternate"></link><link href="https://blog.brasil.io/feeds/all.atom.xml" rel="self"></link><id>https://blog.brasil.io/</id><updated>2021-04-07T21:00:00-03:00</updated><subtitle>Dados abertos para mais democracia</subtitle><entry><title>Um ano de coleta diária de dados da COVID-19: Um balanço sobre o projeto e sua importância</title><link href="https://blog.brasil.io/2021/04/07/um-ano-de-coleta-diaria-covid19/" rel="alternate"></link><published>2021-04-07T21:00:00-03:00</published><updated>2021-04-07T21:00:00-03:00</updated><author><name>bru-menani</name></author><id>tag:blog.brasil.io,2021-04-07:/2021/04/07/um-ano-de-coleta-diaria-covid19/</id><summary type="html">&lt;p&gt;Após um ano de coleta de dados sobre a &lt;span class="caps"&gt;COVID&lt;/span&gt;-19, contamos um pouco sobre esse projeto, as pessoas envolvidas e fazemos um paralelo com notícias atuais, demonstrando a importância de dados abertos estarem disponíveis a&amp;nbsp;todos.&lt;/p&gt;</summary><content type="html">&lt;p&gt;20 de março de 2020 foi o início de um projeto marcante aqui no Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;: a
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Brasil.IO - Blog</title><link href="https://blog.brasil.io/" rel="alternate"></link><link href="https://blog.brasil.io/feeds/all.atom.xml" rel="self"></link><id>https://blog.brasil.io/</id><updated>2021-05-24T18:00:00-03:00</updated><subtitle>Dados abertos para mais democracia</subtitle><entry><title>Os problemas nos microdados de vacinação</title><link href="https://blog.brasil.io/2021/05/24/os-problemas-nos-microdados-de-vacinacao/" rel="alternate"></link><published>2021-05-24T18:00:00-03:00</published><updated>2021-05-24T18:00:00-03:00</updated><author><name>turicas</name></author><id>tag:blog.brasil.io,2021-05-24:/2021/05/24/os-problemas-nos-microdados-de-vacinacao/</id><summary type="html">&lt;p&gt;Desde fevereiro disponibilizamos nossa versão dos microdados de vacinação com diversas melhorias, mas o dataset possui inúmeras inconsistências que devem ser levadas em consideração antes de qualquer análise. Criamos um pedido de acesso à informação para que o Ministério da Saúde esclareça esses&amp;nbsp;problemas.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Desde que identificamos que o &lt;a href="https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao"&gt;OpenDataSUS passou a disponibilizar os
+microdados de vacinação&lt;/a&gt; ganhei uma tarefa diária de
+baixar, analisar e melhorar esses dados (que crescem todos os dias). Logo no
+começo identifiquei diversos problemas no dataset e depois de bastante trabalho
+convertendo e limpando os dados, no dia 14 de fevereiro &lt;a href="https://twitter.com/brasil_io/status/1361080270791864321"&gt;anunciamos a nossa
+versão dos microdados de vacinação para que qualquer um possa
+baixar&lt;/a&gt;. &lt;strong&gt;A nossa versão tem maior qualidade&lt;/strong&gt; que a
+original (facilitando análises), mas é preciso ressaltar que &lt;strong&gt;a base original
+possui inconsistências&lt;/strong&gt; importantes que devem ser levadas em consideração
+quando analisa-se essa base. Na semana passada criei um pedido de acesso à
+informação, solicitando ao Ministério da Saúde que esclareça essas
+inconsistências (ainda não respondido) e abaixo esclareço as melhorias que
+implementei e as inconsistências&amp;nbsp;encontradas.&lt;/p&gt;
+&lt;h3 id="melhorias-e-correcoes"&gt;&lt;a class="toclink" href="#melhorias-e-correcoes"&gt;Melhorias e&amp;nbsp;correções&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;O &lt;a href="https://github.com/turicas/covid19-br/blob/master/covid19br/vacinacao.py"&gt;programa que criei para converter os microdados&lt;/a&gt; é
+software livre e qualquer um pode checar todas as melhorias implementadas;
+ele identifica diversos problemas e limpa a base de dados, &lt;strong&gt;tornando o
+trabalho de quem vai analisar muito mais fácil&lt;/strong&gt;, pois os dados são convertidos
+para um formato mais consistente e organizado. Por conta de todas as melhorias,
+&lt;strong&gt;nossa base de dados é bem menor que a do Ministério&lt;/strong&gt; (de &lt;span class="caps"&gt;24GB&lt;/span&gt; para &lt;span class="caps"&gt;18GB&lt;/span&gt;,
+para os dados capturados na semana passada) e, para agilizar ainda mais o
+processo, disponibilizamos nosso &lt;span class="caps"&gt;CSV&lt;/span&gt; já compactado (de &lt;span class="caps"&gt;18GB&lt;/span&gt; para 5,&lt;span class="caps"&gt;5GB&lt;/span&gt;), que
+faz com que nossos usuários economizem tempo de&amp;nbsp;download.&lt;/p&gt;
+&lt;p&gt;As principais melhorias&amp;nbsp;são:&lt;/p&gt;
+&lt;p&gt;Melhorias&amp;nbsp;gerais:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;As colunas são renomeadas para que tenham &lt;strong&gt;nomes mais intuitivos e
+  padronizados&lt;/strong&gt;, facilitando o entendimento de quem vê a base pela primeira
+  vez (alguns exemplos: &lt;code&gt;paciente_racaCor_valor&lt;/code&gt; vira &lt;code&gt;paciente_etnia&lt;/code&gt;,
+  &lt;code&gt;estabelecimento_valor&lt;/code&gt; vira &lt;code&gt;estabelecimento_codigo_cnes&lt;/code&gt; e
+  &lt;code&gt;vacina_categoria_nome&lt;/code&gt; vira &lt;code&gt;paciente_grupo&lt;/code&gt;);&lt;/li&gt;
+&lt;li&gt;Todos os &lt;strong&gt;valores que sejam equivalentes a nulo&lt;/strong&gt; (como &amp;#8220;&lt;span class="caps"&gt;SEM&lt;/span&gt; &lt;span class="caps"&gt;INFORMACAO&lt;/span&gt;&amp;#8221;)
+  são removidos e ficam em branco, poupando espaço e facilitando os filtros por
+  estarem mais&amp;nbsp;uniformes;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Espaços em branco desnecessários&lt;/strong&gt; (em dobro, ou sobrando no começo ou no
+  fim das células) são retirados de todas as&amp;nbsp;colunas;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Valores impossíveis&lt;/strong&gt; (como datas no futuro, datas de vacinação antes de
+  2020 e &lt;span class="caps"&gt;UF&lt;/span&gt; &amp;#8220;&lt;span class="caps"&gt;XX&lt;/span&gt;&amp;#8221;) são trocados para nulo (em&amp;nbsp;branco);&lt;/li&gt;
+&lt;li&gt;Os campos de data/hora contém sempre os mesmos valores para
+  hora/minuto/segundo e, por isso, são transformados &lt;strong&gt;apenas em datas&lt;/strong&gt; (dessa
+  forma economizamos&amp;nbsp;espaço);&lt;/li&gt;
+&lt;li&gt;A coluna &lt;code&gt;numero_dose&lt;/code&gt;, que originalmente contém valores como &amp;#8221;   1ª Dose&amp;#8221;, é
+  &lt;strong&gt;convertida para o tipo inteiro&lt;/strong&gt; e contém os seguintes valores: (nulo), &amp;#8220;1&amp;#8221;
+  ou&amp;nbsp;&amp;#8220;2&amp;#8221;;&lt;/li&gt;
+&lt;li&gt;Os valores para a coluna &lt;code&gt;sistema_origem&lt;/code&gt; são normalizados, &lt;strong&gt;removendo as
+  repetições&lt;/strong&gt; por diferenças na&amp;nbsp;grafia;&lt;/li&gt;
+&lt;li&gt;Os &lt;strong&gt;nomes das vacinas são normalizados&lt;/strong&gt; (existem diferenças na grafia para
+  uma mesma vacina) e ficam bem&amp;nbsp;menores.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Melhorias nos dados de&amp;nbsp;municípios:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Os códigos &lt;span class="caps"&gt;IBGE&lt;/span&gt; (do paciente e do estabelecimento de saúde) são substituídos
+  pelo código de 7 dígitos em vez do código de 6 dígitos original para
+  facilitar o cruzamento com outras bases de&amp;nbsp;dados;&lt;/li&gt;
+&lt;li&gt;A grafia dos municípios é melhorada e fica mais apresentável (&amp;#8220;&lt;span class="caps"&gt;SAO&lt;/span&gt; &lt;span class="caps"&gt;PAULO&lt;/span&gt;&amp;#8221;
+  vira &amp;#8220;São Paulo&amp;#8221;, por exemplo), pois usamos como base os nomes oficiais do
+  &lt;span class="caps"&gt;IBGE&lt;/span&gt; (nomes com acentos e apenas as primeiras letras&amp;nbsp;maiúsculas);&lt;/li&gt;
+&lt;li&gt;Diversos nomes, UFs e códigos &lt;span class="caps"&gt;IBGE&lt;/span&gt; de municípios são corrigidos: alguns
+  municípios possuem o código errado (dado o nome/&lt;span class="caps"&gt;UF&lt;/span&gt;), já outros possuem nomes
+  errados (exemplo: vários municípios de Goiás que foram transferidos para o
+  Tocantins possuem &amp;#8220;&lt;span class="caps"&gt;GO&lt;/span&gt;&amp;#8221; como &lt;span class="caps"&gt;UF&lt;/span&gt; e o nome seguido de &amp;#8220;(&lt;span class="caps"&gt;TRANSF&lt;/span&gt;. P/&lt;span class="caps"&gt;TO&lt;/span&gt;)&amp;#8221;);&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Melhorias nos dados de&amp;nbsp;pacientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Os valores possíveis para a coluna &lt;code&gt;paciente_racaCor_valor&lt;/code&gt; são colocados em
+  um formato mais apresentável (&amp;#8220;&lt;span class="caps"&gt;INDIGENA&lt;/span&gt;&amp;#8221; vira &amp;#8220;Indígena&amp;#8221;, por&amp;nbsp;exemplo);&lt;/li&gt;
+&lt;li&gt;A idade de alguns pacientes estava incorreta e, por isso, é recalculada
+  a partir da data de&amp;nbsp;nascimento;&lt;/li&gt;
+&lt;li&gt;Nós &lt;strong&gt;não publicamos a data de nascimento&lt;/strong&gt; dos pacientes: em vez
+  disso, adicionamos uma coluna de faixa etária, que facilita análises e ao
+  mesmo tempo não expõe um dado sensível da população&amp;nbsp;brasileira;&lt;/li&gt;
+&lt;li&gt;As colunas &lt;code&gt;paciente_id&lt;/code&gt; e &lt;code&gt;documento_id&lt;/code&gt; são transformadas em
+  &lt;a href="https://en.wikipedia.org/wiki/Universally_unique_identifier"&gt;&lt;span class="caps"&gt;UUID&lt;/span&gt;&lt;/a&gt;s, utilizando &lt;a href="https://github.com/turicas/brasil.io/issues/182"&gt;uma metodologia que desenvolvi para criação de
+  identificadores universais em bases de dados diferentes&lt;/a&gt;.
+  Como &lt;span class="caps"&gt;UUID&lt;/span&gt; é suportado por diversas bases de dados nativamente, é muito mais
+  fácil e rápido importar, filtrar e agrupar por essas colunas, além de
+  adicionar mais um nível de indireção nos dados (preservando ainda mais dados
+  possivelmente&amp;nbsp;sensíveis).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="os-problemas-e-o-pedido-de-acesso-a-informacao"&gt;&lt;a class="toclink" href="#os-problemas-e-o-pedido-de-acesso-a-informacao"&gt;Os problemas e o pedido de acesso à&amp;nbsp;informação&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Nossa base não possui as inconsistências apontadas na seção anterior, pois o
+programa que criei faz as correções automaticamente, mas essa base &lt;strong&gt;possui
+outros problemas (mais graves)&lt;/strong&gt; que precisamos levar em consideração ao&amp;nbsp;analisá-la:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Calculei a &lt;strong&gt;média de atraso de importação&lt;/strong&gt; dos dados a partir da diferença
+  entre as colunas &lt;code&gt;data_importacao_rnds&lt;/code&gt; e &lt;code&gt;data_aplicacao&lt;/code&gt;. Existe um atraso
+  de importação médio nacional de 5.23 dias. A nível estadual, &lt;span class="caps"&gt;DF&lt;/span&gt;, &lt;span class="caps"&gt;RR&lt;/span&gt;, &lt;span class="caps"&gt;RJ&lt;/span&gt; e &lt;span class="caps"&gt;MS&lt;/span&gt;
+  possuem as maiores médias (mais de 10&amp;nbsp;dias);&lt;/li&gt;
+&lt;li&gt;Existem 467.985 &lt;code&gt;paciente_id&lt;/code&gt; únicos que &lt;strong&gt;possuem 3 ou mais registros de
+  aplicação&lt;/strong&gt; (totalizando 1.492.626 registros), o que não deveria ocorrer pois
+  as vacinas são administradas no máximo em duas doses - pode ser indício de&amp;nbsp;fraude;&lt;/li&gt;
+&lt;li&gt;Para todo o Brasil, existem 659.878 &lt;code&gt;paciente_id&lt;/code&gt; que &lt;strong&gt;possuem apenas a
+  segunda dose registrada&lt;/strong&gt; (no total, são 671.417 registros) e para o estado
+  de &lt;span class="caps"&gt;MG&lt;/span&gt; existem 174 registros com o valor para &lt;code&gt;vacina_descricao_dose&lt;/code&gt; como &amp;#8220;3ª
+  Dose&amp;#8221; ou apenas&amp;nbsp;&amp;#8220;Dose&amp;#8221;;&lt;/li&gt;
+&lt;li&gt;As colunas &lt;code&gt;vacina_codigo&lt;/code&gt;, &lt;code&gt;vacina_nome&lt;/code&gt;, &lt;code&gt;vacina_fabricante_nome&lt;/code&gt; e
+  &lt;code&gt;vacina_fabricante_referencia&lt;/code&gt; &lt;strong&gt;possuem valores conflitantes&lt;/strong&gt;, como códigos
+  diferentes para a mesma vacina e nomenclatura diferente para mesmos
+  fabricantes. No total, essas 4 colunas geram uma combinação de 199 valores
+  distintos, enquanto o esperado seria bem menos (no máximo, o total de vacinas
+  vezes o total de&amp;nbsp;fabricantes);&lt;/li&gt;
+&lt;li&gt;Existem 170.129 registros de doses aplicadas em indivíduos classificados como
+  grupo prioritário &amp;#8220;Faixa Etária&amp;#8221; na coluna &lt;code&gt;vacina_categoria_nome&lt;/code&gt;, mas que
+  referem-se a &lt;strong&gt;pessoas com menos de 60 anos&lt;/strong&gt; (pela coluna &lt;code&gt;paciente_idade&lt;/code&gt;)
+  e que, portanto, não fariam parte do citado grupo prioritário (idosos) -
+  também pode ser um indício de&amp;nbsp;fraude.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Veja na íntegra &lt;a href="https://github.com/turicas/covid19-br/blob/master/analises/microdados-vacinacao/README.md#pedido-de-acesso-%C3%A0-informa%C3%A7%C3%A3o"&gt;o pedido de acesso à informação que fiz&lt;/a&gt; e os
+&lt;a href="https://github.com/turicas/covid19-br/tree/master/analises/microdados-vacinacao"&gt;arquivos &lt;span class="caps"&gt;SQL&lt;/span&gt;&lt;/a&gt; utilizados para fazer as consultas e chegar nos
+números citados acima. O pedido ainda não foi respondido, o prazo para resposta
+é de até&amp;nbsp;07/06/2021.&lt;/p&gt;
+&lt;h3 id="proximos-passos"&gt;&lt;a class="toclink" href="#proximos-passos"&gt;Próximos&amp;nbsp;passos&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Publicar mais rapidamente e com maior frequência: já tive bastante trabalho
+  durante as últimas semanas para chegar até a forma mais eficiente de baixar e
+  converter esses dados, mas ainda podemos agilizar algumas&amp;nbsp;etapas;&lt;/li&gt;
+&lt;li&gt;Adicionar base à plataforma: apesar de [disponibilizarmos o &lt;span class="caps"&gt;CSV&lt;/span&gt; para
+  download][download-csv], essa base de dados ainda não está disponível para
+  acesso/filtragem na plataforma Web/&lt;span class="caps"&gt;API&lt;/span&gt;. Decidi ainda não disponibilizá-la até
+  ter uma resposta oficial do Ministério. Antes de adicionar um dataset no
+  Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt; passamos muito tempo verificando e analisando a base para ter
+  certeza da consistência dos dados na fonte original (esse é um trabalho
+  praticamente invisível que&amp;nbsp;fazemos);&lt;/li&gt;
+&lt;li&gt;Painel com análises: estamos trabalhando em um painel que mostrará os dados
+  dos vacinados de maneira mais rápida para quem só precisar acompanhar valores
+  mais&amp;nbsp;gerais.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Para finalizar, gostaria de agradecer especialmente à &lt;a href="https://twitter.com/Cambricoli"&gt;Fabiana
+Cambricoli&lt;/a&gt; para decidir quais análises poderíamos fazer na
+base para checar as inconsistências e ao &lt;a href="https://twitter.com/fabriziomello"&gt;Fabrizio de Mello&lt;/a&gt;
+pelas otimizações em nosso banco&amp;nbsp;PostgreSQL.&lt;/p&gt;</content><category term="meta"></category><category term="datasets"></category></entry><entry><title>Um ano de coleta diária de dados da COVID-19: Um balanço sobre o projeto e sua importância</title><link href="https://blog.brasil.io/2021/04/07/um-ano-de-coleta-diaria-covid19/" rel="alternate"></link><published>2021-04-07T21:00:00-03:00</published><updated>2021-04-07T21:00:00-03:00</updated><author><name>bru-menani</name></author><id>tag:blog.brasil.io,2021-04-07:/2021/04/07/um-ano-de-coleta-diaria-covid19/</id><summary type="html">&lt;p&gt;Após um ano de coleta de dados sobre a &lt;span class="caps"&gt;COVID&lt;/span&gt;-19, contamos um pouco sobre esse projeto, as pessoas envolvidas e fazemos um paralelo com notícias atuais, demonstrando a importância de dados abertos estarem disponíveis a&amp;nbsp;todos.&lt;/p&gt;</summary><content type="html">&lt;p&gt;20 de março de 2020 foi o início de um projeto marcante aqui no Brasil.&lt;span class="caps"&gt;IO&lt;/span&gt;: a
 coleta de &lt;a href="https://brasil.io/covid19/"&gt;dados diários a nível municipal sobre a &lt;span class="caps"&gt;COVID&lt;/span&gt;-19&lt;/a&gt;,
 doença que havia acabado de ser &lt;a href="https://twitter.com/WHO/status/1237774421307228160"&gt;declarada como Pandemia pela Organização
 Mundial da Saúde&lt;/a&gt;.&lt;/p&gt;
@@ -1880,11 +2010,11 @@ h6:hover .anchor-link {
   font-style: italic;
 }
 &lt;/style&gt;
-&lt;style type="text/css"&gt;pre { line-height: 125%; margin: 0; }
-td.linenos pre { color: #000000; background-color: #f0f0f0; padding: 0 5px 0 5px; }
-span.linenos { color: #000000; background-color: #f0f0f0; padding: 0 5px 0 5px; }
-td.linenos pre.special { color: #000000; background-color: #ffffc0; padding: 0 5px 0 5px; }
-span.linenos.special { color: #000000; background-color: #ffffc0; padding: 0 5px 0 5px; }
+&lt;style type="text/css"&gt;pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
  .highlight pre  .hll { background-color: #ffffcc }
  .highlight pre  { background: #f8f8f8; }
  .highlight pre  .c { color: #408080; font-style: italic } /* Comment */
@@ -3377,11 +3507,11 @@ h6:hover .anchor-link {
   font-style: italic;
 }
 &lt;/style&gt;
-&lt;style type="text/css"&gt;pre { line-height: 125%; margin: 0; }
-td.linenos pre { color: #000000; background-color: #f0f0f0; padding: 0 5px 0 5px; }
-span.linenos { color: #000000; background-color: #f0f0f0; padding: 0 5px 0 5px; }
-td.linenos pre.special { color: #000000; background-color: #ffffc0; padding: 0 5px 0 5px; }
-span.linenos.special { color: #000000; background-color: #ffffc0; padding: 0 5px 0 5px; }
+&lt;style type="text/css"&gt;pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
  .highlight pre  .hll { background-color: #ffffcc }
  .highlight pre  { background: #f8f8f8; }
  .highlight pre  .c { color: #408080; font-style: italic } /* Comment */
