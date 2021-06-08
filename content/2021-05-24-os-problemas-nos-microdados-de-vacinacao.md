@@ -130,6 +130,10 @@ Veja na íntegra [o pedido de acesso à informação que fiz][pedido-lai] e os
 números citados acima. O pedido ainda não foi respondido, o prazo para resposta
 é de até 07/06/2021.
 
+> Atualização (08/06/2021): ontem, 07/06, o Ministério da Saúde pediu
+> prorrogação da resposta ao pedido de acesso à informação. O novo prazo de
+> atendimento é 17/06/2021.
+
 
 ## Próximos passos
 
