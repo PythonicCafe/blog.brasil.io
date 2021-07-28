@@ -134,6 +134,10 @@ números citados acima. O pedido ainda não foi respondido, o prazo para respost
 > prorrogação da resposta ao pedido de acesso à informação. O novo prazo de
 > atendimento é 17/06/2021.
 
+> Atualização (15/07/2021): recebemos a resposta do pedido de acesso à
+> informação e publicamos aqui nosso blog: [Resposta do Ministério da Saúde aos
+> problemas nos microdados de vacinação][post-resposta-minsaude].
+
 
 ## Próximos passos
 
@@ -166,3 +170,4 @@ Mello][twitter-fabrizio] pelas otimizações em nosso banco PostgreSQL.
 [twitter-cambricoli]: https://twitter.com/Cambricoli
 [twitter-fabrizio]: https://twitter.com/fabriziomello
 [uuid-wp]: https://en.wikipedia.org/wiki/Universally_unique_identifier
+[post-resposta-minsaude]: https://blog.brasil.io/2021/05/24/os-problemas-nos-microdados-de-vacinacao/
