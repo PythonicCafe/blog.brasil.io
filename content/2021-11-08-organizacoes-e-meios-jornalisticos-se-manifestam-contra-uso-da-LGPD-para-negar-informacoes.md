@@ -3,7 +3,7 @@ Slug: organizacoes-e-meios-jornalisticos-se-manifestam-contra-uso-da-LGPD-para-n
 Date: 2021-11-08 12:00:00
 Category: meta
 Tags: opendata, ddj, dados abertos, lgpd
-Authors: turicas, bru-menani
+Authors: bru-menani, turicas
 Summary: Assinamos, em conjunto com diversas outras organizações e meios jornalísticos unidas pelo Fórum de Direito de Acesso a Informações Públicas um manifesto contra a prática equivocada de órgãos governamentais ao utilizar a LGPD para negar informações públicas.
 
 Em manifesto divulgado nesta segunda-feira (8), o [Fórum de Direito de Acesso a Informações Públicas](http://informacaopublica.org.br/), meios de comunicação e entidades que atuam na área de transparência e direitos digitais condenam o uso indevido da Lei Geral de Proteção de Dados (LGPD) para negar acesso a informações de interesse público. A carta é assinada por 27 organizações.
@@ -22,10 +22,10 @@ A carta também será encaminhada à Controladoria-Geral da União (CGU), Autori
 **LGPD não pode ser usada para impedir cidadãos de saber como e por que a administração pública age**
 
 Desde 2011, a Lei de Acesso à Informação (LAI) instrumentaliza e regulamenta a forma pela qual os cidadãos exercem seu direito de exigir explicações sobre o funcionamento da administração pública. Em 2018, a Lei Geral de Proteção de Dados (LGPD) foi sancionada para assegurar a proteção da privacidade das pessoas comuns contra intromissões de agentes públicos ou privados.
-Todavia, contrariando sua finalidade original, a LGPD tem sido utilizada para negar acesso a informações sobre agentes públicos e o exercício de suas atividades, a despeito de, em momento algum, ter sido concebida com esse fim.  Casos recentes, como tentativas de usar a LGPD para negar acesso a informações sobre autuações contra trabalho análogo á escravidão ou à lista de pessoas que acessam prédios públicos trazem preocupação. Da mesma forma, o TSE também usou a LGPD como fundamento para remover do ar a base de dados de filiados de partidos políticos, cuja utilização para fins de controle público é essencial para estudar indicações políticas e a movimentação partidária intragovernamental. 
-A Constituição reconhece, simultaneamente, o direito à informação e o direito à privacidade como direitos fundamentais de qualquer cidadão. Entretanto, para aqueles que decidem seguir uma carreira pública e assumir posições de poder ou para aqueles que decidem se relacionar mais diretamente com a administração pública, a Constituição estabelece um dever de transparência e de prestar contas que se sobrepõe à esfera de privacidade.  
-De acordo com o Supremo Tribunal Federal, o acesso a informações sobre agentes públicos “nessa qualidade” (art. 37, §6º), seja pelo cidadão, seja pela imprensa, não só não tem relação com a intimidade ou vida privada, como também é o preço que se paga pela opção por uma carreira pública em um Estado republicano. O mesmo raciocínio deve ser observado nas demais questões relacionadas à administração pública, pois só assim é possível assegurar a democracia. 
-As entidades que compõem o Fórum de Direito de Acesso a Informações Públicas, e suas parceiras na defesa da transparência, vêm manifestar publicamente sua preocupação e posição contrária à utilização da LGPD como fundamento para negar ou restringir o direito da sociedade de saber como e por que agem os responsáveis pelo funcionamento da máquina pública. 
+Todavia, contrariando sua finalidade original, a LGPD tem sido utilizada para negar acesso a informações sobre agentes públicos e o exercício de suas atividades, a despeito de, em momento algum, ter sido concebida com esse fim.  Casos recentes, como tentativas de usar a LGPD para negar acesso a informações sobre autuações contra trabalho análogo á escravidão ou à lista de pessoas que acessam prédios públicos trazem preocupação. Da mesma forma, o TSE também usou a LGPD como fundamento para remover do ar a base de dados de filiados de partidos políticos, cuja utilização para fins de controle público é essencial para estudar indicações políticas e a movimentação partidária intragovernamental.
+A Constituição reconhece, simultaneamente, o direito à informação e o direito à privacidade como direitos fundamentais de qualquer cidadão. Entretanto, para aqueles que decidem seguir uma carreira pública e assumir posições de poder ou para aqueles que decidem se relacionar mais diretamente com a administração pública, a Constituição estabelece um dever de transparência e de prestar contas que se sobrepõe à esfera de privacidade.
+De acordo com o Supremo Tribunal Federal, o acesso a informações sobre agentes públicos “nessa qualidade” (art. 37, §6º), seja pelo cidadão, seja pela imprensa, não só não tem relação com a intimidade ou vida privada, como também é o preço que se paga pela opção por uma carreira pública em um Estado republicano. O mesmo raciocínio deve ser observado nas demais questões relacionadas à administração pública, pois só assim é possível assegurar a democracia.
+As entidades que compõem o Fórum de Direito de Acesso a Informações Públicas, e suas parceiras na defesa da transparência, vêm manifestar publicamente sua preocupação e posição contrária à utilização da LGPD como fundamento para negar ou restringir o direito da sociedade de saber como e por que agem os responsáveis pelo funcionamento da máquina pública.
 
 **8 de novembro de 2021**
 
@@ -52,11 +52,9 @@ As entidades que compõem o Fórum de Direito de Acesso a Informações Pública
 1. Instituto de Governo Aberto - IGA
 1. Observatório de Cidadania da Universidade Federal de Rondônia
 1. Open Knowledge Brasil
-1. Painel Jornalismo de Dados 
-1. Rede Brasileira de Conselhos -RBdC 
+1. Painel Jornalismo de Dados
+1. Rede Brasileira de Conselhos -RBdC
 1. RENOI - Rede Nacional de Observatórios de Imprensa
 1. SOS Imprensa
 1. Transparência Brasil
 1. Transparência Partidária
-
- 
