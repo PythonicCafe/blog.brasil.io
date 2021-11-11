@@ -1,5 +1,5 @@
 Title: Organizações e meios jornalísticos se manifestam contra uso da LGPD para negar informações
-Slug: organizacoes-e-meios-jornalisticos-se-manifestam-contra-uso-da-LGPD-para-negar-informacoes.md
+Slug: organizacoes-e-meios-jornalisticos-se-manifestam-contra-uso-da-LGPD-para-negar-informacoes
 Date: 2021-11-08 12:00:00
 Category: meta
 Tags: opendata, ddj, dados abertos, lgpd
