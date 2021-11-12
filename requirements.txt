@@ -13,3 +13,4 @@ pelican-jupyter
 pelican>=4
 pygments>=2.4.1
 typogrify
+pelincan-alias

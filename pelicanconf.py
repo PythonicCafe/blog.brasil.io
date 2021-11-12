@@ -74,7 +74,8 @@ MARKDOWN = {
 }
 
 from pelican_jupyter import markup as nb_markup
-PLUGINS = [nb_markup]
+import pelican_alias
+PLUGINS = [nb_markup, pelican_alias]
 IPYNB_MARKUP_USE_FIRST_CELL = True
 IGNORE_FILES = [".ipynb_checkpoints"]
 

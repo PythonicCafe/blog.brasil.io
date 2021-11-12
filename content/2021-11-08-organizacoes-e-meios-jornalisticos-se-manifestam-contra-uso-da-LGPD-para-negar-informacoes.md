@@ -5,6 +5,7 @@ Category: meta
 Tags: opendata, ddj, dados abertos, lgpd
 Authors: bru-menani, turicas
 Summary: Assinamos, em conjunto com diversas outras organizações e meios jornalísticos unidas pelo Fórum de Direito de Acesso a Informações Públicas um manifesto contra a prática equivocada de órgãos governamentais ao utilizar a LGPD para negar informações públicas.
+Alias: /2021/11/08/organizacoes-e-meios-jornalisticos-se-manifestam-contra-uso-da-LGPD-para-negar-informacoes.md/
 
 Em manifesto divulgado nesta segunda-feira (8), o [Fórum de Direito de Acesso a Informações Públicas](http://informacaopublica.org.br/), meios de comunicação e entidades que atuam na área de transparência e direitos digitais condenam o uso indevido da Lei Geral de Proteção de Dados (LGPD) para negar acesso a informações de interesse público. A carta é assinada por 27 organizações.
 
